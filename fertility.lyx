@@ -1,0 +1,210 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass elsarticle
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Fertility and Agriculture Production: Instrumental Variable Evidence from
+ Uganda
+\end_layout
+
+\begin_layout Author
+Bjorn Van Campenhout and Haruna Sekabira
+\end_layout
+
+\begin_layout Section*
+Introduction
+\end_layout
+
+\begin_layout Standard
+The relationship between well-being and fertility 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In poor, agricultural based societies, at least part of the correlation
+ between household size and well-being works through agricultural productivity.
+ For instance, larger households may mean more cheap labour is available
+ that does not suffer from moral hazard problems of hired labour.
+ But higher fertility may also mean that women have less time to devote
+ to agricultural production.
+ 
+\end_layout
+
+\begin_layout Standard
+Uganda has one of the highest fertility rates in the world and a substantial
+ part of the population lives in rural areas making a living out of semi-subsist
+ance agriculture.
+ 
+\end_layout
+
+\begin_layout Standard
+In this study, we will investigate the effect of fertility on agricultural
+ production at the household level.
+ In particular, we will look at the effect of the number of biological children
+ on household member labour input, as well as a range of productivity measures
+ for different crops.
+ Our identification strategy is a simple but powerful instrumetal variables
+ approach inspired by the work of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
+
+\end_inset
+
+.
+ We use the fact that male ofsprings are prefered in conservative patriarchal
+ societies to construct a range of instruments.
+ The exogenous variation in the sex of a child can then be used to determine
+ the exogenous component of household size.
+ Such a two stage least squares approach is expected to yield consistent
+ estimates for the causal effect of fertility on agricultural production
+ within the household.
+\end_layout
+
+\begin_layout Standard
+This article is organized as follows.
+ The next section looks at related studies.
+\end_layout
+
+\begin_layout Section*
+Related Studies
+\end_layout
+
+\begin_layout Standard
+The effect of household size on well-being is probably most developed in
+ the area of labour economics.
+ Since this literature is so extensive, we only mention two of the most
+ influential works here.
+ The first is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
+
+\end_inset
+
+ that tries to quantify the effect of fertility on female labour supply
+ in the US.
+ They deal with the endogeneity of the number of children women have by
+ exploiting the fact that Americans tend to prefer mixed sibling-sex in
+ their household.
+ They argue that parents of same-sex siblings are significantly and substantiall
+y more likely to go on to have an additional child.
+ They find that more children does indeed reduce labour force pariticipation
+ of women, but the effect is less pronounced than previous studies suggested.
+\end_layout
+
+\begin_layout Standard
+Another paper that tries to answer the same question is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ucp:jpolec:v:88:y:1980:i:2:p:328-48"
+
+\end_inset
+
+.
+ In this paper, the exogenous variation in the number of children is obtained
+ by using the occurence of multiple births (twins) at first birth as an
+ instrument.
+ The authors argue that the comparison between women who gave birth to a
+ single child at first birth and women who gave birth to twins at first
+ birth teases out the causal effect of related to an extra child.
+ Since the occurence of twins is exogenous, there is no danger that heterogenity
+ in women preferences contaminates the estimated coefficients.
+ The study finds that household size reduces female labour supply, but the
+ effect is only temporary.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
+
+\end_inset
+
+ focus more on the consumption side effects of household size in a developing
+ country context.
+ They note the contradiction between widely held views that larger households
+ are often poorer and scale economies in consumption.
+\end_layout
+
+\begin_layout Section*
+Data and Descriptive Statistics
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "fertility"
+options "plainnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

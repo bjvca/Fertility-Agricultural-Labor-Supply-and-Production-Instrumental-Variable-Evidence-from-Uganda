@@ -1,0 +1,20 @@
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+replace h2q4=0 if h2q4==2
+keep if h2q5==3 
+bysort hh: egen maxage=min(h2q8c)
+ gen oldest = 1 if maxage == h2q8c
+ replace oldest=0 if oldest==.
+ gen ones = 1
+ bysort hh: egen size=sum(ones)
+ drop if h2q9>12
+ drop if size>9
+ drop if h2q9<2
+ regress size h2q9 h2q4 if oldest==1
+ 
+ percentage of males
+ 
+ bysort hh: egen sum_males= sum(h2q4)
+ gen percentmales=sum_males/size
+ duplicates drop hh, force
+ 
+ regress size percentmales
