@@ -28,6 +28,11 @@ gen oldestson=1 if oldest==1 & h2q4==1
  replace oldestson=0 if oldestson==.
  gen ageoldest = h2q9 
 
+ *** export selected sample here for dotplot
+ save temp, replace
+ keep hh
+ duplicates drop hh, force
+ save "/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel", replace
  
  percentage of males
  
