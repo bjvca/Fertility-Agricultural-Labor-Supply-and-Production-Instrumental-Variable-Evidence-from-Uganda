@@ -66,7 +66,7 @@ Fertility and Agriculture Production: Instrumental Variable Evidence from
 \end_layout
 
 \begin_layout Author
-Bjorn Van Campenhout and Haruna Sekabira
+Bjorn Van Campenhout
 \end_layout
 
 \begin_layout Section*
@@ -193,6 +193,426 @@ key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
 
 \begin_layout Section*
 Data and Descriptive Statistics
+\end_layout
+
+\begin_layout Standard
+We will be using the Uganda National Household Survey (UNHS) 2005/06.
+ While being somewhat dated, we have chosen this survey because it has much
+ more information on agriculture than the more recent UNHS of 2009/10.
+ Structured with a standard Living Standard Measurement Survey - Integrated
+ Survey on Agriculture (LSMS-ISA) in mind, the UNHS 2005/06 collected detailed
+ information on a sample of almost 43000 people in 7500 households in Uganda.
+\end_layout
+
+\begin_layout Standard
+The selection of children is base on the household roster.
+ In particluar, we will select individuals that respond they are son or
+ daughter of the household head.
+ In Uganda, as in most developing countries, households are often extended,
+ encompassing several generations.
+ This means that such a strategy may also select adults that are son or
+ daughter, but never moved out.
+ 
+\end_layout
+
+\begin_layout Standard
+From this sample, we select households that are headed by couples that are
+ in the reproductive stages or their lives, roughly defined as being between
+ the ages of 16 and 60.
+ We do this because in the household survey, the relationships are defined
+ relative to the household head.
+ As such, we 
+\end_layout
+
+\begin_layout Standard
+Ideally, we would like to have a sample of households where all desired
+ children where born.
+ A household that currently has one child may be in the process of adding
+ more children to their family.
+ If the first child is a girl, this may mistakenly be interpreted as running
+ against our hypothesis that households prefer boys.
+ If the first child is a boy, this may lead us to put too much confidence
+ in our hypothesis.
+ We will investigate the robustness of our results using different strategies.
+ First, we will control for the age of the parents (or the age of the first
+ born) in the first stage regression.
+ Secondly, we will run our regressions using different subsets of the sample,
+ for instance selecting only parents that are nearing the end of their reproduct
+ive period.
+\end_layout
+
+\begin_layout Standard
+Looking at the sex of the fist-born is only one possible strategy.
+ One may argue that the sex of the first born is not very relevant in a
+ context where women bear on average about 6 children.
+ Indeed, it is likely that households will get a second child irrespective
+ of the sex of the first.
+ The story may be different in a household that has already 6 children who
+ happen to be all girls.
+ Therefore, we will not only use the sex of the firstborn child as an instrument
+ for fertility, but also experiment with alternative instruments such as
+ an indicator that the first three children are girls or a variable that
+ expresses the share of male children in the total.
+\end_layout
+
+\begin_layout Section*
+Boy preference and fertility
+\end_layout
+
+\begin_layout Standard
+There is a large literature that documents parents preference for boys over
+ girls in developing countries
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In developed countries, there is a preference for a mix of sexes among children.
+\end_layout
+
+\end_inset
+
+.
+ Most of the literature, however confirms this boy preference in Asian countries.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+share
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+first=boy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+first=girl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+diff
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Hours worked 
+\end_layout
+
+\begin_layout Standard
+Most of Uganda has two cropping seasons.
+ The first runs from January to June and is by far the most important.
+ The second cropping season is from July to December.
+ The UNHS 2005/06 interviewed households twice over the course of one year
+ to capture this feature.
+ It visisted households in the begining of 2005 to caputure the second croping
+ season in 2004 (that is, running from July to December 2004).
+ Households were revisted at the end on 2005 to record information from
+ the first croping season in 2005 (running from January to June 2005).
+ In our study, we will only consider the 2005 cropping season.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename dotplot.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Average hours worked
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The fertility effect on household labour provision
 \end_layout
 
 \begin_layout Standard

@@ -1,0 +1,66 @@
+library(foreign)
+
+* we only use the first cropping season, because this is by far the most important
+
+asec4b <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4b.dta")
+asec5b <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta")
+
+merged <- merge(asec4a, asec5a, by.x=c("hh", "a4aq1", "a4aq2"), by.y=c("hh", "a5aq2", "a5aq3"))
+
+library(doBy)
+
+males <- cbind(summaryBy(a5aq4 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq5 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq6 ~ a4aq5b, data=merged,na.rm=T), "child")
+
+names(males) <- c("crop","days","sex")
+names(females) <- c("crop","days","sex")
+names(children) <- c("crop","days","sex")
+
+prepare <- cbind(rbind(males,females, children),"prepare")
+names(prepare) <-  c("crop","days","sex", "type")
+
+males <- cbind(summaryBy(a5aq7 ~ a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq8 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq9 ~ a4aq5b, data=merged,na.rm=T), "child")
+
+names(males) <- c("crop","days","sex")
+names(females) <- c("crop","days","sex")
+names(children) <- c("crop","days","sex")
+
+input <- cbind(rbind(males,females, children),"input")
+names(input) <-  c("crop","days","sex", "type")
+
+males <- cbind(summaryBy(a5aq10 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq11 ~ a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq12 ~  a4aq5b, data=merged,na.rm=T), "child")
+
+names(males) <- c("crop","days","sex")
+names(females) <- c("crop","days","sex")
+names(children) <- c("crop","days","sex")
+
+weed <- cbind(rbind(males,females, children),"weed")
+names(weed) <-  c("crop","days","sex", "type")
+
+males <- cbind(summaryBy(a5aq13 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq14 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq15 ~  a4aq5b, data=merged,na.rm=T), "child")
+
+names(males) <- c("crop","days","sex")
+names(females) <- c("crop","days","sex")
+names(children) <- c("crop","days","sex")
+
+harvest <- cbind(rbind(males,females, children),"harvest")
+names(harvest) <-  c("crop","days","sex", "type")
+
+long <- rbind(prepare, weed, input, harvest)
+long <-  subset(long,long$days<200)
+long <- subset(long, long$crop %in% c(130,141,150, 210, 310, 620, 630, 741,742,810) )
+
+long$crop <-  as.factor(long$crop)
+
+levels(long$crop)<- c("maize", "millet", "sorghum", "beans","gnuts", "s potatoes","cassava", "matooke", "banana","coffee")
+pdf("dotplot.pdf")
+dotplot(crop ~ days | sex, data = long, groups = type,
+        key = simpleKey(levels(long$type), space = "right"))
+dev.off()

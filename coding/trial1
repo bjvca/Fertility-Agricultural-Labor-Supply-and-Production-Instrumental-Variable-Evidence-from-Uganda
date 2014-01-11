@@ -1,20 +1,64 @@
 use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+* there is a coding error for male=1 female=0
 replace h2q4=0 if h2q4==2
+
+*keep only heads and spouses that are at reproductive age
+gen flag=1 if (h2q5==1 | h2q5==1) & (h2q9<16 | h2q9>60)
+
+bysort hh: egen flaghh=max(flag)
+drop if flaghh==1
+
+*this keeps only suns/daugthers
 keep if h2q5==3 
 bysort hh: egen maxage=min(h2q8c)
  gen oldest = 1 if maxage == h2q8c
  replace oldest=0 if oldest==.
+
+*some of these children are over 40 years old!
+drop if h2q9>14
+
+*drop if h2q9<2
+
  gen ones = 1
  bysort hh: egen size=sum(ones)
- drop if h2q9>12
- drop if size>9
- drop if h2q9<2
+ 
  regress size h2q9 h2q4 if oldest==1
+ 
+gen oldestson=1 if oldest==1 & h2q4==1
+ replace oldestson=0 if oldestson==.
+ gen ageoldest = h2q9 
+
  
  percentage of males
  
  bysort hh: egen sum_males= sum(h2q4)
  gen percentmales=sum_males/size
- duplicates drop hh, force
+
+ 
+ gen add=1 if size>1
+ replace add=0 if add==.
  
  regress size percentmales
+ predict ypred
+ sort hh
+ save firststage, replace
+ clear
+ 
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta
+ 
+gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
+gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
+bysort hh: egen hoursfem=sum(tottimefem)
+bysort hh: egen hoursmale=sum(tottimemale)
+duplicates drop hh, force
+
+merge hh using firststage
+ keep if _merge==3
+ 
+ regress hoursfem size
+ivregress 2sls hoursfem (size = percentmales),first
+ivregress 2sls hoursfem (size = oldestson ageoldest),first
+
+ regress hoursmale size
+ivregress 2sls hoursmale (size = percentmales),first
+ivregress 2sls hoursmale (size = oldestson ageoldest),first
