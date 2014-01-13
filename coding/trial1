@@ -63,6 +63,7 @@ regress size oldestgirl  agefirstborn
  duplicates drop hh, force
  save "/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel", replace
 use temp, clear
+sort hh
 save temp, replace
 drop if size<2
 gen second= oldestgirl* secondoldestgir
@@ -81,9 +82,10 @@ use temp_disag, clear
  bysort hh: egen sum_fmales= sum(h2q4)
  gen percentfmales=sum_fmales/size
 
- 
+ duplicates drop hh, force
+ regress size percentfmales agefirstborn
 
- regress size percentfmales
+
  
  
  predict ypred
@@ -95,17 +97,27 @@ use temp_disag, clear
  
 gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
 gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
+gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
+bysort hh: egen hourschld=sum(tottimechld)
 duplicates drop hh, force
 
-merge hh using firststage
+merge hh using temp
+ keep if _merge==3
+ drop _merge
+ sort hh
+ merge hh using firststage
  keep if _merge==3
  
  regress hoursfem size
-ivregress 2sls hoursfem (size = percentmales),first
-ivregress 2sls hoursfem (size = oldestson ageoldest),first
+ivregress 2sls hoursfem (size = percentfmales agefirstborn),first
+ivregress 2sls hoursfem (size = oldestgirl agefirstborn),first
 
  regress hoursmale size
-ivregress 2sls hoursmale (size = percentmales),first
-ivregress 2sls hoursmale (size = oldestson ageoldest),first
+ivregress 2sls hoursmale (size = percentfmales agefirstborn),first
+ivregress 2sls hoursmale (size = oldestgirl agefirstborn),first
+
+regress hourschld size
+ivregress 2sls hourschld (size = percentfmales agefirstborn),first
+ivregress 2sls hourschld (size = oldestgirl agefirstborn),first
