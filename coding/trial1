@@ -3,47 +3,87 @@ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta
 replace h2q4=0 if h2q4==2
 
 *keep only heads and spouses that are at reproductive age
-gen flag=1 if (h2q5==1 | h2q5==1) & (h2q9<16 | h2q9>60)
 
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==0
+
+replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
+replace flag=0 if flag==.
 bysort hh: egen flaghh=max(flag)
 drop if flaghh==1
 
+*gen age of mother 
+gen agemother=0
+replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen agemother_hh=max(agemother)
+
 *this keeps only suns/daugthers
 keep if h2q5==3 
-bysort hh: egen maxage=min(h2q8c)
- gen oldest = 1 if maxage == h2q8c
- replace oldest=0 if oldest==.
+*drop multiple births
+duplicates drop hh h2q8c, force
+drop if h2q9>14
+bysort hh: egen rankage=rank(h2q8c), unique
+
+
+ *gen oldest = 1 if maxage == h2q8c
+ *replace oldest=0 if oldest==.
 
 *some of these children are over 40 years old!
-drop if h2q9>14
+
 
 *drop if h2q9<2
 
  gen ones = 1
  bysort hh: egen size=sum(ones)
  
- regress size h2q9 h2q4 if oldest==1
+ replace h2q4=!h2q4
  
-gen oldestson=1 if oldest==1 & h2q4==1
- replace oldestson=0 if oldestson==.
- gen ageoldest = h2q9 
+label drop H2Q4
+ 
+ regress size h2q9 h2q4 if rankage==1
+ 
+ 
+gen oldestgirl=1 if rankage==1 & h2q4==1
+replace oldestgirl=0 if oldestgirl==.
 
+gen secondoldestgirl=1 if rankage==2 & h2q4==1
+ replace secondoldestgirl=0 if secondoldestgirl==.
+ gen thirdoldestgirl=1 if rankage==3 & h2q4==1
+ replace thirdoldestgirl=0 if thirdoldestgirl==.
+ gen agefirstborn=h2q9 if rankage==1
+  gen agesecondborn=h2q9 if rankage==2
+   gen agethirdborn=h2q9 if rankage==3
+ save temp_disag, replace
+collapse (max) size oldestgirl secondoldestgirl thirdoldest agefirstborn agesecondborn agethirdborn agemother_hh, by(hh)
+
+
+regress size oldestgirl  agefirstborn 
  *** export selected sample here for dotplot
  save temp, replace
  keep hh
  duplicates drop hh, force
  save "/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel", replace
- 
- percentage of males
- 
- bysort hh: egen sum_males= sum(h2q4)
- gen percentmales=sum_males/size
+use temp, clear
+save temp, replace
+drop if size<2
+gen second= oldestgirl* secondoldestgir
+regress size second  agefirstborn  
+
+drop if size<3
+gen third= thirdoldestgirl* secondoldestgirl*oldestgirl 
+regress size third   agefirstborn
+
+
+
 
  
- gen add=1 if size>1
- replace add=0 if add==.
+* percentage of males
+use temp_disag, clear
+ bysort hh: egen sum_fmales= sum(h2q4)
+ gen percentfmales=sum_fmales/size
+
  
- regress size percentmales
+
+ regress size percentfmales
  predict ypred
  sort hh
  save firststage, replace

@@ -135,8 +135,49 @@ Related Studies
 \end_layout
 
 \begin_layout Standard
-The effect of household size on well-being is probably most developed in
- the area of labour economics.
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
+
+\end_inset
+
+ focus more on the consumption side effects of household size in a developing
+ country context.
+ They note the contradiction between widely held views that larger households
+ are often poorer and scale economies in consumption.
+\end_layout
+
+\begin_layout Standard
+On the production side of the farm household, the effect of household size
+ is equally ambiguous.
+ Some authors point out that larger households means that more labour is
+ available within the household.
+ The additional advantage of this labour is that it is not subject to the
+ moral hazard effects often attributed to hired labour
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+For instance, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:eee:deveco:v:18:y:1985:i:2-3:p:297-313"
+
+\end_inset
+
+ argues this may the reason why small farms appear to be more efficient
+ than large farms
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The relationship between fertility and household labour supply has been
+ studied most carefully in the field of labour economics.
  Since this literature is so extensive, we only mention two of the most
  influential works here.
  The first is 
@@ -175,20 +216,45 @@ key "RePEc:ucp:jpolec:v:88:y:1980:i:2:p:328-48"
  Since the occurence of twins is exogenous, there is no danger that heterogenity
  in women preferences contaminates the estimated coefficients.
  The study finds that household size reduces female labour supply, but the
- effect is only temporary.
-\end_layout
+ effect is only temporary
+\begin_inset Foot
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
+In addition to studies that investigate the causal effect of household size
+ on (female) labour supply, there are also a range of papers that test Becker's
+ quantity-quality fertility model 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
+LatexCommand citep
+key "RePEc:nbr:nberch:2387,RePEc:ucp:jpolec:v:81:y:1973:i:2:p:s279-88"
 
 \end_inset
 
- focus more on the consumption side effects of household size in a developing
- country context.
- They note the contradiction between widely held views that larger households
- are often poorer and scale economies in consumption.
+.
+ Many of these articles also use twins 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ecm:emetrp:v:48:y:1980:i:1:p:227-40,RePEc:tpr:qjecon:v:120:y:2005:i:2:p:669-700"
+
+\end_inset
+
+ and/or sibling sex composition 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New1,RePEc:ucp:jlabec:v:28:y:2010:i:4:p:773-824"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In addition to the studies 
 \end_layout
 
 \begin_layout Section*
@@ -276,6 +342,13 @@ In developed countries, there is a preference for a mix of sexes among children.
 \end_layout
 
 \begin_layout Standard
+The use of the sex of first born as an instrument as opposed to sex-mix
+ in other studies is motivated by cultural differences between African countries
+ and Western countries.
+ EXPLAIN
+\end_layout
+
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="4">
 <features tabularvalignment="middle">
@@ -335,7 +408,7 @@ first=boy
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.493
 \end_layout
 
 \end_inset
@@ -373,7 +446,7 @@ first=boy
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.500
 \end_layout
 
 \end_inset
@@ -411,7 +484,7 @@ first=girl
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.507
 \end_layout
 
 \end_inset
@@ -449,7 +522,7 @@ first=girl
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.500
 \end_layout
 
 \end_inset
@@ -613,6 +686,17 @@ Average hours worked
 
 \begin_layout Standard
 The fertility effect on household labour provision
+\end_layout
+
+\begin_layout Section*
+Dangers
+\end_layout
+
+\begin_layout Standard
+One could argue that richer people are less inclined to increase the number
+ of children when the first is a boy, but that they are more likely to aim
+ at a balanced sex mix.
+ THIS SHOULD BE INVESTIGATED.
 \end_layout
 
 \begin_layout Standard
