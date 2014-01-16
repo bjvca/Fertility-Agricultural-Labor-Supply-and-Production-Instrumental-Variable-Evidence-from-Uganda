@@ -74,6 +74,15 @@ Introduction
 \end_layout
 
 \begin_layout Standard
+At the most basic level, subsistance farmers in rural Africa combine natural
+ with human resources to make a living.
+ They use mainly household labour on their own small plots to produce for
+ own production.
+ As such, the quantity of family labour available is an important determinant
+ of well-being 
+\end_layout
+
+\begin_layout Standard
 The relationship between well-being and fertility 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -218,7 +227,7 @@ key "RePEc:ucp:jpolec:v:88:y:1980:i:2:p:328-48"
  The study finds that household size reduces female labour supply, but the
  effect is only temporary
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 In addition to studies that investigate the causal effect of household size
@@ -255,6 +264,46 @@ key "New1,RePEc:ucp:jlabec:v:28:y:2010:i:4:p:773-824"
 
 \begin_layout Standard
 In addition to the studies 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:eee:jpolmo:v:24:y:2002:i:6:p:539-559"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is also some evidence on Indonesia.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:dem:demres:v:20:y:2009:i:26"
+
+\end_inset
+
+ looks at the relation between consumption and fertility.
+ In 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:iza:izadps:dp2162"
+
+\end_inset
+
+, they use the same data and methods to relate fertility to household labour
+ supply.
+\end_layout
+
+\begin_layout Standard
+Recent work by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:spr:empeco:v:44:y:2013:i:1:p:355-385"
+
+\end_inset
+
+ looks at different strategies available to estimate the causal effect between
+ household size and 
 \end_layout
 
 \begin_layout Section*
@@ -686,6 +735,16 @@ Average hours worked
 
 \begin_layout Standard
 The fertility effect on household labour provision
+\end_layout
+
+\begin_layout Section*
+Comparison with estimates using multiple births
+\end_layout
+
+\begin_layout Standard
+Our dataset contains 86 households that report multiple births (85 twins
+ and one triplet).
+ This is 
 \end_layout
 
 \begin_layout Section*

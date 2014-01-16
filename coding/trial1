@@ -18,10 +18,16 @@ bysort hh: egen agemother_hh=max(agemother)
 
 *this keeps only suns/daugthers
 keep if h2q5==3 
+drop if h2q8c==.
 *drop multiple births
 duplicates drop hh h2q8c, force
-drop if h2q9>16
+*we have manually investigated births within one year, this seems to be non-existant
+drop if h2q9>16 
+
+
 bysort hh: egen rankage=rank(h2q8c), unique
+
+
 
 
  *gen oldest = 1 if maxage == h2q8c
@@ -93,11 +99,11 @@ use temp_disag, clear
  save firststage, replace
  clear
  
- use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta
  
-gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
-gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
-gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
+gen tottimemale=  a5bq4 + a5bq7 +a5bq10+ a5bq13
+gen tottimefem=  a5bq5 + a5bq8 +a5bq11+ a5bq14
+gen tottimechld=  a5bq6 + a5bq9 +a5bq12+ a5bq15
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
 bysort hh: egen hourschld=sum(tottimechld)
@@ -110,7 +116,10 @@ merge hh using temp
  merge hh using firststage
  keep if _merge==3
  
- regress hoursfem size
+ drop if hoursfem>200
+ drop if hoursmale>200
+ drop if hourschld>200
+ regress hoursfem size percentfmales agefirstborn
 ivregress 2sls hoursfem (size = percentfmales agefirstborn),first
 ivregress 2sls hoursfem (size = oldestgirl agefirstborn),first
 
@@ -121,3 +130,4 @@ ivregress 2sls hoursmale (size = oldestgirl agefirstborn),first
 regress hourschld size
 ivregress 2sls hourschld (size = percentfmales agefirstborn),first
 ivregress 2sls hourschld (size = oldestgirl agefirstborn),first
+

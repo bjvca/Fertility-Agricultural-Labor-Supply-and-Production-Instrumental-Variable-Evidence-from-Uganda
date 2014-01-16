@@ -58,12 +58,12 @@ names(harvest) <-  c("crop","days","sex", "type")
 
 long <- rbind(prepare, weed, input, harvest)
 long <-  subset(long,long$days<200)
-long <- subset(long, long$crop %in% c(130,141,150, 210, 310, 620, 630, 741,742,810) )
+long <- subset(long, long$crop %in% c(130, 210, 620, 630, 741) )
 
 long$crop <-  as.factor(long$crop)
 library(lattice)
-levels(long$crop)<- c("maize", "millet", "sorghum", "beans","gnuts", "s potatoes","cassava", "matooke", "banana","coffee")
-pdf("dotplot.pdf")
+levels(long$crop)<- c("maize", "beans", "s potatoes","cassava", "matooke")
+pdf("/home/bjvca/data/data/fertility and ag productivity/dotplot.pdf")
 dotplot(crop ~ days | sex, data = long, groups = type,
         key = simpleKey(levels(long$type), space = "right"))
 dev.off()
