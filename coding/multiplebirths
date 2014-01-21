@@ -1,0 +1,83 @@
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+* there is a coding error for male=1 female=0
+replace h2q4=0 if h2q4==2
+
+*keep only heads and spouses that are at reproductive age
+
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<18 | h2q9>32) & h2q4==0
+
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
+replace flag=0 if flag==.
+bysort hh: egen flaghh=max(flag)
+drop if flaghh==1
+
+
+*gen age of mother 
+gen agemother=0
+replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen agemother_hh=max(agemother)
+
+*this keeps only suns/daugthers
+keep if h2q5==3 
+drop if h2q8c==.
+*drop multiple births
+
+*we have manually investigated births within one year, this seems to be non-existant
+drop if h2q9>16 
+duplicates tag hh h2q8c, gen(mults)
+replace mults=1 if mults>0
+duplicates drop hh h2q8c,  force
+
+bysort hh: egen rankage=rank(h2q8c), unique
+
+
+
+
+ *gen oldest = 1 if maxage == h2q8c
+ *replace oldest=0 if oldest==.
+
+*some of these children are over 40 years old!
+
+
+*drop if h2q9<2
+
+ gen ones = 1
+ bysort hh: egen size=sum(ones)
+ 
+ gen multrank=rankage*mults
+
+ gen agefirstborn=h2q9 if rankage==1
+ collapse (max) size multrank mults agefirstborn, by(hh)
+
+ drop if size==1
+ 
+  sort hh
+ save firststage_multbirth, replace
+ clear
+ 
+ 
+  use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta
+ 
+gen tottimemale=  a5bq4 + a5bq7 +a5bq10+ a5bq13
+gen tottimefem=  a5bq5 + a5bq8 +a5bq11+ a5bq14
+gen tottimechld=  a5bq6 + a5bq9 +a5bq12+ a5bq15
+bysort hh: egen hoursfem=sum(tottimefem)
+bysort hh: egen hoursmale=sum(tottimemale)
+bysort hh: egen hourschld=sum(tottimechld)
+duplicates drop hh, force
+
+merge hh using temp
+ keep if _merge==3
+ drop _merge
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ 
+ drop if hoursfem>200
+ drop if hoursmale>200
+ drop if hourschld>200
+ 
+
+ivregress 2sls hoursfem (size = mults agefirstborn), robust
+ivregress 2sls hoursmale (size = mults agefirstborn), robust
+ivregress 2sls hourschld (size = mults agefirstborn), robust

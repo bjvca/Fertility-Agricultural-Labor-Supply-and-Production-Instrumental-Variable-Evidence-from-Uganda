@@ -30,7 +30,7 @@ merge hh using temp
  keep if _merge==3
  drop _merge
  sort hh
- merge hh using firststage
+ merge hh using firststage_multbirth
  keep if _merge==3
  
 
@@ -47,7 +47,7 @@ estimates store m3
 ivregress 2sls yield (size = thirdoldestgirl agefirstborn)if cropcode==130 & yield<8000 & size>2, robust
 estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
-
+ivregress 2sls yield (size = mults agefirstborn)if cropcode==130 & yield<8000 & size>1, robust
 
 *beans
 graph box yield if cropcode==210 & yield<4000
@@ -62,7 +62,7 @@ estimates store m3
 ivregress 2sls yield (size = thirdoldestgirl agefirstborn)  if cropcode==210 & yield<6000 & size>2, robust
 estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
-
+ivregress 2sls yield (size = mults agefirstborn)  if cropcode==210 & yield<6000 & size>1, robust
 
 *s potatoes
 graph box yield if cropcode==620 & yield<20000
@@ -77,6 +77,7 @@ estimates store m3
 ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==620 & yield<20000  & size>2, robust
 estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+ivregress 2sls yield (size = mults agefirstborn) if cropcode==620 & yield<20000  & size>1, robust
 
 *cassava
 regress yield size if cropcode==630 & yield<20000, robust
@@ -90,7 +91,7 @@ estimates store m3
 ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==630 & yield<20000 & size>2,  robust
 estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
-
+ivregress 2sls yield (size = mults agefirstborn) if cropcode==630 & yield<20000 & size>1, robust
 
 *matooke
 regress yield size if cropcode==741 & yield<20000, robust
@@ -104,7 +105,7 @@ estimates store m3
 ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==741 & yield<20000 & size>2,  robust
 estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
-
+ivregress 2sls yield (size = mults agefirstborn) if cropcode==741 & yield<20000  & size>1,  robust
 
 *aggregate
 
@@ -123,7 +124,7 @@ merge hh using temp
  keep if _merge==3
  drop _merge
  sort hh
- merge hh using firststage
+ merge hh using firststage_multbirth
  keep if _merge==3
  drop if yield>700000
  drop if yield==0
@@ -138,6 +139,6 @@ merge hh using temp
  ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if size>2,  robust
  estimates store m4
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
- 
+  ivregress 2sls yield (size = mults agefirstborn) if size>1,  robust
  
 *run also in logs?

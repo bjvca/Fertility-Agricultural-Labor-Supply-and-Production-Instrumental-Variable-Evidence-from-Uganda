@@ -1,0 +1,89 @@
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+* there is a coding error for male=1 female=0
+replace h2q4=0 if h2q4==2
+
+*keep only heads and spouses that are at reproductive age
+
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<18 | h2q9>32) & h2q4==0
+
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
+replace flag=0 if flag==.
+bysort hh: egen flaghh=max(flag)
+drop if flaghh==1
+
+
+*gen age of mother 
+gen agemother=0
+replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen agemother_hh=max(agemother)
+
+*this keeps only suns/daugthers
+keep if h2q5==3 
+drop if h2q8c==.
+*drop multiple births
+duplicates drop hh h2q8c, force
+*we have manually investigated births within one year, this seems to be non-existant
+drop if h2q9>16 
+
+percentage girls
+bysort hh: egen rankage=rank(h2q8c), unique
+
+
+
+
+ *gen oldest = 1 if maxage == h2q8c
+ *replace oldest=0 if oldest==.
+
+*some of these children are over 40 years old!
+
+
+*drop if h2q9<2
+
+ gen ones = 1
+ bysort hh: egen size=sum(ones)
+ 
+ replace h2q4=!h2q4
+ 
+label drop H2Q4
+ 
+ regress size h2q4 if rankage==1, robust
+ estimates store m1
+ 
+ regress size h2q9 h2q4 if rankage==1, robust
+ estimates store m2
+ 
+ 
+ 
+gen oldestgirl=1 if rankage==1 & h2q4==1
+replace oldestgirl=0 if oldestgirl==.
+
+gen secondoldestgirl=1 if rankage==2 & h2q4==1
+ replace secondoldestgirl=0 if secondoldestgirl==.
+
+ 
+ gen thirdoldestgirl=1 if rankage==3 & h2q4==1
+ replace thirdoldestgirl=0 if thirdoldestgirl==.
+ gen agefirstborn=h2q9 if rankage==1
+  gen agesecondborn=h2q9 if rankage==2
+   gen agethirdborn=h2q9 if rankage==3
+ save temp_disag, replace
+collapse (max) size oldestgirl secondoldestgirl thirdoldest agefirstborn agesecondborn agethirdborn agemother_hh, by(hh)
+sort hh
+save sizetemp, replace
+
+
+use "/home/bjvca/data/data/fertility and ag productivity/datasets/conpc.dta"
+rename hhid hh
+sort hh
+merge hh using sizetemp
+
+regress cons_pc_nom size, robust
+regress food_pc_nom size, robust
+regress nf_pc_nom size, robust
+
+ivregress 2sls cons_pc_nom (size = oldestgirl agefirstborn),robust
+ivregress 2sls food_pc_nom  (size = oldestgirl agefirstborn),robust
+ivregress 2sls nf_pc_nom  (size = oldestgirl agefirstborn),robust
+
+
+ 

@@ -61,8 +61,8 @@
 \begin_body
 
 \begin_layout Title
-Fertility and Agriculture Production: Instrumental Variable Evidence from
- Uganda
+Fertility, Household Labour Supply and Agricultural Productivity: Instrumental
+ Variable Evidence from Uganda
 \end_layout
 
 \begin_layout Author
@@ -370,7 +370,7 @@ Looking at the sex of the fist-born is only one possible strategy.
  expresses the share of male children in the total.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 Boy preference and fertility
 \end_layout
 
@@ -391,10 +391,75 @@ In developed countries, there is a preference for a mix of sexes among children.
 \end_layout
 
 \begin_layout Standard
+Boy preference is often established by looking at correlations between sex
+ and variables related to well-being or quality of children.
+ For example Previous works on son-preference have studied its eÆects on
+ fertility and sex-ratio (Ben-Porath and Welch 1976, Bloom and Grenier 1983,
+ Leung 1991, Clark 2000), excess mortality among female infants (Das Gupta
+ 1987, Sen 1990), and diÆerential access to health (Chen et.
+ al.
+ 1982, Pande 2003), nutrition (Sen and Sengupta 1983, Behrman 1988, Hazarika
+ 2000) and education (Behrman, Pollak, and Taubman, 1982, 1986, Davis and
+ Zhang 1995, Alderman and King 1998, Orazem and King 2007).
+\end_layout
+
+\begin_layout Standard
+Empirical evidence also shows that the incidence and the intensity of child
+ labor is higher for female children than male children.
+ 1 Edmonds and Pavcnik (2005) using UNICEF MICS (Multiple Indicator Cluster
+ Survey) data Ønd that the incidence of child labor of female children (72.1
+ percent) is much higher compared to male children (64.8 percent).
+ They also Ønd that female children are more likely to work long hours than
+ male children.
+ Allais (2009) using SIMPOC survey data for sixteen countries Ønds similar
+ evidence.
+\end_layout
+
+\begin_layout Standard
 The use of the sex of first born as an instrument as opposed to sex-mix
  in other studies is motivated by cultural differences between African countries
  and Western countries.
- EXPLAIN
+ In countries where no old age insurance if available, parents may choose
+ to invest more in children that have a higher chance of being able to support
+ them at old age 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:ucp:jpolec:v:90:y:1982:i:1:p:52-73"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Even in Western societies, preference for the firstborn to be a son has
+ been observed.
+ For example, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "test"
+
+\end_inset
+
+report an extensive list of studies that find men and/or women prefer a
+ boy rather than a girl as their first-born.
+ Even in the United States, the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
+
+\end_inset
+
+ provides some evidence of an association between having a male child and
+ reduced childbearing at higher parities, in addition to the mixed-child
+ preference.
+\end_layout
+
+\begin_layout Standard
+Beyeza-Kashesy J, Neema S, Ekstrom AM, Kaharuza F, Mirembe F, Kulane A.
+ "Not a boy, not a child": A qualitative study on young people's views on
+ childbearing in Uganda.
+ Afr J Reprod Health 2010;14:71-81.
 \end_layout
 
 \begin_layout Standard
@@ -678,7 +743,7 @@ diff
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 Hours worked 
 \end_layout
 
@@ -733,18 +798,444 @@ Average hours worked
 
 \end_layout
 
+\begin_layout Subsection*
+Productivity
+\end_layout
+
 \begin_layout Standard
-The fertility effect on household labour provision
+We also aggregate the different corps.
+ We use prices from FoodNet.
+ In particular, we average prices observed in Kampala's Nakawa market over
+ the January-June 2005 period.
 \end_layout
 
 \begin_layout Section*
-Comparison with estimates using multiple births
+Two stage least squares
 \end_layout
 
 \begin_layout Standard
-Our dataset contains 86 households that report multiple births (85 twins
- and one triplet).
- This is 
+The first stage results that link sex of first child/children to fertility
+ is reported in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:firststage"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{ccccccc} 
+\backslash
+hline   
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+         &          (1)  &          (2)  &          (3)  &          (4)
+  &          (5) & (6) 
+\backslash
+
+\backslash
+ 
+\backslash
+hline   
+\backslash
+
+\backslash
+ first = girl        &       0.106+ &       0.124** &        &      &    
+          &              
+\backslash
+
+\backslash
+             &     (0.060)  &     (0.042)  &          &    &             
+ &              
+\backslash
+
+\backslash
+ second = girl      &              &              &       0.118* &      &
+        &              
+\backslash
+
+\backslash
+             &              &              &     (0.052)  &             
+ &         &     
+\backslash
+
+\backslash
+ third = girl       &              &              &              &     
+  0.107  &     &         
+\backslash
+
+\backslash
+             &              &              &              &     (0.078) 
+ &   &           
+\backslash
+
+\backslash
+ percentage girls &              &              &              &       
+       &       0.152** &  
+\backslash
+
+\backslash
+ &      &        &              &              &                  (0.058)
+ & 
+\backslash
+
+\backslash
+  multiple births &        &      &              &              &      
+        &       0.382**
+\backslash
+
+\backslash
+             &      &        &              &              &           
+   &     (0.111)  
+\backslash
+
+\backslash
+ R-square          &       0.00  &       0.51  &       0.40  &       0.30  &
+       0.51 & 0.40 
+\backslash
+
+\backslash
+ Obs          &    2784  &    2784  &    2137  &    1463  &    2653 & 2137
+ 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+OLS estimation of household size
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:firststage"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, household labour supply increases by family size.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{cccc} 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	days female	&	days male	&	days children	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+ols	&	5.403**	&	1.625**	&	3.389**	
+\backslash
+
+\backslash
+ 	&	(0.578)	&	(0.350)	&	(0.314)	
+\backslash
+
+\backslash
+ first=girl	&	3.629**	&	1.384**	&	5.662**	
+\backslash
+
+\backslash
+ 	&	(0.773)	&	(0.466)	&	(0.451)	
+\backslash
+
+\backslash
+ first two=girl	&	3.380**	&	0.96	&	7.901**	
+\backslash
+
+\backslash
+ 	&	(1.169)	&	(0.712)	&	(0.677)	
+\backslash
+
+\backslash
+ first three=girl	&	2.402	&	1.198	&	12.069**	
+\backslash
+
+\backslash
+ 	&	(1.885)	&	(1.162)	&	(1.256)	
+\backslash
+
+\backslash
+ percentage girls	&	3.627**	&	1.382**	&	5.672**	
+\backslash
+
+\backslash
+ 	&	(0.773)	&	(0.466)	&	(0.450)	
+\backslash
+
+\backslash
+ multiple births	&	3.457**	&	1.005	&	7.915**	
+\backslash
+
+\backslash
+ 	&	(1.161)	&	(0.710)	&	(0.634)	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2SLS estimates of household labour supply
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Average maize productivity was just under 700 kg per acre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{ccccccc} 
+\backslash
+hline 
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	maize yield	&	beans yield	&	sw potatoes	&	cassava yield	&	matooke yield	&	yie
+ld	
+\backslash
+
+\backslash
+ 
+\backslash
+hline 
+\backslash
+
+\backslash
+ ols	&	12.019	&	17.419	&	44.541**	&	70.345+	&	55.973	&	7137.670**	
+\backslash
+
+\backslash
+ 	&	(16.581)	&	(13.268)	&	(11.664)	&	(39.482)	&	(59.045)	&	(2277.122)	
+\backslash
+
+\backslash
+ fist=girl	&	-0.356	&	28.471+	&	131.191**	&	75.146	&	99.876	&	11023.616**	
+\backslash
+
+\backslash
+ 	&	(20.332)	&	(17.257)	&	(50.453)	&	(49.622)	&	(69.921)	&	(3104.657)	
+\backslash
+
+\backslash
+ first two=girl	&	6.91	&	45.884+	&	129.796+	&	109.374	&	162.816+	&	11286.187*	
+\backslash
+
+\backslash
+ 	&	(28.236)	&	(24.393)	&	(67.834)	&	(74.868)	&	(86.378)	&	(4444.512)	
+\backslash
+
+\backslash
+ first three=girl	&	-2.464	&	25.114	&	-30.614	&	123.246	&	54.888	&	9015.965	
+\backslash
+
+\backslash
+ 	&	(52.137)	&	(40.509)	&	(136.925)	&	(109.509)	&	(158.322)	&	(7574.652)	
+\backslash
+
+\backslash
+ percentage girls	&	-0.195	&	28.426+	&	132.793**	&	73.354	&	99.398	&	11039.970**	
+\backslash
+
+\backslash
+ 	&	(20.447)	&	(17.198)	&	(50.162)	&	(49.596)	&	(69.855)	&	(3103.242)	
+\backslash
+
+\backslash
+ multiple births	&	9.488	&	48.171*	&	134.480*	&	122.182+	&	 178.090*	&	11452.930**	
+\backslash
+
+\backslash
+ 	&	( 28.501)	&	(24.610)	&	(63.138)	&	(70.607)	&	(89.113)	&	(4418.492)	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline  
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2SLS estimates of agricultural productivity
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*

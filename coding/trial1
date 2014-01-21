@@ -11,6 +11,7 @@ replace flag=0 if flag==.
 bysort hh: egen flaghh=max(flag)
 drop if flaghh==1
 
+
 *gen age of mother 
 gen agemother=0
 replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
@@ -24,7 +25,7 @@ duplicates drop hh h2q8c, force
 *we have manually investigated births within one year, this seems to be non-existant
 drop if h2q9>16 
 
-
+percentage girls
 bysort hh: egen rankage=rank(h2q8c), unique
 
 
@@ -45,7 +46,12 @@ bysort hh: egen rankage=rank(h2q8c), unique
  
 label drop H2Q4
  
- regress size h2q9 h2q4 if rankage==1
+ regress size h2q4 if rankage==1, robust
+ estimates store m1
+ 
+ regress size h2q9 h2q4 if rankage==1, robust
+ estimates store m2
+ 
  
  
 gen oldestgirl=1 if rankage==1 & h2q4==1
@@ -53,6 +59,8 @@ replace oldestgirl=0 if oldestgirl==.
 
 gen secondoldestgirl=1 if rankage==2 & h2q4==1
  replace secondoldestgirl=0 if secondoldestgirl==.
+
+ 
  gen thirdoldestgirl=1 if rankage==3 & h2q4==1
  replace thirdoldestgirl=0 if thirdoldestgirl==.
  gen agefirstborn=h2q9 if rankage==1
@@ -73,26 +81,26 @@ sort hh
 save temp, replace
 drop if size<2
 gen second= oldestgirl* secondoldestgir
-regress size second  agefirstborn  
+regress size second  agefirstborn, robust  
+estimates store m3
 
 drop if size<3
 gen third= thirdoldestgirl* secondoldestgirl*oldestgirl 
-regress size third   agefirstborn
+regress size third   agefirstborn, robust
+estimates store m4
 
 
-
-
- 
 * percentage of males
 use temp_disag, clear
  bysort hh: egen sum_fmales= sum(h2q4)
  gen percentfmales=sum_fmales/size
 
  duplicates drop hh, force
- regress size percentfmales agefirstborn
+ regress size percentfmales agefirstborn, robust
+estimates store m5
 
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01) order(h2q4 second third percentfmales ) drop(agefirstborn h2q9 _cons) stats(r2 N) style(tex)
 
- 
  
  predict ypred
  sort hh
@@ -119,15 +127,49 @@ merge hh using temp
  drop if hoursfem>200
  drop if hoursmale>200
  drop if hourschld>200
- regress hoursfem size percentfmales agefirstborn
-ivregress 2sls hoursfem (size = percentfmales agefirstborn),first
-ivregress 2sls hoursfem (size = oldestgirl agefirstborn),first
+ 
+regress hoursfem size, robust
+estimates store m1
+ivregress 2sls hoursfem (size = oldestgirl agefirstborn),robust
+estimates store m2
+ivregress 2sls hoursfem (size = secondoldestgirl agefirstborn) if size>1, robust
+estimates store m3
+ivregress 2sls hoursfem (size = thirdoldestgirl agefirstborn) if size>2, robust
+estimates store m4
+ivregress 2sls hoursfem (size = percentfmales agefirstborn), robust
+estimates store m5
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
 
- regress hoursmale size
-ivregress 2sls hoursmale (size = percentfmales agefirstborn),first
-ivregress 2sls hoursmale (size = oldestgirl agefirstborn),first
 
-regress hourschld size
-ivregress 2sls hourschld (size = percentfmales agefirstborn),first
-ivregress 2sls hourschld (size = oldestgirl agefirstborn),first
+ regress hoursmale size, robust
+ estimates store m1
+ivregress 2sls hoursmale (size = percentfmales agefirstborn),robust
+estimates store m5
+ivregress 2sls hoursmale (size = oldestgirl agefirstborn),robust
+estimates store m2
+ivregress 2sls hoursmale (size = secondoldestgirl agefirstborn) if size>1,robust
+estimates store m3
+ivregress 2sls hoursmale (size = thirdoldestgirl agefirstborn) if size>2,robust
+estimates store m4
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+
+regress hourschld size, robust
+estimates store m1
+ivregress 2sls hourschld (size = percentfmales agefirstborn),robust
+estimates store m5
+ivregress 2sls hourschld (size = oldestgirl agefirstborn),robust
+estimates store m2
+ivregress 2sls hourschld (size = secondoldestgirl agefirstborn) if size>1,robust
+estimates store m3
+ivregress 2sls hourschld (size = thirdoldestgirl agefirstborn) if size>2,robust
+estimates store m4
+
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+
+
+
 
