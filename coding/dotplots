@@ -2,19 +2,19 @@ library(foreign)
 
 * we only use the first cropping season, because this is by far the most important
 
-asec4b <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4b.dta")
-asec5b <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta")
+asec4a <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta")
+asec5a <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta")
 
-merged <- merge(asec4b, asec5b, by.x=c("hh", "a4bq1", "a4bq2"), by.y=c("hh", "a5bq2", "a5bq3"))
+merged <- merge(asec4a, asec5a, by.x=c("hh", "a4aq1", "a4aq2"), by.y=c("hh", "a5aq2", "a5aq3"))
 selhh <- read.dta("/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel.dta")
 merged <- merge(selhh, merged, by.x=c("hh"), by.y=c("hh")) 
 
 
 library(doBy)
 
-males <- cbind(summaryBy(a5bq4 ~  a4bq5b, data=merged,na.rm=T), "male")
-females <- cbind(summaryBy(a5bq5 ~  a4bq5b, data=merged,na.rm=T), "female")
-children <- cbind(summaryBy(a5bq6 ~ a4bq5b, data=merged,na.rm=T), "child")
+males <- cbind(summaryBy(a5aq4 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq5 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq6 ~ a4aq5b, data=merged,na.rm=T), "child")
 
 names(males) <- c("crop","days","sex")
 names(females) <- c("crop","days","sex")
@@ -23,9 +23,9 @@ names(children) <- c("crop","days","sex")
 prepare <- cbind(rbind(males,females, children),"prepare")
 names(prepare) <-  c("crop","days","sex", "type")
 
-males <- cbind(summaryBy(a5bq7 ~ a4bq5b, data=merged,na.rm=T), "male")
-females <- cbind(summaryBy(a5bq8 ~  a4bq5b, data=merged,na.rm=T), "female")
-children <- cbind(summaryBy(a5bq9 ~ a4bq5b, data=merged,na.rm=T), "child")
+males <- cbind(summaryBy(a5aq7 ~ a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq8 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq9 ~ a4aq5b, data=merged,na.rm=T), "child")
 
 names(males) <- c("crop","days","sex")
 names(females) <- c("crop","days","sex")
@@ -34,9 +34,9 @@ names(children) <- c("crop","days","sex")
 input <- cbind(rbind(males,females, children),"input")
 names(input) <-  c("crop","days","sex", "type")
 
-males <- cbind(summaryBy(a5bq10 ~  a4bq5b, data=merged,na.rm=T), "male")
-females <- cbind(summaryBy(a5bq11 ~ a4bq5b, data=merged,na.rm=T), "female")
-children <- cbind(summaryBy(a5bq12 ~  a4bq5b, data=merged,na.rm=T), "child")
+males <- cbind(summaryBy(a5aq10 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq11 ~ a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq12 ~  a4aq5b, data=merged,na.rm=T), "child")
 
 names(males) <- c("crop","days","sex")
 names(females) <- c("crop","days","sex")
@@ -45,9 +45,9 @@ names(children) <- c("crop","days","sex")
 weed <- cbind(rbind(males,females, children),"weed")
 names(weed) <-  c("crop","days","sex", "type")
 
-males <- cbind(summaryBy(a5bq13 ~  a4bq5b, data=merged,na.rm=T), "male")
-females <- cbind(summaryBy(a5bq14 ~  a4bq5b, data=merged,na.rm=T), "female")
-children <- cbind(summaryBy(a5bq15 ~  a4bq5b, data=merged,na.rm=T), "child")
+males <- cbind(summaryBy(a5aq13 ~  a4aq5b, data=merged,na.rm=T), "male")
+females <- cbind(summaryBy(a5aq14 ~  a4aq5b, data=merged,na.rm=T), "female")
+children <- cbind(summaryBy(a5aq15 ~  a4aq5b, data=merged,na.rm=T), "child")
 
 names(males) <- c("crop","days","sex")
 names(females) <- c("crop","days","sex")

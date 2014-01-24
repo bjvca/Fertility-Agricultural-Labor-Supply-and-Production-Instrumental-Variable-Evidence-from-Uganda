@@ -23,7 +23,7 @@ drop if h2q8c==.
 *drop multiple births
 duplicates drop hh h2q8c, force
 *we have manually investigated births within one year, this seems to be non-existant
-drop if h2q9>16 
+drop if h2q9>16
 
 percentage girls
 bysort hh: egen rankage=rank(h2q8c), unique
@@ -97,12 +97,13 @@ use temp_disag, clear
 
  duplicates drop hh, force
  regress size percentfmales agefirstborn, robust
+
 estimates store m5
 
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01) order(h2q4 second third percentfmales ) drop(agefirstborn h2q9 _cons) stats(r2 N) style(tex)
 
  
- predict ypred
+keep hh percentfmales size
  sort hh
  save firststage, replace
  clear
@@ -112,9 +113,20 @@ estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0
 gen tottimemale=  a5bq4 + a5bq7 +a5bq10+ a5bq13
 gen tottimefem=  a5bq5 + a5bq8 +a5bq11+ a5bq14
 gen tottimechld=  a5bq6 + a5bq9 +a5bq12+ a5bq15
+
+gen prepare = a5bq4+a5bq5+a5bq6
+gen input = a5bq7+a5bq8+a5bq9
+gen weeding=a5bq10+a5bq11+a5bq12
+gen harvesting = a5bq13+a5bq14+a5bq15
+
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
 bysort hh: egen hourschld=sum(tottimechld)
+bysort hh: egen hoursprepare=sum(prepare)
+bysort hh: egen hoursinput=sum(input)
+bysort hh: egen hoursweeding=sum(weeding)
+bysort hh: egen hoursharvesting=sum(harvesting)
+
 duplicates drop hh, force
 
 merge hh using temp
@@ -124,19 +136,19 @@ merge hh using temp
  merge hh using firststage
  keep if _merge==3
  
- drop if hoursfem>200
- drop if hoursmale>200
- drop if hourschld>200
+
+
+ drop if agemother_hh==0
  
-regress hoursfem size, robust
+regress hoursfem size agemother_hh agefirstborn, robust
 estimates store m1
-ivregress 2sls hoursfem (size = oldestgirl agefirstborn),robust
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = oldestgirl ),robust
 estimates store m2
-ivregress 2sls hoursfem (size = secondoldestgirl agefirstborn) if size>1, robust
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = secondoldestgirl ) if size>1, robust
 estimates store m3
-ivregress 2sls hoursfem (size = thirdoldestgirl agefirstborn) if size>2, robust
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = thirdoldestgirl ) if size>2, robust
 estimates store m4
-ivregress 2sls hoursfem (size = percentfmales agefirstborn), robust
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = percentfmales ), robust
 estimates store m5
 estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
 

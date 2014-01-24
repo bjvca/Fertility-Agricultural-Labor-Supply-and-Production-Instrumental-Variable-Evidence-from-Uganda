@@ -49,35 +49,54 @@ bysort hh: egen rankage=rank(h2q8c), unique
  gen agefirstborn=h2q9 if rankage==1
  collapse (max) size multrank mults agefirstborn, by(hh)
 
- drop if size==1
+ drop if size==0
  
   sort hh
  save firststage_multbirth, replace
  clear
  
  
-  use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta
+  use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta
  
-gen tottimemale=  a5bq4 + a5bq7 +a5bq10+ a5bq13
-gen tottimefem=  a5bq5 + a5bq8 +a5bq11+ a5bq14
-gen tottimechld=  a5bq6 + a5bq9 +a5bq12+ a5bq15
+gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
+gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
+gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
 bysort hh: egen hourschld=sum(tottimechld)
 duplicates drop hh, force
 
-merge hh using temp
- keep if _merge==3
- drop _merge
+
  sort hh
- merge hh using firststage
+  merge hh using temp
+  keep if _merge==3
+  drop _merge
+ sort hh
+ merge hh using firststage_multbirth
  keep if _merge==3
  
- drop if hoursfem>200
- drop if hoursmale>200
- drop if hourschld>200
+ tab multrank, gen(multranktab)
+ 
+ regress size mults agefirstborn  femhead_hh substrat multranktab2 multranktab3 multranktab4 multranktab5, robust
+ estimates store m1
+ regress size oldestgirl percentfmales mults agefirstborn  femhead_hh substrat multranktab2 multranktab3 multranktab4 multranktab5, robust
+  estimates store m2
+  
+  estout m1 m2 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multrank*)
+ 
  
 
-ivregress 2sls hoursfem (size = mults agefirstborn), robust
-ivregress 2sls hoursmale (size = mults agefirstborn), robust
-ivregress 2sls hourschld (size = mults agefirstborn), robust
+ivregress 2sls hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5  (size = mults), robust first
+weakiv
+
+ivregress 2sls hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
+weakiv
+ivregress 2sls hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
+weakiv
+
+ivreg2  hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+weakiv
+ivreg2  hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+weakiv
+ivreg2  hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+weakiv

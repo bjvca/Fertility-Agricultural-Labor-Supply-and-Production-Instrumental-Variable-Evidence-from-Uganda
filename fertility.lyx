@@ -429,6 +429,22 @@ key "RePEc:ucp:jpolec:v:90:y:1982:i:1:p:52-73"
 \end_inset
 
 .
+ The preference for a boy over a girl results in what 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jayachandran01082011"
+
+\end_inset
+
+ refer to as a stop-after-a-son fertility pattern.
+ In Uganda, this pattern has also been described
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New2"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -456,15 +472,8 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
 \end_layout
 
 \begin_layout Standard
-Beyeza-Kashesy J, Neema S, Ekstrom AM, Kaharuza F, Mirembe F, Kulane A.
- "Not a boy, not a child": A qualitative study on young people's views on
- childbearing in Uganda.
- Afr J Reprod Health 2010;14:71-81.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="4">
+<lyxtabular version="3" rows="8" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -537,6 +546,44 @@ first=boy
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+test
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -840,90 +887,90 @@ status open
 
 
 \backslash
-begin{tabular}{ccccccc} 
+begin{tabular}{cccccc} 
 \backslash
 hline   
 \end_layout
 
 \begin_layout Plain Layout
 
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-         &          (1)  &          (2)  &          (3)  &          (4)
-  &          (5) & (6) 
+ 	&	m1	&	m2	&	m3	&	m4	&	m5	
 \backslash
 
 \backslash
- 
-\backslash
-hline   
+ 	&	b/se	&	b/se	&	b/se	&	b/se	&	b/se	
 \backslash
 
 \backslash
- first = girl        &       0.106+ &       0.124** &        &      &    
-          &              
+ oldestgirl	&	0.126**	&		&		&		&	0.096	
 \backslash
 
 \backslash
-             &     (0.060)  &     (0.042)  &          &    &             
- &              
+ 	&	(0.041)	&		&		&		&	(0.072)	
 \backslash
 
 \backslash
- second = girl      &              &              &       0.118* &      &
-        &              
+ secondoldestgirl	&		&	0.036	&		&		&	0.019	
 \backslash
 
 \backslash
-             &              &              &     (0.052)  &             
- &         &     
+ 	&		&	(0.045)	&		&		&	(0.069)	
 \backslash
 
 \backslash
- third = girl       &              &              &              &     
-  0.107  &     &         
+ percentfmales	&		&		&	0.157**	&		&	0.047	
 \backslash
 
 \backslash
-             &              &              &              &     (0.078) 
- &   &           
+ 	&		&		&	(0.057)	&		&	(0.146)	
 \backslash
 
 \backslash
- percentage girls &              &              &              &       
-       &       0.152** &  
+ mults	&		&		&		&	2.002**	&		
 \backslash
 
 \backslash
- &      &        &              &              &                  (0.058)
- & 
+ 	&		&		&		&	(0.205)	&		
 \backslash
 
 \backslash
-  multiple births &        &      &              &              &      
-        &       0.382**
+ agefirstborn	&	0.244**	&	0.217**	&	0.244**	&	0.211**	&	0.217**	
 \backslash
 
 \backslash
-             &      &        &              &              &           
-   &     (0.111)  
+ 	&	(0.005)	&	(0.006)	&	(0.005)	&	(0.006)	&	(0.006)	
 \backslash
 
 \backslash
- R-square          &       0.00  &       0.51  &       0.40  &       0.30  &
-       0.51 & 0.40 
+ femheadhh	&	-0.365**	&	-0.361**	&	-0.365**	&	-0.338**	&	-0.361**	
 \backslash
 
 \backslash
- Obs          &    2784  &    2784  &    2137  &    1463  &    2653 & 2137
- 
+ 	&	(0.053)	&	(0.059)	&	(0.053)	&	(0.059)	&	(0.059)	
+\backslash
+
+\backslash
+ substrat	&	-0.355**	&	-0.361**	&	-0.355**	&	-0.359**	&	-0.360**	
+\backslash
+
+\backslash
+ 	&	(0.047)	&	(0.054)	&	(0.047)	&	(0.052)	&	(0.054)	
+\backslash
+
+\backslash
+ constant	&	1.232**	&	1.726**	&	1.216**	&	1.768**	&	1.661**	
+\backslash
+
+\backslash
+ 	&	(0.036)	&	(0.050)	&	(0.040)	&	(0.043)	&	(0.057)	
+\backslash
+
+\backslash
+ R-square	&	0.525	&	0.418	&	0.525	&	0.441	&	0.42	
+\backslash
+
+\backslash
+ N-obs	&	2784	&	2137	&	2784	&	2137	&	2137	
 \backslash
 
 \backslash
@@ -987,18 +1034,32 @@ status open
 
 
 \backslash
-begin{tabular}{cccc} 
+begin{tabular}{ccccccc} 
 \backslash
 hline 
 \end_layout
 
 \begin_layout Plain Layout
 
+	&	(1)	&	(2)	&	(3)	&	(4)	&	(5)	&	(6)	
 \end_layout
 
 \begin_layout Plain Layout
 
-	&	days female	&	days male	&	days children	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS	&	2SLS	&	LIML	
 \backslash
 
 \backslash
@@ -1009,60 +1070,225 @@ hline
 
 
 \backslash
-hline  
-\backslash
-
-\backslash
- 
+hline
 \end_layout
 
 \begin_layout Plain Layout
 
-ols	&	5.403**	&	1.625**	&	3.389**	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{days worked female}	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 
 \backslash
- 	&	(0.578)	&	(0.350)	&	(0.314)	
+
+\end_layout
+
+\begin_layout Plain Layout
+
+size	&	4.562**	&	-48.063*	&	-160.914*	&	-76.388**	&	2.04	&	-72.468*	
 \backslash
 
 \backslash
- first=girl	&	3.629**	&	1.384**	&	5.662**	
+ 	&	(1.184)	&	(28.242)	&	(203.801)	&	(47.624)	&	(5.135)	&	(41.761)	
 \backslash
 
 \backslash
- 	&	(0.773)	&	(0.466)	&	(0.451)	
+ agefirstborn	&	-0.101	&	13.309+	&	37.933	&	20.527+	&	0.194	&	17.452+	
 \backslash
 
 \backslash
- first two=girl	&	3.380**	&	0.96	&	7.901**	
+ 	&	(0.422)	&	(7.219)	&	(47.201)	&	(12.170)	&	(1.277)	&	(9.695)	
 \backslash
 
 \backslash
- 	&	(1.169)	&	(0.712)	&	(0.677)	
+ femhead	&	-4.657	&	-22.371*	&	-67.475	&	-31.905+	&	-4.674	&	-33.429+	
 \backslash
 
 \backslash
- first three=girl	&	2.402	&	1.198	&	12.069**	
+ 	&	(3.680)	&	(10.498)	&	(79.756)	&	(17.219)	&	(4.866)	&	(17.183)	
 \backslash
 
 \backslash
- 	&	(1.885)	&	(1.162)	&	(1.256)	
+ substrat	&	-12.725**	&	-18.273**	&	-31.476	&	-21.259*	&	-14.180**	&	-22.212**	
 \backslash
 
 \backslash
- percentage girls	&	3.627**	&	1.382**	&	5.672**	
+ 	&	(3.251)	&	(5.819)	&	(25.565)	&	(8.501)	&	(3.832)	&	(8.091)	
 \backslash
 
 \backslash
- 	&	(0.773)	&	(0.466)	&	(0.450)	
+ cons	&	38.339**	&	104.121**	&	315.405	&	139.529*	&	46.200**	&	169.290*	
 \backslash
 
 \backslash
- multiple births	&	3.457**	&	1.005	&	7.915**	
+ 	&	(2.563)	&	(35.581)	&	(337.025)	&	(59.737)	&	(9.046)	&	(69.511)	
 \backslash
 
 \backslash
- 	&	(1.161)	&	(0.710)	&	(0.634)	
+ Hansen J	&		&		&		&		&		&	1.077	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{male worked female}	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+size	&	1.44	&	-26.533	&	-21.254	&	-43.337*	&	-3.991	&	-42.362+	
+\backslash
+
+\backslash
+ 	&	(1.363)	&	(22.084)	&	(71.683)	&	(30.354)	&	(5.099)	&	(37.774)	
+\backslash
+
+\backslash
+ agefirstborn	&	0.236	&	7.365	&	5.291	&	11.647	&	1.294	&	10.179	
+\backslash
+
+\backslash
+ 	&	(0.423)	&	(5.646)	&	(16.601)	&	(7.763)	&	(1.238)	&	(8.779)	
+\backslash
+
+\backslash
+ femhead	&	-30.933**	&	-40.349**	&	-40.07	&	-46.005**	&	-33.404**	&	-48.195**	
+\backslash
+
+\backslash
+ 	&	(1.980)	&	(7.717)	&	(27.601)	&	(10.903)	&	(3.298)	&	(14.782)	
+\backslash
+
+\backslash
+ substrat	&	-11.594**	&	-14.543**	&	-16.936*	&	-16.315**	&	-15.000**	&	-19.146**	
+\backslash
+
+\backslash
+ 	&	(2.779)	&	(3.862)	&	(8.011)	&	(5.223)	&	(3.206)	&	(5.642)	
+\backslash
+
+\backslash
+ cons	&	32.941**	&	67.908*	&	72.828	&	88.913*	&	44.335**	&	107.700+	
+\backslash
+
+\backslash
+ 	&	(2.173)	&	(27.327)	&	(118.098)	&	(37.916)	&	(8.966)	&	(61.973)	
+\backslash
+
+\backslash
+ Hansen J	&		&		&		&		&		&	1.475	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{days worked children}	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+ size	&	0.8	&	-3.099	&	-24.938	&	-2.202	&	6.58	&	-6.722	
+\backslash
+
+\backslash
+ 	&	(0.513)	&	(6.647)	&	(38.283)	&	(6.584)	&	(5.344)	&	(13.096)	
+\backslash
+
+\backslash
+ agefirstborn	&	1.161**	&	2.154	&	7.512	&	1.926	&	0.177	&	3.294	
+\backslash
+
+\backslash
+ 	&	(0.187)	&	(1.693)	&	(8.866)	&	(1.662)	&	(1.224)	&	(3.029)	
+\backslash
+
+\backslash
+ femhead	&	-2.433**	&	-3.745	&	-12.818	&	-3.444	&	-0.414	&	-5.807	
+\backslash
+
+\backslash
+ 	&	(0.884)	&	(2.366)	&	(14.875)	&	(2.346)	&	(2.273)	&	(5.073)	
+\backslash
+
+\backslash
+ substrat	&	-1.574	&	-1.985	&	-4.412	&	-1.891	&	-1.411	&	-2.504	
+\backslash
+
+\backslash
+ 	&	(1.031)	&	(1.218)	&	(4.615)	&	(1.175)	&	(1.381)	&	(1.800)	
+\backslash
+
+\backslash
+ cons	&	-4.036**	&	0.837	&	34.535	&	-0.283	&	-17.581+	&	4.442	
+\backslash
+
+\backslash
+ 	&	(0.785)	&	(8.303)	&	(63.330)	&	(8.345)	&	(8.986)	&	(21.657)	
+\backslash
+
+\backslash
+ Hansen J	&		&		&		&		&		&	2.639	
+\backslash
+
+\backslash
+ 	&		&		&		&		&		&		
+\backslash
+
+\backslash
+ N	&	2105	&	2105	&	1686	&	2105	&	1686	&	1686	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+instrument:	&	-	&	1st = girl	&	1st 
+\backslash
+& 2nd = girl	&	percent girl	&	multiple births	&	
 \backslash
 
 \backslash
