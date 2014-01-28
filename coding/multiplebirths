@@ -17,6 +17,12 @@ gen agemother=0
 replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
 bysort hh: egen agemother_hh=max(agemother)
 
+*gen femhead indicator
+gen femhead=0
+replace femhead=h2q5==1 if h2q5==1  & h2q4==0
+bysort hh: egen femhead_hh=max(femhead)
+
+
 *this keeps only suns/daugthers
 keep if h2q5==3 
 drop if h2q8c==.
@@ -25,7 +31,7 @@ drop if h2q8c==.
 *we have manually investigated births within one year, this seems to be non-existant
 drop if h2q9>16 
 duplicates tag hh h2q8c, gen(mults)
-replace mults=1 if mults>0
+drop if mults==2
 duplicates drop hh h2q8c,  force
 
 bysort hh: egen rankage=rank(h2q8c), unique
@@ -46,10 +52,24 @@ bysort hh: egen rankage=rank(h2q8c), unique
  
  gen multrank=rankage*mults
 
- gen agefirstborn=h2q9 if rankage==1
- collapse (max) size multrank mults agefirstborn, by(hh)
+drop mults
+gen mults=1 if multrank>0
+replace mults=0 if mults==.
 
- drop if size==0
+ gen agefirstborn=h2q9 if rankage==1
+ collapse (max) size multrank mults agefirstborn femhead_hh , by(hh)
+
+ *** export selected sample here for dotplot
+sort hh
+ save temp, replace
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec1b.dta
+ keep region district substrat hh
+ sort hh
+ merge hh using temp
+ keep if _merge==3
+ drop _merge
+  replace substrat=0 if substrat==3
+  sort hh
  
   sort hh
  save firststage_multbirth, replace

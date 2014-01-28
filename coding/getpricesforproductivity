@@ -1,0 +1,11 @@
+library(foreign)
+
+dta <- read.dta("/home/bjvca/data/data/UGANDA/Foodnet_price/data/UG-FoodNet_whls_prices-99-08-b.dta")
+
+dta <- subset(dta,dta$year==2004)
+
+dta <- subset(dta,dta$month %in% c("Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
+
+dta <- subset(dta,dta$market=="KMP-Nakawa")
+
+tapply(dta$price,dta$cmdty,mean, na.rm=T)

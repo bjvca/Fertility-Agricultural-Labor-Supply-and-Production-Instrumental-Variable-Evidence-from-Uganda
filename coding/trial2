@@ -70,12 +70,12 @@ gen secondoldestgirl=1 if rankage==2 & h2q4==1
    gen agethirdborn=h2q9 if rankage==3
  bysort hh: egen sum_fmales= sum(h2q4)
  gen percentfmales=sum_fmales/size
- gen secondoldesgirl= secondoldestgirl*oldestgirl 
+
 
 
 
    
-collapse (max) size oldestgirl secondoldestgirl  agefirstborn   agemother_hh femhead_hh percentfmales, by(hh)
+collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl agefirstborn   agemother_hh femhead_hh percentfmales, by(hh)
 
 
  *** export selected sample here for dotplot
@@ -91,18 +91,20 @@ sort hh
   sort hh
  
  
- 
+ replace secondoldestgirl=secondoldestgirl*oldestgirl
+  replace thirdoldestgirl=secondoldestgirl*thirdoldestgirl
+  
  *** first stage regressions
 regress size oldestgirl agefirstborn  femhead_hh substrat, robust
 estimates store m1
 regress size secondoldestgirl agefirstborn femhead_hh substrat if size>1,robust
 estimates store m2
+
 regress size percentfmales agefirstborn  femhead_hh substrat, robust
 estimates store m3
 
-reg size  oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat  if size>1,robust
-estimates store m4
-estout m1 m2 m3 m4, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat ) 
+
+estout m1 m2 m3  cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat ) 
 
 ***
 
@@ -165,10 +167,7 @@ estimates store f3
 ivregress 2sls hoursfem  agefirstborn   femhead_hh substrat (size = percentfmales ), robust
 estimates store f4
 
-ivreg2 hoursfem  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
-ivreg2 hoursmale  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
 
-ivreg2 hourschld  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
 
  regress hoursmale size agefirstborn femhead_hh substrat, robust
  estimates store m1
@@ -192,6 +191,8 @@ ivregress 2sls hourschld agefirstborn femhead_hh substrat (size = secondoldestgi
 estimates store c3
 
 
+
+
 clear
 
 
@@ -203,6 +204,17 @@ gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
 bysort hh: egen hourschld=sum(tottimechld)
+
+gen prepare = a5aq4+a5aq5+a5aq6
+gen input = a5aq7+a5aq8+a5aq9
+gen weeding=a5aq10+a5aq11+a5aq12
+gen harvesting = a5aq13+a5aq14+a5aq15
+
+bysort hh: egen hoursprepare=sum(prepare)
+bysort hh: egen hoursinput=sum(input)
+bysort hh: egen hoursweeding=sum(weeding)
+bysort hh: egen hoursharvesting=sum(harvesting)
+
 duplicates drop hh, force
 
 
@@ -217,21 +229,21 @@ duplicates drop hh, force
  tab multrank, gen(multranktab)
 
 
-ivregress 2sls hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5  (size = mults), robust first
+ivregress 2sls hoursfem agefirstborn substrat femhead_hh   (size = mults), robust first
 estimates store f5
-ivregress 2sls hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
+ivregress 2sls hoursmale agefirstborn substrat femhead_hh (size = mults), robust first
 estimates store m5
-ivregress 2sls hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
+ivregress 2sls hourschld agefirstborn substrat femhead_hh  (size = mults), robust first
 estimates store c5
 
-ivreg2  hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+ivreg2  hoursfem agefirstborn substrat femhead_hh   (size =  oldestgirl percentfmales  ) , liml robust
 estimates store f6
-ivreg2  hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+ivreg2  hoursmale agefirstborn substrat femhead_hh (size = oldestgirl  percentfmales), liml robust
 estimates store m6
-ivreg2  hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
+ivreg2  hourschld agefirstborn substrat femhead_hh  (size = oldestgirl percentfmales ), liml robust
 estimates store c6
 
-estout f1 f2 f3 f4 f5 f6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
-estout m1 m2 m3 m4 m5 m6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
-estout c1 c2 c3 c4 c5 c6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
+estout f1 f2 f3 f4 f5 f6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+estout m1 m2 m3 m4 m5 m6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+estout c1 c2 c3 c4 c5 c6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
 

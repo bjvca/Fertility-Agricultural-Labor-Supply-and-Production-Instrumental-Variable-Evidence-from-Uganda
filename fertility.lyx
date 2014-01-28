@@ -362,16 +362,24 @@ Looking at the sex of the fist-born is only one possible strategy.
  context where women bear on average about 6 children.
  Indeed, it is likely that households will get a second child irrespective
  of the sex of the first.
- The story may be different in a household that has already 6 children who
- happen to be all girls.
+ This is supported by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jayachandran01082011"
+
+\end_inset
+
+, who find that the difference in breastfeeding duration between boys and
+ girls is largest near target family size, when gender is most predictive
+ of subsequent fertility.
  Therefore, we will not only use the sex of the firstborn child as an instrument
  for fertility, but also experiment with alternative instruments such as
- an indicator that the first three children are girls or a variable that
- expresses the share of male children in the total.
+ an indicator that the first two children are girls or a variable that expresses
+ the share of male children in the total family size.
 \end_layout
 
 \begin_layout Subsection*
-Boy preference and fertility
+Background - Boy preference and fertility
 \end_layout
 
 \begin_layout Standard
@@ -393,14 +401,43 @@ In developed countries, there is a preference for a mix of sexes among children.
 \begin_layout Standard
 Boy preference is often established by looking at correlations between sex
  and variables related to well-being or quality of children.
- For example Previous works on son-preference have studied its eÆects on
+ For example Previous works on son-preference have studied its effects on
  fertility and sex-ratio (Ben-Porath and Welch 1976, Bloom and Grenier 1983,
  Leung 1991, Clark 2000), excess mortality among female infants (Das Gupta
- 1987, Sen 1990), and diÆerential access to health (Chen et.
+ 1987, Sen 1990), and differential access to health (Chen et.
  al.
  1982, Pande 2003), nutrition (Sen and Sengupta 1983, Behrman 1988, Hazarika
  2000) and education (Behrman, Pollak, and Taubman, 1982, 1986, Davis and
  Zhang 1995, Alderman and King 1998, Orazem and King 2007).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jayachandran01082011"
+
+\end_inset
+
+ argue that son preference leads mothers to breastfeed daughters and children
+ without brothers relatively less long.
+ This underlying consequence of sex bias my partly explain a range of outcomes
+ observerd in the area of health, mortality and possibly even educational
+ attainment.
+ Their model shows that even when parents want both boys and girls to have
+ the same health and education, disparities can araise passively because
+ of fertility preferences.
+ They show that a 
+\begin_inset Quotes eld
+\end_inset
+
+try until you have a boy
+\begin_inset Quotes erd
+\end_inset
+
+ fertility rule results in girls having on average more siblings, leading
+ to more competition for resources within the household.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -796,7 +833,7 @@ Hours worked
 
 \begin_layout Standard
 Most of Uganda has two cropping seasons.
- The first runs from January to June and is by far the most important.
+ The first runs from January to June.
  The second cropping season is from July to December.
  The UNHS 2005/06 interviewed households twice over the course of one year
  to capture this feature.
@@ -804,7 +841,7 @@ Most of Uganda has two cropping seasons.
  season in 2004 (that is, running from July to December 2004).
  Households were revisted at the end on 2005 to record information from
  the first croping season in 2005 (running from January to June 2005).
- In our study, we will only consider the 2005 cropping season.
+ In our study, we will only consider the 2004 cropping season.
 \end_layout
 
 \begin_layout Standard
@@ -870,7 +907,121 @@ reference "tab:firststage"
 \end_inset
 
 .
+ The dependent variable is the number of children born, or what we will
+ refer to as family or household size.
+ Apart from the exogenous variable that is excluded from the regression
+ elaborated in the next paragraphs, we include a series of control variables
+ that are clearly exogenous to fertility in all 5 specifications of the
+ first stage.
+ The first, 
+\emph on
+agefirstborn
+\emph default
+, is the age of the first-born.
+ We do this because our sample consists of households that are at various
+ stages in the life-cycle.
+ We expect that, the older the firstborn, the more children there will be
+ on average in the family.
+ The second exogenous control variable, 
+\emph on
+femhead,
+\emph default
+ is a an indicator variable that takes the value of 1 if the household head
+ is female.
+ The third, 
+\emph on
+urban
+\emph default
+, is an indicator function that takes the value of 1 if the household resides
+ in an urban area
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In some specifications where we expect regional variation in the outcome
+ variable to be important, such as for yields for certain crops, we also
+ include dummies for the four regions in both the first and second stage
+ equations.
+ This addition did not significantly change other estimated paramers in
+ the first stage.
+\end_layout
+
+\end_inset
+
+.
  
+\end_layout
+
+\begin_layout Standard
+Model (1) uses an indicator that takes the value of one if the firstborn
+ in the household is a girl as an excluded instrument.
+ The coefficient is significant at the one percent level and has the expected
+ sign.
+ Having a girl as a first-born increases family size on average by 0.126
+ children.
+ The controls are all significant and have the expected signs.
+ If the firstborn is older, he or she is likely to have more siblings.
+ Households where females are the head are smaller.
+ This also holds for households that are residing in urban areas.
+\end_layout
+
+\begin_layout Standard
+Model (2) uses as excluded instrument an indicator that equals one if the
+ first two children born to the mother in the household are both girls.
+ Using this instrument only makes sense if we confine ourselves to households
+ that have at least two children, hence the significant reduction in the
+ sample size.
+ As in (1) the parameter is significantly positive according to expectations.
+ The control variables are very close to the what they were in model (1).
+\end_layout
+
+\begin_layout Standard
+Model (3) uses a contineous variable as excluded insturment.
+ We calculated the share of girls among children as a percentage of the
+ total number of children in the household.
+ Again, the coefficient has the expected sign.
+ A higher percentage of females within the households is associated with
+ larger family size.
+ This is consistent with 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jayachandran01082011"
+
+\end_inset
+
+, who observe the 
+\begin_inset Quotes eld
+\end_inset
+
+try until you have a boy
+\begin_inset Quotes erd
+\end_inset
+
+ fertility rule leads to an outcome where larger households have on average
+ more girls.
+ Again, the included instruments are similar to the previous models.
+\end_layout
+
+\begin_layout Standard
+Model (5) uses multiple births as an instrument, an identification strategy
+ used in numerous other studies that try to measure the exogenous effect
+ of household size, as mentioned earlier.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, model (6) uses mutiple excluded instruments.
+\end_layout
+
+\begin_layout Standard
+While most of our instruments are significant and have the expected sign,
+ they account for only a small part of the variance in the outcome.
+ The high R-squared reported is mainly due to the explanatory power of the
+ included instruments.
+ If we regress the indicator variable of a first girl on household size,
+ the R-square drops below 1 percent and the coefficient on the indicator
+ is significant only at the 10 percent level.
+ In other words, we have serious concerns that our instruments are weak.
 \end_layout
 
 \begin_layout Standard
@@ -878,118 +1029,6 @@ reference "tab:firststage"
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{cccccc} 
-\backslash
-hline   
-\end_layout
-
-\begin_layout Plain Layout
-
- 	&	m1	&	m2	&	m3	&	m4	&	m5	
-\backslash
-
-\backslash
- 	&	b/se	&	b/se	&	b/se	&	b/se	&	b/se	
-\backslash
-
-\backslash
- oldestgirl	&	0.126**	&		&		&		&	0.096	
-\backslash
-
-\backslash
- 	&	(0.041)	&		&		&		&	(0.072)	
-\backslash
-
-\backslash
- secondoldestgirl	&		&	0.036	&		&		&	0.019	
-\backslash
-
-\backslash
- 	&		&	(0.045)	&		&		&	(0.069)	
-\backslash
-
-\backslash
- percentfmales	&		&		&	0.157**	&		&	0.047	
-\backslash
-
-\backslash
- 	&		&		&	(0.057)	&		&	(0.146)	
-\backslash
-
-\backslash
- mults	&		&		&		&	2.002**	&		
-\backslash
-
-\backslash
- 	&		&		&		&	(0.205)	&		
-\backslash
-
-\backslash
- agefirstborn	&	0.244**	&	0.217**	&	0.244**	&	0.211**	&	0.217**	
-\backslash
-
-\backslash
- 	&	(0.005)	&	(0.006)	&	(0.005)	&	(0.006)	&	(0.006)	
-\backslash
-
-\backslash
- femheadhh	&	-0.365**	&	-0.361**	&	-0.365**	&	-0.338**	&	-0.361**	
-\backslash
-
-\backslash
- 	&	(0.053)	&	(0.059)	&	(0.053)	&	(0.059)	&	(0.059)	
-\backslash
-
-\backslash
- substrat	&	-0.355**	&	-0.361**	&	-0.355**	&	-0.359**	&	-0.360**	
-\backslash
-
-\backslash
- 	&	(0.047)	&	(0.054)	&	(0.047)	&	(0.052)	&	(0.054)	
-\backslash
-
-\backslash
- constant	&	1.232**	&	1.726**	&	1.216**	&	1.768**	&	1.661**	
-\backslash
-
-\backslash
- 	&	(0.036)	&	(0.050)	&	(0.040)	&	(0.043)	&	(0.057)	
-\backslash
-
-\backslash
- R-square	&	0.525	&	0.418	&	0.525	&	0.441	&	0.42	
-\backslash
-
-\backslash
- N-obs	&	2784	&	2137	&	2784	&	2137	&	2137	
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline  
-\backslash
-end{tabular}
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -1010,14 +1049,127 @@ name "tab:firststage"
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{cccccc} 
+\backslash
+hline   
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+ 	&	(1)	&	(2)	&	(3)	&	(4)	&	(5)	
+\backslash
+
+\backslash
+
+\backslash
+hline   		 oldestgirl	&	0.126**	&		&		&		&	0.095	
+\backslash
+
+\backslash
+ 			       				&	(0.041)	&		&		&		&	(0.061)	
+\backslash
+
+\backslash
+ secondoldestgirl	&		&	0.122*	&		&		&		
+\backslash
+
+\backslash
+ 				&		&	(0.052)	&		&		&	
+\backslash
+
+\backslash
+ percentfmales	&		&			&	0.157**	&		&	0.061	
+\backslash
+
+\backslash
+ 				&		&			&	(0.057)	&		&	(0.084)	
+\backslash
+
+\backslash
+ mults			&		&					&		&	0.545**	&		
+\backslash
+
+\backslash
+ 				&		&					&		&	(0.109)	&		
+\backslash
+
+\backslash
+ agefirstborn	&	0.244**	&	0.217**	&	0.244**	&	0.240**	&	0.243**	
+\backslash
+
+\backslash
+ 				&	(0.005)	&	(0.006)	&	(0.005)	&	(0.005)	&	(0.005)	
+\backslash
+
+\backslash
+ femhead		&	-0.365**	&	-0.360**	&	-0.365**	&	-0.344**	&	-0.365**	
+\backslash
+
+\backslash
+ 				&	(0.053)	&	(0.059)	&	(0.053)	&	(0.053)	&	(0.053)	
+\backslash
+
+\backslash
+ urban			&	-0.355**	&	-0.362**	&	-0.355**	&	-0.361**	&	-0.355**	
+\backslash
+
+\backslash
+ 			&	(0.047)	&	(0.054)	&	(0.047)	&	(0.047)	&	(0.047)	
+\backslash
+
+\backslash
+ constant	&	1.232**	&	1.713**	&	1.216**	&	1.293**	&	1.216**	
+\backslash
+
+\backslash
+ 			&	(0.036)	&	(0.046)	&	(0.040)	&	(0.029)	&	(0.040)	
+\backslash
+
+\backslash
+ R-square	&	0.525	&	0.419	&	0.525	&	0.528	&	0.525	
+\backslash
+
+\backslash
+ N-obs		&	2784	&	2137	&	2784	&	 2784	&	2784	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-In general, household labour supply increases by family size.
- 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Household labour supply
 \end_layout
 
 \begin_layout Standard
@@ -1025,6 +1177,18 @@ In general, household labour supply increases by family size.
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2SLS estimates of household labour supply
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1037,6 +1201,8 @@ status open
 begin{tabular}{ccccccc} 
 \backslash
 hline 
+\backslash
+hline
 \end_layout
 
 \begin_layout Plain Layout
@@ -1099,47 +1265,62 @@ multicolumn{7}{c}{days worked female}
 
 \begin_layout Plain Layout
 
-size	&	4.562**	&	-48.063*	&	-160.914*	&	-76.388**	&	2.04	&	-72.468*	
+  size        &       4.562** &     -48.063* &     -68.434** &     -76.388**
+  &       2.554  &     -60.484**  
 \backslash
 
 \backslash
- 	&	(1.184)	&	(28.242)	&	(203.801)	&	(47.624)	&	(5.135)	&	(41.761)	
+             &     (1.184)  &    (28.242)  &    (38.231)  &    (47.624)  & 
+    (7.863)  &    (36.832)  
 \backslash
 
 \backslash
- agefirstborn	&	-0.101	&	13.309+	&	37.933	&	20.527+	&	0.194	&	17.452+	
+ agefirstborn &      -0.101  &      13.309+ &      16.518+ &      20.527+ &
+       0.411  &      16.474+ 
 \backslash
 
 \backslash
- 	&	(0.422)	&	(7.219)	&	(47.201)	&	(12.170)	&	(1.277)	&	(9.695)	
+             &     (0.422)  &     (7.219)  &     (8.862)  &    (12.170)  & 
+    (2.034)  &     (9.411)  
 \backslash
 
 \backslash
- femhead	&	-4.657	&	-22.371*	&	-67.475	&	-31.905+	&	-4.674	&	-33.429+	
+ femhead  &      -4.657  &     -22.371* &     -31.876* &     -31.905+ &    
+  -5.333  &     -26.552* 
 \backslash
 
 \backslash
- 	&	(3.680)	&	(10.498)	&	(79.756)	&	(17.219)	&	(4.866)	&	(17.183)	
+             &     (3.680)  &    (10.498)  &    (15.910)  &    (17.219)  & 
+    (4.516)  &    (13.398)  
 \backslash
 
 \backslash
- substrat	&	-12.725**	&	-18.273**	&	-31.476	&	-21.259*	&	-14.180**	&	-22.212**	
+ substrat    &     -12.725** &     -18.273** &     -21.790** &     -21.259*
+ &     -12.937** &     -19.582** 
 \backslash
 
 \backslash
- 	&	(3.251)	&	(5.819)	&	(25.565)	&	(8.501)	&	(3.832)	&	(8.091)	
+             &     (3.251)  &     (5.819)  &     (7.759)  &     (8.501)  & 
+    (3.335)  &     (6.912)  
 \backslash
 
 \backslash
- cons	&	38.339**	&	104.121**	&	315.405	&	139.529*	&	46.200**	&	169.290*	
+ cons       &      38.339** &     104.121** &     162.626* &     139.529* &
+      40.849** &     119.648** 
 \backslash
 
 \backslash
- 	&	(2.563)	&	(35.581)	&	(337.025)	&	(59.737)	&	(9.046)	&	(69.511)	
+             &     (2.563)  &    (35.581)  &    (63.775)  &    (59.737)  & 
+   (10.134)  &    (46.303)  
 \backslash
 
 \backslash
- Hansen J	&		&		&		&		&		&	1.077	
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Hansen J	&		&		&		&		&		&	0.904	
 \end_layout
 
 \begin_layout Plain Layout
@@ -1169,47 +1350,57 @@ multicolumn{7}{c}{male worked female}
 
 \begin_layout Plain Layout
 
-size	&	1.44	&	-26.533	&	-21.254	&	-43.337*	&	-3.991	&	-42.362+	
+size        &       1.440  &     -26.533  &      -9.674  &     -43.337*  & 
+     -6.952  &     -31.362  
 \backslash
 
 \backslash
- 	&	(1.363)	&	(22.084)	&	(71.683)	&	(30.354)	&	(5.099)	&	(37.774)	
+             &     (1.363)  &    (22.084)  &    (32.051)  &    (30.354)  & 
+    (7.041)  &     (24.783)  
 \backslash
 
 \backslash
- agefirstborn	&	0.236	&	7.365	&	5.291	&	11.647	&	1.294	&	10.179	
+ agefirstborn&       0.236  &       7.365  &       2.609  &      11.647  & 
+      2.375  &       8.595 
 \backslash
 
 \backslash
- 	&	(0.423)	&	(5.646)	&	(16.601)	&	(7.763)	&	(1.238)	&	(8.779)	
+             &     (0.423)  &     (5.646)  &     (7.466)  &     (7.763)  & 
+    (1.833)  &     (6.335)  
 \backslash
 
 \backslash
- femhead	&	-30.933**	&	-40.349**	&	-40.07	&	-46.005**	&	-33.404**	&	-48.195**	
+ femhead  &     -30.933**&     -40.349**&     -35.612**&     -46.005**&    
+ -33.758**&     -41.974**
 \backslash
 
 \backslash
- 	&	(1.980)	&	(7.717)	&	(27.601)	&	(10.903)	&	(3.298)	&	(14.782)	
+             &     (1.980)  &     (7.717)  &    (12.082)  &    (10.903)  & 
+    (3.369)  &     (8.681)  
 \backslash
 
 \backslash
- substrat	&	-11.594**	&	-14.543**	&	-16.936*	&	-16.315**	&	-15.000**	&	-19.146**	
+ substrat    &     -11.594**&     -14.543**&     -15.723**&     -16.315**& 
+    -12.479**&     -15.052**
 \backslash
 
 \backslash
- 	&	(2.779)	&	(3.862)	&	(8.011)	&	(5.223)	&	(3.206)	&	(5.642)	
+             &     (2.779)  &     (3.862)  &     (4.206)  &     (5.223)  & 
+    (2.951)  &     (4.208)  
 \backslash
 
 \backslash
- cons	&	32.941**	&	67.908*	&	72.828	&	88.913*	&	44.335**	&	107.700+	
+ cons       &      32.941**&      67.908* &      53.697  &      88.913* &  
+    43.431**&       73.944*
 \backslash
 
 \backslash
- 	&	(2.173)	&	(27.327)	&	(118.098)	&	(37.916)	&	(8.966)	&	(61.973)	
+             &     (2.173)  &    (27.327)  &    (52.036)  &    (37.916)  & 
+    (9.133)  &     (30.737)  
 \backslash
 
 \backslash
- Hansen J	&		&		&		&		&		&	1.475	
+ Hansen J	&		&		&		&		&		&	2.624	
 \backslash
 
 \backslash
@@ -1229,47 +1420,67 @@ multicolumn{7}{c}{days worked children}
 \backslash
 
 \backslash
- size	&	0.8	&	-3.099	&	-24.938	&	-2.202	&	6.58	&	-6.722	
+
+\end_layout
+
+\begin_layout Plain Layout
+
+size        &       0.800  &      -3.099  &      -8.672  &      -2.202  &  
+    14.003* &      -3.007  
 \backslash
 
 \backslash
- 	&	(0.513)	&	(6.647)	&	(38.283)	&	(6.584)	&	(5.344)	&	(13.096)	
+             &     (0.513)  &     (6.647)  &     (8.979)  &     (6.584)  & 
+    (6.190)  &     (6.327)  
 \backslash
 
 \backslash
- agefirstborn	&	1.161**	&	2.154	&	7.512	&	1.926	&	0.177	&	3.294	
+ agefirstborn&       1.161**&       2.154  &       3.745+ &       1.926  & 
+     -2.204  &       2.131  
 \backslash
 
 \backslash
- 	&	(0.187)	&	(1.693)	&	(8.866)	&	(1.662)	&	(1.224)	&	(3.029)	
+             &     (0.187)  &     (1.693)  &     (2.101)  &     (1.662)  & 
+    (1.561)  &     (1.610)  
 \backslash
 
 \backslash
- femhead	&	-2.433**	&	-3.745	&	-12.818	&	-3.444	&	-0.414	&	-5.807	
+ femhead  &      -2.433**&      -3.745  &      -6.557+ &      -3.444  &    
+   2.011  &      -3.714  
 \backslash
 
 \backslash
- 	&	(0.884)	&	(2.366)	&	(14.875)	&	(2.346)	&	(2.273)	&	(5.073)	
+             &     (0.884)  &     (2.366)  &     (3.680)  &     (2.346)  & 
+    (2.350)  &     (2.264)  
 \backslash
 
 \backslash
- substrat	&	-1.574	&	-1.985	&	-4.412	&	-1.891	&	-1.411	&	-2.504	
+ substrat    &      -1.574  &      -1.985  &      -2.708  &      -1.891  & 
+     -0.182  &      -1.976+ 
 \backslash
 
 \backslash
- 	&	(1.031)	&	(1.218)	&	(4.615)	&	(1.175)	&	(1.381)	&	(1.800)	
+             &     (1.031)  &     (1.218)  &     (1.674)  &     (1.175)  & 
+    (1.483)  &     (1.195)  
 \backslash
 
 \backslash
- cons	&	-4.036**	&	0.837	&	34.535	&	-0.283	&	-17.581+	&	4.442	
+ cons       &      -4.036**&       0.837  &       7.663  &      -0.283  &  
+   -20.541**&       0.722  
 \backslash
 
 \backslash
- 	&	(0.785)	&	(8.303)	&	(63.330)	&	(8.345)	&	(8.986)	&	(21.657)	
+             &     (0.785)  &     (8.303)  &    (14.821)  &     (8.345)  & 
+    (7.865)  &     (7.918)  
 \backslash
 
 \backslash
- Hansen J	&		&		&		&		&		&	2.639	
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Hansen J	&		&		&		&		&		&	0.019	
 \backslash
 
 \backslash
@@ -1277,7 +1488,7 @@ multicolumn{7}{c}{days worked children}
 \backslash
 
 \backslash
- N	&	2105	&	2105	&	1686	&	2105	&	1686	&	1686	
+ N	&	2105	&	2105	&	1686	&	2105	&	2105	&	2105	
 \backslash
 
 \backslash
@@ -1303,7 +1514,9 @@ instrument:	&	-	&	1st = girl	&	1st
 
 
 \backslash
-hline  
+hline 
+\backslash
+hline 
 \backslash
 end{tabular}
 \end_layout
@@ -1314,28 +1527,31 @@ end{tabular}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-2SLS estimates of household labour supply
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Productivity
 \end_layout
 
 \begin_layout Standard
-Average maize productivity was just under 700 kg per acre.
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prod"
+
+\end_inset
+
+ reports on the second stage of different measures of agricultural productivity.
+ The 2SLS has the indicator that the firstborn is a child and the indicator
+ for multiple births as instruments.
+ We chooses these instruments on the basis of teh Sargan statistic and the
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1343,6 +1559,25 @@ Average maize productivity was just under 700 kg per acre.
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2SLS estimates of agricultural productivity
+\begin_inset CommandInset label
+LatexCommand label
+name "prod"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -1355,70 +1590,265 @@ status open
 begin{tabular}{ccccccc} 
 \backslash
 hline 
+\backslash
+hline
 \end_layout
 
 \begin_layout Plain Layout
 
-	&	maize yield	&	beans yield	&	sw potatoes	&	cassava yield	&	matooke yield	&	yie
-ld	
+           &          OLS  &         2SLS  &         OLS  &          2SLS
+  &          OLS  &         2SLS  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& 
+\backslash
+multicolumn{2}{c}{maize productivity}               &   
+\backslash
+multicolumn{2}{c}{beans productivity}     &      
+\backslash
+multicolumn{2}{c}{sweet potatoes}    
 \backslash
 
 \backslash
  
+\end_layout
+
+\begin_layout Plain Layout
+
+size        &      23.260* &     111.901  &      19.996* &     256.388+ &  
+    34.184* &      76.658  
+\backslash
+
+\backslash
+             &    (11.394)  &    (95.185)  &     (9.503)  &   (150.536)  & 
+   (16.652)  &    (96.682)  
+\backslash
+
+\backslash
+ agefirstborn&     -10.434* &     -33.241  &      -3.616  &     -62.624+ & 
+     -5.023  &     -16.340  
+\backslash
+
+\backslash
+             &     (4.081)  &    (24.663)  &     (2.966)  &    (37.730)  & 
+    (5.894)  &    (26.082)  
+\backslash
+
+\backslash
+ femhead  &     -88.643* &     -55.793  &     -35.651  &      40.521  &    
+  50.862  &      74.767  
+\backslash
+
+\backslash
+             &    (44.246)  &    (59.138)  &    (29.156)  &    (60.993)  & 
+   (61.545)  &    (81.735)  
+\backslash
+
+\backslash
+ substrat    &      24.153  &      41.358  &     -37.112  &       2.409  & 
+    -81.175  &     -78.523  
+\backslash
+
+\backslash
+             &    (43.963)  &    (49.784)  &    (27.828)  &    (42.975)  & 
+   (67.127)  &    (68.456)  
+\backslash
+
+\backslash
+ cons       &     613.878**&     517.080**&     190.015**&     106.573  &  
+   602.003**&     505.312**
+\backslash
+
+\backslash
+             &    (41.785)  &   (111.232)  &    (25.254)  &   (178.872)  & 
+   (70.996)  &   (117.469)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N           &    1000.000  &    1000.000  &    1016.000  &    1016.000  &  
+   593.000  &     593.000  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+           &          OLS  &         2SLS  &         OLS  &          2SLS
+  &          OLS  &         2SLS  
+\backslash
+
+\backslash
+   & 
+\backslash
+multicolumn{2}{c}{cassava productivity}               &   
+\backslash
+multicolumn{2}{c}{matooke productivity}     &      
+\backslash
+multicolumn{2}{c}{return per acre}    
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+size        &      -4.943  &     113.817  &     -14.186  &      32.481  &  
+     4.376+ &      15.846  
+\backslash
+
+\backslash
+             &    (19.785)  &   (150.586)  &    (21.387)  &   (150.369)  & 
+    (2.511)  &    (22.621)  
+\backslash
+
+\backslash
+ agefirstborn&       9.267  &     -22.178  &       4.767  &      -6.367  & 
+      0.116  &      -2.781  
+\backslash
+
+\backslash
+             &     (7.034)  &    (40.300)  &     (7.745)  &    (36.414)  & 
+    (0.910)  &     (5.767)  
+\backslash
+
+\backslash
+ femhead  &      63.407  &     107.550  &     136.209  &     152.429  &    
+ -18.115+ &     -14.379  
+\backslash
+
+\backslash
+             &    (74.520)  &    (90.099)  &   (122.254)  &   (128.937)  & 
+    (9.317)  &    (12.423)  
+\backslash
+
+\backslash
+ substrat    &     128.580  &     120.230  &       9.141  &      20.613  & 
+     11.035  &      12.588  
+\backslash
+
+\backslash
+             &   (101.002)  &   (101.353)  &    (98.485)  &   (108.351)  & 
+   (10.236)  &    (10.801)  
+\backslash
+
+\backslash
+ cons       &     565.206**&     438.281**&     640.696**&     886.492**&  
+   164.560**&     182.325**
+\backslash
+
+\backslash
+             &    (67.466)  &   (170.133)  &    (78.026)  &   (206.753)  & 
+    (8.586)  &    (27.490)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N           &     788.000  &     788.000  &     646.000  &     646.000  &  
+  1733.000  &    1733.000  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 hline 
 \backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+consumption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 
 \backslash
- ols	&	12.019	&	17.419	&	44.541**	&	70.345+	&	55.973	&	7137.670**	
+begin{tabular}{ccccccc} 
 \backslash
-
+hline 
 \backslash
- 	&	(16.581)	&	(13.268)	&	(11.664)	&	(39.482)	&	(59.045)	&	(2277.122)	
-\backslash
-
-\backslash
- fist=girl	&	-0.356	&	28.471+	&	131.191**	&	75.146	&	99.876	&	11023.616**	
-\backslash
-
-\backslash
- 	&	(20.332)	&	(17.257)	&	(50.453)	&	(49.622)	&	(69.921)	&	(3104.657)	
-\backslash
-
-\backslash
- first two=girl	&	6.91	&	45.884+	&	129.796+	&	109.374	&	162.816+	&	11286.187*	
-\backslash
-
-\backslash
- 	&	(28.236)	&	(24.393)	&	(67.834)	&	(74.868)	&	(86.378)	&	(4444.512)	
-\backslash
-
-\backslash
- first three=girl	&	-2.464	&	25.114	&	-30.614	&	123.246	&	54.888	&	9015.965	
-\backslash
-
-\backslash
- 	&	(52.137)	&	(40.509)	&	(136.925)	&	(109.509)	&	(158.322)	&	(7574.652)	
-\backslash
-
-\backslash
- percentage girls	&	-0.195	&	28.426+	&	132.793**	&	73.354	&	99.398	&	11039.970**	
-\backslash
-
-\backslash
- 	&	(20.447)	&	(17.198)	&	(50.162)	&	(49.596)	&	(69.855)	&	(3103.242)	
-\backslash
-
-\backslash
- multiple births	&	9.488	&	48.171*	&	134.480*	&	122.182+	&	 178.090*	&	11452.930**	
-\backslash
-
-\backslash
- 	&	( 28.501)	&	(24.610)	&	(63.138)	&	(70.607)	&	(89.113)	&	(4418.492)	
-\backslash
-
-\backslash
- 
+hline
 \end_layout
 
 \begin_layout Plain Layout
@@ -1427,11 +1857,91 @@ hline
 
 \begin_layout Plain Layout
 
+            &          (1)  &          (2)  &          (3)  &          (4)
+  &          (5)  &          (6)  
+\backslash
+
+\backslash
+             &     
+\backslash
+multicolumn{3}{c}{OLS}   &      
+\backslash
+multicolumn{3}{c}{LIML}   
+\backslash
+
+\backslash
+ size          
+\end_layout
+
+\begin_layout Plain Layout
+
+size        &    -201.615**&     -59.138**&    -142.580**&     -68.412  &  
+     6.469  &     -78.246  
+\backslash
+
+\backslash
+             &    (38.068)  &     (6.749)  &    (35.331)  &   (274.527)  & 
+   (56.969)  &   (243.760)  
+\backslash
+
+\backslash
+ substrat    &    1174.614**&     226.106**&     948.691**&    1221.932**& 
+    249.434**&     971.544**
+\backslash
+
+\backslash
+             &   (174.850)  &    (22.680)  &   (160.714)  &   (187.467)  & 
+   (29.249)  &   (170.643)  
+\backslash
+
+\backslash
+ agefirstborn&      74.759**&      10.750**&      64.057**&      42.331  & 
+     -5.219  &      48.395  
+\backslash
+
+\backslash
+             &    (14.481)  &     (2.527)  &    (13.116)  &    (68.764)  & 
+   (14.014)  &    (61.368)  
+\backslash
+
+\backslash
+ femhead  &    -362.186**&     -60.984**&    -301.059**&    -313.744* &    
+ -37.106  &    -277.663* 
+\backslash
+
+\backslash
+             &    (79.099)  &    (19.694)  &    (68.913)  &   (137.291)  & 
+   (29.365)  &   (121.346)  
+\backslash
+
+\backslash
+ cons       &    1213.882**&     594.706**&     618.906**&    1041.242**&  
+   509.633**&     535.526+ 
+\backslash
+
+\backslash
+             &   (115.146)  &    (16.328)  &   (106.433)  &   (366.892)  & 
+   (74.693)  &   (325.352)  
+\backslash
+
+\backslash
+  N           &    2780  &    2781  &    2780  &    2780  &    2781  & 
+   2780  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
 
 
+\backslash
+hline 
 \backslash
 hline  
 \backslash
@@ -1444,35 +1954,12 @@ end{tabular}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-2SLS estimates of agricultural productivity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section*
-Dangers
-\end_layout
-
-\begin_layout Standard
-One could argue that richer people are less inclined to increase the number
- of children when the first is a boy, but that they are more likely to aim
- at a balanced sex mix.
- THIS SHOULD BE INVESTIGATED.
 \end_layout
 
 \begin_layout Standard
