@@ -1,0 +1,134 @@
+ 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+rename a4aq1 parcelID
+rename a4aq2 plotID
+
+sort hh parcelID plotID
+
+save cropID, replace 
+*merge in here time spend 
+
+
+
+ sort hh
+ merge hh using firststage.dta
+ keep if _merge==3
+ 
+bysort hh: egen totarea=sum(areafarmer)
+ 
+ gen hasmaize=1 if cropcode==130
+ replace hasmaize=0 if hasmaize!=1
+ gen maizesize=hasmaize*areafarmer
+ bysort hh: egen maizesize_hh=max(maizesize)
+ bysort hh: egen maizedum=max(hasmaize)
+
+ 
+  gen hasbeans=1 if cropcode==210
+ replace hasbeans=0 if hasbeans!=1
+  gen beanssize=hasbeans*areafarmer
+  bysort hh: egen beanssize_hh=max(beanssize)
+ bysort hh: egen beansdum=max(hasbeans)
+ 
+   gen hassp=1 if cropcode==620
+ replace hassp=0 if hassp!=1
+  gen spsize=hassp*areafarmer
+  bysort hh: egen spsize_hh=max(spsize)
+ bysort hh: egen spdum=max(hassp)
+ 
+   gen hascassava=1 if cropcode==630
+ replace hascassava=0 if hascassava!=1
+   gen cassavasize=hascassava*areafarmer
+  bysort hh: egen cassavasize_hh=max(cassavasize)
+ bysort hh: egen cassavadum=max(hascassava)
+ 
+   gen hasmatookes=1 if cropcode==741
+ replace hasmatooke=0 if hasmatooke!=1
+   gen matookesize=hasmatooke*areafarmer
+  bysort hh: egen matookesize_hh=max(matookesize)
+ bysort hh: egen matookedum=max(hasmatooke)
+ 
+ duplicates drop hh, force
+ 
+ tab region, gen(regdum)
+ regress maizedum size substrat femhead_hh agefirstborn regdum*
+ estimates store s1
+ 
+ ivreg2  maizedum  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+  estimates store s2
+  regress beansdum size substrat femhead_hh agefirstborn regdum*
+   estimates store s3
+ ivreg2  beansdum  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+  estimates store s4
+  regress spdum size substrat femhead_hh agefirstborn regdum*
+   estimates store s5
+ ivreg2  spdum  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+  estimates store s6
+  regress cassavadum size substrat femhead_hh agefirstborn regdum*
+   estimates store s7
+ ivreg2  cassavadum  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+  estimates store s8
+  regress matookedum size substrat femhead_hh agefirstborn regdum*
+   estimates store s9
+ ivreg2  matookedum  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+  estimates store s10
+  
+  estout s1 s2 s3 s4 s5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+   estout s6 s7 s8 s9 s10 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+ 
+ 
+ 
+ ** area under cultivation
+ regress maizesize_hh size substrat femhead_hh agefirstborn regdum*
+ ivreg2  maizesize_hh  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+   regress beanssize_hh size substrat femhead_hh agefirstborn regdum*
+ ivreg2  beanssize_hh  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ 
+  regress spsize_hh size substrat femhead_hh agefirstborn regdum*
+ ivreg2  spsize_hh  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ 
+  regress cassavasize_hh size substrat femhead_hh agefirstborn regdum*
+ ivreg2  cassavasize_hh  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ 
+  regress matookesize_hh size substrat femhead_hh agefirstborn regdum*
+ ivreg2  matookesize_hh  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ 
+  **percentage area under cultivation
+ gen maizesize_per=maizesize_hh/totarea
+  gen beanssize_per=beanssize_hh/totarea
+  gen spsize_per=spsize_hh/totarea
+  gen cassavasize_per=cassavasize_hh/totarea
+  gen matookesize_per=matookesize_hh/totarea
+  
+ regress maizesize_per size substrat femhead_hh agefirstborn regdum*
+ estimates store ar1
+ ivreg2  maizesize_per  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ estimates store ar2  
+   
+   regress beanssize_per size substrat femhead_hh agefirstborn regdum*
+   estimates store ar3
+ ivreg2  beanssize_per  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ estimates store ar4
+ 
+  regress spsize_per size substrat femhead_hh agefirstborn regdum*
+  estimates store ar5
+ ivreg2  spsize_per  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ estimates store ar6
+ 
+  regress cassavasize_per size substrat femhead_hh agefirstborn regdum*
+  estimates store ar7
+ ivreg2  cassavasize_per  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ estimates store ar8
+  regress matookesize_per size substrat femhead_hh agefirstborn regdum*
+  estimates store ar9
+ ivreg2  matookesize_per  substrat femhead_hh agefirstborn regdum* (size=oldestgirl)
+ estimates store ar10
+ 
+   
+  estout ar1 ar2 ar3 ar4 ar5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+   estout ar6 ar7 ar8 ar9 ar10 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
