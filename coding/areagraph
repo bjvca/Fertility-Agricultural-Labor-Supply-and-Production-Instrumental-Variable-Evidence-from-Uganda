@@ -1,0 +1,6 @@
+** R program to plot area use for crop mix
+dta <- c(0.1432195,0.1088201,0.0753075,0.0996381,0.0901299)
+dta <- c(dta,  0.4828849)
+pdf("areas.pdf")
+barplot(as.matrix(sort(dta)),beside=F, horiz=T,legend = c("sw pot","matooke","cassava","beans","maize","other"))
+dev.off()
