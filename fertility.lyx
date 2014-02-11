@@ -76,31 +76,16 @@ Introduction
 \begin_layout Standard
 At the most basic level, subsistance farmers in rural Africa combine natural
  with human resources to make a living.
- They use mainly household labour on their own small plots to produce for
- own production.
+ They use mainly household labour on their own small plots to produce mainly
+ for own production.
  As such, the quantity of family labour available is an important determinant
  of well-being.
- 
-\end_layout
-
-\begin_layout Standard
-The relationship between well-being and fertility 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-In poor, agricultural based societies, at least part of the correlation
- between household size and well-being works through agricultural productivity.
- For instance, larger households may mean more cheap labour is available
- that does not suffer from moral hazard problems of hired labour.
- But higher fertility may also mean that women have less time to devote
- to agricultural production.
+ Family labour availability, generally believed to suffer much less from
+ moral hazard problems, will be a direct function of the number of biological
+ children within the household.
+ For instance, more children means more hands to work on the field.
+ At the same time, more children means mothers, and to a lesser extend siblings
+ and fathers, will need to spend more time on reproductive chores.
  
 \end_layout
 
@@ -108,6 +93,18 @@ In poor, agricultural based societies, at least part of the correlation
 Uganda has one of the highest fertility rates in the world and a substantial
  part of the population lives in rural areas making a living out of semi-subsist
 ance agriculture.
+ Even in the light of substantial reductions in child mortality rate, total
+ fertility rates remain stubbornly high.
+ On average, Ugandan women in rural areas bear on average 6.8 children 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New9"
+
+\end_inset
+
+.
+ The question on how familiy size affects well-being through its effect
+ on production is therefore very important.
  
 \end_layout
 
@@ -126,18 +123,52 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
 \end_inset
 
 .
- We use the fact that male ofsprings are prefered in conservative patriarchal
+ We use the fact that male ofsprings are prefered in conservative, patriarchal
  societies to construct a range of instruments.
  The exogenous variation in the sex of a child can then be used to determine
  the exogenous component of household size.
  Such a two stage least squares approach is expected to yield consistent
- estimates for the causal effect of fertility on agricultural production
- within the household.
+ estimates for the causal effect of fertility on agricultural labour supply
+ and associated agricultural production within the household.
+\end_layout
+
+\begin_layout Standard
+Our findings suggest that high fertility rates cause women to work significnalty
+ less on the family farm.
+ Labour of men and children is unaffacted by family size.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+add results here
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 This article is organized as follows.
- The next section looks at related studies.
+ The next section gives a brief overview of the most prominent papers that
+ are related to the present paper.
+ Then, we make our case for the use of the sex of the first-born as an instrumen
+t.
+ We then present the data on which we will rely, and describe our main variables
+ we will use in the analysis.
+ We then present the results.
+ In this section, we first take a close look at the first stage regression.
+ We then look at the effect of fertility on household labour supply, considering
+ differential effects depending on household demographics as well as agricultura
+l labour activities.
+ We then turn to the effect of household size on crop portfolio and productivity.
+ Finally, we briefly present the effect of fertility on per capita consumption
+ expenditure for reference.
+ A final section concludes.
 \end_layout
 
 \begin_layout Section*
@@ -293,16 +324,18 @@ key "RePEc:iza:izadps:dp2162"
 
 , they use the same data and methods to relate fertility to household labour
  supply.
- Also 
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset citation
 LatexCommand citet
 key "doi:10.1080/00220380500356779"
 
 \end_inset
 
- use sex of the first to children as a natural experiment and find that
+ use sex of the first two children as a natural experiment and find that
  household size has a positive effect on poverty.
- However, about half of this effect can be attributed to endogeneity.
  Recent work by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -315,79 +348,7 @@ key "RePEc:spr:empeco:v:44:y:2013:i:1:p:355-385"
 \end_layout
 
 \begin_layout Section*
-Data and Descriptive Statistics
-\end_layout
-
-\begin_layout Standard
-We will be using the Uganda National Household Survey (UNHS) 2005/06.
- While being somewhat dated, we have chosen this survey because it has much
- more information on agriculture than the more recent UNHS of 2009/10.
- Structured with a standard Living Standard Measurement Survey - Integrated
- Survey on Agriculture (LSMS-ISA) in mind, the UNHS 2005/06 collected detailed
- information on a sample of almost 43000 people in 7500 households in Uganda.
-\end_layout
-
-\begin_layout Standard
-The selection of children is base on the household roster.
- In particluar, we will select individuals that respond they are son or
- daughter of the household head.
- In Uganda, as in most developing countries, households are often extended,
- encompassing several generations.
- This means that such a strategy may also select adults that are son or
- daughter, but never moved out.
- 
-\end_layout
-
-\begin_layout Standard
-From this sample, we select households that are headed by couples that are
- in the reproductive stages or their lives, roughly defined as being between
- the ages of 16 and 60.
- We do this because in the household survey, the relationships are defined
- relative to the household head.
- As such, we 
-\end_layout
-
-\begin_layout Standard
-Ideally, we would like to have a sample of households where all desired
- children where born.
- A household that currently has one child may be in the process of adding
- more children to their family.
- If the first child is a girl, this may mistakenly be interpreted as running
- against our hypothesis that households prefer boys.
- If the first child is a boy, this may lead us to put too much confidence
- in our hypothesis.
- We will investigate the robustness of our results using different strategies.
- First, we will control for the age of the parents (or the age of the first
- born) in the first stage regression.
- Secondly, we will run our regressions using different subsets of the sample,
- for instance selecting only parents that are nearing the end of their reproduct
-ive period.
-\end_layout
-
-\begin_layout Standard
-Looking at the sex of the fist-born is only one possible strategy.
- One may argue that the sex of the first born is not very relevant in a
- context where women bear on average about 6 children.
- Indeed, it is likely that households will get a second child irrespective
- of the sex of the first.
- This is supported by 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "Jayachandran01082011"
-
-\end_inset
-
-, who find that the difference in breastfeeding duration between boys and
- girls is largest near target family size, when gender is most predictive
- of subsequent fertility.
- Therefore, we will not only use the sex of the firstborn child as an instrument
- for fertility, but also experiment with alternative instruments such as
- an indicator that the first two children are girls or a variable that expresses
- the share of male children in the total family size.
-\end_layout
-
-\begin_layout Subsection*
-Background - Boy preference and fertility
+Boy preference and Fertility
 \end_layout
 
 \begin_layout Standard
@@ -653,6 +614,82 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
  provides some evidence of an association between having a male child and
  reduced childbearing at higher parities, in addition to the mixed-child
  preference.
+\end_layout
+
+\begin_layout Section*
+Data and Descriptive Statistics
+\end_layout
+
+\begin_layout Standard
+We will be using the Uganda National Household Survey (UNHS) 2005/06.
+ While being somewhat dated, we have chosen this survey because it has much
+ more information on agriculture than the more recent UNHS of 2009/10.
+ Structured with a standard Living Standard Measurement Survey - Integrated
+ Survey on Agriculture (LSMS-ISA) in mind, the UNHS 2005/06 collected detailed
+ information on a sample of almost 43000 people in 7500 households in Uganda.
+\end_layout
+
+\begin_layout Standard
+The selection of children is base on the household roster.
+ In particluar, we will select individuals that respond they are son or
+ daughter of the household head.
+ In Uganda, as in most developing countries, households are often extended,
+ encompassing several generations.
+ This means that such a strategy may also select adults that are son or
+ daughter, but never moved out.
+ 
+\end_layout
+
+\begin_layout Standard
+From this sample, we select households that are headed by couples that are
+ in the reproductive stages or their lives, roughly defined as being between
+ the ages of 16 and 60.
+ We do this because in the household survey, the relationships are defined
+ relative to the household head.
+ As such, we 
+\end_layout
+
+\begin_layout Standard
+Ideally, we would like to have a sample of households where all desired
+ children where born.
+ A household that currently has one child may be in the process of adding
+ more children to their family.
+ If the first child is a girl, this may mistakenly be interpreted as running
+ against our hypothesis that households prefer boys.
+ If the first child is a boy, this may lead us to put too much confidence
+ in our hypothesis.
+ We will investigate the robustness of our results using different strategies.
+ First, we will control for the age of the parents (or the age of the first
+ born) in the first stage regression.
+ Secondly, we will run our regressions using different subsets of the sample,
+ for instance selecting only parents that are nearing the end of their reproduct
+ive period.
+\end_layout
+
+\begin_layout Standard
+Looking at the sex of the fist-born is only one possible strategy.
+ One may argue that the sex of the first born is not very relevant in a
+ context where women bear on average about 6 children.
+ Indeed, it is likely that households will get a second child irrespective
+ of the sex of the first.
+ This is supported by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Jayachandran01082011"
+
+\end_inset
+
+, who find that the difference in breastfeeding duration between boys and
+ girls is largest near target family size, when gender is most predictive
+ of subsequent fertility.
+ Therefore, we will not only use the sex of the firstborn child as an instrument
+ for fertility, but also experiment with alternative instruments such as
+ an indicator that the first two children are girls or a variable that expresses
+ the share of male children in the total family size.
+\end_layout
+
+\begin_layout Subsection*
+Fertility
 \end_layout
 
 \begin_layout Standard
@@ -974,7 +1011,7 @@ diff
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Hours worked 
 \end_layout
 
@@ -1020,7 +1057,41 @@ Average hours worked
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Crop mix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Average Crops in Area as Percent of Total Land
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename areas.pdf
+	scale 60
+
+\end_inset
+
 
 \end_layout
 
@@ -1029,7 +1100,7 @@ Average hours worked
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Productivity
 \end_layout
 
@@ -1041,7 +1112,11 @@ We also aggregate the different corps.
 \end_layout
 
 \begin_layout Section*
-Two stage least squares
+Results
+\end_layout
+
+\begin_layout Subsubsection*
+The first stage regression
 \end_layout
 
 \begin_layout Standard
