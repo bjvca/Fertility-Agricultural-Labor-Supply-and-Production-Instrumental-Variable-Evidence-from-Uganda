@@ -4,3 +4,5 @@ dta <- c(dta,  0.4828849)
 pdf("areas.pdf")
 barplot(as.matrix(sort(dta)),beside=F, horiz=T,legend = c("sw pot","matooke","cassava","beans","maize","other"))
 dev.off()
+
+*** now trackted

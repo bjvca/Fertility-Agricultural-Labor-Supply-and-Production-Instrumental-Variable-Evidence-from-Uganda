@@ -1,0 +1,16 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@article{RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34,
+	abstract = "The widely held view that larger families tend to be poorer in developing countries has influenced research and policy. The scope for size economies in consumption cautions against this view. We find that the correlation between poverty and size vanishes in Pakistan when the size elasticity of the cost of living is about 0-6. This turns out to be the elasticity implied by a modified version of the food share method of setting scales. By contrast, some measures of child nutritional status indicate an elasticity of unity. Considerations of the weight attached to child versus adult welfare may help resolve the non-robustness of demographic profiles of poverty. Copyright 1995 by Royal Economic Society.",
+	author = "Lanjouw, Peter and Ravallion, Martin",
+	journal = "Economic Journal",
+	keywords = "",
+	month = "November",
+	number = "433",
+	pages = "1415--34",
+	title = "Poverty and Household Size",
+	url = "http://ideas.repec.org/a/ecj/econjl/v105y1995i433p1415-34.html",
+	volume = "105",
+	year = 1995
+}
+

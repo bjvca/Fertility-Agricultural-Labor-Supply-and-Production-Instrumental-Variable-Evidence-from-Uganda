@@ -1,0 +1,165 @@
+ 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+rename a4aq1 parcelID
+rename a4aq2 plotID
+
+sort hh parcelID plotID
+
+save cropID, replace 
+*merge in here time spend 
+
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta, clear
+ 
+ 
+gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
+gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
+gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
+
+rename a5aq2 parcelID 
+rename a5aq3 plotID
+sort hh parcelID plotID
+
+merge hh parcelID plotID using cropID
+
+keep if _merge==3
+
+collapse (sum) tottimemale tottimefem tottimechld, by(hh cropcode)
+
+
+ sort hh
+ merge hh using firststage.dta
+ keep if _merge==3
+ 
+ local crop 130
+regress tottimefem size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act1
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act2
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act3 
+ 
+regress tottimemale size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act4
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act5
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act6
+
+
+regress tottimechld size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act7
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act8
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act9 
+
+estout act1 act2 act3 act4 act5 act6 act7 act8 act9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+
+ local crop 210
+regress tottimefem size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act1
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act2
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act3 
+ 
+regress tottimemale size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act4
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act5
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act6
+
+
+regress tottimechld size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act7
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act8
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act9 
+
+estout act1 act2 act3 act4 act5 act6 act7 act8 act9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+
+ local crop 620
+
+regress tottimefem size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act1
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act2
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act3 
+ 
+regress tottimemale size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act4
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act5
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act6
+
+
+regress tottimechld size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act7
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act8
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act9 
+
+estout act1 act2 act3 act4 act5 act6 act7 act8 act9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+
+ local crop 630
+
+regress tottimefem size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act1
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act2
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act3 
+ 
+regress tottimemale size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act4
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act5
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act6
+
+
+regress tottimechld size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act7
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act8
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act9 
+
+estout act1 act2 act3 act4 act5 act6 act7 act8 act9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+
+ local crop 741
+
+regress tottimefem size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act1
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act2
+ivreg2 tottimefem  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act3 
+ 
+regress tottimemale size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act4
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act5
+ivreg2 tottimemale  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act6
+
+
+regress tottimechld size agefirstborn  femhead_hh substrat if cropcode==`crop' , robust
+estimates store act7
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl )  if cropcode==`crop', robust
+estimates store act8
+ivreg2 tottimechld  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales)  if cropcode==`crop', robust liml
+estimates store act9 
+
+estout act1 act2 act3 act4 act5 act6 act7 act8 act9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
