@@ -2868,6 +2868,246 @@ production and productivity
 \end_layout
 
 \begin_layout Subsection*
+Consumption
+\end_layout
+
+\begin_layout Standard
+The last part of the analysis looks at the effect of fertility on consumption
+ expenditure, an oft used measure of welfare.
+ This part of the analysis therefore comes very close to 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:hhs:aareco:2003_011"
+
+\end_inset
+
+, who use instrument the sex of the first two children as an insturment
+ to isolate the exogenous effect of fertility on poverty in India.
+\end_layout
+
+\begin_layout Standard
+The results are thus similar to the ones found in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:hhs:aareco:2003_011"
+
+\end_inset
+
+.
+ They find that family size is positively related to poverty in India.
+ However, when they allow for endogeneity of fertility, the effect is essentiall
+y halved.
+ In our case, we also initially find a negative effect on consumption per
+ capita, implying a positive effect on poverty.
+ When we account for endogeneity of fertility, the effect also becomes smaller,
+ such that, with our instuments, it becomes insignificantly differnt from
+ zero.
+ However, it may be that the 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1080/00220380500356779"
+
+\end_inset
+
+ are biased.
+ It is well-kown that fertility at birth is already skewed in many Asian
+ countries.
+ India, from which their sample is drawn, is particluarly known for selective
+ abortion of girls 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "New8"
+
+\end_inset
+
+.
+ This suggests a relationship between the instrument and the error term
+ of the structural equation.
+ It is well know that, in the context of weak instruments, such correlation
+ can seriously bias estimates 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "1995"
+
+\end_inset
+
+.
+ The likely negative correlation between the instrument and the error term
+ will mean that, in this case, s
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1080/00220380500356779"
+
+\end_inset
+
+'s estimates are biased downward, in the direction of their original OLS
+ estimate.
+ This bias is likely to be much less pronounced in our data.
+\end_layout
+
+\begin_layout Standard
+There is a second potential problem that affects that affects both our and
+ the results in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1080/00220380500356779"
+
+\end_inset
+
+.
+ Welfare, and the related concept of poverty, relies on consumption per
+ capita.
+ Consumption per capita as the independent variable is likely to be problematic
+ in the two stage least squares setting we use.
+ There is a real danger that our instrumental variable affects the outcome
+ variable directly, instead of only through its influence in family size.
+ For instance, if boys consume on average more than girls, the exlusion
+ restriction is violated.
+ Therefore, we recommend caution should be taken when interpeting these
+ last findings.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+consumption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{ccccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            &          (1)  &          (2)  &          (3)  &          (4)
+  &          (5)  &          (6)  
+\backslash
+
+\backslash
+             &     
+\backslash
+multicolumn{3}{c}{OLS}   &      
+\backslash
+multicolumn{3}{c}{LIML}   
+\backslash
+
+\backslash
+ size          
+\end_layout
+
+\begin_layout Plain Layout
+
+size        &    -201.615**&     -59.138**&    -142.580**&     -68.412  &  
+     6.469  &     -78.246  
+\backslash
+
+\backslash
+             &    (38.068)  &     (6.749)  &    (35.331)  &   (274.527)  & 
+   (56.969)  &   (243.760)  
+\backslash
+
+\backslash
+ substrat    &    1174.614**&     226.106**&     948.691**&    1221.932**& 
+    249.434**&     971.544**
+\backslash
+
+\backslash
+             &   (174.850)  &    (22.680)  &   (160.714)  &   (187.467)  & 
+   (29.249)  &   (170.643)  
+\backslash
+
+\backslash
+ agefirstborn&      74.759**&      10.750**&      64.057**&      42.331  & 
+     -5.219  &      48.395  
+\backslash
+
+\backslash
+             &    (14.481)  &     (2.527)  &    (13.116)  &    (68.764)  & 
+   (14.014)  &    (61.368)  
+\backslash
+
+\backslash
+ femhead  &    -362.186**&     -60.984**&    -301.059**&    -313.744* &    
+ -37.106  &    -277.663* 
+\backslash
+
+\backslash
+             &    (79.099)  &    (19.694)  &    (68.913)  &   (137.291)  & 
+   (29.365)  &   (121.346)  
+\backslash
+
+\backslash
+ cons       &    1213.882**&     594.706**&     618.906**&    1041.242**&  
+   509.633**&     535.526+ 
+\backslash
+
+\backslash
+             &   (115.146)  &    (16.328)  &   (106.433)  &   (366.892)  & 
+   (74.693)  &   (325.352)  
+\backslash
+
+\backslash
+  N           &    2780  &    2781  &    2780  &    2780  &    2781  & 
+   2780  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline  
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
 Conclusion
 \end_layout
 
