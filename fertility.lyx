@@ -95,7 +95,7 @@ Uganda has one of the highest fertility rates in the world and a substantial
 ance agriculture.
  Even in the light of substantial reductions in child mortality rate, total
  fertility rates remain stubbornly high.
- On average, Ugandan women in rural areas bear on average 6.8 children 
+ On average, Ugandan women in rural areas bear 6.8 children 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "New9"
@@ -105,7 +105,9 @@ key "New9"
 .
  The question on how familiy size affects well-being through its effect
  on production is therefore very important.
- 
+ For policy purposes, knowlege on how fertility affects time allocation
+ to work on the field is important to guide efforts related to crop intensificat
+ion and commercialisation.
 \end_layout
 
 \begin_layout Standard
@@ -165,9 +167,7 @@ t.
  We then look at the effect of fertility on household labour supply, considering
  differential effects depending on household demographics as well as agricultura
 l labour activities.
- We then turn to the effect of household size on crop portfolio and productivity.
- Finally, we briefly present the effect of fertility on per capita consumption
- expenditure for reference.
+ We then turn to the effect of household size on productivity.
  A final section concludes.
 \end_layout
 
@@ -176,6 +176,9 @@ Related Studies
 \end_layout
 
 \begin_layout Standard
+Fertility and the related concept of household size impacts household well-being
+ trough consumption and production.
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
@@ -185,11 +188,12 @@ key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
  focus more on the consumption side effects of household size in a developing
  country context.
  They note the contradiction between widely held views that larger households
- are often poorer and scale economies in consumption.
-\end_layout
-
-\begin_layout Standard
-On the production side of the farm household, the effect of household size
+ are often poorer (due to increased competition for a given food stock)
+ and scale economies in consumption.
+ The find that, if economies of scale are accounted for within housholds,
+ the negative correlation between household size and consumption expenditure
+ disappears.
+ On the production side of the farm household, the effect of household size
  is equally ambiguous.
  Some authors point out that larger households means that more labour is
  available within the household.
@@ -213,7 +217,8 @@ key "RePEc:eee:deveco:v:18:y:1985:i:2-3:p:297-313"
 \end_inset
 
 .
- 
+ But at the same time, more dependents within the household means more time
+ needs to be allocated to reproductive activities.
 \end_layout
 
 \begin_layout Standard
@@ -295,14 +300,27 @@ key "New1,RePEc:ucp:jlabec:v:28:y:2010:i:4:p:773-824"
 \end_layout
 
 \begin_layout Standard
-In addition to the studies 
 \begin_inset CommandInset citation
 LatexCommand citet
-key "RePEc:eee:jpolmo:v:24:y:2002:i:6:p:539-559"
+key "doi:10.1080/00220380500356779"
 
 \end_inset
 
-
+ use sex of the first two children as a natural experiment and find that
+ household size has a positive effect on poverty.
+ In our study, we are less ambitious.
+ We feel that there are too many pathways through which household size can
+ influence poverty to be useful.
+ In addition, welfare, and the related concept of poverty, relies on consumption
+ per capita.
+ Consumption per capita as the independent variable is likely to be problematic
+ in the two stage least squares setting.
+ There is a real danger that the instrumental variable affects the outcome
+ variable directly, instead of only through its influence in family size.
+ For instance, if boys consume on average more than girls, the exlusion
+ restriction is violated.
+ Therefore, we recommend caution should be taken when interpeting these
+ last findings.
 \end_layout
 
 \begin_layout Standard
@@ -324,27 +342,48 @@ key "RePEc:iza:izadps:dp2162"
 
 , they use the same data and methods to relate fertility to household labour
  supply.
- 
-\end_layout
-
-\begin_layout Standard
+ This last study probably comes closest to our study.
+ However, all studies we know of employ data from South East Asia.
+ It is well-kown that fertility at birth is already skewed in many Asian
+ countries.
+ For instance India, from which 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "doi:10.1080/00220380500356779"
 
 \end_inset
 
- use sex of the first two children as a natural experiment and find that
- household size has a positive effect on poverty.
- Recent work by 
+ drawn their sample, is particluarly known for selective abortion of girls
+ 
 \begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:spr:empeco:v:44:y:2013:i:1:p:355-385"
+LatexCommand citep
+key "New8"
 
 \end_inset
 
- looks at different strategies available to estimate the causal effect between
- household size and 
+.
+ This suggests a relationship between the instrument and the error term
+ of the structural equation.
+ It is well know that, in the context of weak instruments, such correlation
+ can seriously bias estimates 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "1995"
+
+\end_inset
+
+.
+ The likely negative correlation between the instrument and the error term
+ will mean that, in this case, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "doi:10.1080/00220380500356779"
+
+\end_inset
+
+'s estimates are biased downward, in the direction of their original OLS
+ estimate.
+ This bias is likely to be much less pronounced in our data.
 \end_layout
 
 \begin_layout Section*
@@ -636,17 +675,11 @@ The selection of children is base on the household roster.
  In Uganda, as in most developing countries, households are often extended,
  encompassing several generations.
  This means that such a strategy may also select adults that are son or
- daughter, but never moved out.
+ daughter, but never moved out, while others may have moved out.
+ This is why we choose to select households that are headed by a woman (or
+ where the spouse is) in the reproductive stages or their lives, defined
+ as being between the ages of 18 and 32.
  
-\end_layout
-
-\begin_layout Standard
-From this sample, we select households that are headed by couples that are
- in the reproductive stages or their lives, roughly defined as being between
- the ages of 16 and 60.
- We do this because in the household survey, the relationships are defined
- relative to the household head.
- As such, we 
 \end_layout
 
 \begin_layout Standard
@@ -654,24 +687,39 @@ Ideally, we would like to have a sample of households where all desired
  children where born.
  A household that currently has one child may be in the process of adding
  more children to their family.
+ Assume a couple that has just formed and is entering their reproductive
+ stage.
  If the first child is a girl, this may mistakenly be interpreted as running
  against our hypothesis that households prefer boys.
  If the first child is a boy, this may lead us to put too much confidence
  in our hypothesis.
- We will investigate the robustness of our results using different strategies.
- First, we will control for the age of the parents (or the age of the first
- born) in the first stage regression.
- Secondly, we will run our regressions using different subsets of the sample,
- for instance selecting only parents that are nearing the end of their reproduct
-ive period.
+ The fact that we are working with a cross section of households rather
+ than historical data on births by women that have reached the end of their
+ reproductive lives is also reflected in the average number of children.
+ This is only 2.85 children, while women bear almost 7 children over ther
+ entire reproductive period.
+ We will control for this by including the age of the first born in the
+ regression.
+ 
 \end_layout
 
 \begin_layout Standard
-Looking at the sex of the fist-born is only one possible strategy.
+Looking at the sex of the first-born is only one possible strategy.
  One may argue that the sex of the first born is not very relevant in a
  context where women bear on average about 6 children.
  Indeed, it is likely that households will get a second child irrespective
- of the sex of the first.
+ of the sex of the first
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This may especially be the case when target family size is large, as is
+ the case in Uganda
+\end_layout
+
+\end_inset
+
+.
  This is supported by 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -688,20 +736,96 @@ key "Jayachandran01082011"
  the share of male children in the total family size.
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Fertility
 \end_layout
 
 \begin_layout Standard
+In this section, we will present some descriptive statistics to see if boy
+ preference is reflected in fertility patterns in the Ugandan data.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:gender-and-fertility"
+
+\end_inset
+
+ summarizes our findings.
+ The first two columns asks if households that have a duaghter as first-born
+ are more likely to have an extra child.
+ We simply calculated the percentage of households that had more than one
+ child conditional on their first born being a son or a girl.
+ We find that in the subsample where the first child is a boy, about 37.46
+ percent of households will have at least one more child.
+ However, if the first child happened to be a girl, almost 40 percent of
+ households will have at least one more child.
+ 
+\end_layout
+
+\begin_layout Standard
+The third and fourth column present the same statistics, but now looks the
+ sex of the first two children.
+ As such, there are three possible scenarios.
+ If the first two children are both boys, we expect that the chance that
+ they have extra children is lowest.
+ We find the probability of adding children in this case to be just over
+ 13 percent.
+ If the first was a girl and the second was also a girl, we expect there
+ is a higher chance that parents choose to have extra children.
+ Indeed, we see that for these parents, there is an almost 14 percent chance
+ that they add at least one child to the household.
+ For those that had a first girl but their second child was a boy, we expect
+ the probability of increasing household size to lie between the two, which
+ is indeed the case.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, we compare the average fertility in two different groups defined
+ by the share of female children within the total number of children.
+ As already stated above, because of boy preference, female children are
+ likely to live in larger families.
+ We indeed find that if there are more girls than boys amongst the children,
+ the average number of children is higher.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+gender and fertility
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:gender-and-fertility"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="4">
+<lyxtabular version="3" rows="4" columns="6">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -710,16 +834,16 @@ Fertility
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-share
+other child
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -728,18 +852,36 @@ share
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+other child
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+av fertility
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -748,112 +890,54 @@ first=boy
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.493
+0.3746408
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+first=boy, second=boy
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1318247 
 \end_layout
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-test
+share daugthers<0.5
 \end_layout
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+2.783122
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.500
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -862,83 +946,54 @@ first=girl
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.507
+0.39295977
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+first=girl, second=boy
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.1336207
 \end_layout
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+share daugthers>0.5
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.500
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+2.882875
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-diff
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -947,7 +1002,7 @@ diff
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -956,7 +1011,25 @@ diff
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+first=girl, second=girl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1390086
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -965,36 +1038,7 @@ diff
 
 \end_inset
 </cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1011,12 +1055,20 @@ diff
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection*
 Hours worked 
 \end_layout
 
 \begin_layout Standard
-Most of Uganda has two cropping seasons.
+In this section we will briefly look at some descriptive statistics on labour
+ supply, one of the prime pathways through which fertility affects productivity
+ and well-being.
+ Most of Uganda has two cropping seasons.
  The first runs from January to June.
  The second cropping season is from July to December.
  The UNHS 2005/06 interviewed households twice over the course of one year
@@ -1026,6 +1078,45 @@ Most of Uganda has two cropping seasons.
  Households were revisted at the end on 2005 to record information from
  the first croping season in 2005 (running from January to June 2005).
  In our study, we will only consider the 2004 cropping season.
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Average-hours-worked"
+
+\end_inset
+
+ shows rime reported on the field along different dimensions
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The dimensions are mother, father or child; land preparation, input application,
+ weeding and harvesting; and crop.
+ The crops are the five most grown crops.
+\end_layout
+
+\end_inset
+
+.
+ One of the most obvious observations is that women do most of the work,
+ and child labour is restricted to about one day per crop and activity during
+ the entire season.
+ This already indicates that the trade of between the time lost by the mother
+ because of rearing the children and the time gained by extra hands is likely
+ to work against agricultural production.
+ Typical for Uganda is the low amount of time spent on applying inputs.
+ Farmers in Uganda use very linited amounts of fertilizer and other inputs,
+ so also the time spend on applying them is little.
+ There is also some heterogeneity in the time spend on different crops.
+ For instance, matooke requires less time than maize, both for men and for
+ women.
+ However, there are also difference between the sexes.
+ For instance, women spend much more time cultivating sweet potatoes, and
+ to a lesser extent beans, than men.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1050,45 +1141,14 @@ status open
 
 \begin_layout Plain Layout
 Average hours worked
-\end_layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Average-hours-worked"
 
 \end_inset
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Crop mix
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Average Crops in Area as Percent of Total Land
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename areas.pdf
-	scale 60
 
 \end_inset
 
@@ -1105,10 +1165,60 @@ Productivity
 \end_layout
 
 \begin_layout Standard
-We also aggregate the different corps.
+We also investigate the effect of fertility on productivity, defined as
+ the amount of each crop harvested per unit of land (per acre).
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Average-productivity-for"
+
+\end_inset
+
+ shows average productivty for each of the five most important crops.
+ We also aggregate the different corps by weighing them to average prices.
  We use prices from FoodNet.
  In particular, we average prices observed in Kampala's Nakawa market over
- the January-June 2005 period.
+ the July to December 2004 period.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Average productivity for different crops
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Average-productivity-for"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename barprod.pdf
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -1254,6 +1364,9 @@ key "1995"
 
 , also drops to 3.18.
  In other words, we have serious concerns that our instruments are weak.
+ We therefore use inference that is robust to weak instruments.
+ We rely on the Anderson-Rubin test statistic as implemented in the stata
+ command weakiv.
 \end_layout
 
 \begin_layout Standard
@@ -1618,8 +1731,8 @@ femhead  &      -4.657  &     -22.371* &     -31.876* &     -31.905+ &
 
 \begin_layout Plain Layout
 
-substrat    &     -12.725** &     -18.273** &     -21.790** &     -21.259* &
-        -19.582** 
+urban    &     -12.725** &     -18.273** &     -21.790** &     -21.259* &  
+      -19.582** 
 \backslash
 
 \backslash
@@ -1736,8 +1849,8 @@ femhead  &     -30.933**&     -40.349**&     -35.612**&     -46.005**&
 
 \begin_layout Plain Layout
 
-substrat    &     -11.594**&     -14.543**&     -15.723**&     -16.315**&  
-      -15.052**
+urban    &     -11.594**&     -14.543**&     -15.723**&     -16.315**&     
+   -15.052**
 \backslash
 
 \backslash
@@ -1841,8 +1954,8 @@ femhead  &      -2.433**&      -3.745  &      -6.557+ &      -3.444  &
 
 \begin_layout Plain Layout
 
-substrat    &      -1.574  &      -1.985  &      -2.708  &      -1.891  &  
-      -1.976+ 
+urban    &      -1.574  &      -1.985  &      -2.708  &      -1.891  &     
+   -1.976+ 
 \backslash
 
 \backslash
@@ -1948,14 +2061,60 @@ Columns (2) to (4) esitimate the same models, but instrumenting size with
  of days worked on the field sunstantially.
  A woman now reports to be working about 104 days.
  As expected, less time is spent on agriculture in urban areas.
- Female headed households now work less days on the field, while more time
- is invested if the age of the firstborn is higher.
+ Female headed households now work significantly less days on the field,
+ while more time is invested if the age of the firstborn is higher.
  Most interestingly, we now find that an additional child causes the number
  of days worked on the farm to decrease by almost 50 days.
+ 
+\end_layout
+
+\begin_layout Standard
+Cycling through the results with the alternative instruments, the results
+ change little with respect to significance.
+ According to Hansen-J statistic, our model that uses multiple instruments
+ is valid.
+ We thus assume this is the best specification.
+ This specification tells us that women spend on average almost 120 days
+ in the field.
+ Each additional child causes a reduction of about 60 days.
+\end_layout
+
+\begin_layout Standard
+If we instrument fertility in the models for days worked for males in the
+ household, average days worked also increases.
+ Still, it remains much lower than the average days reported by women.
+ Apart from the large female headedness effect, the only other variable
+ that seems to matter is the urban indicator, where males spend on average
+ significantly less time.
+ There is some indication of a negative effect of fertility on male labour
+ supply, but it is not significantly different from zero.
+ Finally, there is no effect of fertility on child labour.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Labour by Activity
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Labour-by-Activity"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -2005,7 +2164,7 @@ multicolumn{3}{c}{input application}
 \backslash
 
 \backslash
-       size        &       1.443  &     -31.375  &     -37.920  &       0.080
+       size        &       1.443  &     -31.375*  &     -37.920*  &       0.080
   &      -3.428  &      -3.963  
 \backslash
 
@@ -2035,8 +2194,8 @@ multicolumn{3}{c}{input application}
 \backslash
 
 \backslash
- substrat    &      -8.629**&     -12.121**&     -12.817**&      -0.319  & 
-     -0.692  &      -0.749  
+ urban    &      -8.629**&     -12.121**&     -12.817**&      -0.319  &    
+  -0.692  &      -0.749  
 \backslash
 
 \backslash
@@ -2076,7 +2235,17 @@ hline
 
 \begin_layout Plain Layout
 
-          &     
+&          (7)  &          (8)  &          (9)  &          (10)  &     
+     (11)  &          (12)  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+         &     
 \backslash
 multicolumn{3}{c}{weeding}   &      
 \backslash
@@ -2098,7 +2267,7 @@ multicolumn{3}{c}{harvesting}
 \backslash
 
 \backslash
-         size        &       2.479**&     -30.568+ &     -33.809+ &       2.748*
+         size        &       2.479**&     -30.568* &     -33.809* &       2.748*
  &     -12.333  &     -16.817  
 \backslash
 
@@ -2128,8 +2297,8 @@ multicolumn{3}{c}{harvesting}
 \backslash
 
 \backslash
- substrat    &     -10.316**&     -13.831**&     -14.176**&      -7.159**& 
-     -8.764**&      -9.241**
+ urban    &     -10.316**&     -13.831**&     -14.176**&      -7.159**&    
+  -8.764**&      -9.241**
 \backslash
 
 \backslash
@@ -2177,258 +2346,6 @@ end{tabular}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Labour by Activity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-Crop Portfolio
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{cccccc} 
-\backslash
-hline 
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-            &       
-\backslash
-multicolumn{2}{c}{maize}  &        
-\backslash
-multicolumn{2}{c}{beans}  &          sw pot 
-\backslash
-
-\backslash
-             &       OLS  &       2SLS &        OLS  &        2SLS  &  
-     OLS  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-size        &       0.001  &      -0.040  &      -0.004  &       0.081  &  
-     0.001  
-\backslash
-
-\backslash
-             &     (0.004)  &     (0.078)  &     (0.003)  &     (0.070)  & 
-    (0.003)  
-\backslash
-
-\backslash
- substrat    &       0.028* &       0.024  &       0.009  &       0.016  & 
-      0.058**
-\backslash
-
-\backslash
-             &     (0.014)  &     (0.016)  &     (0.011)  &     (0.014)  & 
-    (0.010)  
-\backslash
-
-\backslash
- femhead  &      -0.014  &      -0.028  &       0.024* &       0.052* &    
-   0.021* 
-\backslash
-
-\backslash
-             &     (0.014)  &     (0.029)  &     (0.011)  &     (0.026)  & 
-    (0.011)  
-\backslash
-
-\backslash
- agefirstborn&      -0.002  &       0.009  &      -0.001  &      -0.022  & 
-     -0.001  
-\backslash
-
-\backslash
-             &     (0.001)  &     (0.020)  &     (0.001)  &     (0.018)  & 
-    (0.001)  
-\backslash
-
-\backslash
-  cons       &       0.169**&       0.142  &       0.123**&       0.061  & 
-      0.097**
-\backslash
-
-\backslash
-             &     (0.013)  &     (0.090)  &     (0.010)  &     (0.080)  & 
-    (0.010)  
-\backslash
-
-\backslash
- N           &    2078.000  &    2078.000  &    2078.000  &    2078.000  & 
-   2078.000  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-& se pot &
-\backslash
-multicolumn{2}{c}{cassava} & 
-\backslash
-multicolumn{2}{c}{matooke}  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-      &      2SLS  &       OLS &      2SLS  &     OLS  &     2SLS  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-size        &      -0.027  &       0.004  &       0.100+  &      -0.007* & 
-      0.006  
-\backslash
-
-\backslash
-             &     (0.057)  &     (0.003)  &     (0.072)  &     (0.003)  & 
-    (0.055)  
-\backslash
-
-\backslash
- substrat    &       0.055**&       0.005  &       0.014  &      -0.007  & 
-     -0.006  
-\backslash
-
-\backslash
-             &     (0.012)  &     (0.011)  &     (0.015)  &     (0.010)  & 
-    (0.011)  
-\backslash
-
-\backslash
- femhead  &       0.013  &      -0.009  &       0.022  &      -0.003  &    
-   0.001  
-\backslash
-
-\backslash
-             &     (0.022)  &     (0.011)  &     (0.027)  &     (0.010)  & 
-    (0.021)  
-\backslash
-
-\backslash
- agefirstborn&       0.006  &      -0.002  &      -0.026  &       0.003**& 
-     -0.001  
-\backslash
-
-\backslash
-             &     (0.015)  &     (0.001)  &     (0.018)  &     (0.001)  & 
-    (0.014)  
-\backslash
-
-\backslash
- cons       &       0.087  &       0.088**&      -0.044  &       0.130**&  
-     0.160* 
-\backslash
-
-\backslash
-             &     (0.066)  &     (0.010)  &     (0.083)  &     (0.009)  & 
-    (0.063)  
-\backslash
-
-\backslash
- N           &    2078.000  &    2078.000  &    2078.000  &    2078.000  & 
-   2078.000  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline 
-\backslash
-hline 
-\backslash
-end{tabular}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Fertility and Crop Portfolio area
-\begin_inset CommandInset label
-LatexCommand label
-name "croparea"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -2441,14 +2358,68 @@ name "croparea"
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "croparea"
+reference "tab:Labour-by-Activity"
 
 \end_inset
 
- looks at the crop portfolio in terms of area cultivated by a particular
- crop.
- For beans, the 2SLS parameter on size is positive, but only significant
- at a p-value of 17 percent.
+ looks at reported labour by activity instead of by sex.
+ For instance, model (1) presents OLS results for number of days reported
+ to be spending on land preparation.
+ On average, the houshold spends about 29 days preparing land.
+ There are no fertility effects.
+ Model (2) presents the same model, but instruments fertility with the indicator
+ for the first child being a girl.
+ This increases the average number of hour worked in the field.
+ More importantly, the parameter on fertility now becomes significantly
+ negative.
+ An extra child reduces time spent on land preparation by more than 30 days.
+ The effect is confirmed when we use both percentage of females among the
+ children and the sex of the first-born as instruments (model (3)).
+\end_layout
+
+\begin_layout Standard
+Models (4)-(5) run the same respective regressions, but now with time reported
+ to input application as the dependent variable.
+ The OLS regression indicates households spend less than half a day on this
+ activity.
+ There seems to be no significant effect of fertility on this activity.
+\end_layout
+
+\begin_layout Standard
+Model (7) presents OLS results for time spend on weeding.
+ If we do not properly model endogeneity of fertility, more children mean
+ more weeding is done.
+ Female headed households spend less time on weeding, as do urban households.
+ Households spend on average 21 days weeding and each extra child increases
+ this by about 2.5 days.
+ If we do account for endogeneity of fertility, we find that household size
+ actually decreases time allocated to weeding by more than thirty days.
+ Instrumenting fertility with the sex of the first-born (model (8)) and
+ the sex of the firstborn and the percentage of females amongst the children.
+\end_layout
+
+\begin_layout Standard
+Finally, models (10) to (12) investigate the effects of fertility on harvesting.
+ According to the ordinarly least squares models, there is a positive associatio
+n between the number of children in the family and the number of days worked
+ on the farm (model (10)).
+ The average number of days is about 17 days, lower than time allocated
+ to both perparing the land and weeding.
+ Each additional child is associated with an extra three days of harvesting.
+ However, allowing for endogenity of fertility wipes out the effect (models
+ (11) and (12)).
+\end_layout
+
+\begin_layout Standard
+The above suggests that family size affects land preparation and weeding
+ in a negative way.
+ Harvesting seems to be less related to family size.
+ Probably, when crops are ready to be harvested, farmers are more likely
+ to put in the extra effort.
+ This seems to be less evident for work that has an uncertain payoff in
+ the future.
+ The reductions of time allocated to land preparation and weeding are expected
+ to reduce agricultural productivity.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -2463,10 +2434,8 @@ reference "prod"
 
 \end_inset
 
- reports on the second stage of different measures of agricultural productivity.
- The 2SLS has the indicator that the firstborn is a child and the indicator
- for multiple births as instruments.
- We chooses these instruments on the basis of teh Sargan statistic and the
+ reports on the second stage of agricultural productivity for the five most
+ important crops.
  
 \end_layout
 
@@ -2567,8 +2536,8 @@ size        &      23.260* &     111.901  &      19.996* &     256.388+ &
 \backslash
 
 \backslash
- substrat    &      24.153  &      41.358  &     -37.112  &       2.409  & 
-    -81.175  &     -78.523  
+ urban    &      24.153  &      41.358  &     -37.112  &       2.409  &    
+ -81.175  &     -78.523  
 \backslash
 
 \backslash
@@ -2592,8 +2561,8 @@ size        &      23.260* &     111.901  &      19.996* &     256.388+ &
 
 \begin_layout Plain Layout
 
-N           &    1000.000  &    1000.000  &    1016.000  &    1016.000  &  
-   593.000  &     593.000  
+N           &    1000  &    1000  &    1016  &    1016  &     593  &   
+  593  
 \backslash
 
 \backslash
@@ -2614,7 +2583,7 @@ hline
 \begin_layout Plain Layout
 
            &          OLS  &         2SLS  &         OLS  &          2SLS
-  &          OLS  &         2SLS  
+  &           &     
 \backslash
 
 \backslash
@@ -2622,9 +2591,7 @@ hline
 \backslash
 multicolumn{2}{c}{cassava productivity}               &   
 \backslash
-multicolumn{2}{c}{matooke productivity}     &      
-\backslash
-multicolumn{2}{c}{return per acre}    
+multicolumn{2}{c}{matooke productivity}     &      &   
 \backslash
 
 \backslash
@@ -2634,52 +2601,52 @@ multicolumn{2}{c}{return per acre}
 \begin_layout Plain Layout
 
 size        &      -4.943  &     113.817  &     -14.186  &      32.481  &  
-     4.376+ &      15.846  
+    &      
 \backslash
 
 \backslash
              &    (19.785)  &   (150.586)  &    (21.387)  &   (150.369)  & 
-    (2.511)  &    (22.621)  
+      &      
 \backslash
 
 \backslash
  agefirstborn&       9.267  &     -22.178  &       4.767  &      -6.367  & 
-      0.116  &      -2.781  
+      &      
 \backslash
 
 \backslash
              &     (7.034)  &    (40.300)  &     (7.745)  &    (36.414)  & 
-    (0.910)  &     (5.767)  
+     &      
 \backslash
 
 \backslash
  femhead  &      63.407  &     107.550  &     136.209  &     152.429  &    
- -18.115+ &     -14.379  
+  &      
 \backslash
 
 \backslash
              &    (74.520)  &    (90.099)  &   (122.254)  &   (128.937)  & 
-    (9.317)  &    (12.423)  
+     &  
 \backslash
 
 \backslash
  substrat    &     128.580  &     120.230  &       9.141  &      20.613  & 
-     11.035  &      12.588  
+    &    
 \backslash
 
 \backslash
              &   (101.002)  &   (101.353)  &    (98.485)  &   (108.351)  & 
-   (10.236)  &    (10.801)  
+     &   
 \backslash
 
 \backslash
  cons       &     565.206**&     438.281**&     640.696**&     886.492**&  
-   164.560**&     182.325**
+   & 
 \backslash
 
 \backslash
              &    (67.466)  &   (170.133)  &    (78.026)  &   (206.753)  & 
-    (8.586)  &    (27.490)  
+     &     
 \backslash
 
 \backslash
@@ -2688,8 +2655,7 @@ size        &      -4.943  &     113.817  &     -14.186  &      32.481  &
 
 \begin_layout Plain Layout
 
-N           &     788.000  &     788.000  &     646.000  &     646.000  &  
-  1733.000  &    1733.000  
+N           &     788  &     788  &     646  &     646  &     &    
 \backslash
 
 \backslash
@@ -2767,53 +2733,53 @@ hline
 \backslash
 
 \backslash
- size        &   35202.808**& -182680.699*  &      11.815**&      86.680  &
-   -1418.830+ &  -26562.376+  
+ size        &   35.203**& -182.1*  &      11.815**&      86.680  &   -1.419+
+ &  -26.562+  
 \backslash
 
 \backslash
-             &  (6357.820)  &(129515.246)  &     (3.907)  &    (81.977)  & 
-  (768.892)  & (17847.181)  
+             &  (6.358)  &(129.515)  &     (3.907)  &    (81.977)  &   (0.769)
+  & (17.847)  
 \backslash
 
 \backslash
- agefirstborn&      -1.781  &   55806.815+ &      -1.082  &     -20.267  & 
-   -156.878  &    6283.380  
+ agefirstborn&      -1.781  &   55.807+ &      -1.082  &     -20.267  &    -0.157
+  &    6.283  
 \backslash
 
 \backslash
-             &  (1866.746)  & (33384.522)  &     (1.462)  &    (21.090)  & 
-  (278.892)  &  (4594.421)  
+             &  (1.868)  & (33.384)  &     (1.462)  &    (21.090)  &   (0.279)
+  &  (4.594)  
 \backslash
 
 \backslash
- femhead  &  -86955.458**& -154054.547**&     -30.173* &      -7.030  &  -11265.474**
-&  -19008.644**
+ femhead  &  -86.955**& -154.054**&     -30.173* &      -7.030  &  -11.265**&
+  -19.009**
 \backslash
 
 \backslash
-             & (13530.795)  & (45480.342)  &    (12.166)  &    (27.555)  & 
- (2655.447)  &  (6463.225)  
+             & (13.531)  & (45.480)  &    (12.166)  &    (27.555)  &  (2.655)
+  &  (6.463)  
 \backslash
 
 \backslash
- substrat    &    5934.587  &  -23450.059  &      11.761  &      22.306  & 
-  -1530.008  &   -4920.968  
+ substrat    &    5.934  &  -23.450  &      11.761  &      22.306  &   -1.530
+  &   -4.921  
 \backslash
 
 \backslash
-             & (20645.951)  & (32729.709)  &    (16.629)  &    (20.406)  & 
- (3058.119)  &  (4319.992)  
+             & (20.646)  & (32.730)  &    (16.629)  &    (20.406)  &  (3.058)
+  &  (4.320)  
 \backslash
 
 \backslash
- cons       &  162841.481**&  420911.269**&     106.578**&     157.298+ &  
- 51464.785**&   83998.303**
+ cons       &  162.841**&  420.911**&     106.578**&     157.298+ &   51.464**&
+   83.998**
 \backslash
 
 \backslash
-             & (16953.087)  &(151283.297)  &    (12.708)  &    (92.921)  & 
- (2882.995)  & (20920.872)  
+             & (16.953)  &(151.283)  &    (12.708)  &    (92.921)  &  (2.883)
+  & (20.921)  
 \backslash
 
 \backslash
@@ -2851,250 +2817,6 @@ end{tabular}
 
 \begin_layout Plain Layout
 production and productivity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Consumption
-\end_layout
-
-\begin_layout Standard
-The last part of the analysis looks at the effect of fertility on consumption
- expenditure, an oft used measure of welfare.
- This part of the analysis therefore comes very close to 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:hhs:aareco:2003_011"
-
-\end_inset
-
-, who use instrument the sex of the first two children as an insturment
- to isolate the exogenous effect of fertility on poverty in India.
-\end_layout
-
-\begin_layout Standard
-The results are thus similar to the ones found in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:hhs:aareco:2003_011"
-
-\end_inset
-
-.
- They find that family size is positively related to poverty in India.
- However, when they allow for endogeneity of fertility, the effect is essentiall
-y halved.
- In our case, we also initially find a negative effect on consumption per
- capita, implying a positive effect on poverty.
- When we account for endogeneity of fertility, the effect also becomes smaller,
- such that, with our instuments, it becomes insignificantly differnt from
- zero.
- However, it may be that the 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "doi:10.1080/00220380500356779"
-
-\end_inset
-
- are biased.
- It is well-kown that fertility at birth is already skewed in many Asian
- countries.
- India, from which their sample is drawn, is particluarly known for selective
- abortion of girls 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "New8"
-
-\end_inset
-
-.
- This suggests a relationship between the instrument and the error term
- of the structural equation.
- It is well know that, in the context of weak instruments, such correlation
- can seriously bias estimates 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "1995"
-
-\end_inset
-
-.
- The likely negative correlation between the instrument and the error term
- will mean that, in this case, s
-\begin_inset CommandInset citation
-LatexCommand citet
-key "doi:10.1080/00220380500356779"
-
-\end_inset
-
-'s estimates are biased downward, in the direction of their original OLS
- estimate.
- This bias is likely to be much less pronounced in our data.
-\end_layout
-
-\begin_layout Standard
-There is a second potential problem that affects that affects both our and
- the results in 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "doi:10.1080/00220380500356779"
-
-\end_inset
-
-.
- Welfare, and the related concept of poverty, relies on consumption per
- capita.
- Consumption per capita as the independent variable is likely to be problematic
- in the two stage least squares setting we use.
- There is a real danger that our instrumental variable affects the outcome
- variable directly, instead of only through its influence in family size.
- For instance, if boys consume on average more than girls, the exlusion
- restriction is violated.
- Therefore, we recommend caution should be taken when interpeting these
- last findings.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-consumption
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tabular}{ccccccc} 
-\backslash
-hline 
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-            &          (1)  &          (2)  &          (3)  &          (4)
-  &          (5)  &          (6)  
-\backslash
-
-\backslash
-             &     
-\backslash
-multicolumn{3}{c}{OLS}   &      
-\backslash
-multicolumn{3}{c}{LIML}   
-\backslash
-
-\backslash
- size          
-\end_layout
-
-\begin_layout Plain Layout
-
-size        &    -201.615**&     -59.138**&    -142.580**&     -68.412  &  
-     6.469  &     -78.246  
-\backslash
-
-\backslash
-             &    (38.068)  &     (6.749)  &    (35.331)  &   (274.527)  & 
-   (56.969)  &   (243.760)  
-\backslash
-
-\backslash
- substrat    &    1174.614**&     226.106**&     948.691**&    1221.932**& 
-    249.434**&     971.544**
-\backslash
-
-\backslash
-             &   (174.850)  &    (22.680)  &   (160.714)  &   (187.467)  & 
-   (29.249)  &   (170.643)  
-\backslash
-
-\backslash
- agefirstborn&      74.759**&      10.750**&      64.057**&      42.331  & 
-     -5.219  &      48.395  
-\backslash
-
-\backslash
-             &    (14.481)  &     (2.527)  &    (13.116)  &    (68.764)  & 
-   (14.014)  &    (61.368)  
-\backslash
-
-\backslash
- femhead  &    -362.186**&     -60.984**&    -301.059**&    -313.744* &    
- -37.106  &    -277.663* 
-\backslash
-
-\backslash
-             &    (79.099)  &    (19.694)  &    (68.913)  &   (137.291)  & 
-   (29.365)  &   (121.346)  
-\backslash
-
-\backslash
- cons       &    1213.882**&     594.706**&     618.906**&    1041.242**&  
-   509.633**&     535.526+ 
-\backslash
-
-\backslash
-             &   (115.146)  &    (16.328)  &   (106.433)  &   (366.892)  & 
-   (74.693)  &   (325.352)  
-\backslash
-
-\backslash
-  N           &    2780  &    2781  &    2780  &    2780  &    2781  & 
-   2780  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline 
-\backslash
-hline  
-\backslash
-end{tabular}
 \end_layout
 
 \end_inset

@@ -82,6 +82,7 @@ drop if totval==.
 
 collapse (sum) totval  areafarmer, by(hh)
 
+
 gen yield=totval/areafarmer
 replace yield=yield/1000
 sort hh
@@ -92,7 +93,7 @@ sort hh
  tab region, gen(dreg)
  
  gen prod_cap=totval/hhsize
-  regress  totval  size   agefirstborn femhead_hh substrat dreg* if prod_cap < 190000  , robust 
+  regress  totval  size   agefirstborn femhead_hh substrat dreg* if prod_cap < 180000  , robust 
   estimates store m1
  ivreg2  totval    agefirstborn femhead_hh substrat dreg* (size=oldestgirl) if prod_cap < 190000  , robust 
  estimates store m2
