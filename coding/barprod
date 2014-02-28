@@ -1,0 +1,5 @@
+dta <- c( 548.1171 ,330.1895, 638.921, 576.3543,804.107 )
+pdf("barprod.pdf")
+ barplot(sort(dta,decreasing=T), horiz=T, names.arg=c("matooke","maize","cassava","sw pot","beans"))     
+dev.off()
+
