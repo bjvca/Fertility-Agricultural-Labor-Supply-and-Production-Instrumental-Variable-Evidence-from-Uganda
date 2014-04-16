@@ -1,0 +1,424 @@
+
+clear
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+* there is a coding error for male=1 female=0
+replace h2q4=0 if h2q4==2
+
+shell rm temp.dta
+
+*keep only heads and spouses that are at reproductive age
+
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<=15 | h2q9>49) & h2q4==0
+
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>49) & h2q4==1
+replace flag=0 if flag==.
+bysort hh: egen flaghh=max(flag)
+drop if flaghh==1
+
+
+*gen age of mother 
+gen agemother=0
+replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen agemother_hh=max(agemother)
+
+*gen femhead indicator
+gen femhead=0
+replace femhead=h2q5==1 if h2q5==1  & h2q4==0
+bysort hh: egen femhead_hh=max(femhead)
+
+
+sort hh pid
+save temp, replace
+
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec4.dta 
+keep hh pid h4q4
+gen momedu=0
+replace momedu=1 if h4q4>=14 & h4q4<18 
+replace momedu=2 if h4q4>=18 & h4q4<37  
+replace momedu=3 if h4q4>=37 
+replace momedu=. if h4q4==99 | h4q4==.
+
+sort hh pid
+merge hh pid using temp
+drop if _merge==1
+
+
+gen momedu2=0
+replace momedu2=momedu if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen momedu_hh=max(momedu2)
+
+gen fatedu=0
+replace fatedu=momedu if (h2q5==1 | h2q5==2)  & h2q4==1
+bysort hh: egen fatedu_hh=max(fatedu)
+
+*this keeps only suns/daugthers
+keep if h2q5==3 
+drop if h2q8c==.
+*drop multiple births
+duplicates drop hh h2q8c, force
+*we have manually investigated births within one year, this seems to be non-existant
+drop if h2q9>15
+
+percentage girls
+bysort hh: egen rankage=rank(h2q8c), unique
+
+
+
+
+ *gen oldest = 1 if maxage == h2q8c
+ *replace oldest=0 if oldest==.
+
+*some of these children are over 40 years old!
+
+
+*drop if h2q9<2
+
+ gen ones = 1
+ bysort hh: egen size=sum(ones)
+ 
+ replace h2q4=!h2q4
+ 
+label drop H2Q4
+ 
+
+ 
+ 
+ 
+gen oldestgirl=1 if rankage==1 & h2q4==1
+replace oldestgirl=0 if oldestgirl==.
+
+gen secondoldestgirl=1 if rankage==2 & h2q4==1
+ replace secondoldestgirl=0 if secondoldestgirl==.
+
+ 
+ gen thirdoldestgirl=1 if rankage==3 & h2q4==1
+ replace thirdoldestgirl=0 if thirdoldestgirl==.
+ gen agefirstborn=h2q9 if rankage==1
+  gen agesecondborn=h2q9 if rankage==2
+   gen agethirdborn=h2q9 if rankage==3
+ bysort hh: egen sum_fmales= sum(h2q4)
+ gen percentfmales=sum_fmales/size
+
+
+ collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl momedu_hh fatedu_hh agemother_hh femhead_hh percentfmales, by(hh)
+
+ *** export selected sample here for dotplot
+sort hh
+ save temp, replace
+  use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec16.dta
+ keep if h16q2==110
+ keep hh h16q3
+ rename h16q3 memdead
+ replace memdead=0 if memdead==2
+ sort hh
+ merge hh using temp
+ keep if _merge==3
+ drop _merge
+ 
+sort hh
+ save temp, replace
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec1b.dta
+ keep region district substrat hmult hh
+ sort hh
+ merge hh using temp
+ keep if _merge==3
+ drop _merge
+  replace substrat=0 if substrat==3
+  sort hh
+  tostring hh, gen(strhh)
+  generate str comm = substr(strhh,1,8)
+sort comm  
+save temp, replace   
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_COMM_DATA/csec2
+keep if c2q1==6  | c2q1==7
+keep if c2q3a==1
+duplicates drop comm, force
+sort comm
+merge comm using temp
+drop _merge
+rename c2q3a health
+replace health=0 if health==.
+sort comm  
+save temp, replace   
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_COMM_DATA/csec2
+keep if c2q1==1
+keep if c2q3a==1
+duplicates drop comm, force
+sort comm
+merge comm using temp
+rename c2q3a pschool
+replace pschool=0 if pschool==.
+
+
+  
+ 
+ 
+ replace secondoldestgirl=secondoldestgirl*oldestgirl
+  replace thirdoldestgirl=secondoldestgirl*thirdoldestgirl
+ 
+ drop _merge
+ sort agemother_hh
+ merge agemother_hh using "/home/bjvca/data/data/fertility and ag productivity/datasets/maxbirths.dta"
+ keep if _merge==3
+ drop _merge
+ 
+ gen dif_size= maxsize- size
+ 
+ *** first stage regressions
+regress dif_size oldestgirl  femhead_hh substrat, robust
+tab momedu_hh, gen(momedu_hh_dum)
+drop momedu_hh_dum1
+replace momedu_hh_dum2=1 if momedu_hh_dum3==1
+replace momedu_hh_dum3=1 if momedu_hh_dum4==1
+replace momedu_hh_dum2=1 if  momedu_hh_dum4==1
+
+
+
+regress dif_size oldestgirl   femhead_hh substrat momedu_hh_dum* health pschool memdead, robust
+
+estimates store m1
+regress dif_size secondoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>1,robust
+estimates store m2
+regress dif_size thirdoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>2,robust
+estimates store m3
+regress  dif_size percentfmales   femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
+estimates store m4
+
+
+estout m1 m2 m3 m4 cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat ) 
+
+***
+
+*add later
+ *regress size multi agefirstborn  femhead_hh substrat multrank, robust
+
+ 
+ 
+ save temp, replace
+ 
+ 
+ drop _merge
+sort hh
+ save firststage, replace
+
+
+ 
+ keep hh
+ duplicates drop hh, force
+ save "/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel", replace
+
+  
+
+ 
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta, clear
+ 
+ 
+gen tottimemale=  a5aq4 + a5aq7 +a5aq10+ a5aq13
+gen tottimefem=  a5aq5 + a5aq8 +a5aq11+ a5aq14
+gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
+
+
+bysort hh: egen hoursfem=sum(tottimefem)
+bysort hh: egen hoursmale=sum(tottimemale)
+bysort hh: egen hourschld=sum(tottimechld)
+
+
+duplicates drop hh, force
+
+
+ merge hh using firststage
+ keep if _merge==3
+ 
+
+
+ 
+ 
+regress hoursfem dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
+estimates store f1
+ivregress 2sls  hoursfem femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = oldestgirl ),robust
+estimates store f2
+ivregress 2sls  hoursfem femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = secondoldestgirl ) if size>1, robust
+estimates store f3
+
+ivregress 2sls  hoursfem femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = percentfmales ), robust
+estimates store f4
+
+
+
+ regress hoursmale dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead, robust
+ estimates store m1
+ivregress 2sls hoursmale   femhead_hh substrat momedu_hh_dum*  health pschool memdead ( dif_size = percentfmales ),robust
+estimates store m4
+ivregress 2sls hoursmale   femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = oldestgirl ),robust
+estimates store m2
+ivregress 2sls hoursmale   femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = secondoldestgirl ) if size>1,robust
+estimates store m3
+
+
+
+
+regress hourschld dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead, robust
+estimates store c1
+ivregress 2sls hourschld  femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size = percentfmales ),robust
+estimates store c4
+ivregress 2sls hourschld  femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = oldestgirl ),robust
+estimates store c2
+ivregress 2sls hourschld  femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = secondoldestgirl ) if size>1,robust
+estimates store c3
+
+
+
+
+clear
+
+
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta
+
+gen prepare = a5aq4+a5aq5+a5aq6
+gen input = a5aq7+a5aq8+a5aq9
+gen weeding=a5aq10+a5aq11+a5aq12
+gen harvesting = a5aq13+a5aq14+a5aq15
+
+bysort hh: egen hoursprepare=sum(prepare)
+bysort hh: egen hoursinput=sum(input)
+bysort hh: egen hoursweeding=sum(weeding)
+bysort hh: egen hoursharvesting=sum(harvesting)
+
+duplicates drop hh, force
+
+
+ merge hh using firststage
+ keep if _merge==3 
+ drop _merge
+ sort hh
+save time_dta, replace
+ 
+ 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+duplicates drop hh a4aq1 a4aq2 a4aq3, force 
+rename a4aq3 areafarmer
+
+rename a4aq1 parcelID
+rename a4aq2 plotID
+sort hh parcelID plotID
+bysort hh: egen totarea=sum(areafarmer)
+duplicates drop hh, force 
+
+sort hh
+save areas, replace
+
+ merge hh  using time_dta
+ 
+ 
+ keep if _merge==3
+ 
+ 
+regress hoursprepare dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
+estimates store act1
+ivreg2 hoursprepare  femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size=oldestgirl ) , robust
+ivreg2 hoursprepare  femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size=secondoldestgirl ) if size>1 , robust
+estimates store act2
+ivreg2 hoursprepare  femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size= percentfmales) , robust
+estimates store act3
+
+ regress hoursinput size agefirstborn  femhead_hh substrat , robust
+ estimates store act4
+ivreg2 hoursinput femhead_hh substrat momedu_hh_dum*  health pschool memdead (size=oldestgirl ) , robust
+estimates store act5
+ivreg2 hoursinput  femhead_hh substrat momedu_hh_dum*  health pschool memdead (size=oldestgirl percentfmales) , robust liml
+estimates store act6
+ 
+regress hoursweeding size agefirstborn  femhead_hh substrat , robust
+estimates store act7
+ivreg2 hoursweeding  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act8
+ivreg2 hoursweeding  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust liml
+estimates store act9
+
+regress hoursharvesting size agefirstborn  femhead_hh substrat , robust
+estimates store act10
+ivreg2 hoursharvesting  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act11
+ivreg2 hoursharvesting  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust liml
+estimates store act12
+ 
+estout act1 act2 act3 act4 act5 act6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+estout act7 act8 act9 act10 act11 act12, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+ 
+ drop if areafarmer <0.1
+ 
+ gen hoursfem_area=hoursfem/areafarmer
+  gen hoursmale_area=hoursmale/areafarmer
+ gen hourschld_area=hourschld/areafarmer
+ 
+ 
+ regress hoursfem_area size agefirstborn  femhead_hh substrat if hoursfem_area <150, robust
+ estimates store ha1
+ ivregress 2sls  hoursfem_area   agefirstborn  femhead_hh substrat (size = oldestgirl ) if hoursfem_area <150,robust
+ estimates store ha2
+   ivregress 2sls  hoursfem_area   agefirstborn  femhead_hh substrat (size = secondoldestgirl ) if hoursfem_area <150 & size>1,robust
+  ivregress 2sls  hoursfem_area   agefirstborn  femhead_hh substrat (size = percentfmales ) if hoursfem_area <150,robust
+  ivreg2  hoursfem_area   agefirstborn  femhead_hh substrat (size =oldestgirl percentfmales ) if hoursfem_area <150,robust liml
+  estimates store ha3
+
+ 
+ regress  hoursmale_area size  agefirstborn  femhead_hh substrat if hoursmale_area<150,robust
+ estimates store ha4
+ ivregress 2sls  hoursmale_area   agefirstborn  femhead_hh substrat (size = oldestgirl ) if hoursmale_area<150,robust
+ estimates store ha5
+ ivregress 2sls  hoursmale_area   agefirstborn  femhead_hh substrat (size =  secondoldestgirl ) if hoursmale_area<150 & size>1,robust 
+ ivregress 2sls  hoursmale_area   agefirstborn  femhead_hh substrat (size = percentfmales ) if hoursmale_area<150,robust
+ ivreg2 hoursmale_area   agefirstborn  femhead_hh substrat (size = oldestgirl percentfmales ) if hoursmale_area<150,robust  liml 
+ estimates store ha6
+  
+regress  hourschld_area  size agefirstborn  femhead_hh substrat  if hourschld_area<150,robust
+estimates store ha7
+ivregress 2sls  hourschld_area   agefirstborn  femhead_hh substrat (size = oldestgirl ) if hourschld_area<150,robust
+estimates store ha8
+ivregress 2sls  hourschld_area   agefirstborn  femhead_hh substrat (size = secondoldestgirl ) if hourschld_area<150 & size>1,robust
+ivregress 2sls  hourschld_area   agefirstborn  femhead_hh substrat (size = percentfmales ) if hourschld_area<150,robust 
+ivreg2  hourschld_area   agefirstborn  femhead_hh substrat (size = oldestgirl percentfmales) if hourschld_area<150,robust liml
+estimates store ha9
+
+estout ha1 ha2 ha3 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+estout ha4 ha5 ha6 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+estout  ha7 ha8 ha9, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+ 
+ gen hoursprepare_area=hoursprepare/areafarmer
+  gen hoursinput_area=hoursinput/areafarmer
+ gen hoursweeding_area=hoursweeding/areafarmer 
+  gen hoursharvesting_area=hoursharvesting/areafarmer 
+  
+  
+  regress hoursprepare_area size agefirstborn  femhead_hh substrat , robust
+estimates store act1
+ivreg2 hoursprepare_area  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act2
+ivreg2 hoursprepare_area  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust liml
+estimates store act3
+
+ regress hoursinput_area size agefirstborn  femhead_hh substrat , robust
+ estimates store act4
+ivreg2 hoursinput_area  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act5
+ivreg2 hoursinput_area  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust liml
+estimates store act6
+ 
+regress hoursweeding_area size agefirstborn  femhead_hh substrat , robust
+estimates store act7
+ivreg2 hoursweeding_area  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act8
+ivreg2 hoursweeding_area  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust  liml
+estimates store act9
+
+regress hoursharvesting_area size agefirstborn  femhead_hh substrat , robust
+estimates store act10
+ivreg2 hoursharvesting_area  agefirstborn  femhead_hh substrat (size=oldestgirl ) , robust
+estimates store act111
+ivreg2 hoursharvesting_area  agefirstborn  femhead_hh substrat (size=oldestgirl percentfmales) , robust liml
+estimates store act12
+ 
+estout act1 act2 act3 act4 act5 act6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
+estout act7 act8 act9 act10 act11 act12, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(N) style(tex)  
