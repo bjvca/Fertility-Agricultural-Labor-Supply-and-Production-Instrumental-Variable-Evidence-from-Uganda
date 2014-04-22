@@ -173,6 +173,7 @@ replace momedu_hh_dum3=1 if momedu_hh_dum4==1
 replace momedu_hh_dum2=1 if  momedu_hh_dum4==1
 
 
+keep if agemother_hh<34
 
 regress dif_size oldestgirl   femhead_hh substrat momedu_hh_dum* health pschool memdead, robust
 

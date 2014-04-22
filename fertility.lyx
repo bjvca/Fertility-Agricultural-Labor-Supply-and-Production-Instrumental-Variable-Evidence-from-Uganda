@@ -782,20 +782,6 @@ We will use the Uganda National Household Survey (UNHS) 2005/06.
 \end_layout
 
 \begin_layout Standard
-The selection of children is base on the household roster.
- In particular, we will select individuals that respond they are son or
- daughter of the household head.
- In Uganda, as in most developing countries, households are often extended,
- encompassing several generations.
- This means that such a strategy may also select adults that are son or
- daughter, but never moved out, while others may have moved out.
- This is why we choose to select households that are headed by a woman (or
- where the spouse is) in the reproductive stages or their lives, defined
- as being between the ages of 18 and 32.
- 
-\end_layout
-
-\begin_layout Standard
 Ideally, we would like to have a sample of households where all desired
  children where born.
  A household that currently has one child may be in the process of adding
@@ -812,11 +798,46 @@ d as running against our hypothesis that households prefer boys.
  The fact that we are working with a cross section of households rather
  than historical data on all births by women that have reached the end of
  their reproductive lives is also reflected in the average number of children.
- This is only 2.85 children, while women bear almost 7 children over their
+ This is only 3.13 children, while women bear almost 7 children over their
  entire reproductive period.
- We will control for this by including the age of the first born in the
- regression.
  
+\end_layout
+
+\begin_layout Standard
+To deal with this problem, we work with the difference in the actual number
+ of children reported and the maximum reproductive capacity for a woman
+ at a certain age, rather than simply the number of children in the household.
+ To get the latter, we would need to estimate the average age at menarche
+ within the population, and then simply divide into age the pregnancy period
+ plus post pregnancy lactation in-fecund period.
+ In addition, one would also need to corporate the maternal mortality ratio
+ for "censoring" women's lives who have too many children and thus increasing
+ her mortality rate (and exit from the sample).
+ However, we took the 95th precental of total fertility rates per age from
+ the Demographic and Health Survey of Uganda (2011).
+ This is probably a good approximation of the upper bound by age of fertility
+ in the population.
+\end_layout
+
+\begin_layout Standard
+The selection of children is base on the household roster.
+ In particular, we will select individuals that respond they are son or
+ daughter of the household head.
+ There is a potential problem when using a cross sectional survey such as
+ the UNHS that only looks at reported dependents currently living within
+ the household to calculate the difference between actual and theoretical
+ fertility.
+ Older women may be living in households where some of the older children
+ have already left the household.
+ Thus, at around the age of thirty, the gap between reported children in
+ the household and theoretical fertility starts to increase more rapidly
+ because of children growing old enough to start household of their own.
+ More troubling, the reported gender of the oldest son or daughter living
+ in the household may not be the gender of first-born.
+ To overcome this problem, we restrict our sample to households where the
+ mother is between 16 and 32.
+ The cut off age of thirty two is because at this age, the first-born of
+ the mother will turn 16, which is our entry age into the sample of mothers.
 \end_layout
 
 \begin_layout Standard
@@ -826,7 +847,7 @@ Looking at the sex of the first-born is only one possible strategy.
  Indeed, it is likely that households will get a second child irrespective
  of the sex of the first
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 This may especially be the case when target family size is large, as is
