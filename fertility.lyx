@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass article
@@ -12,13 +12,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -29,15 +29,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
-\cite_engine natbib_authoryear
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -73,12 +82,14 @@ Bjorn Van Campenhout
 Fertility is likely to affect agricultural production through its effect
  on household labor supply.
  However, to uncover the causal effect of fertility on agricultural labour
- and production, one needs to deal with the fact that fertility is a choice
- variable within the household that is determined simultaneously with labour
- and production decisions.
+ and production, one needs to deal with the fact that the household size
+ is a choice variable within the household that is determined simultaneously
+ with labour and production decisions.
  Using the fact that in traditional, patriarchal societies sons are preferred
  to girls, we isolate exogenous variation in the number of children born
- to the mother and related it to labor supply and production outcomes.
+ to the mother and related it to labor supply and production outcomes in
+ Uganda, a country that combines a dominant agricultural sector with one
+ of the largest fertility rates in the world.
  We find that fertility significantly reduces the time women spend on agricultur
 al activities.
  Especially land preparation and weeding seem to suffer when time needs
@@ -807,6 +818,7 @@ d as running against our hypothesis that households prefer boys.
 To deal with this problem, we work with the difference in the actual number
  of children reported and the maximum reproductive capacity for a woman
  at a certain age, rather than simply the number of children in the household.
+ We will refer to this measure of fertility as the gap or shortfall in fertility.
  To get the latter, we would need to estimate the average age at menarche
  within the population, and then simply divide into age the pregnancy period
  plus post pregnancy lactation in-fecund period.
@@ -900,6 +912,21 @@ reference "tab:gender-and-fertility"
 \end_layout
 
 \begin_layout Standard
+We also look at the shortfall in actural fertility to theoretical fertility.
+ In the first two columns, we report this fertility gap for two groups of
+ households.
+ We find that households that have a boy as the firstborn child have an
+ average fertility gap of about 2.46 children.
+ Consistent with the proposition that have a firstborn girl are likely to
+ have more children conditional on age, we find that the gap is smaller
+ then the firstborn is a girl (2.26).
+ In other words, households where the firstborn is a girl will be closer
+ to the theoretical maximal fertility than those that had a boy as the firstborn.
+ The difference in the fertility gap between the group of households with
+ a first born boy and a first born girl is significant (p=0.003).
+\end_layout
+
+\begin_layout Standard
 The third and fourth column present the same statistics, but now looks the
  sex of the first two children.
  As such, there are three possible scenarios.
@@ -914,7 +941,9 @@ The third and fourth column present the same statistics, but now looks the
  For those that had a first girl but their second child was a boy, we expect
  the probability of increasing household size to lie between the two, which
  is indeed the case.
- 
+ The lower panel shows that the gap between actual and potential household
+ size is largest when the first two children are boys.
+ The gap is smallest when the first two children are both girls.
 \end_layout
 
 \begin_layout Standard
@@ -924,6 +953,8 @@ Finally, we compare the average fertility in two different groups defined
  likely to live in larger families.
  We indeed find that if there are more girls than boys amongst the children,
  the average number of children is higher.
+ We also find a difference in the fertiliy gap that is significant with
+ associated p-value of 0.021.
 \end_layout
 
 \begin_layout Standard
@@ -933,7 +964,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 gender and fertility
@@ -954,14 +985,14 @@ name "tab:gender-and-fertility"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="6">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<lyxtabular version="3" rows="8" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
@@ -1186,6 +1217,230 @@ av fertility
 \end_inset
 </cell>
 </row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gap
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gap
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st=boy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st=boy, 2nd=boy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.46
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+% daughters<0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.41
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st=girl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.26
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st=girl, 2nd=boy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.38
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+% daughters>0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.32
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1st=girl, 2nd=girl
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
 </lyxtabular>
 
 \end_inset
@@ -1266,7 +1521,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Average hours worked
@@ -1328,7 +1583,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Average productivity for different crops
@@ -1530,7 +1785,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 OLS estimation of household size
@@ -1572,73 +1827,129 @@ hline
 
 \begin_layout Plain Layout
 
- 	&	(1)	&	(2)	&	(3)		&	(4)	
+            &          (1)  &          (2)  &          (3)  &          (4)
+  
 \backslash
 
 \backslash
-
-\backslash
-hline   		 oldestgirl	&	0.126**	&		&			&	0.095	
-\backslash
-
-\backslash
- 			       				&	(0.041)	&		&				&	(0.061)	
+   oldestgirl  &      -0.182**&              &              &           
+   
 \backslash
 
 \backslash
- secondoldestgirl	&		&	0.122*	&				&				
+             &     (0.067)  &              &              &             
+ 
 \backslash
 
 \backslash
- 				&		&	(0.052)	&				&			
+ secondoldestgirl&              &      -0.196* &              &         
+     
 \backslash
 
 \backslash
- percentfmales	&		&			&	0.157**	&			0.061			
+             &              &     (0.082)  &              &             
+ 
 \backslash
 
 \backslash
- 				&		&			&	(0.057)	&			(0.084)			
+ thirdoldestgirl&              &              &      -0.140  &          
+    
 \backslash
 
 \backslash
-  agefirstborn	&	0.244**	&	0.217**	&	0.244**		&	0.243**	
+             &              &              &     (0.117)  &             
+ 
 \backslash
 
 \backslash
- 				&	(0.005)	&	(0.006)	&	(0.005)		&	(0.005)	
+ percentfmales&              &              &              &      -0.271**
+ 
 \backslash
 
 \backslash
- femhead		&	-0.365**	&	-0.360**	&	-0.365**		&	-0.365**
+             &              &              &              &     (0.094) 
+ 
 \backslash
 
 \backslash
- 				&	(0.053)	&	(0.059)	&	(0.053)		&	(0.053)	
+ femhead  &       1.186** &       1.169**&       1.202** &       1.186** 
 \backslash
 
 \backslash
- urban			&	-0.355**	&	-0.362**	&	-0.355**		&	-0.355**	
+             &     (0.098)  &     (0.105)  &     (0.118)  &     (0.098)  
 \backslash
 
 \backslash
- 			&	(0.047)	&	(0.054)	&	(0.047)	&	(0.047)	
+ urban    &       0.322** &       0.274** &       0.076  &       0.325** 
 \backslash
 
 \backslash
- constant	&	1.232**	&	1.713**	&	1.216**		&	1.216**	
+             &     (0.083)  &     (0.097)  &     (0.115)  &     (0.083)  
 \backslash
 
 \backslash
- 			&	(0.036)	&	(0.046)	&	(0.040)		&	(0.040)	
+ momeduprim&      -0.155* &      -0.025  &      -0.009  &      -0.158* 
 \backslash
 
 \backslash
- R-square	&	0.525	&	0.419	&	0.525		&	0.525	
+             &     (0.075)  &     (0.082)  &     (0.094)  &     (0.075)  
 \backslash
 
 \backslash
- N-obs		&	2784	&	2137	&	2784		&	2784	
+ momedu sec3&       0.259* &       0.221+ &       0.194  &       0.258* 
+\backslash
+
+\backslash
+             &     (0.101)  &     (0.121)  &     (0.150)  &     (0.101)  
+\backslash
+
+\backslash
+ momedu high &       1.056** &       0.910** &       0.754+ &       1.058**
+ 
+\backslash
+
+\backslash
+             &     (0.192)  &     (0.249)  &     (0.403)  &     (0.192)  
+\backslash
+
+\backslash
+ health      &       0.095  &       0.107  &       0.151  &       0.090  
+\backslash
+
+\backslash
+             &     (0.124)  &     (0.146)  &     (0.171)  &     (0.124)  
+\backslash
+
+\backslash
+ pschool     &       0.042  &      -0.005  &      -0.118  &       0.044  
+\backslash
+
+\backslash
+             &     (0.070)  &     (0.078)  &     (0.090)  &     (0.070)  
+\backslash
+
+\backslash
+ memdead     &       0.283**&       0.203+ &       0.117  &       0.284**
+\backslash
+
+\backslash
+             &     (0.100)  &     (0.108)  &     (0.127)  &     (0.100)  
+\backslash
+
+\backslash
+ cons       &       2.160**&       1.947**&       1.780** &       2.205** 
+\backslash
+
+\backslash
+             &     (0.074)  &     (0.075)  &     (0.079)  &     (0.081)  
+\backslash
+
+\backslash
+  
+\backslash
+
+\backslash
+ N           &    2656  &    2036  &    1391  &    2656  
 \backslash
 
 \backslash
@@ -1765,10 +2076,10 @@ In the middle panel, we report the same OLS regression but with the number
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 2SLS estimates of household labor supply
@@ -1852,6 +2163,14 @@ multicolumn{7}{c}{days worked female}
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 
 \backslash
 
@@ -1861,86 +2180,21 @@ multicolumn{7}{c}{days worked female}
 
 \begin_layout Plain Layout
 
-  size        &       4.562** &     -48.063* &     -68.434** &     -76.388**
-  &        -60.484**  
-\backslash
-
-\backslash
-             &     (1.184)  &    (28.242)  &    (38.231)  &    (47.624)   &
-    (36.832)  
-\backslash
-
-\backslash
- 
 \end_layout
 
 \begin_layout Plain Layout
 
-agefirstborn &      -0.101  &      13.309+ &      16.518+ &      20.527+ & 
-         16.474+ 
-\backslash
-
-\backslash
-             &     (0.422)  &     (7.219)  &     (8.862)  &    (12.170)  & 
-        (9.411)  
-\backslash
-
-\backslash
- 
 \end_layout
 
 \begin_layout Plain Layout
 
-femhead  &      -4.657  &     -22.371* &     -31.876* &     -31.905+ &     
-    -26.552* 
+difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
+      38.773** 
 \backslash
 
 \backslash
-            
-\end_layout
-
-\begin_layout Plain Layout
-
-&     (3.680)  &    (10.498)  &    (15.910)  &    (17.219)  &    (13.398)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-urban    &     -12.725** &     -18.273** &     -21.790** &     -21.259* &  
-      -19.582** 
-\backslash
-
-\backslash
-             &     (3.251)  &     (5.819)  &     (7.759)  &     (8.501)    &
-     (6.912)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-cons       &      38.339** &     104.121** &     162.626* &     139.529* & 
-  
-\end_layout
-
-\begin_layout Plain Layout
-
-   119.648** 
-\backslash
-
-\backslash
-             &     (2.563)  &    (35.581)  &    (63.775)  &    (59.737) 
-\end_layout
-
-\begin_layout Plain Layout
-
- &    (46.303)  
+             &     (0.735)  &    (17.769)  &    (33.364)  &    (19.353)  & 
+   (19.085)  
 \backslash
 
 \backslash
@@ -1948,16 +2202,6 @@ cons       &      38.339** &     104.121** &     162.626* &     139.529* &
 \end_layout
 
 \begin_layout Plain Layout
-
-Hansen J	&		&		&		&		&			0.904	
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
 
 \end_layout
 
@@ -1979,89 +2223,28 @@ multicolumn{7}{c}{days worked male}
 
 \begin_layout Plain Layout
 
-size        &       1.440  &     -26.533  &      -9.674  &     -43.337*  & 
-       -31.362  
-\backslash
-
-\backslash
-             &     (1.363)  &    (22.084)  &    (32.051)  &    (30.354)  & 
-     (24.783)  
-\backslash
-
-\backslash
- 
 \end_layout
 
 \begin_layout Plain Layout
 
-agefirstborn&       0.236  &       7.365  &       2.609  &      11.647  &  
-          8.595 
+difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &  
+    20.076+  
 \backslash
 
 \backslash
-             &     (0.423)  &     (5.646)  &     (7.466)  &     (7.763)  & 
-    (6.335)  
+             &     (0.668)  &    (13.983)  &    (25.595)  &    (13.580)  & 
+   (14.756)  
 \backslash
 
 \backslash
- 
+
 \end_layout
 
 \begin_layout Plain Layout
 
-femhead  &     -30.933**&     -40.349**&     -35.612**&     -46.005**&     
-  -41.974**
-\backslash
-
-\backslash
-            
 \end_layout
 
 \begin_layout Plain Layout
-
-&     (1.980)  &     (7.717)  &    (12.082)  &    (10.903)   &     (8.681)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-urban    &     -11.594**&     -14.543**&     -15.723**&     -16.315**&     
-   -15.052**
-\backslash
-
-\backslash
-             &     (2.779)  &     (3.862)  &     (4.206)  &     (5.223)  & 
-      (4.208)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-cons       &      32.941**&      67.908* &      53.697  &      88.913* &   
-       73.944*
-\backslash
-
-\backslash
-             &     (2.173)  &    (27.327)  &    (52.036)  &    (37.916)  & 
-       (30.737)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-Hansen J	&		&		&		&		&			2.624	
-\backslash
-
-\backslash
 
 \end_layout
 
@@ -2083,103 +2266,34 @@ multicolumn{7}{c}{days worked children}
 
 \begin_layout Plain Layout
 
-size        &       0.800  &      -3.099  &      -8.672  &      -2.202  &  
-         -3.007  
+difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &   
+   -4.304  
 \backslash
 
 \backslash
-             &     (0.513)  &     (6.647)  &     (8.979)  &     (6.584)  & 
-      (6.327)  
+             &     (0.364)  &     (5.150)  &     (7.387)  &     (3.505)  & 
+    (5.308)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&		&		&		&		&		&		
+\backslash
+
+\backslash
+ N           &    2016  &    2016  &    1620  &    2016  &    2016  
 \backslash
 
 \backslash
  
-\end_layout
-
-\begin_layout Plain Layout
-
-agefirstborn&       1.161**&       2.154  &       3.745+ &       1.926  &  
-        2.131  
-\backslash
-
-\backslash
-             &     (0.187)  &     (1.693)  &     (2.101)  &     (1.662)  & 
-    (1.610)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-femhead  &      -2.433**&      -3.745  &      -6.557+ &      -3.444  &     
-    -3.714  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-            &     (0.884)  &     (2.366)  &     (3.680)  &     (2.346)  &  
-    (2.264)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-urban    &      -1.574  &      -1.985  &      -2.708  &      -1.891  &     
-   -1.976+ 
-\backslash
-
-\backslash
-             &     (1.031)  &     (1.218)  &     (1.674)  &     (1.175)  & 
-    (1.195)  
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-cons       &      -4.036**&       0.837  &       7.663  &      -0.283  &   
-\end_layout
-
-\begin_layout Plain Layout
-
-    0.722  
-\backslash
-
-\backslash
-             &     (0.785)  &     (8.303)  &    (14.821)  &     (8.345)  & 
-        (7.918)  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-Hansen J	&		&		&		&		&			0.019	
-\backslash
-
-\backslash
- 	&		&		&		&		&		&		
-\backslash
-
-\backslash
- N	&	2105	&	2105	&	1686	&	2105	&		2105	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2307,13 +2421,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Labor by Activity
+2SLS estimates of household labor supply
 \begin_inset CommandInset label
 LatexCommand label
-name "tab:Labour-by-Activity"
+name "tab:2SLS-estimates-of-1"
 
 \end_inset
 
@@ -2333,7 +2447,7 @@ status open
 
 
 \backslash
-begin{tabular}{ccccccc} 
+begin{tabular}{rcccccc} 
 \backslash
 hline 
 \backslash
@@ -2342,24 +2456,7 @@ hline
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-            &          (1)  &          (2)  &          (3)  &          (4)
-  &          (5)  &          (6)  
-\backslash
-
-\backslash
-             &     
-\backslash
-multicolumn{3}{c}{land preparation}   &      
-\backslash
-multicolumn{3}{c}{input application}   
-\backslash
-
-\backslash
- 
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
 \end_layout
 
 \begin_layout Plain Layout
@@ -2368,70 +2465,19 @@ multicolumn{3}{c}{input application}
 
 \begin_layout Plain Layout
 
-          &       OLS  &       2SLS  &        LIML  &       OLS  &     
-   2SLS  &        LIML  
+
 \backslash
 
 \backslash
-       size        &       1.443  &     -31.375*  &     -37.920*  &       0.080
-  &      -3.428  &      -3.963  
-\backslash
 
-\backslash
-             &     (0.900)  &    (20.005)  &    (24.079)  &     (0.097)  & 
-    (2.583)  &     (2.991)  
-\backslash
-
-\backslash
- agefirstborn&       0.412  &       8.779+ &      10.447+ &       0.052+ & 
-      0.947  &       1.083  
-\backslash
-
-\backslash
-             &     (0.327)  &     (5.122)  &     (6.161)  &     (0.030)  & 
-    (0.658)  &     (0.762)  
-\backslash
-
-\backslash
- femhead  &     -14.445**&     -25.522**&     -27.731**&       0.364  &    
-  -0.820  &      -1.001  
-\backslash
-
-\backslash
-             &     (1.908)  &     (7.299)  &     (8.720)  &     (0.891)  & 
-    (0.839)  &     (0.891)  
-\backslash
-
-\backslash
- urban    &      -8.629**&     -12.121**&     -12.817**&      -0.319  &    
-  -0.692  &      -0.749  
-\backslash
-
-\backslash
-             &     (2.616)  &     (4.018)  &     (4.545)  &     (0.282)  & 
-    (0.526)  &     (0.577)  
-\backslash
-
-\backslash
- cons       &      28.833**&      69.863**&      78.046**&       0.482* &  
-     4.868  &       5.537  
-\backslash
-
-\backslash
-             &     (2.002)  &    (25.021)  &    (30.142)  &     (0.207)  & 
-    (3.271)  &     (3.782)  
-\backslash
-
-\backslash
- N           &    2104  &    2104  &    2104  &    2104  &    2104  &  
-  2104  
-\backslash
-
-\backslash
- 
 \end_layout
 
 \begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
 
 \end_layout
 
@@ -2444,8 +2490,88 @@ hline
 
 \begin_layout Plain Layout
 
-&          (7)  &          (8)  &          (9)  &          (10)  &     
-     (11)  &          (12)  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{time allocated to land preparation}	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
+      24.458* 
+\backslash
+
+\backslash
+             &     (0.560)  &    (12.020)  &    (24.926)  &    (13.437)  & 
+   (14.820)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{time allocated to input application}	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &       0.055  &       1.675  &       0.594  &       2.315  &   
+    2.118  
+\backslash
+
+\backslash
+             &     (0.143)  &     (1.607)  &     (1.885)  &     (1.823)  & 
+    (1.726)  
 \backslash
 
 \backslash
@@ -2454,11 +2580,86 @@ hline
 
 \begin_layout Plain Layout
 
-         &     
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-multicolumn{3}{c}{weeding}   &      
+multicolumn{7}{c}{time allocated to weeding}	
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-multicolumn{3}{c}{harvesting}   
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &  
+    19.875* 
+\backslash
+
+\backslash
+             &     (0.516)  &    (10.678)  &    (18.694)  &    (11.652)  & 
+   (11.725)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+multicolumn{7}{c}{time allocated to harvesting}	
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &   
+    9.298  
+\backslash
+
+\backslash
+             &     (0.532)  &    (10.337)  &    (21.014)  &     (8.628)  & 
+   (10.634)  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&		&		&		&		&		&		
+\backslash
+
+\backslash
+N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  &  
+  2015.000  
 \backslash
 
 \backslash
@@ -2467,67 +2668,15 @@ multicolumn{3}{c}{harvesting}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-                         &       OLS  &       2SLS  &        LIML  &   
-    OLS  &        2SLS  &        LIML  
+instrument:	&	-	&	1st = girl	&	1st 
 \backslash
-
+& 2nd = girl	&	
 \backslash
-         size        &       2.479**&     -30.568* &     -33.809* &       2.748*
- &     -12.333  &     -16.817  
+% girl	& 1st = girl 
 \backslash
-
+& 
 \backslash
-             &     (0.789)  &    (18.482)  &    (20.231)  &     (1.100)  & 
-   (15.885)  &    (18.489)  
-\backslash
-
-\backslash
- agefirstborn&       0.571+ &       8.996+ &       9.822+ &       0.354  & 
-      4.199  &       5.342  
-\backslash
-
-\backslash
-             &     (0.297)  &     (4.721)  &     (5.171)  &     (0.325)  & 
-    (4.063)  &     (4.727)  
-\backslash
-
-\backslash
- femhead  &     -13.356**&     -24.511**&     -25.605**&     -10.956**&    
- -16.046**&     -17.560**
-\backslash
-
-\backslash
-             &     (1.702)  &     (6.873)  &     (7.497)  &     (1.761)  & 
-    (5.402)  &     (6.310)  
-\backslash
-
-\backslash
- urban    &     -10.316**&     -13.831**&     -14.176**&      -7.159**&    
-  -8.764**&      -9.241**
-\backslash
-
-\backslash
-             &     (2.263)  &     (3.807)  &     (4.066)  &     (1.902)  & 
-    (2.523)  &     (2.843)  
-\backslash
-
-\backslash
- cons       &      21.018**&      62.335**&      66.388**&      16.901**&  
-    35.756+ &      41.362+ 
-\backslash
-
-\backslash
-             &     (1.591)  &    (23.355)  &    (25.528)  &     (1.550)  & 
-   (19.512)  &    (22.805)  
-\backslash
-
-\backslash
- N           &    2104  &    2104  &    2104  &    2104  &    2104  &  
-  2104  
+% girl	
 \backslash
 
 \backslash
@@ -2544,17 +2693,13 @@ multicolumn{3}{c}{harvesting}
 \backslash
 hline 
 \backslash
-hline  
+hline 
 \backslash
 end{tabular}
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2701,7 +2846,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 2SLS estimates of agricultural productivity
@@ -2885,8 +3030,8 @@ size        &      -4.943  &     113.817  &     -14.186  &      32.481  &
 \backslash
 
 \backslash
- substrat    &     128.580  &     120.230  &       9.141  &      20.613  & 
-    &    
+ urban    &     128.580  &     120.230  &       9.141  &      20.613  &    
+ &    
 \backslash
 
 \backslash
@@ -3193,7 +3338,7 @@ end{tabular}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 total production and productivity
@@ -3290,6 +3435,1479 @@ This suggests that reducing fertility as a policy in itself is unlikely
 LatexCommand bibtex
 bibfiles "fertility"
 options "agecon"
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Appendix
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
+      38.773** 
+\backslash
+
+\backslash
+             &     (0.735)  &    (17.769)  &    (33.364)  &    (19.353)  & 
+   (19.085)  
+\backslash
+
+\backslash
+ femhead  &      -7.906* &     -43.577* &     -71.806+ &     -56.883* &    
+ -54.370* 
+\backslash
+
+\backslash
+             &     (3.715)  &    (21.981)  &    (40.831)  &    (24.354)  & 
+   (23.883)  
+\backslash
+
+\backslash
+ urban    &     -13.317**&     -20.758**&     -25.334* &     -23.534**&    
+ -23.009**
+\backslash
+
+\backslash
+             &     (3.536)  &     (6.910)  &    (10.247)  &     (8.041)  & 
+    (7.811)  
+\backslash
+
+\backslash
+ momeduprim&       0.023  &       4.177  &       3.472  &       5.726  &   
+    5.434  
+\backslash
+
+\backslash
+             &     (2.754)  &     (4.566)  &     (5.864)  &     (5.194)  & 
+    (5.085)  
+\backslash
+
+\backslash
+ momedusec&       1.115  &      -1.624  &       2.608  &      -2.646  &    
+  -2.453  
+\backslash
+
+\backslash
+             &     (4.706)  &     (5.869)  &     (9.177)  &     (6.913)  & 
+    (6.676)  
+\backslash
+
+\backslash
+ momedutert&     -15.001* &     -46.192* &     -70.087+ &     -57.827* &   
+  -55.630* 
+\backslash
+
+\backslash
+             &     (6.961)  &    (23.251)  &    (38.987)  &    (25.869)  & 
+   (25.530)  
+\backslash
+
+\backslash
+ health      &      -7.274  &     -11.634+ &      -9.296  &     -13.260  & 
+    -12.953  
+\backslash
+
+\backslash
+             &     (4.607)  &     (6.967)  &    (11.406)  &     (8.326)  & 
+    (8.044)  
+\backslash
+
+\backslash
+ pschool     &       6.740* &       3.705  &       3.073  &       2.573  & 
+      2.786  
+\backslash
+
+\backslash
+             &     (2.703)  &     (3.837)  &     (6.100)  &     (4.461)  & 
+    (4.334)  
+\backslash
+
+\backslash
+ memdead     &       6.810+ &       0.209  &      -2.949  &      -2.253  & 
+     -1.788  
+\backslash
+
+\backslash
+             &     (3.874)  &     (6.592)  &     (9.328)  &     (7.510)  & 
+    (7.333)  
+\backslash
+
+\backslash
+ cons       &      49.054**&     -10.209  &     -48.668  &     -32.314  &  
+   -28.140  
+\backslash
+
+\backslash
+             &     (2.815)  &    (36.011)  &    (61.945)  &    (39.017)  & 
+   (38.525)  
+\backslash
+
+\backslash
+  
+\backslash
+
+\backslash
+ N           &    2016  &    2016  &    1620  &    2016  &    2016  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+          
+\end_layout
+
+\begin_layout Plain Layout
+
+instrument:	&	-	&	1st = girl	&	1st 
+\backslash
+& 2nd = girl	&	
+\backslash
+% girl	& 1st = girl 
+\backslash
+& 
+\backslash
+% girl	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours worked by mother (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &  
+    20.076+  
+\backslash
+
+\backslash
+             &     (0.668)  &    (13.983)  &    (25.595)  &    (13.580)  & 
+   (14.756)  
+\backslash
+
+\backslash
+ femhead  &     -30.349**&     -44.381**&     -39.124  &     -58.231**&    
+ -55.496**
+\backslash
+
+\backslash
+             &     (2.216)  &    (16.903)  &    (30.436)  &    (16.952)  & 
+   (18.155)  
+\backslash
+
+\backslash
+ urban    &     -10.103**&     -13.030**&     -14.318**&     -15.919**&    
+ -15.349**
+\backslash
+
+\backslash
+             &     (2.902)  &     (4.347)  &     (5.249)  &     (5.056)  & 
+    (5.016)  
+\backslash
+
+\backslash
+ momeduprim&       1.374  &       3.008  &       2.241  &       4.620  &   
+    4.302  
+\backslash
+
+\backslash
+             &     (2.717)  &     (3.271)  &     (2.967)  &     (3.769)  & 
+    (3.687)  
+\backslash
+
+\backslash
+ momedusecond&      -7.239* &      -8.317* &      -9.670* &      -9.381* & 
+     -9.171* 
+\backslash
+
+\backslash
+             &     (3.120)  &     (3.454)  &     (3.770)  &     (4.404)  & 
+    (4.175)  
+\backslash
+
+\backslash
+ momedutertiary&      -5.829  &     -18.098  &      -9.522  &     -30.209+ &
+     -27.817  
+\backslash
+
+\backslash
+             &     (4.926)  &    (16.387)  &    (26.183)  &    (17.049)  & 
+   (17.973)  
+\backslash
+
+\backslash
+ health      &      -7.849* &      -9.564* &      -9.534* &     -11.257* & 
+    -10.922* 
+\backslash
+
+\backslash
+             &     (3.589)  &     (4.045)  &     (4.444)  &     (5.168)  & 
+    (4.913)  
+\backslash
+
+\backslash
+ pschool     &       5.826* &       4.632  &       7.310  &       3.454  & 
+      3.687  
+\backslash
+
+\backslash
+             &     (2.843)  &     (3.630)  &     (4.782)  &     (3.620)  & 
+    (3.742)  
+\backslash
+
+\backslash
+ memdead     &       6.756* &       4.159  &       5.314  &       1.596  & 
+      2.102  
+\backslash
+
+\backslash
+             &     (3.272)  &     (4.374)  &     (5.030)  &     (5.209)  & 
+    (5.089)  
+\backslash
+
+\backslash
+ cons       &      38.067**&      14.756  &      26.774  &      -8.254  &  
+    -3.711  
+\backslash
+
+\backslash
+             &     (2.377)  &    (28.289)  &    (47.345)  &    (27.361)  & 
+   (29.750)  
+\backslash
+
+\backslash
+  
+\backslash
+
+\backslash
+ N           &    2016  &    2016  &    1620  &    2016  &    2016  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours worked by father (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &   
+   -4.304  
+\backslash
+
+\backslash
+             &     (0.364)  &     (5.150)  &     (7.387)  &     (3.505)  & 
+    (5.308)  
+\backslash
+
+\backslash
+ femhead  &      -2.181* &       5.303  &      -1.397  &      -1.120  &    
+   2.940  
+\backslash
+
+\backslash
+             &     (0.999)  &     (6.183)  &     (8.939)  &     (4.262)  & 
+    (6.387)  
+\backslash
+
+\backslash
+ urban    &      -1.557  &       0.004  &      -1.750  &      -1.335  &    
+  -0.488  
+\backslash
+
+\backslash
+             &     (1.107)  &     (1.613)  &     (1.756)  &     (1.242)  & 
+    (1.553)  
+\backslash
+
+\backslash
+ momeduprim &      -0.166  &      -1.037  &       0.045  &      -0.290  &  
+    -0.762  
+\backslash
+
+\backslash
+             &     (0.944)  &     (1.475)  &     (1.127)  &     (1.082)  & 
+    (1.369)  
+\backslash
+
+\backslash
+ momedusec&       1.891  &       2.465  &       2.112  &       1.972  &    
+   2.284  
+\backslash
+
+\backslash
+             &     (1.430)  &     (1.702)  &     (1.748)  &     (1.489)  & 
+    (1.624)  
+\backslash
+
+\backslash
+ momedutertiary4&       6.184  &      12.728+ &       8.402  &       7.112 
+ &      10.662  
+\backslash
+
+\backslash
+             &     (3.965)  &     (6.589)  &     (8.051)  &     (5.362)  & 
+    (6.738)  
+\backslash
+
+\backslash
+ health      &      -2.212+ &      -1.298  &      -2.589+ &      -2.083+ & 
+     -1.586  
+\backslash
+
+\backslash
+             &     (1.215)  &     (1.476)  &     (1.460)  &     (1.245)  & 
+    (1.380)  
+\backslash
+
+\backslash
+ pschool     &      -1.534+ &      -0.897  &      -1.624  &      -1.444+ & 
+     -1.099  
+\backslash
+
+\backslash
+             &     (0.845)  &     (1.054)  &     (1.092)  &     (0.865)  & 
+    (0.982)  
+\backslash
+
+\backslash
+ memdead     &       1.332  &       2.717  &       1.495  &       1.528  & 
+      2.280  
+\backslash
+
+\backslash
+             &     (1.242)  &     (1.700)  &     (1.932)  &     (1.469)  & 
+    (1.709)  
+\backslash
+
+\backslash
+ cons       &       6.950**&      19.383+ &      10.045  &       8.712  &  
+    15.457  
+\backslash
+
+\backslash
+             &     (1.030)  &    (10.856)  &    (13.793)  &     (7.286)  & 
+   (11.073)  
+\backslash
+
+\backslash
+  
+\backslash
+
+\backslash
+ N           &    2016  &    2016  &    1620  &    2016  &    2016  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours worked by children (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
+      24.458* 
+\backslash
+
+\backslash
+             &     (0.560)  &    (12.020)  &    (24.926)  &    (13.437)  & 
+   (14.820)  
+\backslash
+
+\backslash
+ femhead  &     -15.163**&     -32.382* &     -62.627* &     -46.193**&    
+ -44.966* 
+\backslash
+
+\backslash
+             &     (2.133)  &    (14.791)  &    (30.651)  &    (16.894)  & 
+   (18.433)  
+\backslash
+
+\backslash
+ substrat    &      -7.656**&     -11.268**&     -17.286* &     -14.166**& 
+    -13.908* 
+\backslash
+
+\backslash
+             &     (2.715)  &     (4.292)  &     (7.588)  &     (5.361)  & 
+    (5.466)  
+\backslash
+
+\backslash
+ momeduprim&      -2.565  &      -0.643  &      -0.999  &       0.899  &   
+    0.762  
+\backslash
+
+\backslash
+             &     (2.274)  &     (3.242)  &     (4.386)  &     (3.557)  & 
+    (3.701)  
+\backslash
+
+\backslash
+ momedusecond&      -2.091  &      -3.409  &      -2.008  &      -4.466  & 
+     -4.372  
+\backslash
+
+\backslash
+             &     (2.934)  &     (3.494)  &     (6.572)  &     (4.395)  & 
+    (4.339)  
+\backslash
+
+\backslash
+ momedutertiary&     -10.334* &     -25.365+ &     -47.820+ &     -37.421* &
+     -36.350+ 
+\backslash
+
+\backslash
+             &     (4.270)  &    (14.898)  &    (28.685)  &    (17.542)  & 
+   (18.790)  
+\backslash
+
+\backslash
+ health      &      -5.001  &      -7.134+ &      -7.775  &      -8.846  & 
+     -8.694  
+\backslash
+
+\backslash
+             &     (3.311)  &     (4.184)  &     (8.023)  &     (5.444)  & 
+    (5.363)  
+\backslash
+
+\backslash
+ pschool     &       2.327  &       0.941  &       0.095  &      -0.171  & 
+     -0.072  
+\backslash
+
+\backslash
+             &     (1.997)  &     (2.499)  &     (4.529)  &     (3.075)  & 
+    (3.070)  
+\backslash
+
+\backslash
+ memdead     &       4.983+ &       1.768  &      -2.511  &      -0.811  & 
+     -0.581  
+\backslash
+
+\backslash
+             &     (2.793)  &     (4.137)  &     (6.901)  &     (5.104)  & 
+    (5.190)  
+\backslash
+
+\backslash
+ cons       &      37.734**&       9.243  &     -33.684  &     -13.609  &  
+   -11.579  
+\backslash
+
+\backslash
+             &     (2.304)  &    (24.695)  &    (45.968)  &    (26.958)  & 
+   (29.923)  
+\backslash
+
+\backslash
+ r2          &       0.023  &      -0.273  &      -1.973  &      -0.940  & 
+     -0.865  
+\backslash
+
+\backslash
+ N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
+   2015.000  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours spend on preparing fields (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &       0.055  &       1.675  &       0.594  &       2.315  &   
+    2.118  
+\backslash
+
+\backslash
+             &     (0.143)  &     (1.607)  &     (1.885)  &     (1.823)  & 
+    (1.726)  
+\backslash
+
+\backslash
+ femhead  &       0.277  &      -1.694  &      -0.264  &      -2.473  &    
+  -2.233  
+\backslash
+
+\backslash
+             &     (0.751)  &     (1.601)  &     (2.016)  &     (1.723)  & 
+    (1.632)  
+\backslash
+
+\backslash
+ substrat    &      -0.524  &      -0.937  &      -0.636  &      -1.101  & 
+     -1.051  
+\backslash
+
+\backslash
+             &     (0.404)  &     (0.707)  &     (0.654)  &     (0.789)  & 
+    (0.760)  
+\backslash
+
+\backslash
+ momeduprim&       0.564**&       0.784* &       0.775**&       0.871* &   
+    0.845* 
+\backslash
+
+\backslash
+             &     (0.207)  &     (0.329)  &     (0.264)  &     (0.382)  & 
+    (0.362)  
+\backslash
+
+\backslash
+ momedusecondary&       0.969  &       0.818  &       1.163  &       0.758 
+ &       0.777  
+\backslash
+
+\backslash
+             &     (0.893)  &     (0.833)  &     (1.144)  &     (0.821)  & 
+    (0.823)  
+\backslash
+
+\backslash
+ momedutertiary&      -0.605  &      -2.326  &      -1.558  &      -3.006  &
+      -2.797  
+\backslash
+
+\backslash
+             &     (1.212)  &     (2.533)  &     (2.695)  &     (2.824)  & 
+    (2.719)  
+\backslash
+
+\backslash
+ health      &       0.088  &      -0.156  &      -0.203  &      -0.253  & 
+     -0.223  
+\backslash
+
+\backslash
+             &     (0.492)  &     (0.607)  &     (0.611)  &     (0.688)  & 
+    (0.659)  
+\backslash
+
+\backslash
+ pschool     &      -0.106  &      -0.265  &      -0.160  &      -0.327  & 
+     -0.308  
+\backslash
+
+\backslash
+             &     (0.304)  &     (0.304)  &     (0.348)  &     (0.310)  & 
+    (0.306)  
+\backslash
+
+\backslash
+ memdead     &       0.111  &      -0.257  &       0.093  &      -0.402  & 
+     -0.357  
+\backslash
+
+\backslash
+             &     (0.351)  &     (0.573)  &     (0.557)  &     (0.654)  & 
+    (0.624)  
+\backslash
+
+\backslash
+ cons       &       0.565  &      -2.697  &      -0.412  &      -3.986  &  
+    -3.589  
+\backslash
+
+\backslash
+             &     (0.469)  &     (3.324)  &     (3.608)  &     (3.780)  & 
+    (3.581)  
+\backslash
+
+\backslash
+ r2          &       0.006  &      -0.186  &      -0.006  &      -0.369  & 
+     -0.306  
+\backslash
+
+\backslash
+ N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
+   2015.000  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours spend on input application (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &  
+    19.875* 
+\backslash
+
+\backslash
+             &     (0.516)  &    (10.678)  &    (18.694)  &    (11.652)  & 
+   (11.725)  
+\backslash
+
+\backslash
+ femhead  &     -14.038**&     -30.922* &     -48.644* &     -39.841**&    
+ -38.256**
+\backslash
+
+\backslash
+             &     (1.884)  &    (13.284)  &    (23.061)  &    (14.674)  & 
+   (14.696)  
+\backslash
+
+\backslash
+ substrat    &      -9.888**&     -13.431**&     -16.502**&     -15.302**& 
+    -14.969**
+\backslash
+
+\backslash
+             &     (2.452)  &     (4.148)  &     (5.852)  &     (4.792)  & 
+    (4.710)  
+\backslash
+
+\backslash
+ momeduprimary&      -0.735  &       1.150  &       0.809  &       2.146  &
+       1.969  
+\backslash
+
+\backslash
+             &     (1.898)  &     (2.658)  &     (3.335)  &     (2.995)  & 
+    (2.953)  
+\backslash
+
+\backslash
+ momedusecondary&      -1.413  &      -2.705  &      -1.649  &      -3.388 
+ &      -3.266  
+\backslash
+
+\backslash
+             &     (2.767)  &     (3.352)  &     (5.221)  &     (4.022)  & 
+    (3.880)  
+\backslash
+
+\backslash
+ momedutertiary&      -2.635  &     -17.374  &     -29.016  &     -25.159  &
+     -23.776  
+\backslash
+
+\backslash
+             &     (4.858)  &    (14.033)  &    (22.192)  &    (15.580)  & 
+   (15.643)  
+\backslash
+
+\backslash
+ health      &      -9.744**&     -11.837**&     -12.252* &     -12.942**& 
+    -12.746**
+\backslash
+
+\backslash
+             &     (2.194)  &     (3.490)  &     (5.804)  &     (4.362)  & 
+    (4.209)  
+\backslash
+
+\backslash
+ pschool     &       4.157* &       2.798  &       2.616  &       2.080  & 
+      2.207  
+\backslash
+
+\backslash
+             &     (1.838)  &     (2.159)  &     (3.390)  &     (2.523)  & 
+    (2.452)  
+\backslash
+
+\backslash
+ memdead     &       5.112* &       1.960  &       0.250  &       0.295  & 
+      0.591  
+\backslash
+
+\backslash
+             &     (2.443)  &     (4.014)  &     (5.489)  &     (4.570)  & 
+    (4.508)  
+\backslash
+
+\backslash
+ cons       &      32.005**&       4.067  &     -18.019  &     -10.690  &  
+    -8.067  
+\backslash
+
+\backslash
+             &     (1.952)  &    (21.536)  &    (34.594)  &    (23.350)  & 
+   (23.527)  
+\backslash
+
+\backslash
+ r2          &       0.032  &      -0.350  &      -1.293  &      -0.860  & 
+     -0.754  
+\backslash
+
+\backslash
+ N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
+   2015.000  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours spend on weeding (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &   
+    9.298  
+\backslash
+
+\backslash
+             &     (0.532)  &    (10.337)  &    (21.014)  &     (8.628)  & 
+   (10.634)  
+\backslash
+
+\backslash
+ femhead  &     -11.999**&     -13.997  &      -4.882  &     -26.158* &    
+ -23.393+ 
+\backslash
+
+\backslash
+             &     (1.852)  &    (12.224)  &    (24.855)  &    (10.622)  & 
+   (12.817)  
+\backslash
+
+\backslash
+ substrat    &      -7.362**&      -7.781**&      -8.358* &     -10.333**& 
+     -9.753**
+\backslash
+
+\backslash
+             &     (1.989)  &     (2.887)  &     (4.036)  &     (3.219)  & 
+    (3.308)  
+\backslash
+
+\backslash
+ momeduprimary&       2.346  &       2.569  &       3.336  &       3.927  &
+       3.618  
+\backslash
+
+\backslash
+             &     (2.010)  &     (2.225)  &     (2.241)  &     (2.481)  & 
+    (2.444)  
+\backslash
+
+\backslash
+ momedusecondary&      -0.874  &      -1.027  &      -1.846  &      -1.958 
+ &      -1.746  
+\backslash
+
+\backslash
+             &     (2.511)  &     (2.449)  &     (3.142)  &     (2.960)  & 
+    (2.787)  
+\backslash
+
+\backslash
+ momedutertiary&      -1.573  &      -3.317  &       4.011  &     -13.933  &
+     -11.519  
+\backslash
+
+\backslash
+             &     (4.042)  &    (11.936)  &    (21.322)  &    (11.046)  & 
+   (12.746)  
+\backslash
+
+\backslash
+ health      &      -2.869  &      -3.117  &      -0.472  &      -4.624  & 
+     -4.281  
+\backslash
+
+\backslash
+             &     (3.256)  &     (3.279)  &     (4.220)  &     (3.933)  & 
+    (3.749)  
+\backslash
+
+\backslash
+ pschool     &       4.818* &       4.657+ &       6.386+ &       3.678  & 
+      3.901  
+\backslash
+
+\backslash
+             &     (2.231)  &     (2.823)  &     (3.752)  &     (2.600)  & 
+    (2.787)  
+\backslash
+
+\backslash
+ memdead     &       4.186+ &       3.813  &       4.560  &       1.542  & 
+      2.058  
+\backslash
+
+\backslash
+             &     (2.498)  &     (2.925)  &     (3.818)  &     (3.337)  & 
+    (3.319)  
+\backslash
+
+\backslash
+ cons       &      24.856**&      21.551  &      36.812  &       1.428  &  
+     6.002  
+\backslash
+
+\backslash
+             &     (1.574)  &    (20.948)  &    (38.944)  &    (17.451)  & 
+   (21.498)  
+\backslash
+
+\backslash
+ r2          &       0.017  &       0.012  &      -0.034  &      -0.197  & 
+     -0.122  
+\backslash
+
+\backslash
+ N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
+   2015.000  
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect on hours spend on harvesting (full results)
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

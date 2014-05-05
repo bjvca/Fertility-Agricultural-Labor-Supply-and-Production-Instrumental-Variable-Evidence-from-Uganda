@@ -1,4 +1,4 @@
- 
+clear 
 use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
 rename a4aq5b cropcode
 sort hh cropcode
@@ -13,20 +13,34 @@ save plots, replace
 use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7a.dta"
 rename a7aq2b cropcode
 sort hh cropcode
+keep if cropcode==130
+* we need conversion factors here
+rename a7aq3a untcd
+sort untcd
+save sp, replace
 
-gen totkg = a7aq3b *a7aq3d
+
+use   "/home/bjvca/data/data/fertility and ag productivity/datasets/conversionfactors.dta"
+
+keep if descript==111
+sort untcd
+merge  untcd using  sp
+replace qkg_uca=100 if untcd==10
+
+
+gen totkg = a7aq3b *qkg_uca
 collapse (sum) totkg, by(hh cropcode)
 sort hh cropcode
 merge hh cropcode using plots
 
-drop if areafarmer < 0.1
+
 gen yield=totkg/areafarmer
 *regress yield area 
 
 drop _merge
 sort hh
 save yields, replace
-
+use yields
 
 
  sort hh
@@ -37,39 +51,55 @@ save yields, replace
 *maize
 tab region, gen(regd)
 
-regress yield size agefirstborn femhead_hh regd* substrat  if cropcode==130 & yield<2000, robust
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==130 & yield<4000, robust
 estimates store m1
-ivreg2 yield agefirstborn femhead_hh substrat  regd* (size=oldestgirl ) if cropcode==130 & yield<2000, robust
-estimates store m2
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if cropcode==130 & yield<4000, robust
 
-
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if if size>1 & cropcode==130 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if cropcode==130 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if cropcode==130 & yield<4000, liml robust
 
 *beans
-regress yield size agefirstborn femhead_hh  regd* substrat if cropcode==210 & yield<2000, robust 
-estimates store m3
-ivreg2 yield agefirstborn femhead_hh substrat  regd* (size = oldestgirl)   if cropcode==210 & yield<2000, robust
-estimates store m4
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==210 & yield<4000, robust
+estimates store m1
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if cropcode==210 & yield<4000, robust
+
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if if size>1 & cropcode==210 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if cropcode==210 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if cropcode==210 & yield<4000, liml robust
 
 
 *s potatoes
-regress yield size agefirstborn femhead_hh substrat regd* if cropcode==620 & yield<1700, robust
-estimates store m5
-ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl)  if cropcode==620 & yield<1700, robust
-estimates store m6
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==620 & yield<4000, robust
+estimates store m1
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if cropcode==620 & yield<4000, robust
+
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if if size>1 & cropcode==620 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if cropcode==620 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if cropcode==620 & yield<4000, liml robust
 
 
 *cassava
-regress yield size  agefirstborn femhead_hh substrat regd*  if cropcode==630 & yield<2700, robust
-estimates store m7
-ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl)  if cropcode==630 & yield<2700, robust
-estimates store m8
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==630 & yield<4000, robust
+estimates store m1
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if cropcode==630 & yield<4000, robust
+
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if if size>1 & cropcode==630 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if cropcode==630 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if cropcode==630 & yield<4000, liml robust
+
 
 
 *matooke
-regress yield size agefirstborn femhead_hh substrat regd* if cropcode==741 & yield<2700, robust
-estimates store m9
-ivreg2 yield agefirstborn femhead_hh substrat regd* (size =  oldestgirl)  if cropcode==741 & yield<2700,  robust
-estimates store m10
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==741 & yield<6000, robust
+estimates store m1
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if cropcode==741 & yield<6000, robust
+
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if  size>1 & cropcode==741 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if cropcode==741 & yield<4000, robust
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if cropcode==741 & yield<6000, liml robust
+
+
 
 *aggregate
 
