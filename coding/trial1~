@@ -1,0 +1,182 @@
+use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
+* there is a coding error for male=1 female=0
+replace h2q4=0 if h2q4==2
+
+*keep only heads and spouses that are at reproductive age
+
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<18 | h2q9>32) & h2q4==0
+
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
+replace flag=0 if flag==.
+bysort hh: egen flaghh=max(flag)
+drop if flaghh==1
+
+
+*gen age of mother 
+gen agemother=0
+replace agemother=h2q9 if (h2q5==1 | h2q5==2)  & h2q4==0
+bysort hh: egen agemother_hh=max(agemother)
+
+*this keeps only suns/daugthers
+keep if h2q5==3 
+drop if h2q8c==.
+*drop multiple births
+duplicates drop hh h2q8c, force
+*we have manually investigated births within one year, this seems to be non-existant
+drop if h2q9>16
+
+percentage girls
+bysort hh: egen rankage=rank(h2q8c), unique
+
+
+
+
+ *gen oldest = 1 if maxage == h2q8c
+ *replace oldest=0 if oldest==.
+
+*some of these children are over 40 years old!
+
+
+*drop if h2q9<2
+
+ gen ones = 1
+ bysort hh: egen size=sum(ones)
+ 
+ replace h2q4=!h2q4
+ 
+label drop H2Q4
+ 
+ regress size h2q4 if rankage==1, robust
+ estimates store m1
+ 
+ regress size h2q9 h2q4 if rankage==1, robust
+ estimates store m2
+ 
+ 
+ 
+gen oldestgirl=1 if rankage==1 & h2q4==1
+replace oldestgirl=0 if oldestgirl==.
+
+gen secondoldestgirl=1 if rankage==2 & h2q4==1
+ replace secondoldestgirl=0 if secondoldestgirl==.
+
+ 
+ gen thirdoldestgirl=1 if rankage==3 & h2q4==1
+ replace thirdoldestgirl=0 if thirdoldestgirl==.
+ gen agefirstborn=h2q9 if rankage==1
+  gen agesecondborn=h2q9 if rankage==2
+   gen agethirdborn=h2q9 if rankage==3
+ save temp_disag, replace
+collapse (max) size oldestgirl secondoldestgirl thirdoldest agefirstborn agesecondborn agethirdborn agemother_hh, by(hh)
+
+
+regress size oldestgirl  agefirstborn 
+ *** export selected sample here for dotplot
+ save temp, replace
+ keep hh
+ duplicates drop hh, force
+ save "/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel", replace
+use temp, clear
+sort hh
+save temp, replace
+drop if size<2
+gen second= oldestgirl* secondoldestgir
+regress size second  agefirstborn, robust  
+estimates store m3
+
+drop if size<3
+gen third= thirdoldestgirl* secondoldestgirl*oldestgirl 
+regress size third   agefirstborn, robust
+estimates store m4
+
+
+* percentage of males
+use temp_disag, clear
+ bysort hh: egen sum_fmales= sum(h2q4)
+ gen percentfmales=sum_fmales/size
+
+ duplicates drop hh, force
+ regress size percentfmales agefirstborn, robust
+
+estimates store m5
+
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01) order(h2q4 second third percentfmales ) drop(agefirstborn h2q9 _cons) stats(r2 N) style(tex)
+
+ 
+keep hh percentfmales size
+ sort hh
+ save firststage, replace
+ clear
+ 
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5b.dta
+ 
+gen tottimemale=  a5bq4 + a5bq7 +a5bq10+ a5bq13
+gen tottimefem=  a5bq5 + a5bq8 +a5bq11+ a5bq14
+gen tottimechld=  a5bq6 + a5bq9 +a5bq12+ a5bq15
+
+gen prepare = a5bq4+a5bq5+a5bq6
+gen input = a5bq7+a5bq8+a5bq9
+gen weeding=a5bq10+a5bq11+a5bq12
+gen harvesting = a5bq13+a5bq14+a5bq15
+
+bysort hh: egen hoursfem=sum(tottimefem)
+bysort hh: egen hoursmale=sum(tottimemale)
+bysort hh: egen hourschld=sum(tottimechld)
+duplicates drop hh, force
+
+merge hh using temp
+ keep if _merge==3
+ drop _merge
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ 
+
+
+ drop if agemother_hh==0
+ 
+regress hoursfem size agemother_hh agefirstborn, robust
+estimates store m1
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = oldestgirl ),robust
+estimates store m2
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = secondoldestgirl ) if size>1, robust
+estimates store m3
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = thirdoldestgirl ) if size>2, robust
+estimates store m4
+ivregress 2sls hoursfem agemother_hh agefirstborn (size = percentfmales ), robust
+estimates store m5
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+ regress hoursmale size, robust
+ estimates store m1
+ivregress 2sls hoursmale (size = percentfmales agefirstborn),robust
+estimates store m5
+ivregress 2sls hoursmale (size = oldestgirl agefirstborn),robust
+estimates store m2
+ivregress 2sls hoursmale (size = secondoldestgirl agefirstborn) if size>1,robust
+estimates store m3
+ivregress 2sls hoursmale (size = thirdoldestgirl agefirstborn) if size>2,robust
+estimates store m4
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+
+regress hourschld size, robust
+estimates store m1
+ivregress 2sls hourschld (size = percentfmales agefirstborn),robust
+estimates store m5
+ivregress 2sls hourschld (size = oldestgirl agefirstborn),robust
+estimates store m2
+ivregress 2sls hourschld (size = secondoldestgirl agefirstborn) if size>1,robust
+estimates store m3
+ivregress 2sls hourschld (size = thirdoldestgirl agefirstborn) if size>2,robust
+estimates store m4
+
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+
+
+
+

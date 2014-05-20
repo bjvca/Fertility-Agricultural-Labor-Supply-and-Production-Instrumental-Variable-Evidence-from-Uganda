@@ -1,0 +1,127 @@
+**** portfolio
+
+
+
+log using log.log, replace
+foreach cropid of numlist 130 210 620 630 741 {
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+** has crop?
+
+
+
+gen hascrop=1 if cropcode==`cropid'
+replace hascrop=0 if cropcode!=`cropid'
+
+collapse (max) hascrop, by(hh)
+
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+
+ 
+
+ 
+ probit  hascrop  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , robust
+ estimates store f1
+ ivprobit hascrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl),  twostep
+estimates store f2
+weakiv
+ ivprobit  hascrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1, twostep
+estimates store f3
+weakiv
+ ivprobit hascrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), twostep
+estimates store f4
+weakiv
+ ivprobit hascrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), twostep
+estimates store f5
+weakiv
+
+di "************************* `cropid' ********************************"
+di "are you growing the crop"
+estout f1 f2 f3 f4 f5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+ 
+
+ 
+ ** maize area?
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+ * keep if a4aq6==100
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+ bysort hh: egen totarea = sum(areafarmer ) 
+ gen croparea= areafarmer if cropcode==`cropid'
+ replace croparea=0 if croparea==.
+ 
+ gen percentarea= croparea/totarea
+ 
+ collapse (max) percentarea croparea, by(hh)
+  sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+ 
+ sum croparea
+
+ }
+  tobit  croparea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+ ivtobit croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+weakiv
+ ivtobit  croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+weakiv
+ ivtobit  croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ ivtobit croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv
+
+di "area allocated the crop"
+estout f1 f2 f3 f4 f5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+
+ 
+ tobit  percentarea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+
+ ivtobit percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+weakiv
+ ivtobit  percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+weakiv
+ ivtobit  percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ ivtobit percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv
+
+di "percentage of area allocated to the crop"
+estout f1 f2 f3 f4 f5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+ 
+ 
+ 
+ }
+ 
+ log close
+ 
+ 
+ 
+ 
+ * maize production (kg)
+ *** see the do file production
+ 
+ * maize yield (kg/area)
+ *see the do file productivity_v4
+ 

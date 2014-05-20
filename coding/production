@@ -1,0 +1,118 @@
+
+*** production
+
+
+
+
+
+log using prodction.log, replace
+foreach cropid of numlist 130 210 620 630 741 {
+
+
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+ * keep if a4aq6==100
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+save plots, replace
+
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7a.dta"
+rename a7aq2b cropcode
+sort hh cropcode
+
+* we need conversion factors here
+rename a7aq3a untcd
+rename a7aq3c condition
+
+
+**** if not maize grains, than it is cobs
+replace  condition=22 if  condition!=45 & cropcode==130
+
+replace  condition=45 if  condition==35 & cropcode==210
+replace  condition=24 if  condition==14 & cropcode==210
+sort  cropcode condition untcd 
+save sp, replace
+
+
+clear
+insheet using   "/home/bjvca/data/data/fertility and ag productivity/datasets/conv_prod.csv"
+rename product cropcode
+
+sort  cropcode condition untcd 
+merge  cropcode condition untcd using  sp
+
+
+gen totkg = a7aq3b *qkg_uca
+collapse (sum) totkg, by(hh cropcode)
+
+
+gen totcrop= totkg if cropcode == `cropid'
+replace totcrop=0 if cropcode != `cropid'
+
+collapse (sum) totcrop, by(hh)
+
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+
+drop if totcrop> 1000 & `cropid'==130 
+drop if totcrop> 250 & `cropid'==210 
+drop if totcrop> 2000 & `cropid'==620 
+drop if totcrop> 2000 & `cropid'==630 
+drop if totcrop> 5000 & `cropid'==630 
+
+replace sum_hhmeb=1 if sum_hhmeb==0
+gen prod_cap=totcrop/sum_hhmeb
+
+sum prod_cap
+}
+ tobit  totcrop  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+ ivtobit totcrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+weakiv
+ ivtobit  totcrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+weakiv
+ ivtobit  totcrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ ivtobit totcrop femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv
+
+di "area allocated the crop"
+estout f1 f2 f3 f4 f5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+
+replace sum_hhmeb=1 if sum_hhmeb==0
+gen prod_cap=totcrop/sum_hhmeb
+
+
+ tobit  prod_cap  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+ ivtobit prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+weakiv
+ ivtobit  prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+weakiv
+ ivtobit  prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ ivtobit prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv
+
+di "area allocated the crop"
+estout f1 f2 f3 f4 f5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+
+}
+ 
+ 

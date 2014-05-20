@@ -1,0 +1,100 @@
+set more off
+log using prodctivity.log, replace
+foreach cropid of numlist 130 210 620 630 741 {
+
+
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+*keep if a4aq6==100
+gen areafarmer=a4aq3* a4aq6/100 
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+save plots, replace
+
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7a.dta"
+rename a7aq2b cropcode
+sort hh cropcode
+
+* we need conversion factors here
+rename a7aq3a untcd
+rename a7aq3c condition
+
+
+**** if not maize grains, than it is cobs
+replace  condition=22 if  condition!=45 & cropcode==130
+
+replace  condition=45 if  condition==35 & cropcode==210
+replace  condition=24 if  condition==14 & cropcode==210
+sort  cropcode condition untcd 
+save sp, replace
+
+
+clear
+insheet using   "/home/bjvca/data/data/fertility and ag productivity/datasets/conv_prod.csv"
+rename product cropcode
+
+sort  cropcode condition untcd 
+merge  cropcode condition untcd using  sp
+keep if _merge==3
+
+
+gen totkg = a7aq3b *qkg_uca
+collapse (sum) totkg, by(hh cropcode)
+sort hh cropcode
+merge hh cropcode using plots
+
+keep if _merge==3
+drop _merge
+
+drop if areafarmer <0.1
+
+drop if totkg> 1000 & `cropid'==130 
+drop if totkg> 250 & `cropid'==210 
+drop if totkg> 2000 & `cropid'==620 
+drop if totkg> 2000 & `cropid'==630 
+drop if totkg> 5000 & `cropid'==741
+
+gen yield=totkg/areafarmer
+*regress yield area 
+
+
+sort hh
+save yields, replace
+use yields
+
+
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ 
+
+*maize
+tab region, gen(regd)
+
+
+regress yield  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*  if cropcode==`cropid' , robust
+estimates store m1
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=oldestgirl )  if  cropcode==`cropid', robust
+estimates store m2
+weakiv
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=secondoldestgirl )  if size>1 &  cropcode==`cropid', robust
+estimates store m3
+weakiv
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales )  if  cropcode==`cropid', robust
+estimates store m4
+weakiv
+ivreg2  yield  femhead_hh substrat momedu_hh_dum*  health pschool memdead  regd* (dif_size=percentfmales oldestgirl )  if  cropcode==`cropid', liml robust
+estimates store m5
+weakiv
+
+estout m1 m2 m3 m4 m5 , cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)  
+sum yield if cropcode ==`cropid'
+}
+
+*aggregate
+

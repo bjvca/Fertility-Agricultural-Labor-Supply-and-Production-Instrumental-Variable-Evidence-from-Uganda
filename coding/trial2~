@@ -112,9 +112,6 @@ sort hh
   
  *** first stage regressions
 regress size oldestgirl agemother_hh  femhead_hh substrat, robust
-
-xi: regress size oldestgirl agemother_hh  femhead_hh substrat i.momedu_hh, robust
-
 estimates store m1
 regress size secondoldestgirl agemother_hh femhead_hh substrat if size>1,robust
 estimates store m2

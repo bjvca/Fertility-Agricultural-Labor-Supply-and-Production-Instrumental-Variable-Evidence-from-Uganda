@@ -4,7 +4,7 @@ rename a4aq5b cropcode
 sort hh cropcode
  * a4aq6/100
 *keep if a4aq6==100
-gen areafarmer=a4aq3* a4aq6/100 
+gen areafarmer=a4aq3* a4aq6/100 * a4aq13/100
 
 
 collapse (sum) areafarmer, by(hh cropcode)

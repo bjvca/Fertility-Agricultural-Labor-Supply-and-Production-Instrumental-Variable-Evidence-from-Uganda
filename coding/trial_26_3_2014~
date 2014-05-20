@@ -24,6 +24,7 @@ bysort hh: egen femhead_hh=max(femhead)
 
 sort hh pid
 save temp, replace
+
 use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec4.dta 
 keep hh pid h4q4
 gen momedu=0
@@ -34,6 +35,11 @@ replace momedu=. if h4q4==99 | h4q4==.
 
 sort hh pid
 merge hh pid using temp
+drop if _merge==1
+
+
+
+
 gen momedu2=0
 replace momedu2=momedu if (h2q5==1 | h2q5==2)  & h2q4==0
 bysort hh: egen momedu_hh=max(momedu2)
@@ -88,7 +94,7 @@ gen secondoldestgirl=1 if rankage==2 & h2q4==1
  gen percentfmales=sum_fmales/size
 
 
- collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl agefirstborn momedu_hh  agemother_hh femhead_hh percentfmales, by(hh)
+ collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl   agemother_hh femhead_hh percentfmales, by(hh)
 
  *** export selected sample here for dotplot
 sort hh

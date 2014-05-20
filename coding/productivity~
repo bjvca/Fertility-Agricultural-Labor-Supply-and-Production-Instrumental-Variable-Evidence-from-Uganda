@@ -1,0 +1,114 @@
+ 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4b.dta"
+rename a4bq5b cropcode
+sort hh cropcode
+gen areaGPS=a4bq3a * a4bq6/100
+gen areafarmer=a4bq3b * a4bq6/100
+
+
+collapse (sum) areaGPS areafarmer, by(hh cropcode)
+save plots, replace
+
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7b.dta"
+rename a7bq2b cropcode
+sort hh cropcode
+
+gen totkg = a7bq3b *a7bq3d
+collapse (sum) totkg, by(hh cropcode)
+sort hh cropcode
+merge hh cropcode using plots
+
+
+gen yield=totkg/areafarmer
+*regress yield area 
+
+drop _merge
+sort hh
+
+merge hh using temp
+ keep if _merge==3
+ drop _merge
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ 
+
+*maize
+
+regress yield size if cropcode==130 & yield<8000, robust
+estimates store m1
+ivregress 2sls yield (size = percentfmales agefirstborn) if cropcode==130 & yield<8000, robust
+estimates store m5
+ivregress 2sls yield (size = oldestgirl agefirstborn)if cropcode==130 & yield<8000,  robust
+estimates store m2
+ivregress 2sls yield (size = secondoldestgirl agefirstborn)if cropcode==130 & yield<8000 & size>1, robust
+estimates store m3
+ivregress 2sls yield (size = thirdoldestgirl agefirstborn)if cropcode==130 & yield<8000 & size>2, robust
+estimates store m4
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+*beans
+graph box yield if cropcode==210 & yield<4000
+regress yield size  if cropcode==210 & yield<6000, robust 
+estimates store m1
+ivregress 2sls yield (size = percentfmales agefirstborn)   if cropcode==210 & yield<6000, robust
+estimates store m5
+ivregress 2sls yield (size = oldestgirl agefirstborn)  if cropcode==210 & yield<6000 ,  robust
+estimates store m2
+ivregress 2sls yield (size = secondoldestgirl agefirstborn)  if cropcode==210 & yield<6000  & size>1, robust
+estimates store m3
+ivregress 2sls yield (size = thirdoldestgirl agefirstborn)  if cropcode==210 & yield<6000 & size>2, robust
+estimates store m4
+estout m1 m2 m3 m4 m5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex)
+
+
+*s potatoes
+graph box yield if cropcode==620 & yield<20000
+regress yield size if cropcode==620 & yield<2000, robust
+ivregress 2sls yield (size = percentfmales agefirstborn)  if cropcode==620 & yield<20000, first robust
+ivregress 2sls yield (size = oldestgirl agefirstborn) if cropcode==620 & yield<20000, first robust
+ivregress 2sls yield (size = secondoldestgirl agefirstborn) if cropcode==620 & yield<20000  & size>1, first robust
+ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==620 & yield<20000  & size>2, first robust
+*cassava
+regress yield size if cropcode==630 & yield<20000
+ivregress 2sls yield (size = percentfmales agefirstborn)  if cropcode==630 & yield<20000, first robust
+ivregress 2sls yield (size = oldestgirl agefirstborn) if cropcode==630 & yield<20000, first robust
+ivregress 2sls yield (size = secondoldestgirl agefirstborn) if cropcode==630 & yield<20000 & size>1, first robust
+ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==630 & yield<20000 & size>2, first robust
+*matooke
+regress yield size if cropcode==741 & yield<20000
+ivregress 2sls yield (size = percentfmales agefirstborn)  if cropcode==741 & yield<20000, first robust
+ivregress 2sls yield (size = oldestgirl agefirstborn) if cropcode==741 & yield<20000, first robust
+ivregress 2sls yield (size = secondoldestgirl agefirstborn) if cropcode==741 & yield<20000  & size>1, first robust
+ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if cropcode==741 & yield<20000 & size>2, first robust
+
+*aggregate
+
+gen totval=totkg*348 if cropcode==130
+replace totval=totkg*654 if cropcode==210
+replace totval=totkg*293 if cropcode==620
+replace totval=totkg*320 if cropcode==630
+replace totval=totkg*226 if cropcode==741
+drop if totval==.
+
+collapse (sum) totval areaGPS areafarmer, by(hh)
+
+gen yield=totval/areafarmer
+sort hh
+merge hh using temp
+ keep if _merge==3
+ drop _merge
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ drop if yield>700000
+ drop if yield==0
+ regress yield size 
+ ivregress 2sls yield (size = percentfmales agefirstborn), first robust
+ ivregress 2sls yield (size = oldestgirl agefirstborn), first robust
+ ivregress 2sls yield (size = secondoldestgirl agefirstborn) if size>1, first robust
+ ivregress 2sls yield (size = thirdoldestgirl agefirstborn) if size>2, first robust
+ 
+*run also in logs?

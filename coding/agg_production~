@@ -1,0 +1,181 @@
+clear 
+
+log using app_productivity.log, replace
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+*keep if a4aq6==100
+gen areafarmer=a4aq3* a4aq6/100 
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+save plots, replace
+
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7a.dta"
+rename a7aq2b cropcode
+sort hh cropcode
+
+* we need conversion factors here
+rename a7aq3a untcd
+rename a7aq3c condition
+
+
+**** if not maize grains, than it is cobs
+replace  condition=22 if  condition!=45 & cropcode==130
+
+replace  condition=45 if  condition==35 & cropcode==210
+replace  condition=24 if  condition==14 & cropcode==210
+sort  cropcode condition untcd 
+save sp, replace
+
+
+clear
+insheet using   "/home/bjvca/data/data/fertility and ag productivity/datasets/conv_prod.csv"
+rename product cropcode
+
+sort  cropcode condition untcd 
+merge  cropcode condition untcd using  sp
+keep if _merge==3
+
+
+gen totkg = a7aq3b *qkg_uca
+collapse (sum) totkg, by(hh cropcode)
+sort hh cropcode
+merge hh cropcode using plots
+
+keep if _merge==3
+drop _merge
+
+
+
+
+
+keep if cropcode==130  | cropcode== 210 | cropcode== 620 | cropcode== 630  | cropcode== 741 
+
+ sort hh
+ merge hh using firststage
+drop if _merge==1
+ replace totkg=0 if totkg==.
+ drop _merge
+replace areafarmer=0 if areafarmer==.
+
+drop if totkg> 1000 & cropcode==130 
+drop if totkg> 250 & cropcode==210 
+drop if totkg> 2000 & cropcode==620 
+drop if totkg> 2000 & cropcode==630 
+drop if totkg> 5000 & cropcode==741 
+
+
+gen totval=totkg*293 if cropcode==130
+replace totval=totkg*549 if cropcode==210
+replace totval=totkg*185 if cropcode==620
+replace totval=totkg*168 if cropcode==630
+replace totval=totkg*215 if cropcode==741
+replace totval=0 if totkg==0
+drop if totval==.
+
+
+
+collapse (sum) totval  areafarmer, by(hh)
+
+
+ sort hh
+ merge hh using firststage
+keep if _merge==3
+ tab region, gen(dreg)
+ 
+ 
+ replace sum_hhmeb=1 if sum_hhmeb==0
+ gen prod_cap=totval/sum_hhmeb
+ 
+  tab region, gen(regd)
+ tobit totval dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*, robust ll
+estimates store f1
+
+ivtobit  totval femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl ),twostep ll
+estimates store f2
+weakiv
+ivtobit  totval femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1, ll twostep
+estimates store f3
+weakiv
+ivtobit totval femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ivtobit  totval femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv 
+ 
+ 
+estout f1 f2 f3 f4 f5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(regd*)
+
+  tab region, gen(regd)
+  replace prod_cap=prod_cap/1000
+  
+ tobit prod_cap dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*, robust ll
+estimates store f1
+
+ivtobit  prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl ),twostep ll
+estimates store f2
+weakiv
+ivtobit  prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1, ll twostep
+estimates store f3
+weakiv
+ivtobit prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ivtobit  prod_cap femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv 
+estout f1 f2 f3 f4 f5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(regd*)  
+  
+   tobit areafarmer dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*, robust ll
+estimates store f1
+
+ivtobit  areafarmer femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl ),twostep ll
+estimates store f2
+weakiv
+ivtobit  areafarmer femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1, ll twostep
+estimates store f3
+weakiv
+ivtobit areafarmer femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), ll twostep
+estimates store f4
+weakiv
+ivtobit  areafarmer femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+weakiv 
+  
+ 
+
+
+ 
+estout f1 f2 f3 f4 f5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(regd*)
+drop if areafarmer<0.1
+
+gen yield=totval/areafarmer
+replace yield=yield/1000
+
+
+   tab region, gen(regd)
+   drop if yield>2000
+ regress yield dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead regd*, robust
+estimates store f1
+
+ivreg2  yield femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl ),robust
+estimates store f2
+weakiv
+ivreg2  yield femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = secondoldestgirl ) if size>1, robust
+estimates store f3
+weakiv
+ivreg2 yield femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = percentfmales ), robust
+estimates store f4
+weakiv
+ivreg2  yield femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl percentfmales ), liml robust
+estimates store f5
+weakiv 
+  
+ 
+estout f1 f2 f3 f4 f5, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(regd*)
+
+

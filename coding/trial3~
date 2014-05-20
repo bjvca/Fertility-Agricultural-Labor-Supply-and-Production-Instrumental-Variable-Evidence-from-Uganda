@@ -4,9 +4,11 @@ replace h2q4=0 if h2q4==2
 
 *keep only heads and spouses that are at reproductive age
 
-gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<=15 | h2q9>49) & h2q4==0
+gen counter=1
 
-*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>49) & h2q4==1
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<18 | h2q9>32) & h2q4==0
+
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
 replace flag=0 if flag==.
 bysort hh: egen flaghh=max(flag)
 drop if flaghh==1
@@ -22,22 +24,6 @@ gen femhead=0
 replace femhead=h2q5==1 if h2q5==1  & h2q4==0
 bysort hh: egen femhead_hh=max(femhead)
 
-sort hh pid
-save temp, replace
-use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec4.dta 
-keep hh pid h4q4
-gen momedu=0
-replace momedu=1 if h4q4>14 & h4q4<18 
-replace momedu=2 if h4q4>18 & h4q4<37  
-replace momedu=3 if h4q4>37 
-replace momedu=. if h4q4==99 | h4q4==.
-
-sort hh pid
-merge hh pid using temp
-gen momedu2=0
-replace momedu2=momedu if (h2q5==1 | h2q5==2)  & h2q4==0
-bysort hh: egen momedu_hh=max(momedu2)
-
 
 *this keeps only suns/daugthers
 keep if h2q5==3 
@@ -45,7 +31,7 @@ drop if h2q8c==.
 *drop multiple births
 duplicates drop hh h2q8c, force
 *we have manually investigated births within one year, this seems to be non-existant
-drop if h2q9>15
+drop if h2q9>16
 
 percentage girls
 bysort hh: egen rankage=rank(h2q8c), unique
@@ -88,7 +74,11 @@ gen secondoldestgirl=1 if rankage==2 & h2q4==1
  gen percentfmales=sum_fmales/size
 
 
- collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl agefirstborn momedu_hh  agemother_hh femhead_hh percentfmales, by(hh)
+
+
+   
+collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl agefirstborn   agemother_hh femhead_hh percentfmales, by(hh)
+
 
  *** export selected sample here for dotplot
 sort hh
@@ -101,25 +91,18 @@ sort hh
  drop _merge
   replace substrat=0 if substrat==3
   sort hh
-  
-  
-  
-  
  
  
  replace secondoldestgirl=secondoldestgirl*oldestgirl
   replace thirdoldestgirl=secondoldestgirl*thirdoldestgirl
   
  *** first stage regressions
-regress size oldestgirl agemother_hh  femhead_hh substrat, robust
-
-xi: regress size oldestgirl agemother_hh  femhead_hh substrat i.momedu_hh, robust
-
+regress size oldestgirl agefirstborn  femhead_hh substrat, robust
 estimates store m1
-regress size secondoldestgirl agemother_hh femhead_hh substrat if size>1,robust
+regress size secondoldestgirl agefirstborn femhead_hh substrat if size>1,robust
 estimates store m2
 
-regress size percentfmales agemother_hh  femhead_hh substrat, robust
+regress size percentfmales agefirstborn  femhead_hh substrat, robust
 estimates store m3
 
 

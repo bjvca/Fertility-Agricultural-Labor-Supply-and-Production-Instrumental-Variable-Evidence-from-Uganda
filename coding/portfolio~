@@ -1,0 +1,54 @@
+**** portfolio
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+** has maize?
+
+gen hasmaize=1 if cropcode==130
+replace hasmaize=0 if cropcode!=130
+
+collapse (max) hasmaize, by(hh)
+
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+ probit  hasmaize  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , robust
+ ivprobit hasmaize femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl) , twostep 
+
+ 
+ ** maize area?
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+ * keep if a4aq6==100
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+ bysort hh: egen totarea = sum(areafarmer ) 
+ gen maizearea= areafarmer if cropcode==130
+ replace maizearea=0 if maizearea==.
+ 
+ gen percentarea= maizearea/totarea
+ 
+ collapse (max) percentarea maizearea, by(hh)
+  sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+ tobit  percentarea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ ivtobit percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+
+  tobit  maizearea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ ivtobit maizearea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+ 
+ * maize production (kg)
+ *** see the do file production
+ 
+ * maize yield (kg/area)
+ see the do file productivity_v4
+ 

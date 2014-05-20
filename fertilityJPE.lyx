@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass article
+\textclass svglobal3
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -70,21 +70,43 @@
 \begin_body
 
 \begin_layout Title
-Fertility, Household Labor Supply and Agricultural Production: Instrumental
- Variable Evidence from Uganda
+Fertility, Household Labor Supply and Agricultural Production
+\end_layout
+
+\begin_layout Subtitle
+Instrumental Variable Evidence from Uganda
+\end_layout
+
+\begin_layout Running Title
+Fertility, Household Labor Supply and Agricultural Production
 \end_layout
 
 \begin_layout Author
 Bjorn Van Campenhout
 \end_layout
 
+\begin_layout Institute
+International Food Policy Research Institute (IFPRI) - Kampala - Plot 15,
+ East Naguru Road, Po Box 28565 - Kampala - Uganda - b.vancampenhout@cgiar.org
+ - +256 790 833729
+\end_layout
+
+\begin_layout Running Author
+Bjorn Van Campenhout
+\end_layout
+
+\begin_layout Standard
+Keywords: fertility, instrumental variables, household labour supply, agricultur
+e, Uganda.
+\end_layout
+
+\begin_layout Standard
+JEL codes: J13, J22, Q12
+\end_layout
+
 \begin_layout Abstract
 Fertility is likely to affect agricultural production through its effect
  on household labor supply.
- However, to uncover the causal effect of fertility on agricultural labour
- and production, one needs to deal with the fact that the household size
- is a choice variable within the household that is determined simultaneously
- with labour and production decisions.
  Using the fact that in traditional, patriarchal societies sons are preferred
  to girls, we isolate exogenous variation in the number of children born
  to the mother and related it to labor supply and production outcomes in
@@ -97,9 +119,8 @@ Fertility is likely to affect agricultural production through its effect
  There is no effect on child labour.
  Households with lower fertility devote significantly more time to land
  preparation and weeding.
- We also find that smaller households grow and produce more matooke.
- This effect holds to a lesser extent for sweet potatoes.
- We find no impact on yields.
+ This results in the fact that larger households grow less matooke and sweet
+ potatoes.
  
 \end_layout
 
@@ -145,8 +166,8 @@ key "New9"
  The question on how fertility affects well-being through its effect on
  household labour supply and agricultural production is therefore relevant.
  For example, knowledge on how fertility affects time allocation by different
- cattegories within the household is important to gender-stream efforts
- related to crop intensification and commercialization.
+ categories within the household is important to gender-stream efforts related
+ to crop intensification and commercialization.
 \end_layout
 
 \begin_layout Standard
@@ -163,7 +184,7 @@ In this study, we will investigate the effect of fertility on agricultural
  to have more children because this means cheap labor.
  If fertility, time allocations and agricultural production is indeed jointly
  determined, just looking at correlations will be misleading, and one needs
- to find a way to seperate the exogenous varation from the part that is
+ to find a way to separate the exogenous variation from the part that is
  jointly determined.
 \end_layout
 
@@ -177,8 +198,8 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
 \end_inset
 
 .
- We use the fact that male offsprings are preferred in conservative, patriarchal
- societies to construct a range of instruments.
+ We use the fact that male off-springs are preferred in conservative, patriarcha
+l societies to construct a range of instruments.
  The exogenous variation in the sex of a child can then be used to determine
  the exogenous component of household size.
  Such a two stage least squares approach is expected to yield consistent
@@ -213,7 +234,7 @@ key "doi:10.1080/00220380500356779"
  fertility in India and its effect on well-being.
  We feel it is too ambitious to relate fertility directly to poverty and
  related measures of consumption as there may be ways in which the instrument
- can affect consumption besides through the fertility chanel.
+ can affect consumption besides through the fertility channel.
  We therefore restrict ourselves to labour allocation, area planted and
  production.
  In addition, most studies that look at the effects of fertility on labour
@@ -416,7 +437,7 @@ key "doi:10.1080/00220380500356779"
  For instance, if boys consume on average more than girls, the exclusion
  restriction is violated.
  They confirm that high fertility is correlated with poverty, but the correlatio
-n dissapears when they account for potential endogeneity of fertility.
+n disappears when they account for potential endogeneity of fertility.
  There is also some evidence on Indonesia.
  
 \begin_inset CommandInset citation
@@ -844,7 +865,7 @@ Alternatively, one could use the number of children within the household
  In addition, one would also need to corporate the maternal mortality ratio
  for "censoring" women's lives who have too many children and thus increasing
  her mortality rate (and exit from the sample).
- However, we took the 95th precental of total fertility rates per age from
+ However, we took the 95th percentile of total fertility rates per age from
  the Demographic and Health Survey of Uganda (2011).
  This is probably a good approximation of the upper bound by age of fertility
  in the population.
@@ -920,7 +941,7 @@ reference "tab:gender-and-fertility"
 \end_layout
 
 \begin_layout Standard
-We also look at the shortfall in actural fertility to theoretical fertility.
+We also look at the shortfall in actual fertility to theoretical fertility.
  In the first two columns, we report this fertility gap for two groups of
  households.
  We find that households that have a boy as the firstborn child have an
@@ -961,7 +982,7 @@ Finally, we compare the average fertility in two different groups defined
  likely to live in larger families.
  We indeed find that if there are more girls than boys amongst the children,
  the average number of children is higher.
- We also find a difference in the fertiliy gap that is significant with
+ We also find a difference in the fertility gap that is significant with
  associated p-value of 0.021.
 \end_layout
 
@@ -1154,7 +1175,7 @@ av fertility
 \begin_inset Text
 
 \begin_layout Plain Layout
-% daugthers>0.5
+% daughters>0.5
 \end_layout
 
 \end_inset
@@ -1474,7 +1495,7 @@ In this section we will briefly look at some descriptive statistics on labor
  The second cropping season is from July to December.
  The UNHS 2005/06 interviewed households twice over the course of one year
  to capture this feature.
- It visisted households in the beginning of 2005 to capture the second cropping
+ It visited households in the beginning of 2005 to capture the second cropping
  season in 2004 (that is, running from July to December 2004).
  Households were revisited at the end on 2005 to record information from
  the first cropping season in 2005 (running from January to June 2005).
@@ -1565,6 +1586,13 @@ name "fig:Average-hours-worked"
 
 \begin_layout Subsubsection*
 Production
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Production"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1590,7 +1618,7 @@ reference "tab:2averages"
  level.
  This may seem low, but this because households that report not to produce
  the crop are also part of the average.
- We also devide by household size.
+ We also divide by household size.
  Finally, we report yields for the five crops, defined as the amount of
  each crop harvested per unit of land (per acre).
 \end_layout
@@ -1789,7 +1817,11 @@ The maximum number of children has been estimated from the DHS and is actually
 \end_inset
 
 .
- We will refer to this as the feriltiy gap or fertility shortfall.
+ We will refer to this as the fertility gap (
+\emph on
+fgap
+\emph default
+) or fertility shortfall.
  It actually is the reverse of fertility, as the higher the gap, the lower
  the number of children in the household in a given age cohort.
  Apart from the exogenous variable that is excluded from the second stage
@@ -1832,7 +1864,7 @@ mprim
  take the value of 1 if the mother has completed primary eduction.
  
 \emph on
-msecond
+msec
 \emph default
  is the additional effect of having completed secondary education.
  Thus, if 
@@ -1850,7 +1882,7 @@ mthird
 \emph default
  is the additional effect of the mother having completed tertiary education.
  The comparison category are therefore households where the mother did not
- compelete at least primary education.
+ complete at least primary education.
  We also add two community variables which are likely to influence household
  size.
  These are 
@@ -1879,13 +1911,13 @@ We experiment with four different possible excluded instruments.
  The coefficient is significant at the one percent level and has the expected
  sign.
  Having a girl as a first-born reduces that fertility gap by about 0.2 children.
- In othe words, households that have a girl as a first-born tend to be closer
- to maximal fecundity.
+ In other words, households that have a girl as a first-born tend to be
+ closer to maximal fecundity.
  For the controls, we find that households where females are the head have
  a significantly larger fertility gap.
  The effect is very large, suggesting such mothers have more than 1 child
  less.
- Also in urban areas, households seem to have less children, as a significanlty
+ Also in urban areas, households seem to have less children, as a significantly
  larger difference indicates.
  Schooling of the mother seems to reduce the number of children only at
  secondary and tertiary level.
@@ -1895,10 +1927,10 @@ We experiment with four different possible excluded instruments.
  The community variables do not seem to have an effect on the fertility
  gap.
  Finally, having lost a child in the past leaves a significant additional
- feritlity gap compared to households that never lost a child.
+ fertility gap compared to households that never lost a child.
  However, the additional gap is much lower than one, suggesting a substantial
  replacement effect in Ugandan fertility.
- The constant indicates that the overall average feritlity gap is about
+ The constant indicates that the overall average fertility gap is about
  two children.
 \end_layout
 
@@ -1979,7 +2011,7 @@ As a rule of thumb, it is often stated that one has weak instruments if
  In other words, we have serious concerns that our instruments are weak.
  We therefore use inference that is robust to weak instruments.
  In particular, we rely on the Anderson-Rubin test statistic to gauge the
- significance of the endogenous variable in all subequent regressions 
+ significance of the endogenous variable in all subsequent regressions 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:ecm:emetrp:v:65:y:1997:i:3:p:557-586"
@@ -2102,7 +2134,7 @@ hline
 \backslash
 
 \backslash
- msecond&       0.259* &       0.220+ &       0.193  &       0.257* 
+ msec&       0.259* &       0.220+ &       0.193  &       0.257* 
 \backslash
 
 \backslash
@@ -2176,6 +2208,10 @@ hline
 end{tabular}
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -2191,9 +2227,17 @@ Household labor supply
 \end_layout
 
 \begin_layout Standard
-We now turn to look at the effect of fertility on household labor supply.
- We will look at labor supply by three different categories of household
- members (table 
+We now turn to look at the effect of fertility on total household labor
+ supply (table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:totlabour"
+
+\end_inset
+
+).
+ We will also look at labor supply separately for the mother, the father
+ and the children (table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:2SLS-estimates-of"
@@ -2213,10 +2257,247 @@ reference "tab:2SLS-estimates-allocation"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{rcccccc} 
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+fgap    &      -0.212  &      39.614  &      59.576  &      64.978** &     
+ 62.710** 
+\backslash
+
+\backslash
+             &     (1.386)  &    (30.258)  &    (50.154)  &    (33.135)  & 
+   (35.648)  
+\backslash
+
+\backslash
+ femhead  &     -40.394**&     -88.806* &    -113.348+ &    -119.638**&    -116.881**
+\backslash
+
+\backslash
+             &     (5.098)  &    (37.206)  &    (61.008)  &    (41.590)  & 
+   (44.357)  
+\backslash
+
+\backslash
+ urban    &     -24.968**&     -35.077**&     -41.591**&     -41.515**&    
+ -40.940**
+\backslash
+
+\backslash
+             &     (6.079)  &    (10.774)  &    (13.803)  &    (13.123)  & 
+   (13.310)  
+\backslash
+
+\backslash
+ mprim &       1.226  &       6.903  &       5.875  &      10.519  &      10.196
+  
+\backslash
+
+\backslash
+             &     (5.165)  &     (7.587)  &     (7.952)  &     (8.849)  & 
+    (8.959)  
+\backslash
+
+\backslash
+ msec&      -4.230  &      -7.991  &      -5.032  &     -10.387  &     -10.173
+  
+\backslash
+
+\backslash
+             &     (6.952)  &     (8.644)  &    (11.557)  &    (11.022)  & 
+   (10.786)  
+\backslash
+
+\backslash
+ mthird&     -14.608  &     -56.929  &     -72.027  &     -83.882+ &     -81.472+
+ 
+\backslash
+
+\backslash
+             &    (11.362)  &    (38.515)  &    (56.045)  &    (43.971)  & 
+   (46.309)  
+\backslash
+
+\backslash
+ health      &     -17.331* &     -22.992* &     -20.964  &     -26.597+ & 
+    -26.275+ 
+\backslash
+
+\backslash
+             &     (8.017)  &    (10.683)  &    (14.775)  &    (13.724)  & 
+   (13.481)  
+\backslash
+
+\backslash
+ school     &      11.036* &       6.879  &       8.616  &       4.232  &  
+     4.469  
+\backslash
+
+\backslash
+             &     (5.017)  &     (6.688)  &     (9.109)  &     (7.722)  & 
+    (7.802)  
+\backslash
+
+\backslash
+ cdead     &      14.906* &       5.927  &       3.685  &       0.209  &   
+    0.720  
+\backslash
+
+\backslash
+             &     (6.606)  &    (10.398)  &    (12.805)  &    (12.667)  & 
+   (12.750)  
+\backslash
+
+\backslash
+ cons       &      94.142**&      13.750  &     -13.363  &     -37.449  &  
+   -32.872  
+\backslash
+
+\backslash
+             &     (4.983)  &    (61.460)  &    (92.890)  &    (66.756)  & 
+   (71.924)  
+\backslash
+
+\backslash
+  
+\backslash
+
+\backslash
+ N           &    2016 &    2016  &    1620  &    2016  &    2016  
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+          
+\end_layout
+
+\begin_layout Plain Layout
+
+instrument:	&	-	&	1st = girl	&	1st 
+\backslash
+& 2nd = girl	&	
+\backslash
+% girl	& 1st = girl 
+\backslash
+& 
+\backslash
+% girl	
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hline 
+\backslash
+hline 
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Effect of fertility on total hours worked in agriculture
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:totlabour"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 In table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "tab:2SLS-estimates-of"
+reference "tab:totlabour"
 
 \end_inset
 
@@ -2238,78 +2519,50 @@ We have also done this analysis using days worked per acre of land held
 \end_inset
 
 .
- We differentiate between work done by the mother, the father and the children.
- We only show the coefficient on the fertility gap, but we also added the
- exogenous control variables that were also included in the first stage
- regression.
- Full results can be found in the appendix.
+ The first column of the table reports the result without taking into account
+ endogeneity of number of children.
+ It reports OLS estimates for the number of days the reported working on
+ the household farm, engaging in land preparation, input application, weeding
+ and harvesting.
+ We see that there is no significant correlation between the number of days
+ worked and fertility as measured by the fertility gap.
+ We do find significant and negative effects of the household being headed
+ by a female and the household being located in an urban area.
+ The education of mothers does not seem to be systematically related to
+ the hours worked in agriculture.
+ The OLS estimates also show positive correlations between a school in the
+ community and hours worked in agriculture and between a deceased child
+ in the past and hours worked.
+ There is also some indication of a positive correlation between health
+ centers in the community and hours worked.
+ On average, households report working about 90 labor days on the field
+ in the July to December 2004 cropping season.
  
 \end_layout
 
 \begin_layout Standard
-The first column of the table reports the result without taking into account
- endogeneity of number of children.
- The top panel of the table reports OLS estimates for the number of days
- the mother reported working in the household.
- We can see that there is no significant correlation between the number
- of days worked by the mother and fertility as measured by the fertility
- gap.
- Full results, in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:appendixmotherh"
-
-\end_inset
-
-, show significant and negative effects of the household being headed by
- a female and the houshold being located in an urban area.
- Mothers that have finished tertiary education also work significantly less
- on the field.
- The constant indicates women spend about 50 labor days working the on the
- field in the July to December 2004 cropping season.
-\end_layout
-
-\begin_layout Standard
-Models (2) to (4) estimate the same models, but instrumenting the fertility
+Models (2) to (4) estimate the same models, but instrument the fertility
  gap with a single gender related excluded instrument.
  In model (2), the instrument is an indicator taking the value of one if
  the firstborn is a girl.
- Accounting for endogeneity of fertility using the exogenous variation caused
- by the sex of the firstborn renders the fertility gap significant at a
- 5 percent level.
- The estimate is positive, implying that higher fertility (and hence a shrinking
- fertility gap) reduces the number of days the woman works on the field.
- The control variables do not seem to change too much between the OLS and
- 2SLS specification (see again table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:appendixmotherh"
-
-\end_inset
-
-).
- While the size of the coefficients changes, the sign and siginifcance levels
- are very similar.
- It appears, though that the the fertility gap drives most of the positive
- effect of hours worked (and the constant is not estimated signficinatly
- different from zero).
- With an average fertility gap of about 2, mother work about 60 days on
- the field according to model (2).
+ The coefficient on the fertility gap now becomes positive, but remains
+ insignificant.
+ Model (3) uses the sex of the first and second born as instruments for
+ the fertility gap.
+ The size of the fertility effect becomes larger, but still not significantly
+ different from zero.
+ Model (4) uses the share of daughters as an instrument.
+ The estimate is positive and significant, implying that higher fertility
+ (and hence a shrinking fertility gap) reduces the number of days worked
+ on the field.
+ 
 \end_layout
 
 \begin_layout Standard
-Cycling through the results with the alternative instruments, the results
- change little with respect to significance.
- For instance, model (3) uses the sex of the first and second born as instrument
-s for the fertility gap.
- The coefficient on the instrumented fertility gap is now significant at
- the 1 percent level.
- Model (4) uses the share of daugthers as an instrument.
- Again here, the coefficient is significant and positive.
- Finally, model (5) uses both the gender of the firstborn and the share
- of daughters as instruments
+Finally, model (5) uses both the gender of the firstborn and the share of
+ daughters as instruments
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 We use Limited Information Maximum Likelihood (LIML), as this is known to
@@ -2328,17 +2581,98 @@ key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
 
 .
  According to Hansen-J statistic, our model that uses multiple instruments
- is valid.
+ is valid (Hansen-J=0.849; p-val=0.357).
  We thus assume this is the best specification.
- This specification tells us that women spend on average almost 78 days
- in the field.
- Each additional child causes a reduction of about 39 days.
+ Each additional child causes a reduction of about 62 days of labour in
+ agriculture.
+ With respect to the other variables in the regression, we find some signs
+ that households with women that have finished tertiary education appear
+ to be less engaged in agriculture.
 \end_layout
 
 \begin_layout Standard
-In the middle panel, we report the same OLS regression but with the number
- of days worked by adult males as the dependent variable.
+In table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:2SLS-estimates-of"
+
+\end_inset
+
+, we differentiate between work done by the mother, the father and the children.
+ We only show the coefficient on the fertility gap, but we also added the
+ exogenous control variables that were also included in the first stage
+ regression.
+ Full results can be found in the appendix.
  
+\end_layout
+
+\begin_layout Standard
+The top panel in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:2SLS-estimates-of"
+
+\end_inset
+
+ shows the effect of fertility on hours worked by the mother.
+ The OLS estimate is not significant (model (1)).
+ Accounting for endogeneity of fertility using the exogenous variation caused
+ by the sex of the firstborn renders the fertility gap significant at a
+ 5 percent level (model (2)).
+ Mothers work on average more than 50 days in agriculture.
+ Cycling through the results with the alternative instruments, the results
+ change little with respect to significance.
+ In all, an additional child seems to reduce hours worked by the mother
+ in agricultural production by about 40 days.
+ Full results are reported in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:appendixmotherh"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the first column of the middle panel, we report the same OLS regression
+ but with the number of days worked by adult males as the dependent variable.
+ As is the case with female labour, the fertility gap does not seem to be
+ correlated to male layout supply.
+ Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Effect-on-maileappend"
+
+\end_inset
+
+ in the appendix gives full results.
+ The constant is much lower, reflecting that women work more than ten days
+ more on the field during the season, on average.
+ We find that residing in urban areas leads farmers reporting less days
+ worked on the field.
+ We also find a large negative effect of female headedness on hours worked
+ by the male.
+ This is because in most cases, households are headed by females because
+ the male head is missing, leading to less hours reported on the field.
+ We also find some evidence of males working less if the mother has higher
+ eduction.
+ This is most likely because higher educated men choose higher educated
+ women to marry and the other way around.
+\end_layout
+
+\begin_layout Standard
+Judged by the instrumental variable models from (2) to (5) the effect of
+ fertility on labour supply by the father is less clear cut.
+ When using the sex of the first born (model 2) and the sex of the first
+ two children born (model 3) as instruments, the coefficient is positive
+ but not significantly different from zero.
+ If we instrument the fertility gap using the percentage of females, we
+ find some indication that more children may reduce time allocated to working
+ on the field my males.
+ The effect, however, is much smaller than the reduction found for women.
+ The over-identified model in model (5) shows a significant effect at the
+ 10 percent level only.
 \end_layout
 
 \begin_layout Standard
@@ -2610,36 +2944,33 @@ end{tabular}
 \begin_layout Standard
 The last panel looks at the number of days children are reported to be working
  in agriculture.
- As in the case of male members, there is no correlation with fertility.
+ As in the case of male members, there is no correlation with fertility
+ for the OLS specification in model (1).
+ Full results are again reported in the appendix (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Effect-appchildren"
+
+\end_inset
+
+).
  There also seems to be no difference between rural and urban areas.
  However, female headed households are associated with lower levels of child
  labor.
- Finally, the OLS estimates suggest life-cycle effects.
- If the age of the firstborn is higher, children are more likely to work
+ There is also weak evidence that a school and a health center in the community
+ reduce child labour.
+ Children work on average about 7 days on the field.
+\end_layout
+
+\begin_layout Standard
+When we instrument the fertility gap by the sex of the first-born, the coefficie
+nt remains negative.
+ This is different from what we find for days worked by the mother or the
+ father.
+ This would mean that a lower fertility reduces the hours worked by children
  on the field.
-\end_layout
-
-\begin_layout Standard
-Cycling through the results with the alternative instruments, the results
- change little with respect to significance.
- According to Hansen-J statistic, our model that uses multiple instruments
- is valid.
- We thus assume this is the best specification.
- This specification tells us that women spend on average almost 120 days
- in the field.
- Each additional child causes a reduction of about 60 days.
-\end_layout
-
-\begin_layout Standard
-If we instrument fertility in the models for days worked for males in the
- household, average days worked also increases.
- Still, it remains much lower than the average days reported by women.
- Apart from the large female headedness effect, the only other variable
- that seems to matter is the urban indicator, where males spend on average
- significantly less time.
- There is some indication of a negative effect of fertility on male labor
- supply, but it is not significantly different from zero.
- Finally, there is no effect of fertility on child labor.
+ However, the coefficient becomes only significantly at a p-value of 0.162
+ for the Anderson-Rubin test.
 \end_layout
 
 \begin_layout Standard
@@ -2742,30 +3073,9 @@ hline
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 multicolumn{7}{c}{time allocated to land preparation}	
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
 
 \backslash
@@ -2774,16 +3084,8 @@ multicolumn{7}{c}{time allocated to land preparation}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
-      24.458* 
+    &      -0.023  &      14.121  &      39.186**  &      25.466** &      24.458*
+ 
 \backslash
 
 \backslash
@@ -2797,18 +3099,9 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 multicolumn{7}{c}{time allocated to input application}	
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
 
 \backslash
@@ -2817,8 +3110,8 @@ multicolumn{7}{c}{time allocated to input application}
 
 \begin_layout Plain Layout
 
-difsize    &       0.055  &       1.675  &       0.594  &       2.315  &   
-    2.118  
+    &       0.055  &       1.675  &       0.594  &       2.315  &       2.118
+  
 \backslash
 
 \backslash
@@ -2828,10 +3121,6 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 
 \backslash
  
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2852,8 +3141,8 @@ multicolumn{7}{c}{time allocated to weeding}
 
 \begin_layout Plain Layout
 
-difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &  
-    19.875* 
+    &      -0.019  &      13.851  &      27.837*  &      21.177* &      19.875*
+ 
 \backslash
 
 \backslash
@@ -2862,10 +3151,6 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2887,8 +3172,8 @@ multicolumn{7}{c}{time allocated to harvesting}
 
 \begin_layout Plain Layout
 
-difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &   
-    9.298  
+    &      -0.062  &       1.579  &      -6.014  &      11.569  &       9.298
+  
 \backslash
 
 \backslash
@@ -2910,8 +3195,7 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
-N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  &  
-  2015.000  
+N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -2969,69 +3253,111 @@ reference "tab:2SLS-estimates-allocation"
 \end_inset
 
  looks at reported labor by activity instead of by sex.
- For instance, model (1) presents OLS results for number of days reported
+ Again, the results reported in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:2SLS-estimates-allocation"
+
+\end_inset
+
+ only show the coefficients on the fertility gap.
+ Full results are in the appendix.
+\end_layout
+
+\begin_layout Standard
+Model (1) in the top panel presents OLS results for number of days reported
  to be spending on land preparation.
- On average, the household spends about 29 days preparing land.
+ On average, the household spends about 38 days preparing land (table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:prepappe"
+
+\end_inset
+
+).
  There are no fertility effects.
- Model (2) presents the same model, but instruments fertility with the indicator
+ Again, as expected, households residing in urban areas spend significantly
+ less time preparing land.
+ Female headed households also allocate less time to land preparation.
+ There is also some indication that women that have tertiary education are
+ less engaged in land preparation.
+\end_layout
+
+\begin_layout Standard
+Model (2) presents the same model, but instruments fertility with the indicator
  for the first child being a girl.
- This increases the average number of hour worked in the field.
- More importantly, the parameter on fertility now becomes significantly
- negative.
- An extra child reduces time spent on land preparation by more than 30 days.
- The effect is confirmed when we use both percentage of females among the
- children and the sex of the first-born as instruments (model (3)).
+ The fertility effect now becomes positive, but is not siginificantly different
+ from zero.
+ In model (3), where we look at the sex of the first two children, the fertility
+ gap effect becomes significant.
+ The effect remains significant when we instrument the fertility shortfall
+ by the percentage of females born (model (4)) and in the over-identified
+ model (5), but the effect size reduces.
+ An additional child reduces time allocated to land preparation by about
+ 25 days.
 \end_layout
 
 \begin_layout Standard
-Models (4)-(5) run the same respective regressions, but now with time reported
- to input application as the dependent variable.
- The OLS regression indicates households spend less than half a day on this
- activity.
- There seems to be no significant effect of fertility on this activity.
+The second panel repeats the same five models, but uses hours spent on input
+ application as the dependent variable.
+ In none of the five specifications, fertility seems to have a significant
+ impact.
+ Overall, time spend on input application is very limited anyway, as can
+ be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Average-hours-worked"
+
+\end_inset
+
+.
+ In all, households spend only about one day applying inputs (including
+ planting).
+ The only significant effect we find is that households where the mother
+ has at least primary education allocate more time to input application.
 \end_layout
 
 \begin_layout Standard
-Model (7) presents OLS results for time spend on weeding.
- If we do not properly model endogeneity of fertility, more children mean
- more weeding is done.
- Female headed households spend less time on weeding, as do urban households.
- Households spend on average 21 days weeding and each extra child increases
- this by about 2.5 days.
- If we do account for endogeneity of fertility, we find that household size
- actually decreases time allocated to weeding by more than thirty days per
- additional child (model (8)).
+The third panel presents results for time spend on weeding.
+ The results are similar to the ones for land preparation, but the effects
+ are smaller.
+ Households spend on average 30 days weeding and each extra child reduces
+ this by about 20 days.
+ Full results in the appendix (table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:timeweeding"
+
+\end_inset
+
+) show significant negative effects for female headed households and for
+ households in urban areas.
+ We also find that communities that have a health center are spending less
+ hours on weeding.
  
 \end_layout
 
 \begin_layout Standard
-Finally, models (10) to (12) investigate the effects of fertility on harvesting.
- According to the ordinary least squares models, there is a significant
- positive association between the number of children in the family and the
- number of days worked on the farm (model (10)).
- The average number of days is about 17 days, lower than time allocated
+Finally, the last panel looks at the effects of fertility on days worked
+ for harvesting.
+ There is no significant positive association between the number of children
+ in the family and the number of days spend harvesting.
+ The average number of days is about 26 days, lower than time allocated
  to both preparing the land and weeding.
- Each additional child is associated with an extra three days of harvesting.
- However, allowing for endogenity of fertility wipes out the effect (models
- (11) and (12)).
+ 
 \end_layout
 
 \begin_layout Standard
-The above suggests that family size affects time allocated to land preparation
+The above suggests that fertility affects time allocated to land preparation
  and weeding in a negative way.
- It is interesting to note that the endogenity bias is largest for weeding.
- This suggests that households that have many children are likely to allocate
- more time to weeding (they may put, for instance, more children to work
- for weeding).
- However, if we separate out the causal effect that runs from household
- size to weeding, the reverse effect holds.
  Harvesting seems to be less related to family size.
  Probably, when crops are ready to be harvested, farmers are more likely
  to put in the extra effort.
  This seems to be less evident for work that has an uncertain payoff in
  the future.
- The reductions of time allocated to land preparation and weeding are expected
- to reduce agricultural productivity.
+ The reductions of time allocated to land preparation and weeding may reduce
+ both area planted and agricultural productivity.
+ We will turn to this in the next section.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -3042,7 +3368,7 @@ Area planted, Production and Productivity
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3100,14 +3426,6 @@ hline
 \backslash
 
 \backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3277,100 +3595,59 @@ We will now look at the effect of fertility on production and productivity.
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "prod"
+reference "tab:2SLS-estimates-area"
 
 \end_inset
 
- reports on the second stage of agricultural productivity for the five most
- important crops.
- Models (1) and (2) report OLS and 2SLS estimates for the amount of kilograms
- maize reportedly harvested per acre of cultivated land.
- We find that, on average, households harvest about 614 kilograms per acre.
- Younger households are associated with significantly higher yields, as
- are male headed households.
- The OLS model suggests that household size increases maize productivity.
- However, when endogeneity is taken into account, this positive effect disappear
-s.
+ reports on the second stage regression of different aspects of production
+ for the five most important crops.
+ The table only reports the result coefficient on our fertility variable
+ for the instrumental variable regression that uses the share of girls as
+ excluded instrument.
+ The regressions include the same control variables as in the previous sections.
+ However, we now also added regional dummies, as some crops are grown more
+ in some regions than in others.
+ If the dependent variable is binary or censored, a tobit or probit is estimated
+ using the methods described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:eee:econom:v:36:y:1987:i:3:p:231-250"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The first row takes as the outcome variable a dummy that is one if the household
+ reported growing the crop and zero otherwise.
+ We therefore estimated probit models that show us if additional children
+ increase or decrease the likelihood that the household reports growing
+ a certain crop.
+ We find no significant effects for most crops.
+ Only for sweet potatoes and for matooke it seems that a larger fertility
+ gap increases the chance of growing the crop.
  
 \end_layout
 
 \begin_layout Standard
-Beans productivity is much lower, as expected, averaging just under 200
- kilograms per acre.
- There also seems to be a positive relationship between household size and
- the productivity of beans.
- The instrumental variable approach now confirms that there is a positive
- effect of additional children on the productivity.
- However, productivity reduces when the age of the firstborn is higher.
+The next row looks at the total area reported to be used to grow each crop,
+ measured in acres.
+ We find a positive effect of the fertility gap on the area used to grow
+ matooke.
+ The next row looks at the area as a share of total area.
+ In this case, it seems that households with more children allocate less
+ land as a share of total land to sweet potatoes.
 \end_layout
 
 \begin_layout Standard
-Productivity of sweet potatoes is somewhere between 500 and 600 kilograms
- per hectare.
- As for maize, not taking into account the potential endogeneity of fertility
- results in a positive correlation.
- Instrumenting size by the gender of the first-born renders this effect
- insignificant.
- For cassava and matooke, none of the variables are significant apart from
- the constants.
- Cassava yields are around 500 kilograms per acre.
- Matooke yields are about 700 kilograms per acre.
-\end_layout
-
-\begin_layout Standard
-Finally, in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:total-production-and"
-
-\end_inset
-
- we multiply quantities harvested by average prices and sum over the five
- most important crops.
- This gives us an idea of the value of total production.
- In model (1) we concentrate on the effect of fertility on total production
- at the farm household level in thousands of Ugandan shillings.
- We see that, for this OLS regression, households with more children produce
- more on average.
- Female headed households produce significantly less.
- Households produce crops worth about UGX160000 during entire the agricultural
- season.
-\end_layout
-
-\begin_layout Standard
-The situation changes dramatically when we treat fertility as endogenous
- (model (2)).
- In this case, our estimates suggest that large households produce significantly
- less.
- There is also evidence of a life cycle effect, as production increases
- as the age of the firstborn increases.
- Female headed households appear to do worse, on average, compared to male
- headed households.
- The average output is now worth about UGX420000, but to estimate is much
- less precise.
- 
-\end_layout
-
-\begin_layout Standard
-Next, we turn to total area that has been cultivated by these crops.
- We again present results using plain OLS (model (3)) and 2SLS (model (4)).
- Results show the same pattern as the first two models.
- If we do not account for endogeneity of fertility, there is a correlation
- between larger households and more area cultivated.
- However, if we only consider the exogenous variation within the number
- of children, we find that households with more children actually cultivate
- less land.
-\end_layout
-
-\begin_layout Standard
-The last two columns look at the results for productivity, defined as thousands
- of Ugandan shillings per harvested acre.
- Again, one would be inclined to think high fertility is actually good for
- crop intensification.
- However, when we account for potential endogeneity of fertility, we find
- no effect between productivity and the number of children born to the mother
- within the household\SpecialChar \@.
-
+The next row looks at the value of total production in kg.
+ Only for matooke, again larger households seem to obtain a significantly
+ lower quantity of matooke.
+ The next row looks at production per capita.
+ The lower production of matooke persists if we account for household size.
+ Finally, for none of the products, the fertility gap has a significant
+ effect on yield.
 \end_layout
 
 \begin_layout Standard
@@ -3416,38 +3693,9 @@ hline
 \begin_layout Plain Layout
 
 	&	(1)	&	(2)	&	(3)	&	(4)		&	(5)	
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
 
 \backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3460,6 +3708,13 @@ hline
 
 
 \backslash
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 
 \backslash
 
@@ -3471,8 +3726,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &   -3411.422  &   21056.089  &  -20275.251  &   16988.250  &   19334.078
-  
+production    &   -3411.422  &   21056.089  &  -20275.251  &   16988.250  &
+   19334.078  
 \backslash
 
 \backslash
@@ -3491,8 +3746,8 @@ difsize    &   -3411.422  &   21056.089  &  -20275.251  &   16988.250  &   19334
 
 \begin_layout Plain Layout
 
-difsize    &    4133.443**&   10501.280  &   -9251.026  &   14517.262  &   12340.136
-  
+dproduction per capita    &    4133.443**&   10501.280  &   -9251.026  &  
+ 14517.262  &   12340.136  
 \backslash
 
 \backslash
@@ -3506,8 +3761,8 @@ difsize    &    4133.443**&   10501.280  &   -9251.026  &   14517.262  &   12340
 
 \begin_layout Plain Layout
 
-difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &   
-    0.132  
+area    &      -0.033  &       0.120  &       0.042  &       0.145  &      
+ 0.132  
 \backslash
 
 \backslash
@@ -3521,8 +3776,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 
 \begin_layout Plain Layout
 
-difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &   
-    8.818  
+yield    &      -1.697  &      43.088  &     -96.861  &       0.013  &     
+  8.818  
 \backslash
 
 \backslash
@@ -3559,32 +3814,193 @@ end{tabular}
 
 \end_layout
 
+\begin_layout Standard
+In table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:2SLS-totals"
+
+\end_inset
+
+ we present results on total production and productivity, using the prices
+ for the different crops as described in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Production"
+
+\end_inset
+
+.
+ We present again five different models.
+ The first one a regression that does not take endogeneity into account.
+ While in the previous regressions this was typically OLS, this may now
+ change to a probit or tobit regression, depending on the nature of the
+ dependent variable.
+ The second regression instruments the fertility gap with the sex of the
+ firstborn.
+ The third model uses the sex of the first two children born to the mother
+ and the fourth uses the share of women amongst the children.
+ As before, the fourth model instruments the fertility difference by two
+ instruments: the sex of the firstborn and the share of girls among the
+ children.
+ If the dependent variable is binary or censored, a tobit or probit is estimated
+ using the methods described in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:eee:econom:v:36:y:1987:i:3:p:231-250"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The first row gives results for the change in production.
+ There seems to be no detectable effect from fertility on the total value
+ of the production of the five crops.
+ The second row expresses this production in per capita terms.
+ The OLS estimates show a positive effect of an increase in the fertility
+ gap.
+ However, if we confine to the exogenous part of fertility in the IV regressions
+, the effect disappears.
+ The next row looks at a change in the total area allocated to the five
+ crops.
+ There is again no significant effect from fertility.
+ The final row, which looks at productivity defined as the total value of
+ the five crops divided by the total area allocated to these five crops,
+ also finds no causal impact from family size.
+\end_layout
+
 \begin_layout Section*
 Conclusion
 \end_layout
 
 \begin_layout Standard
-In this paper, we look at the effect of fertility on agricultural productivity
- and its determinants.
+In this paper, we look at the effect of fertility, defined as the number
+ of biological children born to the mother, on agricultural production and
+ its determinants.
  One of the most evident determinants is household agricultural labour.
  More children means more labour is available within the household.
  However, more children also means that time of the most productive persons
- within the family farm, adult females, is lost to reproductive choires.
+ within the family farm, adult females, is lost to reproductive chores.
  In this paper, we try to isolate the causal effect of extra children on
  household labour supply and production.
 \end_layout
 
 \begin_layout Standard
-Cautions: The fact that we rely on a cross-section of households also limits
+The identification strategy we use relies on the premise that, in partilineal
+ societies, boys are preferred to girls in terms of offspring.
+ Households that have a girl as the first child will have a higher propensity
+ to add more children to the household.
+ The fact that the sex of the first child is exogenous can be used to identify
+ the causal impact of additional children on other variables such as labour
+ supply and productivity.
+ Similarly, the fertility rule whereby one is more likely to stop having
+ children after a boy means that, on average, larger households consist
+ of more girls.
+ Therefore, the share of females in the total number of children.
+\end_layout
+
+\begin_layout Standard
+Our first stage regression performs reasonably well.
+ We find a significant negative effect of an indicator variable that the
+ first-born is a girl on a variable that measures the shortfall from fecundity.
+ We equally find a negative effect of an indicator that the first two children
+ are female.
+ Finally, we also find that households with a relatively higher share of
+ girls are negatively related to the fertility gap.
+ While our instruments are significant and have the correct sign, explanatory
+ power as measured by the partial R-squared is low.
+ We therefore use inference methods in the second stage that are robust
+ to weak instruments.
+\end_layout
+
+\begin_layout Standard
+In the second stage regression, we find that fertility affects both time
+ women and men allocated to agricultural production.
+ However, most of the labour time lost as a consequence of an exogenous
+ increase in children is born by the woman.
+ Especially land preparation and weeding are activities that seem to be
+ reduced as a response to more children.
+ When we look at crops, we find that only matooke and sweet potatoes are
+ significantly affected by fertility.
+ 
+\end_layout
+
+\begin_layout Standard
+Matooke is the most important stable crop in Uganda, providing 18 percent
+ of caloric intake 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ags:midcwp:58553"
+
+\end_inset
+
+.
+ The finding that young households that have higher fertility are reducing
+ the most important source of calories suggests that higher fertility also
+ causes under-nutrition.
+ Sweet potatoes is also a typical food security crop, with a low return
+ but also low risk 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ucp:ecdecc:v:44:y:1996:i:3:p:485-513"
+
+\end_inset
+
+.
+ It is also a crop that is mostly under the control of the woman, who does
+ much of the work on the field.
+ Taken together, our analysis suggests fertility to be a serious threat
+ to food security for these households.
+\end_layout
+
+\begin_layout Standard
+That said, the fact that we rely on a cross-section of households also limits
  to what extent our conclusions can be generalized.
- It may well be that households that are at a later stage in their cycle
- profit much more from larger household size.
+ It may well be that households that are at a later stage in their life
+ cycle profit much more from larger household size.
  For instance, in households where the mother has reduced fertility, she
- may have more time to work on in agricultural activities.
+ may have more time to work in agricultural activities.
  In addition, children are likely to be older and much more productive in
  agriculture.
  Therefore, we want to stress that our results only hold for the subset
- of households where the women is between 16 and 32.
+ of 
+\begin_inset Quotes eld
+\end_inset
+
+young
+\begin_inset Quotes erd
+\end_inset
+
+ households, where the women is between 16 and 32.
+\end_layout
+
+\begin_layout Standard
+There are different ways in which the negative effect of fertility on labour
+ and production can be influenced.
+ First, our analysis reconfirms the need for fertility reducing policies.
+ Apart from known fertility reducing policies such as women education and
+ improved maternal health care, the most promising policies would try to
+ work on the root cause of increased fertility.
+ This should be done by reducing the propensity of households to have higher
+ fertility if the firstborn is a girl.
+ We think of a host of policies that go against the patrilineal nature of
+ these societies.
+ For example, Uganda may consider changing its land act similar to what
+ Kenya recently did and give equal inheritance rights to both girls and
+ boys.
+ 
+\end_layout
+
+\begin_layout Standard
+The above policy response involves addressing cultural issues related to
+ high fertility, some of which may face considerable resistance.
+ Changing a set of cultural values is likely to be a very slow process.
+ Meanwhile, the government of Uganda should support the nutritional needs
+ of young families.
+ It should also consider introducing agricultural technologies that save
+ on agricultural labour, especially for women.
 \end_layout
 
 \begin_layout Standard
@@ -3610,7 +4026,7 @@ Appendix
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3647,11 +4063,7 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
+	
 \end_layout
 
 \begin_layout Plain Layout
@@ -3663,8 +4075,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
-      38.773** 
+fgap    &       0.533  &      29.890* &      54.070**  &      40.841** &   
+   38.773** 
 \backslash
 
 \backslash
@@ -3693,8 +4105,8 @@ difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
 \backslash
 
 \backslash
- momeduprim&       0.023  &       4.177  &       3.472  &       5.726  &   
-    5.434  
+ mprim&       0.023  &       4.177  &       3.472  &       5.726  &       5.434
+  
 \backslash
 
 \backslash
@@ -3703,8 +4115,8 @@ difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
 \backslash
 
 \backslash
- momedusec&       1.115  &      -1.624  &       2.608  &      -2.646  &    
-  -2.453  
+ msec&       1.115  &      -1.624  &       2.608  &      -2.646  &      -2.453
+  
 \backslash
 
 \backslash
@@ -3713,8 +4125,8 @@ difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
 \backslash
 
 \backslash
- momedutert&     -15.001* &     -46.192* &     -70.087+ &     -57.827* &   
-  -55.630* 
+ mthird&     -15.001* &     -46.192* &     -70.087+ &     -57.827* &     -55.630*
+ 
 \backslash
 
 \backslash
@@ -3733,8 +4145,8 @@ difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
 \backslash
 
 \backslash
- pschool     &       6.740* &       3.705  &       3.073  &       2.573  & 
-      2.786  
+ school     &       6.740* &       3.705  &       3.073  &       2.573  &  
+     2.786  
 \backslash
 
 \backslash
@@ -3743,8 +4155,8 @@ difsize    &       0.533  &      29.890* &      54.070**  &      40.841** &
 \backslash
 
 \backslash
- memdead     &       6.810+ &       0.209  &      -2.949  &      -2.253  & 
-     -1.788  
+ cdied     &       6.810+ &       0.209  &      -2.949  &      -2.253  &   
+   -1.788  
 \backslash
 
 \backslash
@@ -3848,7 +4260,7 @@ name "tab:appendixmotherh"
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -3901,8 +4313,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &  
-    20.076+  
+fgap    &      -0.620  &      10.928  &       5.915  &      22.327*  &     
+ 20.076+  
 \backslash
 
 \backslash
@@ -3931,8 +4343,8 @@ difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- momeduprim&       1.374  &       3.008  &       2.241  &       4.620  &   
-    4.302  
+ mprim&       1.374  &       3.008  &       2.241  &       4.620  &       4.302
+  
 \backslash
 
 \backslash
@@ -3941,8 +4353,8 @@ difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- momedusecond&      -7.239* &      -8.317* &      -9.670* &      -9.381* & 
-     -9.171* 
+ msec&      -7.239* &      -8.317* &      -9.670* &      -9.381* &      -9.171*
+ 
 \backslash
 
 \backslash
@@ -3951,8 +4363,8 @@ difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- momedutertiary&      -5.829  &     -18.098  &      -9.522  &     -30.209+ &
-     -27.817  
+ mthird&      -5.829  &     -18.098  &      -9.522  &     -30.209+ &     -27.817
+  
 \backslash
 
 \backslash
@@ -3971,8 +4383,8 @@ difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- pschool     &       5.826* &       4.632  &       7.310  &       3.454  & 
-      3.687  
+ school     &       5.826* &       4.632  &       7.310  &       3.454  &  
+     3.687  
 \backslash
 
 \backslash
@@ -3981,8 +4393,8 @@ difsize    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- memdead     &       6.756* &       4.159  &       5.314  &       1.596  & 
-      2.102  
+ cdied     &       6.756* &       4.159  &       5.314  &       1.596  &   
+    2.102  
 \backslash
 
 \backslash
@@ -4037,6 +4449,13 @@ end{tabular}
 
 \begin_layout Plain Layout
 Effect on hours worked by father (full results)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Effect-on-maileappend"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4053,7 +4472,7 @@ Effect on hours worked by father (full results)
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -4090,7 +4509,7 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
+
 \backslash
 
 \backslash
@@ -4106,8 +4525,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &   
-   -4.304  
+fgap    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &      -4.304
+  
 \backslash
 
 \backslash
@@ -4136,8 +4555,8 @@ difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &
 \backslash
 
 \backslash
- momeduprim &      -0.166  &      -1.037  &       0.045  &      -0.290  &  
-    -0.762  
+ mprim &      -0.166  &      -1.037  &       0.045  &      -0.290  &      -0.762
+  
 \backslash
 
 \backslash
@@ -4146,8 +4565,8 @@ difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &
 \backslash
 
 \backslash
- momedusec&       1.891  &       2.465  &       2.112  &       1.972  &    
-   2.284  
+ msec&       1.891  &       2.465  &       2.112  &       1.972  &       2.284
+  
 \backslash
 
 \backslash
@@ -4156,8 +4575,8 @@ difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &
 \backslash
 
 \backslash
- momedutertiary4&       6.184  &      12.728+ &       8.402  &       7.112 
- &      10.662  
+ mthird &       6.184  &      12.728+ &       8.402  &       7.112  &      10.662
+  
 \backslash
 
 \backslash
@@ -4176,8 +4595,8 @@ difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &
 \backslash
 
 \backslash
- pschool     &      -1.534+ &      -0.897  &      -1.624  &      -1.444+ & 
-     -1.099  
+ school     &      -1.534+ &      -0.897  &      -1.624  &      -1.444+ &  
+    -1.099  
 \backslash
 
 \backslash
@@ -4186,8 +4605,8 @@ difsize    &      -0.090  &      -6.249  &      -1.222  &      -0.963  &
 \backslash
 
 \backslash
- memdead     &       1.332  &       2.717  &       1.495  &       1.528  & 
-      2.280  
+ cdied     &       1.332  &       2.717  &       1.495  &       1.528  &   
+    2.280  
 \backslash
 
 \backslash
@@ -4237,7 +4656,14 @@ end{tabular}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Effect on hours worked by children (full results)
+Effect on hours worked by children (full results) 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Effect-appchildren"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4291,11 +4717,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4307,8 +4728,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
-      24.458* 
+fgap    &      -0.023  &      14.121  &      39.186**  &      25.466** &   
+   24.458* 
 \backslash
 
 \backslash
@@ -4337,8 +4758,8 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- momeduprim&      -2.565  &      -0.643  &      -0.999  &       0.899  &   
-    0.762  
+ mprim &      -2.565  &      -0.643  &      -0.999  &       0.899  &       0.762
+  
 \backslash
 
 \backslash
@@ -4347,8 +4768,8 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- momedusecond&      -2.091  &      -3.409  &      -2.008  &      -4.466  & 
-     -4.372  
+ msec&      -2.091  &      -3.409  &      -2.008  &      -4.466  &      -4.372
+  
 \backslash
 
 \backslash
@@ -4357,8 +4778,8 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- momedutertiary&     -10.334* &     -25.365+ &     -47.820+ &     -37.421* &
-     -36.350+ 
+ mtird&     -10.334* &     -25.365+ &     -47.820+ &     -37.421* &     -36.350+
+ 
 \backslash
 
 \backslash
@@ -4377,8 +4798,8 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- pschool     &       2.327  &       0.941  &       0.095  &      -0.171  & 
-     -0.072  
+ school     &       2.327  &       0.941  &       0.095  &      -0.171  &  
+    -0.072  
 \backslash
 
 \backslash
@@ -4387,8 +4808,8 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- memdead     &       4.983+ &       1.768  &      -2.511  &      -0.811  & 
-     -0.581  
+ cdied     &       4.983+ &       1.768  &      -2.511  &      -0.811  &   
+   -0.581  
 \backslash
 
 \backslash
@@ -4407,13 +4828,11 @@ difsize    &      -0.023  &      14.121  &      39.186**  &      25.466** &
 \backslash
 
 \backslash
- r2          &       0.023  &      -0.273  &      -1.973  &      -0.940  & 
-     -0.865  
+  
 \backslash
 
 \backslash
- N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
-   2015.000  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -4445,6 +4864,13 @@ end{tabular}
 
 \begin_layout Plain Layout
 Effect on hours spend on preparing fields (full results)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:prepappe"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4498,11 +4924,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4514,8 +4935,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &       0.055  &       1.675  &       0.594  &       2.315  &   
-    2.118  
+fgap    &       0.055  &       1.675  &       0.594  &       2.315  &      
+ 2.118  
 \backslash
 
 \backslash
@@ -4544,8 +4965,8 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- momeduprim&       0.564**&       0.784* &       0.775**&       0.871* &   
-    0.845* 
+ mprim&       0.564**&       0.784* &       0.775**&       0.871* &       0.845*
+ 
 \backslash
 
 \backslash
@@ -4554,8 +4975,8 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- momedusecondary&       0.969  &       0.818  &       1.163  &       0.758 
- &       0.777  
+ msec &       0.969  &       0.818  &       1.163  &       0.758  &       0.777
+  
 \backslash
 
 \backslash
@@ -4564,8 +4985,8 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- momedutertiary&      -0.605  &      -2.326  &      -1.558  &      -3.006  &
-      -2.797  
+ mthird&      -0.605  &      -2.326  &      -1.558  &      -3.006  &      -2.797
+  
 \backslash
 
 \backslash
@@ -4584,8 +5005,8 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- pschool     &      -0.106  &      -0.265  &      -0.160  &      -0.327  & 
-     -0.308  
+ school     &      -0.106  &      -0.265  &      -0.160  &      -0.327  &  
+    -0.308  
 \backslash
 
 \backslash
@@ -4594,8 +5015,8 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- memdead     &       0.111  &      -0.257  &       0.093  &      -0.402  & 
-     -0.357  
+ cdied     &       0.111  &      -0.257  &       0.093  &      -0.402  &   
+   -0.357  
 \backslash
 
 \backslash
@@ -4614,13 +5035,11 @@ difsize    &       0.055  &       1.675  &       0.594  &       2.315  &
 \backslash
 
 \backslash
- r2          &       0.006  &      -0.186  &      -0.006  &      -0.369  & 
-     -0.306  
+ 
 \backslash
 
 \backslash
- N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
-   2015.000  
+   N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -4648,6 +5067,13 @@ end{tabular}
 
 \begin_layout Plain Layout
 Effect on hours spend on input application (full results)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:applappend"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4701,11 +5127,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4721,8 +5142,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &  
-    19.875* 
+fgap    &      -0.019  &      13.851  &      27.837*  &      21.177* &     
+ 19.875* 
 \backslash
 
 \backslash
@@ -4751,8 +5172,8 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- momeduprimary&      -0.735  &       1.150  &       0.809  &       2.146  &
-       1.969  
+ mprim &      -0.735  &       1.150  &       0.809  &       2.146  &       1.969
+  
 \backslash
 
 \backslash
@@ -4761,8 +5182,8 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- momedusecondary&      -1.413  &      -2.705  &      -1.649  &      -3.388 
- &      -3.266  
+ msec &      -1.413  &      -2.705  &      -1.649  &      -3.388  &      -3.266
+  
 \backslash
 
 \backslash
@@ -4771,8 +5192,8 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- momedutertiary&      -2.635  &     -17.374  &     -29.016  &     -25.159  &
-     -23.776  
+ mthird &      -2.635  &     -17.374  &     -29.016  &     -25.159  &     -23.776
+  
 \backslash
 
 \backslash
@@ -4791,8 +5212,8 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- pschool     &       4.157* &       2.798  &       2.616  &       2.080  & 
-      2.207  
+ school     &       4.157* &       2.798  &       2.616  &       2.080  &  
+     2.207  
 \backslash
 
 \backslash
@@ -4801,8 +5222,8 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- memdead     &       5.112* &       1.960  &       0.250  &       0.295  & 
-      0.591  
+ cdied     &       5.112* &       1.960  &       0.250  &       0.295  &   
+    0.591  
 \backslash
 
 \backslash
@@ -4821,13 +5242,11 @@ difsize    &      -0.019  &      13.851  &      27.837*  &      21.177* &
 \backslash
 
 \backslash
- r2          &       0.032  &      -0.350  &      -1.293  &      -0.860  & 
-     -0.754  
+ 
 \backslash
 
 \backslash
- N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
-   2015.000  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -4855,6 +5274,13 @@ end{tabular}
 
 \begin_layout Plain Layout
 Effect on hours spend on weeding (full results)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:timeweeding"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4871,7 +5297,7 @@ Effect on hours spend on weeding (full results)
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -4908,11 +5334,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -4928,8 +5349,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &   
-    9.298  
+fgap    &      -0.062  &       1.579  &      -6.014  &      11.569  &      
+ 9.298  
 \backslash
 
 \backslash
@@ -4958,8 +5379,8 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- momeduprimary&       2.346  &       2.569  &       3.336  &       3.927  &
-       3.618  
+ mprim &       2.346  &       2.569  &       3.336  &       3.927  &       3.618
+  
 \backslash
 
 \backslash
@@ -4968,8 +5389,8 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- momedusecondary&      -0.874  &      -1.027  &      -1.846  &      -1.958 
- &      -1.746  
+ msec&      -0.874  &      -1.027  &      -1.846  &      -1.958  &      -1.746
+  
 \backslash
 
 \backslash
@@ -4978,8 +5399,8 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- momedutertiary&      -1.573  &      -3.317  &       4.011  &     -13.933  &
-     -11.519  
+ mthird &      -1.573  &      -3.317  &       4.011  &     -13.933  &     -11.519
+  
 \backslash
 
 \backslash
@@ -4998,8 +5419,8 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- pschool     &       4.818* &       4.657+ &       6.386+ &       3.678  & 
-      3.901  
+ school     &       4.818* &       4.657+ &       6.386+ &       3.678  &  
+     3.901  
 \backslash
 
 \backslash
@@ -5008,8 +5429,8 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- memdead     &       4.186+ &       3.813  &       4.560  &       1.542  & 
-      2.058  
+ cdied     &       4.186+ &       3.813  &       4.560  &       1.542  &   
+    2.058  
 \backslash
 
 \backslash
@@ -5028,13 +5449,11 @@ difsize    &      -0.062  &       1.579  &      -6.014  &      11.569  &
 \backslash
 
 \backslash
- r2          &       0.017  &       0.012  &      -0.034  &      -0.197  & 
-     -0.122  
+   
 \backslash
 
 \backslash
- N           &    2015.000  &    2015.000  &    1619.000  &    2015.000  & 
-   2015.000  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -5119,11 +5538,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5139,8 +5553,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &   
-   19.334  
+fgap    &      -3.411  &      21.056  &     -20.275  &      16.988  &      19.334
+  
 \backslash
 
 \backslash
@@ -5168,8 +5582,7 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 \backslash
 
 \backslash
- primary &      31.542**&      35.247**&      40.222**&      34.604**&     
- 34.970**
+ mprim &      31.542**&      35.247**&      40.222**&      34.604**&      34.970**
 \backslash
 
 \backslash
@@ -5178,8 +5591,8 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 \backslash
 
 \backslash
- secondary &     -14.660  &     -20.572  &     -17.281  &     -19.563  &   
-  -20.150  
+ msec &     -14.660  &     -20.572  &     -17.281  &     -19.563  &     -20.150
+  
 \backslash
 
 \backslash
@@ -5188,8 +5601,8 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 \backslash
 
 \backslash
- tertiary &      29.624  &       2.888  &      78.249  &       7.286  &    
-   4.749  
+ mthird &      29.624  &       2.888  &      78.249  &       7.286  &      
+ 4.749  
 \backslash
 
 \backslash
@@ -5208,8 +5621,8 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 \backslash
 
 \backslash
- pschool     &      37.105**&      36.348**&      39.394**&      36.483**& 
-     36.411**
+ school     &      37.105**&      36.348**&      39.394**&      36.483**&  
+    36.411**
 \backslash
 
 \backslash
@@ -5218,8 +5631,8 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 \backslash
 
 \backslash
- memdead     &      15.566  &       8.472  &       9.039  &       9.642  & 
-      8.970  
+ cdied     &      15.566  &       8.472  &       9.039  &       9.642  &   
+    8.970  
 \backslash
 
 \backslash
@@ -5239,12 +5652,15 @@ difsize    &      -3.411  &      21.056  &     -20.275  &      16.988  &
 
 \backslash
   
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
 
-N           &    2637  &    2637  &    2020  &    2637.000  &    2637.000
-  
+N           &    2637  &    2637  &    2020  &    2637  &    2637  
 \backslash
 
 \backslash
@@ -5333,11 +5749,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5353,8 +5764,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &   
-   12.340  
+fgap    &       4.133**&      10.501  &      -9.251  &      14.517  &      12.340
+  
 \backslash
 
 \backslash
@@ -5383,8 +5794,7 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 \backslash
 
 \backslash
- primary &      20.087**&      21.052**&      17.671**&      21.646**&     
- 21.324**
+ mprim &      20.087**&      21.052**&      17.671**&      21.646**&      21.324**
 \backslash
 
 \backslash
@@ -5393,8 +5803,8 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 \backslash
 
 \backslash
- secondary &      -3.727  &      -5.265  &      -4.161  &      -6.221  &   
-   -5.707  
+ msec &      -3.727  &      -5.265  &      -4.161  &      -6.221  &      -5.707
+  
 \backslash
 
 \backslash
@@ -5403,8 +5813,8 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 \backslash
 
 \backslash
- tertiary &      20.268  &      13.311  &      55.245* &       8.899  &    
-  11.294  
+ mthird &      20.268  &      13.311  &      55.245* &       8.899  &      11.294
+  
 \backslash
 
 \backslash
@@ -5423,8 +5833,8 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 \backslash
 
 \backslash
- pschool     &      12.227* &      12.030* &      11.697**&      11.910* & 
-     11.976* 
+ school     &      12.227* &      12.030* &      11.697**&      11.910* &  
+    11.976* 
 \backslash
 
 \backslash
@@ -5433,8 +5843,8 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 \backslash
 
 \backslash
- memdead     &       5.932  &       4.085  &       2.685  &       2.916  & 
-      3.551  
+ cdied     &       5.932  &       4.085  &       2.685  &       2.916  &   
+    3.551  
 \backslash
 
 \backslash
@@ -5454,6 +5864,10 @@ difsize    &       4.133**&      10.501  &      -9.251  &      14.517  &
 
 \backslash
  
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5506,7 +5920,7 @@ Total production per capita (full tobit results)
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -5543,11 +5957,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5563,8 +5972,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &   
-    0.132  
+fgap    &      -0.033  &       0.120  &       0.042  &       0.145  &      
+ 0.132  
 \backslash
 
 \backslash
@@ -5593,8 +6002,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- primary &       0.172* &       0.196* &       0.250**&       0.199* &     
-  0.197*   
+ mprim &       0.172* &       0.196* &       0.250**&       0.199* &       0.197*
+   
 \backslash
 
 \backslash
@@ -5603,8 +6012,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- secondary &      -0.175  &      -0.212  &      -0.215  &      -0.218  &   
-   -0.215+   
+ msec &      -0.175  &      -0.212  &      -0.215  &      -0.218  &      -0.215+
+   
 \backslash
 
 \backslash
@@ -5613,8 +6022,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- tertiary &      -0.035  &      -0.202  &       0.088  &      -0.230  &    
-  -0.215    
+ mthird &      -0.035  &      -0.202  &       0.088  &      -0.230  &      -0.215
+    
 \backslash
 
 \backslash
@@ -5633,8 +6042,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- pschool     &       0.310**&       0.306**&       0.331**&       0.305**& 
-      0.305**
+ school     &       0.310**&       0.306**&       0.331**&       0.305**&  
+     0.305**
 \backslash
 
 \backslash
@@ -5643,8 +6052,8 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- memdead     &       0.103  &       0.058  &       0.012  &       0.051  & 
-      0.055  
+ cdied     &       0.103  &       0.058  &       0.012  &       0.051  &   
+    0.055  
 \backslash
 
 \backslash
@@ -5663,7 +6072,11 @@ difsize    &      -0.033  &       0.120  &       0.042  &       0.145  &
 \backslash
 
 \backslash
- 
+  
+\backslash
+
+\backslash
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -5712,7 +6125,7 @@ Total area (full tobit results)
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset ERT
@@ -5749,11 +6162,6 @@ hline
 
 \begin_layout Plain Layout
 
-	&	OLS	&	2SLS	&	2SLS	&	2SLS		&	LIML	
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5769,8 +6177,8 @@ hline
 
 \begin_layout Plain Layout
 
-difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &   
-    8.818  
+fgap    &      -1.697  &      43.088  &     -96.861  &       0.013  &      
+ 8.818  
 \backslash
 
 \backslash
@@ -5799,8 +6207,8 @@ difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &
 \backslash
 
 \backslash
- primary &       9.668  &      12.719  &      17.577  &       9.785  &     
- 10.384   
+ mprim &       9.668  &      12.719  &      17.577  &       9.785  &      10.384
+   
 \backslash
 
 \backslash
@@ -5809,8 +6217,8 @@ difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &
 \backslash
 
 \backslash
- secondary &      34.954+ &      32.322  &      24.785  &      34.854+ &   
-   34.336+   
+ msec &      34.954+ &      32.322  &      24.785  &      34.854+ &      34.336+
+   
 \backslash
 
 \backslash
@@ -5819,8 +6227,8 @@ difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &
 \backslash
 
 \backslash
- tertiary &      11.594  &     -41.631  &     115.467  &       9.562  &    
-  -0.903    
+ mthird &      11.594  &     -41.631  &     115.467  &       9.562  &      -0.903
+    
 \backslash
 
 \backslash
@@ -5839,8 +6247,8 @@ difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &
 \backslash
 
 \backslash
- pschool     &      10.851  &       5.932  &      28.583  &      10.663  & 
-      9.696  
+ school     &      10.851  &       5.932  &      28.583  &      10.663  &  
+     9.696  
 \backslash
 
 \backslash
@@ -5849,8 +6257,8 @@ difsize    &      -1.697  &      43.088  &     -96.861  &       0.013  &
 \backslash
 
 \backslash
- memdead     &       1.373  &     -14.487  &      22.702  &       0.767  & 
-     -2.351  
+ cdied     &       1.373  &     -14.487  &      22.702  &       0.767  &   
+   -2.351  
 \backslash
 
 \backslash
@@ -5871,6 +6279,10 @@ cons       &     178.153**&     154.719  &     449.143  &     244.882+ &
 \backslash
              &    (16.668)  &   (171.814)  &   (283.600)  &   (130.707)  & 
   (148.357)  
+\backslash
+
+\backslash
+ 
 \backslash
 
 \backslash

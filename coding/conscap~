@@ -1,0 +1,54 @@
+*** first run do trial2.do
+
+use "/home/bjvca/data/data/fertility and ag productivity/datasets/conpc.dta"
+rename hhid hh
+sort hh
+merge hh using firststage
+keep if _merge==3
+drop _merge
+sort hh
+merge hh using firststage_multbirth
+keep if _merge==3
+
+
+
+
+regress cons_pc_nom size substrat agefirstborn femhead_hh, robust
+estimates store m1
+regress food_pc_nom size substrat agefirstborn femhead_hh, robust
+estimates store m2
+regress nf_pc_nom size substrat agefirstborn femhead_hh, robust
+estimates store m3
+
+ivreg2  cons_pc_nom substrat agefirstborn femhead_hh (size=oldestgirl percentfmales mults ), robust liml
+estimates store m4
+ivreg2  food_pc_nom substrat agefirstborn femhead_hh (size=oldestgirl percentfmales mults ), robust  liml
+estimates store m5
+ivreg2  nf_pc_nom substrat agefirstborn femhead_hh (size=oldestgirl percentfmales  mults), robust liml
+estimates store m6
+
+estout m1 m2 m3 m4 m5 m6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+ 
+use "/home/bjvca/data/data/fertility and ag productivity/datasets/conpc.dta"
+rename hhid hh
+sort hh
+merge hh using firststage_multbirth.dta
+keep if _merge==3
+drop _merge
+sort hh
+ save temp, replace
+ use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec1b.dta
+ keep region district substrat hh
+ sort hh
+ merge hh using temp
+ keep if _merge==3
+ drop _merge
+  replace substrat=0 if substrat==3
+  sort hh
+
+
+multrank
+  
+ivreg2  cons_pc_nom substrat agefirstborn femhead_hh (size=mults ) if size>1, robust
+ivreg2  nf_pc_nom substrat agefirstborn femhead_hh (size=mult ), robust
+ivreg2  nf_pc_nom substrat agefirstborn femhead_hh (size=mult ), robust

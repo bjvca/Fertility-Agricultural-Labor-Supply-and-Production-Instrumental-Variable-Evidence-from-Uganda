@@ -1,0 +1,111 @@
+ 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+save plots, replace
+
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec7a.dta"
+rename a7aq2b cropcode
+sort hh cropcode
+
+gen totkg = a7aq3b *a7aq3d
+collapse (sum) totkg, by(hh cropcode)
+sort hh cropcode
+merge hh cropcode using plots
+
+drop if areafarmer < 0.1
+gen yield=totkg/areafarmer
+*regress yield area 
+
+drop _merge
+sort hh
+save yields, replace
+
+
+ sort hh
+ merge hh using firststage_multbirth.dta
+ keep if _merge==3
+ drop _merge
+
+*maize
+tab region, gen(regd)
+
+
+
+ sort hh
+ merge hh using firststage.dta
+ keep if _merge==3
+ 
+ regress yield size agefirstborn femhead_hh regd* substrat  if cropcode==130 & yield<2000, robust
+estimates store m1
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size=oldestgirl ) if cropcode==130 & yield<2000, robust
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size=mults ) if cropcode==130 & yield<2000, robust
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size=mults oldestgirl) if cropcode==130 & yield<2000, robust
+estimates store m2
+
+
+*beans
+regress yield size agefirstborn femhead_hh  regd* substrat if cropcode==210 & yield<2000, robust 
+estimates store m3
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size = oldestgirl)   if cropcode==210 & yield<2000, robust
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size = mults)   if cropcode==210 & yield<2000, robust
+ivreg2 yield agefirstborn femhead_hh substrat  regd* (size = oldestgirl mults)   if cropcode==210 & yield<2000, robust
+estimates store m4
+
+*s potatoes
+regress yield size agefirstborn femhead_hh substrat regd* if cropcode==620 & yield<1700, robust
+estimates store m5
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl)  if cropcode==620 & yield<1700, robust
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = mults)  if cropcode==620 & yield<1700, robust
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl mults)  if cropcode==620 & yield<1700, robust
+estimates store m6
+
+*cassava
+regress yield size  agefirstborn femhead_hh substrat regd*  if cropcode==630 & yield<2700, robust
+estimates store m7
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl)  if cropcode==630 & yield<2700, robust
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = mults)  if cropcode==630 & yield<2700, robust
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size = oldestgirl mults)  if cropcode==630 & yield<2700, robust
+estimates store m8
+
+*matooke
+regress yield size agefirstborn femhead_hh substrat regd* if cropcode==741 & yield<2700, robust
+estimates store m9
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size =  oldestgirl)  if cropcode==741 & yield<2700,  robust
+
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size =  mults)  if cropcode==741 & yield<2700,  robust
+ivreg2 yield agefirstborn femhead_hh substrat regd* (size =  oldestgirl mults)  if cropcode==741 & yield<2700,  robust
+estimates store m10
+*aggregate
+
+gen totval=totkg*293 if cropcode==130
+replace totval=totkg*549 if cropcode==210
+replace totval=totkg*185 if cropcode==620
+replace totval=totkg*168 if cropcode==630
+replace totval=totkg*215 if cropcode==741
+drop if totval==.
+
+collapse (sum) totval  areafarmer, by(hh)
+
+gen yield=totval/areafarmer
+replace yield=yield/1000
+sort hh
+ merge hh using firststage_multbirth
+ keep if _merge==3
+drop _merge
+sort hh
+merge hh using firststage
+ keep if _merge==3
+
+ tab region, gen(dreg)
+ 
+ regress yield size substrat agefirstborn femhead_hh   dreg* if yield < 600  , robust 
+ estimates store m11
+ivreg2  yield   agefirstborn femhead_hh substrat   dreg* (size = oldestgirl mults  ) if yield < 600  , robust 
+ estimates store m12 

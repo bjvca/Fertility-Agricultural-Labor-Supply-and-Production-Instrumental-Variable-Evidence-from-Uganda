@@ -1,0 +1,221 @@
+product	condition	untcd	descript	untdes	qkg_uca
+741	20	1	Plantains(Matooke)	Kilogram (kg)	1
+741	20	10	Plantains(Matooke)	Sack (100 kgs)	100
+741	20	11	Plantains(Matooke)	Sack (80 kgs)	80
+741	20	12	Plantains(Matooke)	Sack (50 kgs)	50
+741	20	22	Plantains(Matooke)	Plastic Basin (15 lts)	10.95
+741	20	64	Plantains(Matooke)	Heap(unspecified)	1.847525
+741	20	67	Plantains(Matooke)	Bunch- Big	29.50287
+741	20	68	Plantains(Matooke)	Bunch- medium	20.36843
+741	20	69	Plantains(Matooke)	Bunch- small	11.3779
+741	20	70	Plantains(Matooke)	Cluster (unspecified)	2.426653
+741	20	87	Plantains(Matooke)	Piece-Big	0.23
+741	20	88	Plantains(Matooke)	Piece-Medium	0.15
+741	20	89	Plantains(Matooke)	Piece-Small	0.1
+741	20	103	Plantains(Matooke)	Plastinbasin(5ltrs)	3.275
+620	20	1	Sweet potatoes (fresh)	Kilogram (kg)	1
+620	20	10	Sweet potatoes (fresh)	Sack (100 kgs)	113.25
+620	20	11	Sweet potatoes (fresh)	Sack (80 kgs)	91
+620	20	12	Sweet potatoes (fresh)	Sack (50 kgs)	56
+620	20	13	Sweet potatoes (fresh)	Sack (unspecified)	56
+620	20	14	Sweet potatoes (fresh)	Jerrican (20 lts)	24.15
+620	20	15	Sweet potatoes (fresh)	Jerrican (10 lts)	12.075
+620	20	16	Sweet potatoes (fresh)	Jerrican (5 lts)	6.04
+620	20	20	Sweet potatoes (fresh)	Tin (Debe) - 20 lts	24.15
+620	20	21	Sweet potatoes (fresh)	 Tin (5 lts)	6.0375
+620	20	22	Sweet potatoes (fresh)	Plastic Basin (15 lts)	11.4
+620	20	29	Sweet potatoes (fresh)	Kimbo/Cowboy/Blueband Tin (2kg)	2
+620	20	37	Sweet potatoes (fresh)	Basket (20 kg)	26.4
+620	20	38	Sweet potatoes (fresh)	Basket (10 kg)	14.35
+620	20	39	Sweet potatoes (fresh)	Basket (5 kg)	6.15
+620	20	40	Sweet potatoes (fresh)	Basket (2 kg)	2.87
+620	20	64	Sweet potatoes (fresh)	Heap(unspecified)	3
+620	20	85	Sweet potatoes (fresh)	Number of Units (General)	0.5
+620	20	87	Sweet potatoes (fresh)	Piece-Big	4.1
+620	20	88	Sweet potatoes (fresh)	Piece-Medium	2.07027
+620	20	89	Sweet potatoes (fresh)	Piece-Small	1.345833
+620	20	90	Sweet potatoes (fresh)	Heap - Big	3.332763
+620	20	91	Sweet potatoes (fresh)	Heap - medium	2.114651
+620	20	92	Sweet potatoes (fresh)	Heap - small	1.765625
+620	20	103	Sweet potatoes (fresh)	Plastinbasin(5ltrs)	3.8
+620	20	119	Sweet potatoes (fresh)	Nomi Tin(1kg)	3.27
+620	20	120	Sweet potatoes (fresh)	Nomi Tin(500g)	1.7
+620	20	133	Sweet potatoes (fresh)	Sadolin Tin- 3ltrs	2.645
+630	20	1	Cassava (fresh)	Kilogram (kg)	1
+630	20	10	Cassava (fresh)	Sack (100 kgs)	100
+630	20	11	Cassava (fresh)	Sack (80 kgs)	80
+630	20	12	Cassava (fresh)	Sack (50 kgs)	102
+630	20	13	Cassava (fresh)	Sack (unspecified)	102
+630	20	14	Cassava (fresh)	Jerrican (20 lts)	18
+630	20	15	Cassava (fresh)	Jerrican (10 lts)	9
+630	20	16	Cassava (fresh)	Jerrican (5 lts)	4.5
+630	20	20	Cassava (fresh)	Tin (Debe) - 20 lts	18
+630	20	21	Cassava (fresh)	 Tin (5 lts)	4.5
+630	20	22	Cassava (fresh)	Plastic Basin (15 lts)	13.25
+630	20	37	Cassava (fresh)	Basket (20 kg)	23
+630	20	38	Cassava (fresh)	Basket (10 kg)	11.08
+630	20	39	Cassava (fresh)	Basket (5 kg)	5.75
+630	20	40	Cassava (fresh)	Basket (2 kg)	2.216
+630	20	64	Cassava (fresh)	Heap(unspecified)	11.2
+630	20	85	Cassava (fresh)	Number of Units (General)	1
+630	20	87	Cassava (fresh)	Piece-Big	4.004496
+630	20	88	Cassava (fresh)	Piece-Medium	0.9632047
+630	20	89	Cassava (fresh)	Piece-Small	1.625833
+630	20	90	Cassava (fresh)	Heap - Big	3.976219
+630	20	91	Cassava (fresh)	Heap - medium	2.485648
+630	20	92	Cassava (fresh)	Heap - small	2.014179
+630	20	103	Cassava (fresh)	Plastinbasin(5ltrs)	4.416667
+630	40	1	Cassava (dry/flour)	Kilogram (kg)	1
+630	40	13	Cassava (dry/flour)	Sack (unspecified)	85
+630	40	14	Cassava (dry/flour)	Jerrican (20 lts)	14.5
+630	40	20	Cassava (dry/flour)	Tin (Debe) - 20 lts	14.5
+630	40	21	Cassava (dry/flour)	 Tin (5 lts)	2.55
+630	40	22	Cassava (dry/flour)	Plastic Basin (15 lts)	8.05
+630	40	29	Cassava (dry/flour)	Kimbo/Cowboy/Blueband Tin (2kg)	1.6
+630	40	30	Cassava (dry/flour)	Kimbo/Cowboy/Blueband Tin (1kg)	0.75
+630	40	31	Cassava (dry/flour)	Kimbo/Cowboy/Blueband Tin (0.5kg)	0.38
+630	40	32	Cassava (dry/flour)	Cup/Mug(0.5lt)	0.45
+630	40	33	Cassava (dry/flour)	Glass(0.25lt)	0.225
+630	40	37	Cassava (dry/flour)	Basket (20 kg)	13.4
+630	40	38	Cassava (dry/flour)	Basket (10 kg)	6.7
+630	40	39	Cassava (dry/flour)	Basket (5 kg)	3.35
+630	40	40	Cassava (dry/flour)	Basket (2 kg)	1.34
+630	40	64	Cassava (dry/flour)	Heap(unspecified)	5.6
+630	40	74	Cassava (dry/flour)	Goologolo (4-5ltrs)	11.2
+630	40	77	Cassava (dry/flour)	Jug (2 lts)	1.275
+630	40	79	Cassava (dry/flour)	Jug (1 lt)	0.9
+630	40	90	Cassava (dry/flour)	Heap - Big	2.8
+630	40	91	Cassava (dry/flour)	Heap - medium	1.15
+630	40	103	Cassava (dry/flour)	Plastinbasin(5ltrs)	1.925
+630	40	106	Cassava (dry/flour)	Jug(2.5ltrs)	1.45
+630	40	107	Cassava (dry/flour)	Nice cup(100g)- Large	0.285
+630	40	108	Cassava (dry/flour)	Nice cup(60g)-Medium	0.25
+630	40	109	Cassava (dry/flour)	Nice cup(50g)-Small	0.18
+630	40	114	Cassava (dry/flour)	Plastic plate(60g)-Large	0.62
+630	40	115	Cassava (dry/flour)	Plastic plate(30g)-Small	0.27
+630	40	116	Cassava (dry/flour)	Metallic plate(100g)-Large	0.58
+630	40	117	Cassava (dry/flour)	Metallic plate(80g)- Small	0.23
+630	40	118	Cassava (dry/flour)	Plastic bowl(40g)	0.41
+630	40	119	Cassava (dry/flour)	Nomi Tin(1kg)	1
+630	40	120	Cassava (dry/flour)	Nomi Tin(500g)	0.5
+630	40	121	Cassava (dry/flour)	Nomi Tin(250g)	0.25
+630	40	122	Cassava (dry/flour)	Nido Tin(400g)	0.4
+130	45	1	Maize (grains)	Kilogram (kg)	1
+130	45	14	Maize (grains)	Jerrican (20 lts)	16.5
+130	45	15	Maize (grains)	Jerrican (10 lts)	8.25
+130	45	17	Maize (grains)	Jerrican (3 lts)	2.475
+130	45	19	Maize (grains)	Jerrican (1 lt)	0.75
+130	45	20	Maize (grains)	Tin (Debe) - 20 lts	18
+130	45	21	Maize (grains)	 Tin (5 lts)	4.5
+130	45	22	Maize (grains)	Plastic Basin (15 lts)	15
+130	45	29	Maize (grains)	Kimbo/Cowboy/Blueband Tin (2kg)	3.5
+130	45	30	Maize (grains)	Kimbo/Cowboy/Blueband Tin (1kg)	0.8
+130	45	31	Maize (grains)	Kimbo/Cowboy/Blueband Tin (0.5kg)	0.4
+130	45	32	Maize (grains)	Cup/Mug(0.5lt)	0.35
+130	45	33	Maize (grains)	Glass(0.25lt)	0.25
+130	45	34	Maize (grains)	Ladle(100g)	0.1
+130	45	39	Maize (grains)	Basket (5 kg)	5
+130	45	40	Maize (grains)	Basket (2 kg)	2
+130	45	64	Maize (grains)	Heap(unspecified)	0.625
+130	45	71	Maize (grains)	Gourd (1-5ltrs)	4.5
+130	45	74	Maize (grains)	Goologolo (4-5ltrs)	4.5
+130	45	75	Maize (grains)	Calabash (1-5ltrs)	3.2
+130	45	77	Maize (grains)	Jug (2 lts)	4
+130	45	79	Maize (grains)	Jug (1 lt)	2.1
+130	45	107	Maize (grains)	Nice cup(100g)- Large	0.4
+130	45	108	Maize (grains)	Nice cup(60g)-Medium	0.25
+130	45	109	Maize (grains)	Nice cup(50g)-Small	0.18
+130	45	112	Maize (grains)	Plastic tumbler(50g)- Big	
+130	45	113	Maize (grains)	Plastic tumbler(30g)-Small	
+130	45	114	Maize (grains)	Plastic plate(60g)-Large	0.62
+130	45	115	Maize (grains)	Plastic plate(30g)-Small	0.27
+130	45	118	Maize (grains)	Plastic bowl(40g)	0.58
+130	45	119	Maize (grains)	Nomi Tin(1kg)	1
+130	45	120	Maize (grains)	Nomi Tin(500g)	0.5
+130	45	121	Maize (grains)	Nomi Tin(250g)	0.25
+130	22	1	Maize (cobs)	Kilogram (kg)	1
+130	22	20	Maize (cobs)	Tin (Debe) - 20 lts	10.2
+130	22	21	Maize (cobs)	 Tin (5 lts)	5.1
+130	22	22	Maize (cobs)	Plastic Basin (15 lts)	12.7
+130	22	37	Maize (cobs)	Basket (20 kg)	15.2
+130	22	38	Maize (cobs)	Basket (10 kg)	7.6
+130	22	39	Maize (cobs)	Basket (5 kg)	3.7
+130	22	40	Maize (cobs)	Basket (2 kg)	1
+130	22	64	Maize (cobs)	Heap(unspecified)	3
+130	22	85	Maize (cobs)	Number of Units (General)	0.34
+130	22	87	Maize (cobs)	Piece-Big	0.525
+130	22	88	Maize (cobs)	Piece-Medium	0.4485402
+130	22	89	Maize (cobs)	Piece-Small	0.2871053
+130	22	90	Maize (cobs)	Heap - Big	2.125
+130	22	91	Maize (cobs)	Heap - medium	1.775
+130	22	92	Maize (cobs)	Heap - small	1.3
+130	22	96	Maize (cobs)	Bundle-Big	
+130	22	97	Maize (cobs)	Bundle-Medium	
+130	22	99	Maize (cobs)	Others specify	
+130	22	103	Maize (cobs)	Plastinbasin(5ltrs)	
+210	24	1	Beans (fresh)	Kilogram (kg)	1
+210	24	20	Beans (fresh)	Tin (Debe) - 20 lts	8.4
+210	24	21	Beans (fresh)	 Tin (5 lts)	2.1
+210	24	22	Beans (fresh)	Plastic Basin (15 lts)	2.525
+210	24	29	Beans (fresh)	Kimbo/Cowboy/Blueband Tin (2kg)	2
+210	24	30	Beans (fresh)	Kimbo/Cowboy/Blueband Tin (1kg)	1
+210	24	31	Beans (fresh)	Kimbo/Cowboy/Blueband Tin (0.5kg)	0.5
+210	24	32	Beans (fresh)	Cup/Mug(0.5lt)	0.1
+210	24	33	Beans (fresh)	Glass(0.25lt)	0.175
+210	24	37	Beans (fresh)	Basket (20 kg)	10
+210	24	38	Beans (fresh)	Basket (10 kg)	5
+210	24	39	Beans (fresh)	Basket (5 kg)	2.5
+210	24	40	Beans (fresh)	Basket (2 kg)	1
+210	24	64	Beans (fresh)	Heap(unspecified)	0.9666667
+210	24	66	Beans (fresh)	Bundle (Unspecified)	
+210	24	75	Beans (fresh)	Calabash (1-5ltrs)	3.67
+210	24	90	Beans (fresh)	Heap - Big	1
+210	24	91	Beans (fresh)	Heap - medium	2
+210	24	92	Beans (fresh)	Heap - small	0.5
+210	24	96	Beans (fresh)	Bundle-Big	
+210	24	97	Beans (fresh)	Bundle-Medium	
+210	24	98	Beans (fresh)	Bundle-Small	1
+210	24	103	Beans (fresh)	Plastinbasin(5ltrs)	1.52
+210	24	107	Beans (fresh)	Nice cup(100g)- Large	0.39
+210	24	108	Beans (fresh)	Nice cup(60g)-Medium	0.33
+210	24	109	Beans (fresh)	Nice cup(50g)-Small	0.25
+210	24	118	Beans (fresh)	Plastic bowl(40g)	0.23
+210	24	119	Beans (fresh)	Nomi Tin(1kg)	1.75
+210	24	120	Beans (fresh)	Nomi Tin(500g)	0.875
+210	24	121	Beans (fresh)	Nomi Tin(250g)	0.4375
+210	24	122	Beans (fresh)	Nido Tin(400g)	0.7
+210	45	1	Beans (dry)	Kilogram (kg)	1
+210	45	2	Beans (dry)	Gram	0.001
+210	45	12	Beans (dry)	Sack (50 kgs)	50
+210	45	14	Beans (dry)	Jerrican (20 lts)	19.6
+210	45	21	Beans (dry)	 Tin (5 lts)	3.875
+210	45	22	Beans (dry)	Plastic Basin (15 lts)	12.55
+210	45	29	Beans (dry)	Kimbo/Cowboy/Blueband Tin (2kg)	4
+210	45	30	Beans (dry)	Kimbo/Cowboy/Blueband Tin (1kg)	2
+210	45	31	Beans (dry)	Kimbo/Cowboy/Blueband Tin (0.5kg)	1
+210	45	32	Beans (dry)	Cup/Mug(0.5lt)	0.2
+210	45	33	Beans (dry)	Glass(0.25lt)	0.2
+210	45	39	Beans (dry)	Basket (5 kg)	3.9
+210	45	40	Beans (dry)	Basket (2 kg)	1.56
+210	45	64	Beans (dry)	Heap(unspecified)	6
+210	45	74	Beans (dry)	Goologolo (4-5ltrs)	4.2
+210	45	77	Beans (dry)	Jug (2 lts)	1.68
+210	45	79	Beans (dry)	Jug (1 lt)	0.84
+210	45	103	Beans (dry)	Plastinbasin(5ltrs)	2.925
+210	45	106	Beans (dry)	Jug(2.5ltrs)	2.15
+210	45	107	Beans (dry)	Nice cup(100g)- Large	0.44
+210	45	108	Beans (dry)	Nice cup(60g)-Medium	0.35
+210	45	109	Beans (dry)	Nice cup(50g)-Small	0.25
+210	45	110	Beans (dry)	Metallic tumbler(100g)- Big	1
+210	45	111	Beans (dry)	Metallic tumbler(50g)- Small	0.63
+210	45	112	Beans (dry)	Plastic tumbler(50g)- Big	0.27
+210	45	113	Beans (dry)	Plastic tumbler(30g)-Small	0.27
+210	45	114	Beans (dry)	Plastic plate(60g)-Large	0.74
+210	45	115	Beans (dry)	Plastic plate(30g)-Small	0.42
+210	45	116	Beans (dry)	Metallic plate(100g)-Large	0.85
+210	45	117	Beans (dry)	Metallic plate(80g)- Small	0.63
+210	45	118	Beans (dry)	Plastic bowl(40g)	0.64
+210	45	119	Beans (dry)	Nomi Tin(1kg)	3.87
+210	45	120	Beans (dry)	Nomi Tin(500g)	1.96
+210	45	121	Beans (dry)	Nomi Tin(250g)	1.07
+210	45	122	Beans (dry)	Nido Tin(400g)	0.73

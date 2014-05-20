@@ -1,0 +1,74 @@
+**** portfolio
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+** has crop?
+
+local cropid 210
+
+gen hascrop=1 if cropcode==`cropid'
+replace hascrop=0 if cropcode!=`cropid'
+
+collapse (max) hascrop, by(hh)
+
+ sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+ probit  hascrop  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , robust
+ ivprobit hascrop femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl) , twostep 
+
+ 
+ ** maize area?
+clear 
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4a.dta"
+rename a4aq5b cropcode
+sort hh cropcode
+ * a4aq6/100
+ * keep if a4aq6==100
+gen areafarmer=a4aq3 * a4aq6/100
+
+
+collapse (sum) areafarmer, by(hh cropcode)
+ bysort hh: egen totarea = sum(areafarmer ) 
+ gen croparea= areafarmer if cropcode==`cropid'
+ replace croparea=0 if croparea==.
+ 
+ gen percentarea= croparea/totarea
+ 
+ collapse (max) percentarea croparea, by(hh)
+  sort hh
+ merge hh using firststage
+ keep if _merge==3
+ tab region, gen(regd)
+ tobit  percentarea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+ ivtobit percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+ ivtobit  percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+ ivtobit  percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = percentfmales ), ll twostep
+estimates store f4
+ ivtobit percentarea femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+
+ 
+ 
+ tobit  croparea  dif_size femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* , ll
+ estimates store f1
+ ivtobit croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead regd* (dif_size = oldestgirl), ll twostep
+estimates store f2
+ ivtobit  croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = secondoldestgirl ) if size>1,ll twostep
+estimates store f3
+ ivtobit  croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead (dif_size = percentfmales ), ll twostep
+estimates store f4
+ ivtobit croparea femhead_hh substrat momedu_hh_dum*  health pschool memdead  (dif_size = oldestgirl percentfmales ), ll twostep
+estimates store f5
+ 
+ * maize production (kg)
+ *** see the do file production
+ 
+ * maize yield (kg/area)
+ see the do file productivity_v4
+ 

@@ -1,12 +1,19 @@
+*** this one uses total household size
+clear
 use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec2.dta 
 * there is a coding error for male=1 female=0
 replace h2q4=0 if h2q4==2
 
+ gen ones = 1 if h2q9<30
+ * gen ones = 1
+ replace ones=0 if ones==.
+ bysort hh: egen size=sum(ones)
+
 *keep only heads and spouses that are at reproductive age
 
-gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<=15 | h2q9>49) & h2q4==0
+gen flag=1 if (h2q5==1 | h2q5==2) & (h2q9<18 | h2q9>32) & h2q4==0
 
-*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>49) & h2q4==1
+*replace flag=1 if (h2q5==1 | h2q5==2) & (h2q9<16 | h2q9>45) & h2q4==1
 replace flag=0 if flag==.
 bysort hh: egen flaghh=max(flag)
 drop if flaghh==1
@@ -22,22 +29,6 @@ gen femhead=0
 replace femhead=h2q5==1 if h2q5==1  & h2q4==0
 bysort hh: egen femhead_hh=max(femhead)
 
-sort hh pid
-save temp, replace
-use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_SOCIO_DATA/hsec4.dta 
-keep hh pid h4q4
-gen momedu=0
-replace momedu=1 if h4q4>14 & h4q4<18 
-replace momedu=2 if h4q4>18 & h4q4<37  
-replace momedu=3 if h4q4>37 
-replace momedu=. if h4q4==99 | h4q4==.
-
-sort hh pid
-merge hh pid using temp
-gen momedu2=0
-replace momedu2=momedu if (h2q5==1 | h2q5==2)  & h2q4==0
-bysort hh: egen momedu_hh=max(momedu2)
-
 
 *this keeps only suns/daugthers
 keep if h2q5==3 
@@ -45,7 +36,7 @@ drop if h2q8c==.
 *drop multiple births
 duplicates drop hh h2q8c, force
 *we have manually investigated births within one year, this seems to be non-existant
-drop if h2q9>15
+drop if h2q9>16
 
 percentage girls
 bysort hh: egen rankage=rank(h2q8c), unique
@@ -61,8 +52,7 @@ bysort hh: egen rankage=rank(h2q8c), unique
 
 *drop if h2q9<2
 
- gen ones = 1
- bysort hh: egen size=sum(ones)
+
  
  replace h2q4=!h2q4
  
@@ -81,14 +71,19 @@ gen secondoldestgirl=1 if rankage==2 & h2q4==1
  
  gen thirdoldestgirl=1 if rankage==3 & h2q4==1
  replace thirdoldestgirl=0 if thirdoldestgirl==.
+ 
  gen agefirstborn=h2q9 if rankage==1
   gen agesecondborn=h2q9 if rankage==2
    gen agethirdborn=h2q9 if rankage==3
  bysort hh: egen sum_fmales= sum(h2q4)
- gen percentfmales=sum_fmales/size
 
 
- collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl agefirstborn momedu_hh  agemother_hh femhead_hh percentfmales, by(hh)
+
+
+
+   
+collapse (max) size oldestgirl secondoldestgirl thirdoldestgirl  agefirstborn   agemother_hh femhead_hh  rankage sum_fmales, by(hh)
+ gen percentfmales=sum_fmales/rankage
 
  *** export selected sample here for dotplot
 sort hh
@@ -101,29 +96,24 @@ sort hh
  drop _merge
   replace substrat=0 if substrat==3
   sort hh
-  
-  
-  
-  
- 
  
  replace secondoldestgirl=secondoldestgirl*oldestgirl
-  replace thirdoldestgirl=secondoldestgirl*thirdoldestgirl
-  
+  replace thirdoldestgirl=secondoldestgirl*thirdoldestgirl 
+ 
+ replace size=rankage/agemother_hh
+ 
  *** first stage regressions
-regress size oldestgirl agemother_hh  femhead_hh substrat, robust
-
-xi: regress size oldestgirl agemother_hh  femhead_hh substrat i.momedu_hh, robust
-
+regress size oldestgirl agefirstborn  femhead_hh substrat, robust
 estimates store m1
-regress size secondoldestgirl agemother_hh femhead_hh substrat if size>1,robust
+regress size secondoldestgirl agefirstborn femhead_hh substrat if rankage>1,robust
+regress size thirdoldestgirl agefirstborn femhead_hh substrat if rankage>2,robust
 estimates store m2
-
-regress size percentfmales agemother_hh  femhead_hh substrat, robust
+regress size percentfmales agefirstborn  femhead_hh substrat, robust
 estimates store m3
 
-
-estout m1 m2 m3  cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat ) 
+reg size  oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat  if size>1,robust
+estimates store m4
+estout m1 m2 m3 m4, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl percentfmales agefirstborn  femhead_hh substrat ) 
 
 ***
 
@@ -186,7 +176,10 @@ estimates store f3
 ivregress 2sls hoursfem  agefirstborn   femhead_hh substrat (size = percentfmales ), robust
 estimates store f4
 
+ivreg2 hoursfem  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
+ivreg2 hoursmale  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
 
+ivreg2 hourschld  agefirstborn   femhead_hh substrat (size = oldestgirl secondoldestgirl percentfmales ) if size>1, robust liml
 
  regress hoursmale size agefirstborn femhead_hh substrat, robust
  estimates store m1
@@ -210,8 +203,6 @@ ivregress 2sls hourschld agefirstborn femhead_hh substrat (size = secondoldestgi
 estimates store c3
 
 
-
-
 clear
 
 
@@ -223,17 +214,6 @@ gen tottimechld=  a5aq6 + a5aq9 +a5aq12+ a5aq15
 bysort hh: egen hoursfem=sum(tottimefem)
 bysort hh: egen hoursmale=sum(tottimemale)
 bysort hh: egen hourschld=sum(tottimechld)
-
-gen prepare = a5aq4+a5aq5+a5aq6
-gen input = a5aq7+a5aq8+a5aq9
-gen weeding=a5aq10+a5aq11+a5aq12
-gen harvesting = a5aq13+a5aq14+a5aq15
-
-bysort hh: egen hoursprepare=sum(prepare)
-bysort hh: egen hoursinput=sum(input)
-bysort hh: egen hoursweeding=sum(weeding)
-bysort hh: egen hoursharvesting=sum(harvesting)
-
 duplicates drop hh, force
 
 
@@ -248,21 +228,21 @@ duplicates drop hh, force
  tab multrank, gen(multranktab)
 
 
-ivregress 2sls hoursfem agefirstborn substrat femhead_hh   (size = mults), robust first
+ivregress 2sls hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5  (size = mults), robust first
 estimates store f5
-ivregress 2sls hoursmale agefirstborn substrat femhead_hh (size = mults), robust first
+ivregress 2sls hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
 estimates store m5
-ivregress 2sls hourschld agefirstborn substrat femhead_hh  (size = mults), robust first
+ivregress 2sls hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults), robust first
 estimates store c5
 
-ivreg2  hoursfem agefirstborn substrat femhead_hh   (size =  oldestgirl percentfmales  ) , liml robust
+ivreg2  hoursfem agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
 estimates store f6
-ivreg2  hoursmale agefirstborn substrat femhead_hh (size = oldestgirl  percentfmales), liml robust
+ivreg2  hoursmale agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
 estimates store m6
-ivreg2  hourschld agefirstborn substrat femhead_hh  (size = oldestgirl percentfmales ), liml robust
+ivreg2  hourschld agefirstborn substrat femhead_hh multranktab2 multranktab3 multranktab4 multranktab5 (size = mults oldestgirl percentfmales ), liml robust
 estimates store c6
 
-estout f1 f2 f3 f4 f5 f6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
-estout m1 m2 m3 m4 m5 m6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
-estout c1 c2 c3 c4 c5 c6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) 
+estout f1 f2 f3 f4 f5 f6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
+estout m1 m2 m3 m4 m5 m6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
+estout c1 c2 c3 c4 c5 c6, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) drop(multranktab*)
 
