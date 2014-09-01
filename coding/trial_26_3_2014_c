@@ -181,15 +181,18 @@ replace momedu_hh_dum2=1 if  momedu_hh_dum4==1
 keep if agemother_hh<33
 
 regress dif_size oldestgirl   femhead_hh substrat momedu_hh_dum* health pschool memdead, robust
-
 estimates store m1
+*** ologits just for fun, not to be used in 2SLS: that would be the forbidden regression
+ologit dif_size oldestgirl   femhead_hh substrat momedu_hh_dum* health pschool memdead, robust
 regress dif_size secondoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>1,robust
 estimates store m2
+ologit dif_size secondoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>1,robust
 regress dif_size thirdoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>2,robust
 estimates store m3
+ologit dif_size thirdoldestgirl   femhead_hh substrat momedu_hh_dum*  health pschool memdead if size>2,robust
 regress  dif_size percentfmales   femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
 estimates store m4
-
+ologit  dif_size percentfmales   femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
 
 estout m1 m2 m3 m4, cells(b(star fmt(3)) se(par fmt(3)))starlevels(+ 0.10 * 0.05 ** 0.01)  stats(r2 N) style(tex) order( oldestgirl  secondoldestgirl thirdoldestgirl percentfmales femhead_hh substrat momedu_hh_dum*  health pschool memdead ) 
 
@@ -236,7 +239,7 @@ duplicates drop hh, force
  keep if _merge==3
  
 
-gen tottime=hoursfem +hoursmale +hourschld
+gen tottime=hoursfem +hoursmale
  
 regress tottime dif_size  femhead_hh substrat momedu_hh_dum*  health pschool memdead , robust
 estimates store f1
@@ -306,10 +309,10 @@ clear
 
  use /home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta
 
-gen prepare = a5aq4+a5aq5+a5aq6
-gen input = a5aq7+a5aq8+a5aq9
-gen weeding=a5aq10+a5aq11+a5aq12
-gen harvesting = a5aq13+a5aq14+a5aq15
+gen prepare = a5aq4+a5aq5
+gen input = a5aq7+a5aq8
+gen weeding=a5aq10+a5aq11
+gen harvesting = a5aq13+a5aq14
 
 bysort hh: egen hoursprepare=sum(prepare)
 bysort hh: egen hoursinput=sum(input)
