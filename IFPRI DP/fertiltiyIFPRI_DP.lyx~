@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass article
+\textclass ifpri
 \begin_preamble
 \usepackage{endnotes}
 \let\footnote=\endnote
@@ -11,7 +11,7 @@
 \maintain_unincluded_children false
 \language english
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman default
 \font_sans default
@@ -78,6 +78,38 @@ Fertility, Agricultural labour Supply and Production - Instrumental Variable
  Evidence from Uganda
 \end_layout
 
+\begin_layout Author
+Bjorn Van Campenhout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+division{Development Strategy and Governance Division}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cpauthor{Bjorn Van Campenhout, International Food Policy Research Institute
+\backslash
+
+\backslash
+ Research Fellow, Development Strategy and Governance Division
+\backslash
+
+\backslash
+{b.vancampenhout@cgiar.org}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Abstract
 Fertility is likely to affect agricultural production through its effect
  on the supply of agricultural labour.
@@ -115,9 +147,7 @@ At the most basic level, subsistence farmers in rural Africa combine natural
 \end_layout
 
 \begin_layout Standard
-Uganda has one of the highest fertility rates in the world and a substantial
- part of the population lives in rural areas making a living out of semi-subsist
-ence agriculture.
+Uganda has one of the highest fertility rates in the world.
  Even in the context of large reductions in child mortality rates, total
  fertility rates remain stubbornly high.
  On average, Ugandan women in rural areas bear 6.8 children over the course
@@ -129,6 +159,12 @@ key "New9"
 \end_inset
 
 .
+ At the same time, a substantial part of the population lives in rural areas
+ making a living out of semi-subsistence agriculture.
+ Ugandan agriculture accounts for about 35 percent of GDP and employs about
+ 73 percent of the of the active labour force.
+ Virtually all households that reside in rural areas are engaged in farming,
+ and about 80 percent are small scale semi-subsistence farmers.
  The question on how fertility affects well-being through its effect on
  household labour supply and agricultural production is therefore relevant.
  For example, knowledge on how fertility affects time allocation by different

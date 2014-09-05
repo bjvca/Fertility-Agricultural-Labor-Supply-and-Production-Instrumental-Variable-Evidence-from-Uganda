@@ -4,7 +4,10 @@
 \begin_header
 \textclass article
 \begin_preamble
-\usepackage{endnotes}
+
+
+\usepackage{ifpri}
+\usepackage{footnote}
 \let\footnote=\endnote
 \end_preamble
 \use_default_options true
@@ -74,8 +77,7 @@
 \begin_body
 
 \begin_layout Title
-Fertility, Agricultural labour Supply and Production - Instrumental Variable
- Evidence from Uganda
+Fertility, Agricultural labour Supply and Production
 \end_layout
 
 \begin_layout Abstract

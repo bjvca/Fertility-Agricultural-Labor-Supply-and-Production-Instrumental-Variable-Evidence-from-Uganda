@@ -4,6 +4,9 @@
 \begin_header
 \textclass article
 \begin_preamble
+ \documentclass{article}
+ \usepackage{ifpri}
+
 \usepackage{endnotes}
 \let\footnote=\endnote
 \end_preamble

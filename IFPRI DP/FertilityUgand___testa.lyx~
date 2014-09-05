@@ -4,7 +4,10 @@
 \begin_header
 \textclass article
 \begin_preamble
-\usepackage{endnotes}
+
+
+\usepackage{ifpri}
+\usepackage{footnote}
 \let\footnote=\endnote
 \end_preamble
 \use_default_options true

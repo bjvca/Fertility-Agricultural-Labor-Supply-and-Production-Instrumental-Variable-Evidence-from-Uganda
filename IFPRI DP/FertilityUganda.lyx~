@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass article
+\textclass ifpri
 \begin_preamble
 \usepackage{endnotes}
 \let\footnote=\endnote
