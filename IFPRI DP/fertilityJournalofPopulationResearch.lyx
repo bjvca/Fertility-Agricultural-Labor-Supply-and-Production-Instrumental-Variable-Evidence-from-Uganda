@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass ifpri
+\textclass article
 \begin_preamble
 
 \end_preamble
@@ -77,36 +77,8 @@ Fertility, Agricultural labor Supply and Production: Instrumental Variable
  Evidence from Uganda
 \end_layout
 
-\begin_layout Author
-Bjorn Van Campenhout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-division{Development Strategy and Governance Division}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-cpauthor{Bjorn Van Campenhout, International Food Policy Research Institute
-\backslash
-
-\backslash
- Research Fellow, Development Strategy and Governance Division
-\backslash
-
-\backslash
-{b.vancampenhout@cgiar.org}}
-\end_layout
-
-\end_inset
-
-
+\begin_layout Description
+Keywords: fertility, labor supply, instrumental variables, Uganda 
 \end_layout
 
 \begin_layout Abstract
@@ -258,8 +230,12 @@ key "doi:10.1080/00220380500356779"
  allocation in a developing country context use data from Asian countries.
  The high incidence of selective abortion in these countries may mean the
  sex of the first child or children becomes endogenous as well.
- This was likely to be much less of a problem in our application, which
- is, to our knowledge, the first such application to an African country.
+ This was likely to be much less of a problem in our application.
+ In sum, this study aims to contribute to the thin literature on boy preference
+ in Africa.
+ Its originality also lies in the outcome variables studied.
+ While most studies are we look at outcome variables in terms of formal
+ labor supply that are in the sphere of subsistence agriculture.
 \end_layout
 
 \begin_layout Standard
@@ -540,6 +516,16 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
 \end_inset
 
 .
+ In countries and cultures that exhibit boy preference, sex balance with
+ the households is thus unlikely to be a valid instrument.
+ This is indeed what 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RePEc:pra:mprapa:52908"
+
+\end_inset
+
+ finds for South Africa.
 \end_layout
 
 \end_inset
@@ -813,7 +799,34 @@ key "New2"
 
 \end_inset
 
-.
+, albeit only qualitatively.
+ The only quantitative assessment of boy preference in Uganda can be found
+ in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PADR:PADR588"
+
+\end_inset
+
+, a study comparing 61 countries.
+ Contrary to our case, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PADR:PADR588"
+
+\end_inset
+
+ finds no evidence of boy preference.
+ However, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "PADR:PADR588"
+
+\end_inset
+
+ uses information on the desired number of boys and girls to calculate sex
+ ratios, while we use actual births.
+ 
 \end_layout
 
 \begin_layout Standard

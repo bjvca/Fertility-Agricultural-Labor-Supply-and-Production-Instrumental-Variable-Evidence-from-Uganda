@@ -2,9 +2,10 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass ifpri
+\textclass article
 \begin_preamble
 
+\pagestyle{empty}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -57,12 +58,12 @@
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation skip
-\defskip smallskip
+\paragraph_separation indent
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -75,38 +76,6 @@
 \begin_layout Title
 Fertility, Agricultural labor Supply and Production: Instrumental Variable
  Evidence from Uganda
-\end_layout
-
-\begin_layout Author
-Bjorn Van Campenhout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-division{Development Strategy and Governance Division}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-cpauthor{Bjorn Van Campenhout, International Food Policy Research Institute
-\backslash
-
-\backslash
- Research Fellow, Development Strategy and Governance Division
-\backslash
-
-\backslash
-{b.vancampenhout@cgiar.org}}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Abstract
@@ -126,11 +95,69 @@ Human fertility is likely to affect agricultural production through its
  in terms of yield per land area.
 \end_layout
 
-\begin_layout Abstract
-Keywords: fertility, labor supply, instrumental variables, boy preference.
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
 \end_layout
 
-\begin_layout Section*
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Background: Human fertility is likely to affect agricultural production
+ through its effect on the supply of agricultural labor, especially in Uganda
+ - a country that combines a dominant agricultural sector with one of the
+ highest fertility rates in the world.
+\end_layout
+
+\begin_layout Itemize
+Objective: Estimate the causal effect of human fertility on agricultural
+ labor, production and productivity in a poor population that relies heavily
+ on small scale subsistence farming.
+\end_layout
+
+\begin_layout Itemize
+Methods: We use quasi-experimental Instrumental Variables (IV) methods to
+ isolate exogenous variation in the number of children born to a couple.
+ In particular, we exploit the fact that in traditional, patriarchal societies
+ sons are often preferred to daughters.
+\end_layout
+
+\begin_layout Itemize
+Results: We found that fertility has a sizable negative effect on household
+ labor allocation to subsitence agriculture.
+ Households with lower fertility devote significantly more time to land
+ preparation and weeding, while larger households grow less matooke and
+ sweet potatoes.
+ We found no significant effect on agricultural productivity as measured
+ in terms of yield per land area.
+\end_layout
+
+\begin_layout Itemize
+Conclusions: Our research underscores the importance of a gendered approach
+ toward agricultural intensification policies.
+ It points to the value of fertility reducing policies such as getting girls
+ to school in obtaining basic agricultural and nutrition related outcomes.
+\end_layout
+
+\begin_layout Itemize
+Comments: More research is needed to verify if our findings extend to households
+ in older age cohorts.
+\end_layout
+
+\begin_layout Section
 Introduction
 \end_layout
 
@@ -139,8 +166,8 @@ At the most basic level, subsistence farmers in rural Africa combine natural
  with human resources to make a living.
  They use mainly household labor on their own small plots to produce food
  for their own consumption.
- Accordingly, the quantity of family members available for agricultural
- labor is an important determinant of wellbeing.
+ As such, the quantity of family members available for agricultural labor
+ is an important determinant of wellbeing.
  More children means mothers, and to a lesser extent fathers, will need
  to spend more time caring for children, meaning less time will be available
  to spend on agricultural activities.
@@ -165,8 +192,8 @@ key "New9"
 .
  At the same time, a substantial part of the population lives in rural areas
  making a living out of semi-subsistence agriculture.
- Ugandan agriculture accounts for about 35 percent of gross domestic product
- and employs about 73 percent of the active labor force.
+ Ugandan agriculture accounts for about 35 percent of GDP and employs about
+ 73 percent of the active labor force.
  Virtually all households that reside in rural areas engage in farming,
  and about 80 percent are small-scale, semi-subsistence farmers.
  The question of how fertility affects wellbeing through its effect on household
@@ -270,7 +297,7 @@ We found that the sex of the firstborn, the sex of the first two children
  Fertility has a strong negative effect on the number of days the mother
  works in the field.
  We also find some evidence of a negative effect on the father, but the
- size of the effect is only half of that on the mother.
+ size of the effect is only half of that on the women.
  Households with lower fertility devote significantly more time to land
  preparation and weeding.
  We also found that smaller households produce more matooke.
@@ -296,7 +323,7 @@ This article is organized as follows.
  A final section concludes.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Related Studies
 \end_layout
 
@@ -520,7 +547,7 @@ In this paper, we will try to address some of the above challenges.
  
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Boy preference and Fertility
 \end_layout
 
@@ -799,7 +826,7 @@ key "RePEc:got:gotcrc:133"
  
 \begin_inset CommandInset citation
 LatexCommand citet
-key "RePEc:wbk:wbrwps:6869"
+key "New3"
 
 \end_inset
 
@@ -837,21 +864,20 @@ key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
 
  found some evidence of an association between having a male child and reduced
  childbearing at higher parities - in addition to the mixed-child preference.
- Accordingly, we felt that the sex of the firstborn (or closely related
- indicators) would provide a valid instrument for fertility at the household
- level in Uganda.
+ As such, we felt that the sex of the firstborn (or closely related indicators)
+ would provide a valid instrument for fertility at the household level in
+ Uganda.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Data and Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
-We used the Uganda National Household Survey (UNHS) 2005-2006,obtained directly
- from the Uganda Bureau of Statistics (UBOS).
- Although it is somewhat dated, we chose this survey because it has much
- more information about agriculture than the more recent UNHS of 2009-2012,
- or that of 2012-2013.
+We used the Uganda National Household Survey (UNHS) 2005-2006.
+ While being somewhat dated, we chose this survey because it has much more
+ information about agriculture than the more recent UNHS of 2009-2012, or
+ that of 2012-2013.
  The 2005-2006 UNHS we chose was structured with a standard Living Standards
  Measurement Study - Integrated Survey on Agriculture (LSMS-ISA) in mind-
  it collected detailed information on a sample of almost 43,000 people in
@@ -918,14 +944,7 @@ shortfall in fertility
  ratio for "censoring" the lives of women who have had too many children
  and thus increased mortality rates (and exit from the sample).
  Instead, we took the 95th percentile of total fertility rates per age from
- the Demographic and Health Survey of Uganda done in 2011 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "New9"
-
-\end_inset
-
-.
+ the Demographic and Health Survey of Uganda (2011).
  This is probably a good approximation of the upper bound by age-of-fertility
  in the population.
 \end_layout
@@ -954,18 +973,7 @@ The selection of children was based on the household roster of the UNHS
  Restricting our sample in this way had a second advantage.
  For some of the indirect outcome variables we used, such as productivity,
  there was a risk that the gender of the firstborn had a direct effect on
- the outcome, instead of only through fertility
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-For example, boys may have a different effect on productivity than girls
- due to their physical differences.
-\end_layout
-
-\end_inset
-
-.
+ the outcome, instead of only through fertility.
  Restricting our sample to households with only young mothers meant that
  the children were also likely to be younger, and thus less likely to engage
  in agricultural production, making a violation of the exclusion restriction
@@ -997,7 +1005,7 @@ key "Jayachandran01082011"
  gender patterns in the household are related to fertility.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Gender of Offspring and Fertility
 \end_layout
 
@@ -1086,7 +1094,7 @@ Finally, columns 5 and 6 propose the share of female children in the total
  
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Agricultural labor Supply
 \end_layout
 
@@ -1162,7 +1170,7 @@ While the relationship between fertility and child labor is an important
  
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Production
 \begin_inset CommandInset label
 LatexCommand label
@@ -1243,7 +1251,7 @@ UGX stands for Ugandan Shillings, the national currency.
  The yield per acre was about UGX220,220.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Results
 \end_layout
 
@@ -1382,7 +1390,7 @@ oldestgirl
  For the controls, we found that households where females were the head
  had a significantly larger fertility gap.
  The effect was very large, suggesting that such mothers had more than 1
- child less than the maximum.
+ child less.
  Also, in urban areas, households seemed to have significantly fewer children.
  Schooling of the mother seemed to reduce the number of children only at
  the secondary and tertiary level.
@@ -1507,7 +1515,7 @@ key "RePEc:ecm:emetrp:v:65:y:1997:i:3:p:557-586"
  
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Household labor supply
 \end_layout
 
@@ -1529,7 +1537,7 @@ reference "tab:2SLS-estimates-of"
 
 \end_inset
 
-), and by activity (table 
+), and also looks at labor supply by activity (table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:2SLS-estimates-allocation"
@@ -1679,21 +1687,7 @@ reference "tab:2SLS-estimates-of"
  For the sake of space, it only shows the coefficient on the fertility gap,
  but we also added the exogenous control variables that were also included
  in the first stage regression.
- Full results can be found in the appendix (table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:appendixmotherh"
-
-\end_inset
-
- and table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Effect-on-maileappend"
-
-\end_inset
-
-).
+ Full results can be found in the appendix.
  The top panel in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1869,8 +1863,8 @@ reference "tab:timeweeding"
 
 ) show significant negative effects for female-headed households and for
  households in urban areas.
- We also found that households in communities that have a health center
- spent fewer days on weeding.
+ We also found that communities that have a health center spent fewer days
+ on weeding.
  Finally, the last panel looks at the effects of fertility on days worked
  for harvesting.
  There was no significant positive association between the number of children
@@ -1895,7 +1889,7 @@ The above suggests that fertility affects time allocated to land preparation
  The next section looks at this question.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Area planted, Production and Productivity
 \end_layout
 
@@ -2010,7 +2004,7 @@ The first row gives results for the change in production.
  also showed no causal impact from family size.
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Conclusion
 \end_layout
 
@@ -2140,7 +2134,7 @@ Policy response involves addressing cultural issues related to high fertility,
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "/home/bjvca/data/data/fertility and ag productivity/fertility"
-options "/home/bjvca/IFPRI_Style"
+options "elsarticle-harv"
 
 \end_inset
 
@@ -2154,7 +2148,7 @@ options "/home/bjvca/IFPRI_Style"
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Section
 Tables
 \end_layout
 
@@ -2185,8 +2179,7 @@ name "tab:gender-and-fertility"
 \end_layout
 
 \begin_layout Plain Layout
-\noindent
-\align left
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="6">
 <features rotate="0" tabularvalignment="middle">
@@ -2651,12 +2644,6 @@ gap
 
 \end_layout
 
-\begin_layout Plain Layout
-\noindent
-\align left
-Source: Author's calculations based on the UNHS 2005-2006
-\end_layout
-
 \end_inset
 
 
@@ -2809,32 +2796,13 @@ yield (kg per acre) &   358.2  &   128.5  &  1096.3  &  1030.8  & 2067.3
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
 end{tabular}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\noindent
-\align left
-Source: Author's calculations based on the UNHS 2005-2006
 \end_layout
 
 \end_inset
@@ -2881,6 +2849,9 @@ status open
 
 \begin_layout Plain Layout
 
+
+\backslash
+centering{}%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2890,36 +2861,6 @@ status open
 begin{tabular}{rccccc} 
 \backslash
 hline   
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-	&	(1)	&	(2)	&	(3)	&	(4)		
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\end_layout
-
-\begin_layout Plain Layout
-
-
 \backslash
 hline
 \end_layout
@@ -3059,19 +3000,6 @@ hline
 hline 
 \backslash
 hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3360,20 +3288,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3644,20 +3559,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3944,20 +3846,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4216,20 +4105,7 @@ yield    &   -22.060      &   41.329   &      69.834   &   -480.421     &
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4464,20 +4340,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -4814,20 +4677,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5052,12 +4902,7 @@ fgap    &      -0.620  &      10.928  &       5.915  &      22.327*  &
 \backslash
 
 \backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-N           &    2016  &    2016  &    1620  &    2016  &    2016  
+ N           &    2016  &    2016  &    1620  &    2016  &    2016  
 \backslash
 
 \backslash
@@ -5091,20 +4936,7 @@ instrument:	&	-	&	1st = girl	&	1st
 \backslash
 hline 
 \backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
+hline 
 \end_layout
 
 \begin_layout Plain Layout
@@ -5324,16 +5156,7 @@ fgap    &      -0.048  &      15.876  &      41.127**  &      26.028** &
 \backslash
 
 \backslash
-   
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-N           &    2015  &    2015  &    1619  &    2015  &    2015  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -5368,19 +5191,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5603,16 +5413,7 @@ fgap    &       0.051  &       1.812  &       0.849  &       2.372  &
 \backslash
 
 \backslash
-   
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-N           &    2015  &    2015  &    1619  &    2015  &    2015  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -5647,19 +5448,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -5886,16 +5674,7 @@ fgap   &       0.026  &      17.708*  &      25.959*  &      21.385* &
 \backslash
 
 \backslash
-   
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-N           &    2015  &    2015  &    1619  &    2015  &    2015  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -5930,19 +5709,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -6159,16 +5925,7 @@ fgap    &      -0.082  &       5.315  &      -3.591  &      13.852+  &
 \backslash
 
 \backslash
-  
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-N           &    2015  &    2015  &    1619  &    2015  &    2015  
+ N           &    2015  &    2015  &    1619  &    2015  &    2015  
 \backslash
 
 \backslash
@@ -6203,19 +5960,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -6493,19 +6237,6 @@ hline
 \backslash
 multicolumn{6}{l}{
 \backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
 footnotesize Note: Huber-White standard errors in parentheses, +, * and
  ** denote significance at the 10, 5 and 1 percent}
 \backslash
@@ -6764,19 +6495,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -7048,19 +6766,6 @@ hline
 \backslash
 multicolumn{6}{l}{
 \backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
 footnotesize Note: Huber-White standard errors in parentheses, +, * and
  ** denote significance at the 10, 5 and 1 percent}
 \backslash
@@ -7283,10 +6988,6 @@ cons       &     178.153**&     154.719  &     449.143  &     244.882+ &
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 N           &    1567  &    1567  &    1278  &    1567  &    1567  
 \backslash
 
@@ -7326,19 +7027,6 @@ instrument:	&	-	&	1st = girl	&	1st
 hline 
 \backslash
 hline 
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-multicolumn{6}{l}{
-\backslash
-footnotesize Source: Author's calculations based on UHNS 2005-2006 data}
-\backslash
-
-\backslash
-
 \end_layout
 
 \begin_layout Plain Layout

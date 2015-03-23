@@ -80,7 +80,7 @@ Fertility, Household Labor Supply and Agricultural Production - Instrumental
 
 \begin_layout Abstract
 Fertility is likely to affect agricultural production through its effect
- on household labor supply.
+ on the supply of agricultural labour.
  Using the fact that in traditional, patriarchal societies sons are preferred
  to girls, we isolate exogenous variation in the number of children born
  to the mother and related it to labor supply and production outcomes in
@@ -107,14 +107,14 @@ At the most basic level, subsistence farmers in rural Africa combine natural
  with human resources to make a living.
  They use mainly household labor on their own small plots to produce for
  own consumption.
- As such, the quantity of family labor available is an important determinant
- of well-being.
+ As such, the quantity of family labor available for agriculture is an important
+ determinant of well-being.
  Family labor availability, generally believed to suffer much less from
  moral hazard problems, will be a direct function of the number of biological
  children within the household.
  For instance, more children means more hands to work on the field.
  At the same time, more children means mothers, and to a lesser extend siblings
- and fathers, will need to spend more time on reproductive chores meaning
+ and fathers, will need to spend more time on reproductive chores, meaning
  less time will be available to spend on agricultural activities.
  Since women are known to supply most of the agricultural labour the loss
  in time needed for reproductive activities potentially offsets the the
@@ -148,7 +148,8 @@ key "New9"
 In this study, we will investigate the effect of fertility on agricultural
  production at the household level.
  In particular, we will investigate the effect of the number of biological
- children on household member labor input.
+ children on household member labor input in agriculture (further categorized
+ in land preparation, weeding, input application and harvesting).
  We will also look at the effect of fertility on crop portfolio, area cultivated
 , production and productivity for the five most important crops.
  However, fertility is a choice variable to agricultural households.
@@ -961,13 +962,13 @@ Finally, we compare the average fertility in two different groups defined
 \end_layout
 
 \begin_layout Subsubsection*
-Hours worked 
+Time worked performing agricultural activities
 \end_layout
 
 \begin_layout Standard
 In this section we will briefly look at some descriptive statistics on labor
- supply, one of the prime pathways through which fertility affects productivity
- and well-being.
+ supply in agriculture, one of the prime pathways through which fertility
+ affects productivity and well-being.
  Most of Uganda has two cropping seasons.
  The first runs from January to June.
  The second cropping season is from July to December.
@@ -978,7 +979,7 @@ In this section we will briefly look at some descriptive statistics on labor
  Households were revisited at the end on 2005 to record information from
  the first cropping season in 2005 (running from January to June 2005).
  In our study, we will only consider the 2004 cropping season, as data for
- labour allocation to agriculture was unavailable for the 2004 cropping
+ labour allocation in agriculture was unavailable for the 2004 cropping
  season.
 \end_layout
 
@@ -1380,12 +1381,12 @@ We have also done this analysis using days worked per acre of land held
  We do find significant and negative effects of the household being headed
  by a female and the household being located in an urban area.
  The education of mothers does not seem to be systematically related to
- the hours worked in agriculture.
+ the number of days worked in agriculture.
  The OLS estimates also show positive correlations between a school in the
- community and hours worked in agriculture and between a deceased child
- in the past and hours worked.
+ community and days worked in agriculture and between a deceased child in
+ the past and days worked.
  There is also some indication of a positive correlation between health
- centers in the community and hours worked.
+ centers in the community and days worked.
  On average, households report working about 90 labor days on the field
  in the July to December 2004 cropping season.
  
@@ -1465,7 +1466,7 @@ reference "tab:2SLS-estimates-of"
 
 \end_inset
 
- shows the effect of fertility on hours worked by the mother.
+ shows the effect of fertility on time worked in agriculture by the mother.
  The OLS estimate is not significant (model (1)).
  Accounting for endogeneity of fertility using the exogenous variation caused
  by the sex of the firstborn renders the fertility gap significant at a
@@ -1473,8 +1474,8 @@ reference "tab:2SLS-estimates-of"
  Mothers work on average more than 50 days in agriculture.
  Cycling through the results with the alternative instruments, the results
  change little with respect to significance.
- In all, an additional child seems to reduce hours worked by the mother
- in agricultural production by about 40 days.
+ In all, an additional child seems to reduce number of days worked by the
+ mother in agricultural production by about 40 days.
  Full results are reported in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1502,10 +1503,10 @@ reference "tab:Effect-on-maileappend"
  more on the field during the season, on average.
  We find that residing in urban areas leads farmers reporting less days
  worked on the field.
- We also find a large negative effect of female headedness on hours worked
- by the male.
+ We also find a large negative effect of female headedness on days worked
+ on agriculture related activities by the male.
  This is because in most cases, households are headed by females because
- the male head is missing, leading to less hours reported on the field.
+ the male head is missing, leading to less days reported on the field.
  We also find some evidence of males working less if the mother has higher
  eduction.
  This is most likely because higher educated men choose higher educated
@@ -1548,7 +1549,7 @@ When we instrument the fertility gap by the sex of the first-born, the coefficie
 nt remains negative.
  This is different from what we find for days worked by the mother or the
  father.
- This would mean that a lower fertility reduces the hours worked by children
+ This would mean that a lower fertility reduces the time worked by children
  on the field.
  However, the coefficient becomes only significantly at a p-value of 0.162
  for the Anderson-Rubin test.
@@ -1632,7 +1633,7 @@ Model (2) presents the same model, but instruments fertility with the indicator
 \end_layout
 
 \begin_layout Standard
-The second panel repeats the same five models, but uses hours spent on input
+The second panel repeats the same five models, but uses days spent on input
  application as the dependent variable.
  In none of the five specifications, fertility seems to have a significant
  impact.
@@ -1667,7 +1668,7 @@ reference "tab:timeweeding"
 ) show significant negative effects for female headed households and for
  households in urban areas.
  We also find that communities that have a health center are spending less
- hours on weeding.
+ days on weeding.
  
 \end_layout
 
@@ -2877,7 +2878,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Effect of fertility on total hours worked in agriculture
+Effect of fertility on total time worked in agriculture
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:totlabour"
@@ -4053,7 +4054,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Average hours worked
+Average number of days worked
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Average-hours-worked"
@@ -4306,7 +4307,7 @@ end{tabular}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Effect on hours worked by mother (full results)
+Effect on days worked by mother (full results)
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:appendixmotherh"
@@ -4523,7 +4524,7 @@ end{tabular}
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Effect on hours worked by father (full results)
+Effect on days worked by father (full results)
 \begin_inset CommandInset label
 LatexCommand label
 name "tab:Effect-on-maileappend"

@@ -1,0 +1,1295 @@
+Fertility, Household Labor Supply and Agricultural Production - 
+Instrumental Variable Evidence from Uganda
+
+Bjorn Van Campenhout
+
+International Food Policy Research Institute (IFPRI) - Kampala - 
+Plot 15, East Naguru Road, Po Box 28565 - Kampala - Uganda - 
+b.vancampenhout@cgiar.org - +256 790 833729
+
+Bjorn Van Campenhout
+
+Keywords: fertility, instrumental variables, household labour 
+supply, agriculture, Uganda.
+
+JEL codes: J13, J22, Q12
+
+Abstract
+
+Fertility is likely to affect agricultural production through its 
+effect on household labor supply. Using the fact that in 
+traditional, patriarchal societies sons are preferred to girls, 
+we isolate exogenous variation in the number of children born to 
+the mother and related it to labor supply and production outcomes 
+in Uganda, a country that combines a dominant agricultural sector 
+with one of the highest fertility rates in the world. We find 
+that fertility has a strong negative effect on hours worked by 
+the mother in the field. We also find some evidence of a negative 
+effect for the father, but the size of the effect is only half 
+that of the women. There is no effect on child labour. Households 
+with lower fertility devote significantly more time to land 
+preparation and weeding. This results in the fact that larger 
+households grow less matooke and sweet potatoes. 
+
+
+Abstract
+
+Fertility is likely to affect agricultural production through its 
+effect on household labor supply. Using the fact that in 
+traditional, patriarchal societies sons are preferred to girls, 
+we isolate exogenous variation in the number of children born to 
+the mother and related it to labor supply and production outcomes 
+in Uganda, a country that combines a dominant agricultural sector 
+with one of the highest fertility rates in the world. We find 
+that fertility has a strong negative effect on hours worked by 
+the mother in the field. We also find some evidence of a negative 
+effect for the father, but the size of the effect is only half 
+that of the women. There is no effect on child labour. Households 
+with lower fertility devote significantly more time to land 
+preparation and weeding. This results in the fact that larger 
+households grow less matooke and sweet potatoes.
+
+1 Introduction
+
+At the most basic level, subsistence farmers in rural Africa 
+combine natural with human resources to make a living. They use 
+mainly household labor on their own small plots to produce for 
+own consumption. As such, the quantity of family labor available 
+is an important determinant of well-being. Family labor 
+availability, generally believed to suffer much less from moral 
+hazard problems, will be a direct function of the number of 
+biological children within the household. For instance, more 
+children means more hands to work on the field. At the same time, 
+more children means mothers, and to a lesser extend siblings and 
+fathers, will need to spend more time on reproductive chores 
+meaning less time will be available to spend on agricultural 
+activities. Since women are known to supply most of the 
+agricultural labour the loss in time needed for reproductive 
+activities potentially offsets the the gains from larger 
+families. 
+
+Uganda has one of the highest fertility rates in the world and a 
+substantial part of the population lives in rural areas making a 
+living out of semi-subsistence agriculture. Even in the context 
+of large reductions in child mortality rates, total fertility 
+rates remain stubbornly high. On average, Ugandan women in rural 
+areas bear 6.8 children over the course of their reproductive 
+lives (UBOS, 2013). The question on how fertility affects 
+well-being through its effect on household labour supply and 
+agricultural production is therefore relevant. For example, 
+knowledge on how fertility affects time allocation by different 
+categories within the household is important to gender-stream 
+efforts related to crop intensification and commercialization.
+
+In this study, we will investigate the effect of fertility on 
+agricultural production at the household level. In particular, we 
+will investigate the effect of the number of biological children 
+on household member labor input. We will also look at the effect 
+of fertility on crop portfolio, area cultivated, production and 
+productivity for the five most important crops. However, 
+fertility is a choice variable to agricultural households. For 
+instance, mothers who work long hours in the field may try to 
+avoid becoming pregnant because this would only increase 
+hardship. Or, households with low agricultural production may 
+deliberately choose to have more children because this means 
+cheap labor. If fertility, time allocations and agricultural 
+production is indeed jointly determined, just looking at 
+correlations will be misleading, and one needs to find a way to 
+separate the exogenous variation from the part that is jointly 
+determined.
+
+Our identification strategy is a simple but powerful instrumental 
+variables approach inspired by the work of Angrist et al. (1998). 
+We use the fact that male off-springs are preferred in 
+conservative, patriarchal societies to construct a range of 
+instruments. The exogenous variation in the sex of a child can 
+then be used to determine the exogenous component of household 
+size. Such a two stage least squares approach is expected to 
+yield consistent estimates for the causal effect of fertility on 
+agricultural labor supply and associated agricultural production 
+within the household.
+
+There is an active debate among scholars in the field of labour 
+economists on the relationship between fertility and labour 
+supply. Angrist et al. (1998) use the fact that American couples 
+prefer children of different sex, and and are likely to keep 
+trying if the first two children are of the same sex as a source 
+of exogenous variation. We will argue that in a developing 
+country context, the sex of the (first born) child makes more 
+sense as an instrument. Indeed, this instrumentation strategy has 
+been used in such a context. Gupta et al. (2006) use the sex of 
+the first two children to predict exogenous variation in 
+fertility in India and its effect on well-being. We feel it is 
+too ambitious to relate fertility directly to poverty and related 
+measures of consumption as there may be ways in which the 
+instrument can affect consumption besides through the fertility 
+channel. We therefore restrict ourselves to labour allocation, 
+area planted and production. In addition, most studies that look 
+at the effects of fertility on labour allocation are on data from 
+Asia. Well documented high incidence of selective abortion in 
+these areas means the sex of the first child or children becomes 
+endogenous as well. This is likely to be much less of a problem 
+in our application, which is to our knowledge the first such 
+application to an African country.
+
+We find that the sex of the first-born, the sex of the first two 
+children born, as well as the percentage of girls a a share of 
+total children in each age cohort all significantly explain 
+observed fertility, measured as the gap between actual children 
+born and a theoretical maximal fecundity for each age cohort. 
+Fertility has a strong negative effect on hours worked by the 
+mother in the field. We also find some evidence of a negative 
+effect for the father, but the size of the effect is only half 
+that of the women. There is no effect on child labour. Households 
+with lower fertility devote significantly more time to land 
+preparation and weeding. We also find that smaller households 
+grow and produce more matooke. This effect holds to a lesser 
+extent for sweet potatoes. We find no impact on yields. 
+
+This article is organized as follows. The next section gives a 
+brief overview of the most prominent papers that are related to 
+the present paper. Then, we make our case for the use of the sex 
+of the first-born as an instrument using literature that 
+documents child gender and reproductive behaviour. We then 
+present the data we will use in our application, and describe our 
+main variables we will use in the analysis. Next, we present the 
+results. In this section, we first take a close look at the first 
+stage regression. We then look at the effect of fertility on 
+household labor supply, considering differential effects 
+depending on household demographics as well as agricultural labor 
+activities. We then turn to the effect of household size on 
+productivity. A final section concludes.
+
+  Related Studies
+
+Fertility and the related concept of household size impacts 
+household well-being trough consumption and production. Lanjouw et al. (1995)
+ focus more on the consumption side effects of household size in 
+a developing country context. They note the contradiction between 
+widely held views that larger households are often poorer (due to 
+increased competition for a given food stock) and scale economies 
+in consumption. The find that, if economies of scale are 
+accounted for within households, the negative correlation between 
+household size and consumption expenditure disappears. On the 
+production side of the farm household, the effect of household 
+size is equally ambiguous. Some may argue that larger households 
+means that more labor is available within the household. The 
+additional advantage of this labor is that it is not subject to 
+the moral hazard effects often attributed to hired labor[footnote:
+For instance, Feder (1985) argues this may the reason why small 
+farms appear to be more efficient than large farms
+]. But at the same time, more dependents within the household 
+means more time needs to be allocated to reproductive activities. 
+Also, agricultural labour and agricultural production may be 
+subject to diminishing returns. In this study, we will start by 
+investigating the link between fertility and agricultural labour 
+supply and then look at the relation between fertility and 
+agricultural production respectively.
+
+The relationship between fertility and household labor supply has 
+been studied most carefully in the field of labor economics. 
+Since this literature is so extensive, we only mention two of the 
+most influential works here. The first is Angrist et al. (1998), 
+who attempt to quantify the effect of fertility on labor supply 
+in the US. They deal with the endogeneity of the number of 
+children women have by exploiting the fact that Americans tend to 
+prefer mixed sibling-sex in their household. They argue that 
+parents of same-sex siblings are significantly and substantially 
+more likely to go on to have an additional child. They find that 
+more children does indeed reduce labor force participation of 
+women, but the effect is less pronounced than previous studies 
+suggested. They find no effect on the labour supply of the 
+father.
+
+Another paper that tries to answer the same question is Rosenzweig et al. (1980a)
+. In this paper, the exogenous variation in the number of 
+children is obtained by using the occurrence of multiple births 
+(twins) at first birth as an instrument. The authors argue that 
+the comparison between women who gave birth to a single child at 
+first birth and women who gave birth to twins at first birth 
+teases out the causal effect of related to an extra child. Since 
+the occurrence of twins is exogenous, there is no danger that 
+heterogeneity in women preferences contaminates the estimated 
+coefficients. The study finds that household size reduces female 
+labor supply, but the effect is only temporary[footnote:
+In addition to studies that investigate the causal effect of 
+household size on (female) labor supply, there are also a range 
+of papers that test Becker's quantity-quality fertility model (Becker, 1960; Becker et al., 1973)
+. Many of these articles also use twins (Rosenzweig et al., 1980b; Black et al., 2005)
+ and/or sibling sex composition (Conley, 2000; Angrist et al., 2010)
+.
+].
+
+Gupta et al. (2006) use sex of the first two children as a 
+natural experiment and find that household size has a positive 
+effect on poverty in India. They use essentially the same 
+argument as we will make in the next section. Our study, however, 
+is are less ambitious. We feel that there are too many pathways 
+through which household size can influence poverty to be useful. 
+In addition, welfare, and the related concept of poverty, relies 
+on consumption per capita. Consumption per capita as the 
+independent variable is likely to be problematic in the two stage 
+least squares setting. There is a real danger that the 
+instrumental variable affects the outcome variable directly, 
+instead of only through its influence in family size. For 
+instance, if boys consume on average more than girls, the 
+exclusion restriction is violated. They confirm that high 
+fertility is correlated with poverty, but the correlation 
+disappears when they account for potential endogeneity of 
+fertility. There is also some evidence on Indonesia. Kim et al. (2009)
+ looks at the relation between consumption and fertility. In Kim et al. (2006)
+, fertility is related to the allocation of labour within 
+households. However, they move away from the direct instrumental 
+variable approach that is standard and instead estimate a 
+reproduction function taking into account endogenous 
+contraceptive choice. 
+
+All the above studies employ data from South East Asia. It is 
+well-known that fertility at birth is already skewed in many 
+Asian countries. For instance India, from which Gupta et al. (2006)
+ drawn their sample, is particularly known for selective abortion 
+of girls (Jha et al., 2011). This suggests a relationship between 
+the instrument and the error term of the structural equation. It 
+is well know that, in the context of weak instruments, such 
+correlation can seriously bias estimates (Bound et al., 1995). 
+The likely negative correlation between the instrument and the 
+error term will mean that, in this case, Gupta et al. (2006)'s 
+estimates are biased downward, in the direction of their original 
+OLS estimate. This bias is likely to be much less pronounced in 
+our data.
+
+In our paper, we will try to address some of the above 
+challenges. We will use the sex of the first-born and variations 
+thereof as our instrumental variables. We will relate fertility 
+to agricultural labour supply and agricultural production, since 
+there is a direct link between these three variables. We will 
+also concentrate on Africa. Here, while there is a boy 
+preference, reproduction rate norms are high and the cost of 
+raising children is low. This means that selective abortion is 
+much less of a concern. Still, we rely on the sex and numbers of 
+children within the family, meaning that the kind of sex 
+preference as described in Jayachandran et al. (2011) may still 
+render our instrument endogenous.
+
+  Boy preference and Fertility
+
+There is quite some evidence that parents prefer boys over girls 
+in developing countries[footnote:
+In developed countries, there is a preference for a mix of sexes 
+among children, as shown in, for example Angrist et al. (1998).
+]. For instance there is a large body of literature that looks at 
+correlations between sex and variables related to well-being or 
+quality of children. Significant differences in these outcomes 
+are then considered proof of sex bias. Das Gupta (1987) and Sen (1990)
+ look at excess mortality among female infants. Chen et al. (1981)
+ and Pande (2003) investigate differential access to health. Behrman (1988)
+ and Hazarika (2000) find a correlation between sex and nutrition 
+and Behrman et al. (1982), Davies et al. (1995) and Alderman et al. (1998)
+ all investigate correlations between the gender of children and 
+education.
+
+However, at a more basic level, boy preference is already 
+revealed by parents who, if asked in for example surveys, state 
+clearly that they want to have more boys than girls. Such 
+preferences lead to a particular decision rule with respect to 
+fertility, where the likelihood that children are added to the 
+household is positively correlated to the number of surviving 
+girls in the household. The preference for a boy over a girl 
+results in what Jayachandran et al. (2011) refer to as a 
+stop-after-a-son fertility pattern. There are many studies that 
+show empirically that in settings with son preference, a couple 
+that just had a son is more likely to stop having children (Das, 1987)
+ or wait longer to have the next child (Trussell et al., 1985; Arnold et al., 1998; Clark, 2000; Drèze et al., 2001)
+. 
+
+Jayachandran et al. (2011) argue that son preference leads 
+mothers to breastfeed daughters and children without brothers 
+relatively less long. This underlying consequence of sex bias my 
+partly explain a range of outcomes observed in the area of 
+health, mortality and possibly even educational attainment. Their 
+model shows that even when parents want both boys and girls to 
+have the same health and education, disparities can arise 
+passively because of fertility preferences. They show that a “try 
+until you have a boy” fertility rule results in girls having on 
+average more siblings, leading to more competition for resources 
+within the household. 
+
+The use of the sex of first born as an instrument is motivated by 
+various cultural and economic factors documented in the 
+anthropological and demographic literature. In countries where no 
+old age insurance is available, parents may choose to invest more 
+in children that have a higher chance of being able to support 
+them at old age (Behrman et al., 1982). Anthropological and 
+demographic evidence emphasize the dominant role of males in 
+traditional patrilineal societies where descent and inheritance 
+are transmitted through the male line. Furthermore, male children 
+strengthen the relationship between the wife and her husband's 
+kin (by guaranteeing the continuation of his lineage) and secure 
+(the mother's) access to residence and inheritance upon the 
+husband's death. Also, the practice of dowry implies that a 
+daughter is often associated with an expected expenditure, a 
+central part in the theoretical model of son preference in Gupta et al. (2006)
+. 
+
+Most of the evidence on boy preference comes from Asian 
+countries. It is often assumed that gender preferences are much 
+lower or even absent in Sub-Saharan Africa. This is surprising, 
+as many of the cultural and economic factors that are observed in 
+Asia equally apply to Africa. One study that documents 
+significant gender bias in Africa is Anderson et al. (2010), who 
+find skewed sex ratios at older age in favor of men. What is 
+different from the Asian context, though, is that the vast 
+majority of women are not missing at birth, but throughout the 
+entire age spectrum[footnote:
+The large effects documented in Anderson et al. (2010) have 
+recently been attenuated in Klasen et al. (2013), who confirm 
+only missing young adult women.
+]. Milazzo (2012) argues that gender bias is likely not to be 
+found at birth in the African context where high fertility is 
+culturally valued and made less costly for families that still 
+rely on the support from the extended family system. In Uganda, 
+preference for boys has been documented in Beyeza-Kashesya et al. (2010)
+.
+
+Even in Western societies, preference for the firstborn to be a 
+son has been observed. For example, Marleau et al. (2002) report 
+an extensive list of studies that find men and/or women prefer a 
+boy rather than a girl as their first-born. Even in the United 
+States, the Angrist et al. (1998) provides some evidence of an 
+association between having a male child and reduced childbearing 
+at higher parities, in addition to the mixed-child preference. As 
+such, we feel that the sex of the first-born (or closely related 
+indicators) provide a valid instrument for fertility at the 
+household level.
+
+  Data and Descriptive Statistics
+
+We will use the Uganda National Household Survey (UNHS) 2005/06. 
+While being somewhat dated, we have chosen this survey because it 
+has much more information on agriculture than the more recent 
+UNHS of 2009/10. Structured with a standard Living Standard 
+Measurement Survey - Integrated Survey on Agriculture (LSMS-ISA) 
+in mind, the UNHS 2005/06 collected detailed information on a 
+sample of almost 43000 people in 7500 households in Uganda.
+
+Ideally, we would like to have a sample of households where all 
+desired children where born. A household that currently has one 
+child may be in the process of adding more children to their 
+family. Assume a couple that has just formed and is entering 
+their reproductive stage. Assume further that the first child is 
+a girl. In our sample, this household will show up with a smaller 
+than average size, but with a girl as the firstborn, hence this 
+may mistakenly be interpreted as running against our hypothesis 
+that households prefer boys. If the first child is a boy, this 
+same household would show up in our sample as smaller than 
+average, and thus this may lead us to put too much confidence in 
+our hypothesis. The fact that we are working with a cross section 
+of households rather than historical data on all births by women 
+that have reached the end of their reproductive lives is also 
+reflected in the average number of children. This is only 3.13 
+children, while women bear almost 7 children over their entire 
+reproductive period. 
+
+To deal with this problem, we work with the difference in the 
+actual number of children reported and the maximum reproductive 
+capacity for a woman at a certain age, rather than simply the 
+number of children in the household[footnote:
+Alternatively, one could use the number of children within the 
+household and control for the age of the mother. We have also run 
+the analysis using this strategy and got the same conclusions. 
+]. We will refer to this measure of fertility as the gap or 
+shortfall in fertility. To get the latter, we would need to 
+estimate the average age at menarche within the population, and 
+then simply divide into age the pregnancy period plus post 
+pregnancy lactation in-fecund period. In addition, one would also 
+need to corporate the maternal mortality ratio for "censoring" 
+women's lives who have too many children and thus increasing her 
+mortality rate (and exit from the sample). However, we took the 
+95th percentile of total fertility rates per age from the 
+Demographic and Health Survey of Uganda (2011). This is probably 
+a good approximation of the upper bound by age of fertility in 
+the population.
+
+The selection of children is base on the household roster. In 
+particular, we will select individuals that respond they are son 
+or daughter of the household head. There is a potential problem 
+when using a cross sectional survey such as the UNHS that only 
+looks at reported dependents currently living within the 
+household to calculate the difference between actual and 
+theoretical fertility. Older women may be living in households 
+where some of the older children have already left the household. 
+Thus, at around the age of thirty, the gap between reported 
+children in the household and theoretical fertility starts to 
+increase more rapidly because of children growing old enough to 
+start household of their own. More troubling, the reported gender 
+of the oldest son or daughter living in the household may not be 
+the gender of first-born. To overcome this problem, we restrict 
+our sample to households where the mother is between 16 and 32. 
+The cut off age of 32 is because at this age, the first-born of 
+the mother will turn 16, which is our entry age into the sample 
+of mothers.
+
+Looking at the sex of the first-born is only one possible 
+strategy. One may argue that the sex of the first born is not 
+very relevant in a context where women bear on average almost 7 
+children. Indeed, it is likely that households will get a second 
+child irrespective of the sex of the first. This is supported by Jayachandran et al. (2011)
+, who find that the difference in breastfeeding duration between 
+boys and girls is largest near target family size, when gender is 
+most predictive of subsequent fertility. Therefore, we will not 
+only use the sex of the firstborn child as an instrument for 
+fertility, but also experiment with alternative instruments such 
+as an indicator that the first two children are girls or a 
+variable that expresses the share of female children in the total 
+family size.
+
+  Fertility
+
+In this section, we will present some descriptive statistics to 
+check if boy preference is reflected in fertility patterns in the 
+Ugandan data. Table [tab:gender-and-fertility] summarizes our 
+findings. The first two columns checks if households that have a 
+daughter as first-born are more likely to have extra children. We 
+simply calculated the percentage of households that had more than 
+one child conditional on their first born being a son or a girl. 
+We find that in the sub-sample where the first child is a boy, 
+about 37.46 percent of households will have at least one more 
+child. However, if the first child happened to be a girl, almost 
+40 percent of households will have at least one more child. 
+
+We also look at the shortfall in actual fertility to theoretical 
+fertility. In the first two columns, we report this fertility gap 
+for two groups of households. We find that households that have a 
+boy as the firstborn child have an average fertility gap of about 
+2.46 children. Consistent with the proposition that have a 
+firstborn girl are likely to have more children conditional on 
+age, we find that the gap is smaller then the firstborn is a girl 
+(2.26). In other words, households where the firstborn is a girl 
+will be closer to the theoretical maximal fertility than those 
+that had a boy as the firstborn. The difference in the fertility 
+gap between the group of households with a first born boy and a 
+first born girl is significant (p=0.003).
+
+The third and fourth column present the same statistics, but now 
+looks the sex of the first two children. As such, there are three 
+possible scenarios. If the first two children are both boys, we 
+expect that the chance that they have extra children is lowest. 
+We find the probability of adding children in this case to be 
+just over 13 percent. If the first was a girl and the second was 
+also a girl, we expect there is a higher chance that parents 
+choose to have extra children. In this case, there is an almost 
+14 percent chance that they add at least one child to the 
+household. For those that had a first girl but their second child 
+was a boy, we expect the probability of increasing household size 
+to lie between the two, which is indeed the case. The lower panel 
+shows that the gap between actual and potential household size is 
+largest when the first two children are boys. The gap is smallest 
+when the first two children are both girls.
+
+Finally, we compare the average fertility in two different groups 
+defined by the share of female children within the total number 
+of children. As already stated above, because of boy preference, 
+female children are likely to live in larger families. We indeed 
+find that if there are more girls than boys amongst the children, 
+the average number of children is higher. We also find a 
+difference in the fertility gap that is significant with 
+associated p-value of 0.021.
+
+[float Table:
+[Table 1:
+gender and fertility<tab:gender-and-fertility>
+]
+
+
+-------------------------------------------------------------------------------------------
+              prob +1                          prob +1                       av fertility  
+-------------------------------------------------------------------------------------------
+  1st=boy      0.375      1st=boy, 2nd=boy     0.132      % daughters<0.5        2.78      
+  1st=girl     0.393     1st=girl, 2nd=boy      0.134     % daughters>0.5        2.88      
+                         1st=girl, 2nd=girl     0.139                                      
+-------------------------------------------------------------------------------------------
+                gap                              gap                             gap       
+-------------------------------------------------------------------------------------------
+  1st=boy      2.46       1st=boy, 2nd=boy      2.46      % daughters<0.5        2.41      
+  1st=girl     2.26      1st=girl, 2nd=boy      2.38      % daughters>0.5        2.32      
+                         1st=girl, 2nd=girl     2.06                                       
+-------------------------------------------------------------------------------------------
+
+]
+
+  Hours worked 
+
+In this section we will briefly look at some descriptive 
+statistics on labor supply, one of the prime pathways through 
+which fertility affects productivity and well-being. Most of 
+Uganda has two cropping seasons. The first runs from January to 
+June. The second cropping season is from July to December. The 
+UNHS 2005/06 interviewed households twice over the course of one 
+year to capture this feature. It visited households in the 
+beginning of 2005 to capture the second cropping season in 2004 
+(that is, running from July to December 2004). Households were 
+revisited at the end on 2005 to record information from the first 
+cropping season in 2005 (running from January to June 2005). In 
+our study, we will only consider the 2004 cropping season, as 
+data for labour allocation to agriculture was unavailable for the 
+2004 cropping season.
+
+Figure [fig:Average-hours-worked] shows time reported on the 
+field along different dimensions[footnote:
+The dimensions are mother, father or child; land preparation, 
+input application, weeding and harvesting; and crop. The crops 
+are the five most grown crops.
+]. One of the most obvious observations is that women do most of 
+the work, and child labor is restricted to about one day per crop 
+and activity during the entire season. This already indicates 
+that the trade-off between the time lost by the mother because of 
+rearing the children and the time gained by extra hands is likely 
+to work against agricultural production. Typical for Uganda is 
+the low amount of time spent on applying inputs. Farmers in 
+Uganda use very limited amounts of fertilizer and other inputs, 
+so also the time spend on applying them is small. There is also 
+some heterogeneity in the time spend on different crops. For 
+instance, matooke requires less time than maize, both for men and 
+for women. However, there are also difference between the sexes. 
+For instance, women spend much more time cultivating sweet 
+potatoes, and to a lesser extent beans, than men. 
+
+[float Figure:
+[Figure 1:
+Average hours worked<fig:Average-hours-worked>
+]
+
+<Graphics file: /home/bjvca/data/data/fertility and ag productivity/dotplot.pdf>
+]
+
+  Production<sub:Production>
+
+We also investigate the effect of fertility on production of some 
+of the most important crops. More in particular, we look at the 
+effect of fertility on the likelihood that a household cultivates 
+each of the five most important crops. The first row in table [tab:2averages]
+ reports on the percentage of households that grow each of the 
+crops. Over 50 percent report growing maize, beans and cassava. 
+We also look at the impact on area cultivated, measured in acres. 
+Households on average allocate about half an acre to maize. The 
+least space is reserved for sweet potatoes. We also express area 
+cultivated as a share of total area under cultivation. We find 
+that about 17 percent of total land area is allocated to maize. 
+The next line reports average production in kilograms at the 
+household level. This may seem low, but this because households 
+that report not to produce the crop are also part of the average. 
+We also divide by household size. Finally, we report yields for 
+the five crops, defined as the amount of each crop harvested per 
+unit of land (per acre).
+
+We also aggregate the different corps by weighing them to average 
+prices. We use prices from FoodNet. In particular, we average 
+prices observed in Kampala's Nakawa market over the July to 
+December 2004 period. Doing so, we find that the average total 
+value derived from these five crops is about UGX98,500, which 
+translates to about UGX45000 per capita. About 40 percent of the 
+households in their reproductive age does not cultivate any of 
+these five crops. On average, about 0.69 acres is allocated to 
+these five crops. The yield per acre is about UGX220,220.
+
+[float Table:
+[Table 2:
+Averages<tab:2averages>
+]
+
+
+]
+
+  Results
+
+  The first stage regression
+
+The first stage regression results that link sex of first 
+child/children to fertility are reported in table [tab:firststage]
+. The dependent variable, as explained above, is the difference 
+between the maximum number of children of a typical woman at her 
+age and the actual number of children born from the mother[footnote:
+The maximum number of children has been estimated from the DHS 
+and is actually the 95th percentile.
+]. We will refer to this as the fertility gap (fgap) or fertility 
+shortfall. It actually is the reverse of fertility, as the higher 
+the gap, the lower the number of children in the household in a 
+given age cohort. Apart from the exogenous variable that is 
+excluded from the second stage regression elaborated in the next 
+paragraphs, we include a series of control variables that are 
+clearly exogenous to fertility in all 4 specifications of the 
+first stage. The first exogenous control variable, femhead, is a 
+an indicator variable that takes the value of 1 if the household 
+head is female. The second, urban, is an indicator variable that 
+takes the value of 1 if the household resides in an urban area[footnote:
+In some specifications where we expect regional variation in the 
+outcome variable to be important, such as for production and 
+yields for certain crops, we also include dummies for the four 
+regions in both the first and second stage equations. This 
+addition did not significantly change other estimated parameters 
+in the first stage.
+]. Next, we include three dummies to account for the education 
+level of the mother. mprim take the value of 1 if the mother has 
+completed primary eduction. msec is the additional effect of 
+having completed secondary education. Thus, if msecond is one, 
+mprim is also 1. mthird is the additional effect of the mother 
+having completed tertiary education. The comparison category are 
+therefore households where the mother did not complete at least 
+primary education. We also add two community variables which are 
+likely to influence household size. These are school which is a 
+dummy variable that takes the value of one if there is a school 
+in the village and health is a dummy that takes the value of one 
+if there is a public health centre or clinic in the community. 
+Finally, we also add an indicator (cdied) that takes the value of 
+one if a son or daughter of the mother has died in the past.
+
+We experiment with four different possible excluded instruments. 
+Model (1) uses an indicator that takes the value of one if the 
+firstborn in the household is a girl as an excluded instrument. 
+The coefficient is significant at the one percent level and has 
+the expected sign. Having a girl as a first-born reduces that 
+fertility gap by about 0.2 children. In other words, households 
+that have a girl as a first-born tend to be closer to maximal 
+fecundity. For the controls, we find that households where 
+females are the head have a significantly larger fertility gap. 
+The effect is very large, suggesting such mothers have more than 
+1 child less. Also in urban areas, households seem to have less 
+children, as a significantly larger difference indicates. 
+Schooling of the mother seems to reduce the number of children 
+only at secondary and tertiary level. There seems to be some 
+indication that mothers that completed primary education have a 
+slightly smaller fertility gap than mothers that did not even 
+complete primary education. The community variables do not seem 
+to have an effect on the fertility gap. Finally, having lost a 
+child in the past leaves a significant additional fertility gap 
+compared to households that never lost a child. However, the 
+additional gap is much lower than one, suggesting a substantial 
+replacement effect in Ugandan fertility. The constant indicates 
+that the overall average fertility gap is about two children.
+
+Model (2) uses as excluded instrument an indicator that equals 
+one if the first two children born to the mother in the household 
+are both girls. Using this instrument only makes sense if we 
+confine ourselves to households that have at least two children, 
+hence the reduction in the sample size. As in (1) the parameter 
+is significantly negative according to expectations. The control 
+variables are very close to the what they were in model (1). 
+Model (3) goes one step further and considers the first three 
+children. In this case, the indicator thirdoldestgirl is one only 
+if the three first children are all girls. This again only makes 
+sense in households that have at least three children. The 
+coefficient estimate is again negative, but this time it is not 
+significant anymore. 
+
+Model (4) uses a continuous variable as excluded instrument. We 
+calculated the share of girls among children as a share of the 
+total number of children in the household. Again, the coefficient 
+has the expected sign. A higher share of females within the 
+households is associated with a lower fertility gap. This is 
+consistent with Jayachandran et al. (2011), who observe the “try 
+until you have a boy” fertility rule leads to an outcome where 
+larger households have on average more girls. Again, the included 
+instruments are similar to the previous models. We find that an 
+all female siblings household will be on average 0.28 children 
+larger than an all boys siblings household.
+
+While most of our instruments are significant and have the 
+expected sign, they account for only a small part of the variance 
+in the outcome. Even when other exogenous controls are included, 
+the R-squared is low. If we regress the indicator variable of a 
+first girl on the dependent variable, the R-square drops below 1 
+percent. The F-value of a regression with only the excluded 
+instrument, another important indicator of the strength of the 
+instruments according to Bound et al. (1995), also drops to 9.46[footnote:
+As a rule of thumb, it is often stated that one has weak 
+instruments if this F-statistic is smaller than 10.
+]. In other words, we have serious concerns that our instruments 
+are weak. We therefore use inference that is robust to weak 
+instruments. In particular, we rely on the Anderson-Rubin test 
+statistic to gauge the significance of the endogenous variable in 
+all subsequent regressions (Staiger et al., 1997). 
+
+[float Table:
+[Table 3:
+OLS estimation of household size<tab:firststage>
+]
+
+
+]
+
+  Household labor supply
+
+We now turn to look at the effect of fertility on total household 
+labor supply (table [tab:totlabour]). We will also look at labor 
+supply separately for the mother, the father and the children 
+(table [tab:2SLS-estimates-of]). We will also look at labor 
+supply by activity (table [tab:2SLS-estimates-allocation]). 
+
+[float Table:
+
+
+[Table 4:
+Effect of fertility on total hours worked in agriculture<tab:totlabour>
+]
+]
+
+In table [tab:totlabour], we investigate the effect of our main 
+variable of interest, the fertility shortfall, on the number of 
+days worked in agriculture (land preparation, input application, 
+weeding and harvesting)[footnote:
+We have also done this analysis using days worked per acre of 
+land held by the household. However, since average land holdings 
+are about 1.1 acre and there seems to be no systematic 
+relationship between farm size and labor supply, the results are 
+very similar. 
+]. The first column of the table reports the result without 
+taking into account endogeneity of number of children. It reports 
+OLS estimates for the number of days the reported working on the 
+household farm, engaging in land preparation, input application, 
+weeding and harvesting. We see that there is no significant 
+correlation between the number of days worked and fertility as 
+measured by the fertility gap. We do find significant and 
+negative effects of the household being headed by a female and 
+the household being located in an urban area. The education of 
+mothers does not seem to be systematically related to the hours 
+worked in agriculture. The OLS estimates also show positive 
+correlations between a school in the community and hours worked 
+in agriculture and between a deceased child in the past and hours 
+worked. There is also some indication of a positive correlation 
+between health centers in the community and hours worked. On 
+average, households report working about 90 labor days on the 
+field in the July to December 2004 cropping season. 
+
+Models (2) to (4) estimate the same models, but instrument the 
+fertility gap with a single gender related excluded instrument. 
+In model (2), the instrument is an indicator taking the value of 
+one if the firstborn is a girl. The coefficient on the fertility 
+gap now becomes positive, but remains insignificant. Model (3) 
+uses the sex of the first and second born as instruments for the 
+fertility gap. The size of the fertility effect becomes larger, 
+but still not significantly different from zero. Model (4) uses 
+the share of daughters as an instrument. The estimate is positive 
+and significant, implying that higher fertility (and hence a 
+shrinking fertility gap) reduces the number of days worked on the 
+field. 
+
+Finally, model (5) uses both the gender of the firstborn and the 
+share of daughters as instruments[footnote:
+We use Limited Information Maximum Likelihood (LIML), as this is 
+known to have better small sample properties than 2SLS in 
+overidentified models with weak instruments (Angrist et al., 2001)
+.
+]. According to Hansen-J statistic, our model that uses multiple 
+instruments is valid (Hansen-J=0.849; p-val=0.357). We thus 
+assume this is the best specification. Each additional child 
+causes a reduction of about 62 days of labour in agriculture. 
+With respect to the other variables in the regression, we find 
+some signs that households with women that have finished tertiary 
+education appear to be less engaged in agriculture.
+
+In table [tab:2SLS-estimates-of], we differentiate between work 
+done by the mother, the father and the children. We only show the 
+coefficient on the fertility gap, but we also added the exogenous 
+control variables that were also included in the first stage 
+regression. Full results can be found in the appendix. 
+
+The top panel in table [tab:2SLS-estimates-of] shows the effect 
+of fertility on hours worked by the mother. The OLS estimate is 
+not significant (model (1)). Accounting for endogeneity of 
+fertility using the exogenous variation caused by the sex of the 
+firstborn renders the fertility gap significant at a 5 percent 
+level (model (2)). Mothers work on average more than 50 days in 
+agriculture. Cycling through the results with the alternative 
+instruments, the results change little with respect to 
+significance. In all, an additional child seems to reduce hours 
+worked by the mother in agricultural production by about 40 days. 
+Full results are reported in table [tab:appendixmotherh].
+
+In the first column of the middle panel, we report the same OLS 
+regression but with the number of days worked by adult males as 
+the dependent variable. As is the case with female labour, the 
+fertility gap does not seem to be correlated to male layout 
+supply. Table [tab:Effect-on-maileappend] in the appendix gives 
+full results. The constant is much lower, reflecting that women 
+work more than ten days more on the field during the season, on 
+average. We find that residing in urban areas leads farmers 
+reporting less days worked on the field. We also find a large 
+negative effect of female headedness on hours worked by the male. 
+This is because in most cases, households are headed by females 
+because the male head is missing, leading to less hours reported 
+on the field. We also find some evidence of males working less if 
+the mother has higher eduction. This is most likely because 
+higher educated men choose higher educated women to marry and the 
+other way around.
+
+Judged by the instrumental variable models from (2) to (5) the 
+effect of fertility on labour supply by the father is less clear 
+cut. When using the sex of the first born (model 2) and the sex 
+of the first two children born (model 3) as instruments, the 
+coefficient is positive but not significantly different from 
+zero. If we instrument the fertility gap using the percentage of 
+females, we find some indication that more children may reduce 
+time allocated to working on the field my males. The effect, 
+however, is much smaller than the reduction found for women. The 
+over-identified model in model (5) shows a significant effect at 
+the 10 percent level only.
+
+[float Table:
+[Table 5:
+2SLS estimates of household labor supply<tab:2SLS-estimates-of>
+]
+
+
+]
+
+The last panel looks at the number of days children are reported 
+to be working in agriculture. As in the case of male members, 
+there is no correlation with fertility for the OLS specification 
+in model (1). Full results are again reported in the appendix 
+(Table [tab:Effect-appchildren]). There also seems to be no 
+difference between rural and urban areas. However, female headed 
+households are associated with lower levels of child labor. There 
+is also weak evidence that a school and a health center in the 
+community reduce child labour. Children work on average about 7 
+days on the field.
+
+When we instrument the fertility gap by the sex of the 
+first-born, the coefficient remains negative. This is different 
+from what we find for days worked by the mother or the father. 
+This would mean that a lower fertility reduces the hours worked 
+by children on the field. However, the coefficient becomes only 
+significantly at a p-value of 0.162 for the Anderson-Rubin test.
+
+These findings are similar to what others have found. For 
+instance, in their study on labour supply response to fertility 
+in the United States, Angrist et al. (1998) also find that women 
+work less while men do not alter their labour supply in response 
+to more children. Kim et al. (2006) find that women reduce their 
+working hours in response to the higher fecundity in both rural 
+and urban areas in Indonesia. 
+
+[float Table:
+[Table 6:
+2SLS estimates of household labor allocation<tab:2SLS-estimates-allocation>
+]
+
+
+]
+
+Table [tab:2SLS-estimates-allocation] looks at reported labor by 
+activity instead of by sex. Again, the results reported in table [tab:2SLS-estimates-allocation]
+ only show the coefficients on the fertility gap. Full results 
+are in the appendix.
+
+Model (1) in the top panel presents OLS results for number of 
+days reported to be spending on land preparation. On average, the 
+household spends about 38 days preparing land (table [tab:prepappe]
+). There are no fertility effects. Again, as expected, households 
+residing in urban areas spend significantly less time preparing 
+land. Female headed households also allocate less time to land 
+preparation. There is also some indication that women that have 
+tertiary education are less engaged in land preparation.
+
+Model (2) presents the same model, but instruments fertility with 
+the indicator for the first child being a girl. The fertility 
+effect now becomes positive, but is not siginificantly different 
+from zero. In model (3), where we look at the sex of the first 
+two children, the fertility gap effect becomes significant. The 
+effect remains significant when we instrument the fertility 
+shortfall by the percentage of females born (model (4)) and in 
+the over-identified model (5), but the effect size reduces. An 
+additional child reduces time allocated to land preparation by 
+about 25 days.
+
+The second panel repeats the same five models, but uses hours 
+spent on input application as the dependent variable. In none of 
+the five specifications, fertility seems to have a significant 
+impact. Overall, time spend on input application is very limited 
+anyway, as can be seen in figure [fig:Average-hours-worked]. In 
+all, households spend only about one day applying inputs 
+(including planting). The only significant effect we find is that 
+households where the mother has at least primary education 
+allocate more time to input application.
+
+The third panel presents results for time spend on weeding. The 
+results are similar to the ones for land preparation, but the 
+effects are smaller. Households spend on average 30 days weeding 
+and each extra child reduces this by about 20 days. Full results 
+in the appendix (table [tab:timeweeding]) show significant 
+negative effects for female headed households and for households 
+in urban areas. We also find that communities that have a health 
+center are spending less hours on weeding. 
+
+Finally, the last panel looks at the effects of fertility on days 
+worked for harvesting. There is no significant positive 
+association between the number of children in the family and the 
+number of days spend harvesting. The average number of days is 
+about 26 days, lower than time allocated to both preparing the 
+land and weeding. 
+
+The above suggests that fertility affects time allocated to land 
+preparation and weeding in a negative way. Harvesting seems to be 
+less related to family size. Probably, when crops are ready to be 
+harvested, farmers are more likely to put in the extra effort. 
+This seems to be less evident for work that has an uncertain 
+payoff in the future. The reductions of time allocated to land 
+preparation and weeding may reduce both area planted and 
+agricultural productivity. We will turn to this in the next 
+section.
+
+  Area planted, Production and Productivity
+
+[float Table:
+[Table 7:
+2SLS estimates of Area planted, Production and Productivity<tab:2SLS-estimates-area>
+]
+
+
+]
+
+We will now look at the effect of fertility on production and 
+productivity. We will look at productivity defined as kilograms 
+harvested per acre of the five most important products 
+separately. We will also look the value of total production, the 
+value of production per acre and the value of production per 
+capita. 
+
+Table [tab:2SLS-estimates-area] reports on the second stage 
+regression of different aspects of production for the five most 
+important crops. The table only reports the result coefficient on 
+our fertility variable for the instrumental variable regression 
+that uses the share of girls as excluded instrument. The 
+regressions include the same control variables as in the previous 
+sections. However, we now also added regional dummies, as some 
+crops are grown more in some regions than in others. If the 
+dependent variable is binary or censored, a tobit or probit is 
+estimated using the methods described in Newey (1987).
+
+The first row takes as the outcome variable a dummy that is one 
+if the household reported growing the crop and zero otherwise. We 
+therefore estimated probit models that show us if additional 
+children increase or decrease the likelihood that the household 
+reports growing a certain crop. We find no significant effects 
+for most crops. Only for sweet potatoes and for matooke it seems 
+that a larger fertility gap increases the chance of growing the 
+crop. 
+
+The next row looks at the total area reported to be used to grow 
+each crop, measured in acres. We find a positive effect of the 
+fertility gap on the area used to grow matooke. The next row 
+looks at the area as a share of total area. In this case, it 
+seems that households with more children allocate less land as a 
+share of total land to sweet potatoes.
+
+The next row looks at the value of total production in kg. Only 
+for matooke, again larger households seem to obtain a 
+significantly lower quantity of matooke. The next row looks at 
+production per capita. The lower production of matooke persists 
+if we account for household size. Finally, for none of the 
+products, the fertility gap has a significant effect on yield.
+
+[float Table:
+[Table 8:
+2SLS estimates of total production<tab:2SLS-totals>
+]
+
+
+]
+
+In table [tab:2SLS-totals] we present results on total production 
+and productivity, using the prices for the different crops as 
+described in section [sub:Production]. We present again five 
+different models. The first one a regression that does not take 
+endogeneity into account. While in the previous regressions this 
+was typically OLS, this may now change to a probit or tobit 
+regression, depending on the nature of the dependent variable. 
+The second regression instruments the fertility gap with the sex 
+of the firstborn. The third model uses the sex of the first two 
+children born to the mother and the fourth uses the share of 
+women amongst the children. As before, the fourth model 
+instruments the fertility difference by two instruments: the sex 
+of the firstborn and the share of girls among the children. If 
+the dependent variable is binary or censored, a tobit or probit 
+is estimated using the methods described in Newey (1987).
+
+The first row gives results for the change in production. There 
+seems to be no detectable effect from fertility on the total 
+value of the production of the five crops. The second row 
+expresses this production in per capita terms. The OLS estimates 
+show a positive effect of an increase in the fertility gap. 
+However, if we confine to the exogenous part of fertility in the 
+IV regressions, the effect disappears. The next row looks at a 
+change in the total area allocated to the five crops. There is 
+again no significant effect from fertility. The final row, which 
+looks at productivity defined as the total value of the five 
+crops divided by the total area allocated to these five crops, 
+also finds no causal impact from family size.
+
+  Conclusion
+
+In this paper, we look at the effect of fertility, defined as the 
+number of biological children born to the mother, on agricultural 
+production and its determinants. One of the most evident 
+determinants is household agricultural labour. More children 
+means more labour is available within the household. However, 
+more children also means that time of the most productive persons 
+within the family farm, adult females, is lost to reproductive 
+chores. In this paper, we try to isolate the causal effect of 
+extra children on household labour supply and production.
+
+The identification strategy we use relies on the premise that, in 
+partilineal societies, boys are preferred to girls in terms of 
+offspring. Households that have a girl as the first child will 
+have a higher propensity to add more children to the household. 
+The fact that the sex of the first child is exogenous can be used 
+to identify the causal impact of additional children on other 
+variables such as labour supply and productivity. Similarly, the 
+fertility rule whereby one is more likely to stop having children 
+after a boy means that, on average, larger households consist of 
+more girls. Therefore, the share of females in the total number 
+of children.
+
+Our first stage regression performs reasonably well. We find a 
+significant negative effect of an indicator variable that the 
+first-born is a girl on a variable that measures the shortfall 
+from fecundity. We equally find a negative effect of an indicator 
+that the first two children are female. Finally, we also find 
+that households with a relatively higher share of girls are 
+negatively related to the fertility gap. While our instruments 
+are significant and have the correct sign, explanatory power as 
+measured by the partial R-squared is low. We therefore use 
+inference methods in the second stage that are robust to weak 
+instruments.
+
+In the second stage regression, we find that fertility affects 
+both time women and men allocated to agricultural production. 
+However, most of the labour time lost as a consequence of an 
+exogenous increase in children is born by the woman. Especially 
+land preparation and weeding are activities that seem to be 
+reduced as a response to more children. When we look at crops, we 
+find that only matooke and sweet potatoes are significantly 
+affected by fertility. 
+
+Matooke is the most important stable crop in Uganda, providing 18 
+percent of caloric intake (Haggblade et al., 2010). The finding 
+that young households that have higher fertility are reducing the 
+most important source of calories suggests that higher fertility 
+also causes under-nutrition. Sweet potatoes is also a typical 
+food security crop, with a low return but also low risk (Dercon, 1996)
+. It is also a crop that is mostly under the control of the 
+woman, who does much of the work on the field. Taken together, 
+our analysis suggests fertility to be a serious threat to food 
+security for these households.
+
+That said, the fact that we rely on a cross-section of households 
+also limits to what extent our conclusions can be generalized. It 
+may well be that households that are at a later stage in their 
+life cycle profit much more from larger household size. For 
+instance, in households where the mother has reduced fertility, 
+she may have more time to work in agricultural activities. In 
+addition, children are likely to be older and much more 
+productive in agriculture. Therefore, we want to stress that our 
+results only hold for the subset of “young” households, where the 
+women is between 16 and 32.
+
+There are different ways in which the negative effect of 
+fertility on labour and production can be influenced. First, our 
+analysis reconfirms the need for fertility reducing policies. 
+Apart from known fertility reducing policies such as women 
+education and improved maternal health care, the most promising 
+policies would try to work on the root cause of increased 
+fertility. This should be done by reducing the propensity of 
+households to have higher fertility if the firstborn is a girl. 
+We think of a host of policies that go against the patrilineal 
+nature of these societies. For example, Uganda may consider 
+changing its land act similar to what Kenya recently did and give 
+equal inheritance rights to both girls and boys. 
+
+The above policy response involves addressing cultural issues 
+related to high fertility, some of which may face considerable 
+resistance. Changing a set of cultural values is likely to be a 
+very slow process. Meanwhile, the government of Uganda should 
+support the nutritional needs of young families. It should also 
+consider introducing agricultural technologies that save on 
+agricultural labour, especially for women.
+
+References
+
+[Alderman et al. 1998] Alderman, Harold and King, Elizabeth M., "Gender differences in parental investment in education", Structural Change and Economic Dynamics  9, 4 (1998), pp. 453--468.
+
+[Anderson et al. 2010] Anderson, Siwan and Ray, Debraj, "Missing Women: Age and Disease", Review of Economic Studies  77, 4 (2010), pp. 1262--1300.
+
+[Angrist et al. 1998] Angrist, Joshua D and Evans, William N, "Children and Their Parents' Labor Supply: Evidence from Exogenous Variation in Family Size", American Economic Review  88, 3 (1998), pp. 450--77.
+
+[Angrist et al. 2001] Angrist, Joshua D. and Krueger, Alan B., "Instrumental Variables and the Search for Identification: From Supply and Demand to Natural Experiments", Journal of Economic Perspectives  15, 4 (2001), pp. 69--85.
+
+[Angrist et al. 2010] Angrist, Joshua and Lavy, Victor and Schlosser, Analia, "Multiple Experiments for the Causal Link between the Quantity and Quality of Children", Journal of Labor Economics  28, 4 (2010), pp. 773--824.
+
+[Arnold et al. 1998] Arnold, F and Choe, M.K and Roy, T.K., "Son preference, the family-building process and child mortality in India", Population Studies  52, 3 (1998), pp. 301--315.
+
+[Becker 1960] Becker, Gary S., "An Economic Analysis of Fertility", in Demographic and Economic Change in Developed Countries (National Bureau of Economic Research, Inc, 1960), pp. 209--240.
+
+[Becker et al. 1973] Becker, Gary S and Lewis, H Gregg, "On the Interaction between the Quantity and Quality of Children", Journal of Political Economy  81, 2 (1973), pp. S279--88.
+
+[Behrman 1988] Behrman, Jere R, "Intrahousehold Allocation of Nutrients in Rural India: Are Boys Favored? Do Parents Exhibit Inequality Aversion?", Oxford Economic Papers  40, 1 (1988), pp. 32--54.
+
+[Behrman et al. 1982] Behrman, Jere R and Pollak, Robert A and Taubman, Paul, "Parental Preferences and Provision for Progeny", Journal of Political Economy  90, 1 (1982), pp. 52--73.
+
+[Beyeza-Kashesya et al. 2010] Beyeza-Kashesya, Jolly and Neema, Stella and Ekstrom, Anna Mia and Kaharuza, Frank and Mirembe, Florence and Kulane, Asli, "Not a boy, not a child: A qualitative study on young people's views on childbearing in Uganda", African Journal of Reproductive Health  14, 1 (2010), pp. 71--81.
+
+[Black et al. 2005] Black, Sandra E. and Devereux, Paul J. and Salvanes, Kjell G., "The More the Merrier? The Effect of Family Size and Birth Order on Children's Education", The Quarterly Journal of Economics  120, 2 (2005), pp. 669--700.
+
+[Bound et al. 1995] Bound, John and Jaeger, David A. and Baker, Regina M., "Problems with Instrumental Variables Estimation When the Correlation Between the Instruments and the Endogeneous Explanatory...", Journal of the American Statistical Association  90, 430 (1995), pp. pp. 443--450.
+
+[Chen et al. 1981] Chen, Lincoln C. and Huq, Emdadul and D'Souza, Stan, "Sex Bias in the Family Allocation of Food and Health Care in Rural Bangladesh", Population and Development Review  7, 1 (1981), pp. 55--70.
+
+[Clark 2000] Clark, Shelley, "Son preference and sex composition of children: Evidence from india", Demography  37, 1 (2000), pp. 95--108.
+
+[Conley 2000] Conley, Dalton, "Sibship Sex Composition: Effects on Educational Attainment", Social Science Research  29 (2000), pp. 441-- 457.
+
+[Das 1987] Das, Narayan, "Sex preference and fertility behavior: A study of recent Indian data", Demography  24, 4 (1987), pp. 517--530.
+
+[Das Gupta 1987] Das Gupta, Monica, "Selective discrimination against female children in rural Punjab, India", Population and Development Review  13 (1987).
+
+[Davies et al. 1995] Davies, James B and Zhang, Junsen, "Gender Bias, Investments in Children, and Bequests", International Economic Review  36, 3 (1995), pp. 795--818.
+
+[Dercon 1996] Dercon, Stefan, "Risk, Crop Choice, and Savings: Evidence from Tanzania", Economic Development and Cultural Change  44, 3 (1996), pp. 485--513.
+
+[Drèze et al. 2001] Drèze, Jean and Murthi, Mamta, "Fertility, Education, and Development: Evidence from India", Population and Development Review  27, 1 (2001), pp. 33--63.
+
+[Feder 1985] Feder, Gershon, "The relation between farm size and farm productivity : The role of family labor, supervision and credit constraints", Journal of Development Economics  18, 2-3 (1985), pp. 297--313.
+
+[Gupta et al. 2006] Gupta, Nabanita Datta and Dubey, Amaresh, "Fertility and the household's economic status: A natural experiment using Indian micro data", Journal of Development Studies  42, 1 (2006), pp. 110--138.
+
+[Haggblade et al. 2010] Haggblade, Steven and Dewina, Reno, "Staple food prices in Uganda", Michigan State University, Department of Agricultural, Food, and Resource Economics (2010).
+
+[Hazarika 2000] Hazarika, G., "Gender Differences in Children's Nutrition and Access to Health Care in Pakistan", Journal of Development Studies  37, 1 (2000), pp. 73--92.
+
+[Jayachandran et al. 2011] Jayachandran, Seema and Kuziemko, Ilyana, "Why Do Mothers Breastfeed Girls Less than Boys? Evidence and Implications for Child Health in India", The Quarterly Journal of Economics  126, 3 (2011), pp. 1485--1538.
+
+[Jha et al. 2011] Jha, Prabhat and Kesler, Maya A and Kumar, Rajesh and Ram, Faujdar and Ram, Usha and Aleksandrowicz, Lukasz and Bassani, Dieg..., "Trends in selective abortions of girls in India: analysis of nationally representative birth histories from 1990 to 2005 and...", The Lancet  377, 9781 (2011), pp. 1921--1928.
+
+[Kim et al. 2006] Kim, Jungho and Aassve, Arnstein, "Fertility and its Consequence on Family Labour Supply", Institute for the Study of Labor (IZA) (2006).
+
+[Kim et al. 2009] Kim, Jungho and Engelhardt, Henriette and Prskawetz, Alexia and Aassve, Arnstein, "Does fertility decrease household consumption?", Demographic Research  20, 26 (2009), pp. 623--656.
+
+[Klasen et al. 2013] Klasen, Stephan and Vollmer, Sebastian, "Missing Women: Age and Disease: A Correction", Courant Research Centre PEG (2013).
+
+[Lanjouw et al. 1995] Lanjouw, Peter and Ravallion, Martin, "Poverty and Household Size", Economic Journal  105, 433 (1995), pp. 1415--34.
+
+[Marleau et al. 2002] Marleau, Jacques D and Saucier, Jean-françois, "Preference for a First-born Boy in Western Societies", Journal of Biosocial Science  34 (2002), pp. 13--27.
+
+[Milazzo 2012] Milazzo, Annamaria, "Son Preference, Fertility and Family Structure - Evidence from Reproductive Behavior among Nigerian Women", paper presented at the CRED-FUNDP Workshop, Namur, Belgium, Oct 23rd (2012).
+
+[Newey 1987] Newey, Whitney K., "Efficient estimation of limited dependent variable models with endogenous explanatory variables", Journal of Econometrics  36, 3 (1987), pp. 231--250.
+
+[Pande 2003] Pande, RohiniP., "Selective gender differences in childhood nutrition and immunization in rural India: The role of siblings", Demography  40, 3 (2003), pp. 395--418.
+
+[Rosenzweig et al. 1980a] Rosenzweig, Mark R and Wolpin, Kenneth I, "Life-Cycle Labor Supply and Fertility: Causal Inferences from Household Models", Journal of Political Economy  88, 2 (1980), pp. 328--48.
+
+[Rosenzweig et al. 1980b] Rosenzweig, Mark R and Wolpin, Kenneth I, "Testing the Quantity-Quality Fertility Model: The Use of Twins as a Natural Experiment", Econometrica  48, 1 (1980), pp. 227--40.
+
+[Sen 1990] Sen, Amartya, "More Than 100 Million Women Are Missing", The New York Review of Books  (1990).
+
+[Staiger et al. 1997] Staiger, Douglas and Stock, James H., "Instrumental Variables Regression with Weak Instruments", Econometrica  65, 3 (1997), pp. 557--586.
+
+[Trussell et al. 1985] Trussell, James and Martin, Linda and Feldman, Robert and Palmore, James and Concepcion, Mercedes and Bakar, Datin Abu, "Determinants of birth-interval length in the Philippines, Malaysia, and Indonesia: a hazard-model Analysis", Demography  22, 2 (1985), pp. 145--168.
+
+[UBOS 2013] UBOS, "Uganda Demographic and Health Survey 2011" (2013).
+
+
+
+
+
+Appendix
+
+[float Table:
+
+
+[Table 9:
+Effect on hours worked by mother (full results)<tab:appendixmotherh>
+]
+
+
+]
+
+[float Table:
+
+
+[Table 10:
+Effect on hours worked by father (full results)<tab:Effect-on-maileappend>
+]
+]
+
+[float Table:
+
+
+[Table 11:
+Effect on hours worked by children (full results) <tab:Effect-appchildren>
+]
+]
+
+[float Table:
+
+
+[Table 12:
+Effect on hours spend on preparing fields (full results)<tab:prepappe>
+]
+]
+
+[float Table:
+
+
+[Table 13:
+Effect on hours spend on input application (full results)<tab:applappend>
+]
+]
+
+[float Table:
+
+
+[Table 14:
+Effect on hours spend on weeding (full results)<tab:timeweeding>
+]
+]
+
+[float Table:
+
+
+[Table 15:
+Effect on hours spend on harvesting (full results)
+]
+]
+
+[float Table:
+
+
+[Table 16:
+Total production (full tobit results)
+]
+]
+
+[float Table:
+
+
+[Table 17:
+Total production per capita (full tobit results)
+]
+]
+
+[float Table:
+
+
+[Table 18:
+Total area (full tobit results)
+]
+]
+
+[float Table:
+
+
+[Table 19:
+Total yield (x1000 UGX per acre)
+]
+]
+

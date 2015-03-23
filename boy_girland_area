@@ -1,0 +1,48 @@
+*land size
+
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4b.dta"
+rename a4bq5b cropcode
+sort hh cropcode
+gen areaGPS=a4bq3a * a4bq6/100
+gen areafarmer=a4bq3b * a4bq6/100
+
+
+collapse (sum) areaGPS areafarmer, by(hh)
+drop if areafarmer==0
+sort hh
+save plots, replace
+
+
+merge hh using firststage
+
+*land fragmentation
+clear
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec4b.dta"
+rename a4bq5b cropcode
+sort hh cropcode
+
+duplicates drop a4bq1 a4bq2  hh, force
+gen ones=1
+
+bysort hh: egen nr = sum(ones)
+duplicates drop hh nr, force
+
+sort hh
+merge hh using firststage
+
+regress nr percentfemales
+
+*land fragmentation
+clear
+use "/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec2a.dta"
+
+ use /home/bjvca/data/data/wave3/AGSEC1
+ 
+ keep HHID a1bq5h
+ sort HHID
+ save temp, replace
+ 
+  use /home/bjvca/data/data/wave3/AGSEC2A
+  collapse (sum ) a2aq4 a2aq5, by(HHID)
+ merge HHID using temp
+ 
