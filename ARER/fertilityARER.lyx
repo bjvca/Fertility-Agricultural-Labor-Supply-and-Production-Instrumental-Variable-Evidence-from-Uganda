@@ -108,18 +108,17 @@ At the most basic level, subsistence farmers in rural Africa combine natural
  They use mainly household labor on their own small plots to produce food
  for their own consumption.
  As such, the allocation of total available time within these housedholds
- to different competing activities will have an important effect on agricultural
- labor supply, production patterns, productivity, and ultimately well-being.
+ to different activities will have an important effect on agricultural labor
+ supply, production patterns, productivity, and ultimately well-being.
  In households with more children, domestic and reproductive labor competes
  with agriculural labor.
  More children means that especially mothers will need to spend more time
- caring for children, and less time will be available to spend on agricultural
- activities.
+ caring for children.
  Since women are known to supply most of the agricultural labor, the loss
- in time due to caring for offspring and additional rest needed during pregnanci
-es may hurt subsistence agricultural households disproportionately, and
- in ways that are quite different from other incidents that may reduce labor
- supply within the household.
+ in time due to the need to care for the children and additional rest needed
+ during pregnancies may hurt subsistence agricultural households disproportionat
+ely, and in ways that are quite different from other incidents that may
+ reduce labor supply within the household.
  
 \end_layout
 
@@ -170,12 +169,11 @@ In this study, we investigate the effect of fertility on the division of
  variation from the part that is jointly determined to uncover the true
  causal effect of fertility on outcome variables.
  We use the fact that in conservative, patriarchal societies such as Uganda's,
- male off-spring are generally preferred to female.
- This preference and the random nature of the newborns' sex determination
- gives rise to particular fertility patterns.
- In other words, we use the sex of off-spring as an instrumental variable
- (IV) to determine the exogenous component of fertility at the household
- level.
+ male off-spring are generally preferred to female, resulting in particular
+ fertility patterns.
+ The random nature of the newborns' sex means we can use the reproductive
+ paterns as an instrumental variable (IV) to determine the exogenous component
+ of fertility at the household level.
  
 \end_layout
 
@@ -203,7 +201,7 @@ This article is organized as follows.
  Then, we make our case for the use of the sex of the firstborn as an instrument
 , using literature that documents child gender and reproductive behavior.
  We then present the data we used in our application, and describe the main
- variables we will used in the analysis.
+ variables we will use in the analysis.
  Next, we present the results.
  In this section, we first take a close look at the first stage regression.
  We then look at the effect of fertility on household labor supply, considering
@@ -237,7 +235,7 @@ key "RePEc:ecj:econjl:v:105:y:1995:i:433:p:1415-34"
  disappears.
  On the production side of the farm household, the effect of household size
  is equally ambiguous.
- Some may argue that larger households have more labor available within
+ One could argue that larger households have more labor available within
  the household.
  The additional advantage of this labor is that it is not subject to the
  moral hazard effects often attributed to hired labor
@@ -348,6 +346,7 @@ key "New1,RePEc:ucp:jlabec:v:28:y:2010:i:4:p:773-824"
 \end_layout
 
 \begin_layout Standard
+In the context of developing countries, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "doi:10.1080/00220380500356779"
@@ -373,7 +372,7 @@ key "RePEc:dem:demres:v:20:y:2009:i:26"
 
 \end_inset
 
- looked at the relation between consumption and fertility.
+ finds that consumption decreases with an additional child.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -434,30 +433,79 @@ key "1995"
 \end_layout
 
 \begin_layout Standard
+We are not aware of studies that look directly at the effect of fertility
+ on agricultural labour and production decisions.
+ However, since the bulk of the work related to child bearing and rearing
+ is carried by women within the household, fertility is intimitly related
+ to gender, and we can also learn from the large body of literature on gender
+ and agriculture.
+ There is a well documented productivity gap between men and women owned
+ or managed plots 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ucp:jpolec:v:104:y:1996:i:5:p:1010-46"
+
+\end_inset
+
+, and over time, researches have attempted to explain these differences.
+ For example, there is some evidence that lower producivity on women managed
+ plots can be partly explained through property rights agruments 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "agarwal1994field,LastarriaCornhiel19971317,Deere2003925"
+
+\end_inset
+
+.
+ Also, differences in non-land inputs and differential access to technolgy
+ and services has been causes of the productivity gap 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "raey,Chen2011561"
+
+\end_inset
+
+.
+ In addition, women may have different priorities, which results in different
+ land allocation and crop mixes 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:eee:wdevel:v:30:y:2002:i:11:p:1987-2000"
+
+\end_inset
+
+.
+ Finally, the sexual divison of labour in agriculture means male and female
+ labour can not be regardes as perfect substitutes 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Jacoby1991265"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In Uganda, 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "doi:10.1080/00220388.2010.536222"
 
 \end_inset
 
- looks directly at productity differences between male and female managed
- plots in Uganda (and Nigeria).
- The study reports presistent lower productivity for female managed plots
- and female headed households using Ugandan data from 2003.
-\end_layout
-
-\begin_layout Standard
-A similar, more recent paper uses panel data from Uganda and an Oaxaca decomposi
-tion 
+ finds presistent lower productivity for female managed plots and female
+ headed households.
+ 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "ali2015investigating"
 
 \end_inset
 
-.
- The authors of the paper attribute the lower productivity on women managed
- plots to the fact that women use less fertilizer, improved seeds and chemicals.
+ use panel data from Uganda and an Oaxaca decomposition, and find that lower
+ productivity on women managed plots can be attributed to the fact that
+ women use less fertilizer, improved seeds and chemicals.
  Another important determinant of the productigity gap is women's lower
  uptake of cash crops such as bananas and coffee.
  Still, an unexplained productivity gap of about 30 percent persists.
@@ -465,7 +513,7 @@ key "ali2015investigating"
  gap to women’s greater child care responsibilities, leading them to propose
  low-cost approaches to ease child-care constraints on female managers to
  substantially equalize resource distribution within households.
- Similar results have been found in other African countries 
+ Similar results have been found in similar contexts 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:eee:wdevel:v:70:y:2015:i:c:p:416-463"
@@ -584,9 +632,8 @@ key "RePEc:eee:streco:v:9:y:1998:i:4:p:453-468"
 \end_layout
 
 \begin_layout Standard
-However, at a more basic level, boy preference is already revealed by parents
- who, if asked in surveys, for example, often state clearly that they prefer
- boys to girls.
+But boy preference is already revealed by parents who, if asked in for instance
+ surveys, often state that they prefer boys to girls.
  Such preferences lead to a particular decision rule with respect to fertility,
  where the likelihood that children are added to the household is positively
  correlated to the number of surviving girls in the household.
@@ -804,34 +851,8 @@ key "PADR:PADR588"
 \end_inset
 
  uses information on the desired number of boys and girls to calculate sex
- ratios, while we use actual births.
+ ratios, which may differ markedly for actual fertility behaviour.
  
-\end_layout
-
-\begin_layout Standard
-Even in Western societies, preference for firstborn sons, rather than daughters,
- has been observed.
- For example, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "test"
-
-\end_inset
-
- reported an extensive list of studies that found men and/or women prefer
- a boy as their firstborn.
- Even in the United States, 
-\begin_inset CommandInset citation
-LatexCommand citet
-key "RePEc:aea:aecrev:v:88:y:1998:i:3:p:450-77"
-
-\end_inset
-
- found some evidence of an association between having a male child and reduced
- childbearing at higher parities - in addition to the mixed-child preference.
- Accordingly, we felt that the sex of the firstborn (or closely related
- indicators) would provide a valid instrument for fertility at the household
- level in Uganda.
 \end_layout
 
 \begin_layout Section*
@@ -839,8 +860,8 @@ Data and Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
-We used the Uganda National Household Survey (UNHS) 2005-2006,obtained directly
- from the Uganda Bureau of Statistics (UBOS).
+We used the Uganda National Household Survey (UNHS) 2005-2006, obtained
+ directly from the Uganda Bureau of Statistics (UBOS).
  Although it is somewhat dated, we chose this survey because it has much
  more information about agriculture than the more recent UNHS of 2009-2012,
  or that of 2012-2013.
@@ -894,7 +915,7 @@ Alternatively, one could use the number of children within the household
 \end_inset
 
 .
- We referred to this measure of fertility as the 
+ We referred to this measure as the 
 \emph on
 fertility gap
 \emph default
@@ -941,12 +962,13 @@ The selection of children was based on the household roster of the UNHS
  in the household may not have been the gender of firstborn.
  To overcome this problem, we restricted our sample to households where
  the mother was between 16 and 32.
- We chose the cut off age of 32 because at this age, the mother's firstborn
+ We chose the cut-off age of 32 because at this age, the mother's firstborn
  will turns 16, which is our entry age into the sample of mothers.
  Restricting our sample in this way had a second advantage.
  For some of the indirect outcome variables we used, such as productivity,
  there was a risk that the gender of the firstborn had a direct effect on
- the outcome, instead of only through fertility
+ the outcome, instead of only through fertility, threatening the validity
+ of our identification strategy
 \begin_inset Foot
 status open
 
@@ -959,9 +981,8 @@ For example, boys may have a different effect on productivity than girls
 
 .
  Restricting our sample to households with only young mothers meant that
- the children were also likely to be younger, and thus less likely to engage
- in agricultural production, making a violation of the exclusion restriction
- less likely.
+ the children were also likely to be younger, and thus less likely to directly
+ effect outcome variables such as productivity.
  
 \end_layout
 
@@ -983,30 +1004,21 @@ key "Jayachandran01082011"
  of subsequent fertility.
  Therefore, we not only used the sex of the firstborn child as an instrument
  for fertility, but also experimented with alternative instruments such
- as an indicator that the first two children would be girls or a variable
- that expresses the share of female children in the total family size.
- The next section presents some preliminary statistics that suggest how
- gender patterns in the household are related to fertility.
-\end_layout
-
-\begin_layout Subsubsection*
-Gender of Offspring and Fertility
+ as an indicator that the first two children are girls, or a variable that
+ expresses the share of female children in the total family size.
+ 
 \end_layout
 
 \begin_layout Standard
-This section makes a case for the different instruments used in the analysis.
- While the next section runs a first stage regression, this one presents
- some simple descriptive statistics to show that gender of the first few
- children, as well as the share of male children in a women's total number
- of children, affects fertility.
- Table 
+Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:gender-and-fertility"
 
 \end_inset
 
- summarizes our findings.
+ show that gender of the first few children, as well as the share of male
+ children in a women's total number of children, affects fertility.
  The first two columns in the top panel check if households that have a
  daughter as firstborn are more likely to have extra children.
  We simply calculated the percentage of households that had more than one
@@ -1017,12 +1029,7 @@ reference "tab:gender-and-fertility"
  percent of households would have at least one more child.
  However, if the first child happened to be a girl, almost 40 percent of
  households would have at least one more child.
- This confirmed our hypothesis that households have a higher chance of adding
- children if the firstborn is a girl.
-\end_layout
-
-\begin_layout Standard
-We also looked at the effect of the firstborn's gender on the shortfall
+ We also looked at the effect of the firstborn's gender on the shortfall
  that exists when actual fertility is compared with theoretical fertility.
  The first two columns in the bottom panel report this fertility gap for
  these two groups of households.
@@ -1031,9 +1038,6 @@ We also looked at the effect of the firstborn's gender on the shortfall
  Consistent with the proposition that households with a firstborn girl are
  likely to have more children conditional on age, we found that the gap
  is smaller when the firstborn is a girl (2.26).
- In other words, households where the firstborn is a girl are closer to
- the theoretical maximal fertility than those households whose firstborn
- is a boy.
  The difference in the fertility gap between the group of households with
  a firstborn boy and the group with a firstborn girl is significant (p=0.003).
 \end_layout
@@ -1056,17 +1060,11 @@ The third and fourth column present the same statistics, but now looks at
  The lower panel shows that the gap between actual and potential household
  size is also largest when the first two children are boys.
  The gap is smallest when the first two children are both girls.
- All this again confirms our proposition that boy preference affects fertility.
-\end_layout
-
-\begin_layout Standard
-Finally, columns 5 and 6 propose the share of female children in the total
+ Finally, columns 5 and 6 propose the share of female children in the total
  number of a household's children as a potential instrument.
- As already stated above, because of boy preference, female children are
- likely to live in larger families and so we expected a positive correlation
- between this measure and household size.
- For the time being, we simply divided the sample in two, conditional on
- whether more or less than half of the children were female.
+ While we will use this instrument as a contineous variable in the analysis
+ below, for now we simply divided the sample in two, conditional on whether
+ more or less than half of the children were female.
  We found that the average number of children was indeed smaller in the
  sub-sample where less than half of the children were girls as opposed to
  the sub-sample where the majority were girls (top panel, 2.78 children as
@@ -1078,14 +1076,12 @@ Finally, columns 5 and 6 propose the share of female children in the total
  
 \end_layout
 
-\begin_layout Subsubsection*
-Agricultural labor Supply
-\end_layout
-
 \begin_layout Standard
-This section looks briefly at some descriptive statistics on labor supply
- in agriculture, one of the prime pathways through which fertility is likely
- to affect productivity and wellbeing.
+An important outcome variable we will look at is labor supply in agriculture,
+ one of the prime pathways through which fertility is likely to affect productiv
+ity and wellbeing.
+ The UNHS 2005-2006 records hours worked on different plots reported for
+ each individual.
  Most of Uganda has two cropping seasons.
  The first runs from January to June.
  The second is from July to December.
@@ -1121,7 +1117,16 @@ The dimensions are mother, father or child; land preparation, input application,
 \end_inset
 
 .
- Women seemed to do most of the work, and reported child labor was negligible
+ Women seemed to do most of the work, as found in many other studies on
+ gender differentiated time use in agriculture 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:wbk:wbpubs:7214"
+
+\end_inset
+
+.
+ Reported child labor was negligible
 \begin_inset Foot
 status collapsed
 
@@ -1154,22 +1159,11 @@ While the relationship between fertility and child labor is an important
  
 \end_layout
 
-\begin_layout Subsubsection*
-Production
-\begin_inset CommandInset label
-LatexCommand label
-name "sub:Production"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-We also investigated fertility's effect on production of some of the most
- important crops.
- In particular, we looked at fertility's effect on the likelihood that a
- household cultivate each of the five most important crops.
+We will also look at the effect of fertility on production of some of the
+ most important crops.
+ In particular, we will investigate the effect of fertility on the likelihood
+ that a household cultivate each of the five most important crops.
  The first row in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1179,30 +1173,30 @@ reference "tab:2averages"
 
  reports on the percentage of households that grew each of the crops.
  Over 50 percent reported growing maize, beans and cassava.
- We also looked at the impact on area cultivated, measured in acres.
+ We will also look at the impact on area cultivated, measured in acres.
  Households on average allocated about half an acre to maize, while the
  least space was reserved for sweet potatoes.
  We also expressed area cultivated as a share of total area under cultivation.
  We found that about 17 percent of total land area was allocated to maize,
  while only 8 percent was allocated to sweet potatoes.
- The next line reports average production in kilograms at the household
- level.
- This may seem low, but this is because households that reported that they
- did not produce the crop were also part of the average.
- We also divided by household size.
- Finally,table 
+ The next line in table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:2averages"
 
 \end_inset
 
- we reports yields for the five crops, defined as the amount of each crop
- harvested per unit of land (per acre).
+ reports average production in kilograms at the household level.
+ This may seem low, but this is because households that reported that they
+ did not produce the crop were also part of the average.
+ We also divided by household size.
+ Finally, we reports yields for the five crops, defined as the amount of
+ each crop harvested per unit of land (per acre).
 \end_layout
 
 \begin_layout Standard
-We also aggregated the different corps by weighting them by average prices.
+We also aggregated the different corps by weighting them by average prices
+ to investigate the impact of fertility on overall agricultural production.
  We used prices from FoodNet
 \begin_inset Foot
 status open
