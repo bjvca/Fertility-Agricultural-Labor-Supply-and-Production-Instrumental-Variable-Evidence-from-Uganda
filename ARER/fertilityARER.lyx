@@ -155,7 +155,8 @@ key "statabstr"
 
 \begin_layout Standard
 In this study, we investigate the effect of fertility on the division of
- labor and agricultural production at the household level.
+ labor and agricultural production at the household level using household
+ survey data from Uganda.
  In particular, we investigate the effect of the number of biological children
  on household member labor input in agriculture (further categorized as
  land preparation, weeding, input application, and harvesting).
@@ -173,7 +174,14 @@ In this study, we investigate the effect of fertility on the division of
  fertility patterns.
  The random nature of the newborns' sex means we can use the reproductive
  paterns as an instrumental variable (IV) to determine the exogenous component
- of fertility at the household level.
+ of fertility at the household level 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -439,11 +447,11 @@ We are not aware of studies that look directly at the effect of fertility
  is carried by women within the household, fertility is intimitly related
  to gender, and we can also learn from the large body of literature on gender
  and agriculture.
- There is a well documented productivity gap between men and women owned
- or managed plots 
+ There is a well documented productivity gap of about 20-30 percent between
+ men and women owned or managed plots 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "RePEc:ucp:jpolec:v:104:y:1996:i:5:p:1010-46"
+key "RePEc:ucp:jpolec:v:104:y:1996:i:5:p:1010-46,fao2011"
 
 \end_inset
 
@@ -1234,14 +1242,15 @@ Results
 \end_layout
 
 \begin_layout Standard
-This section presents the results of our two-stage least squares estimates
- that looked at the causal impact of fertility on various agriculture related
- outcomes.
+This section presents the results of our Instrumental Variables (IV) estimates
+ of the the causal impact of fertility on various agriculture related outcomes
+ using two stage least squares (2SLS).
  The section starts by presenting the first stage regression of our proposed
  instruments on the fertility gap.
- It then gives a detailed description of the second stage regression that
- focuses on fertility's effect on agricultural labor supply.
- This section also explores fertility's effect on area planted, production,
+ It then gives a detailed description of the second stage regressions that
+ focus on the effect of fertility on different aspects of agricultural labor
+ supply.
+ We also explore the effect of fertility on cropping patterns, production,
  and productivity.
 \end_layout
 
@@ -1257,11 +1266,12 @@ reference "tab:firststage"
 
 \end_inset
 
- reports the results for the first stage regression, which linked the sex
+ reports the results for the first stage regressions, which links the sex
  of first child/children to fertility.
- The dependent variable, as explained above, was the difference between
- the maximum number of children of a typical woman at her age and the actual
- number of children the women bore
+ The dependent variable, as explained above, is in fact the shortfall in
+ fertility and is defined as the difference between the maximum number of
+ children of a typical woman at her age and the actual number of children
+ the women bore
 \begin_inset Foot
 status collapsed
 
@@ -1273,28 +1283,25 @@ The maximum number of children has been estimated from the DHS and is actually
 \end_inset
 
 .
- We referred to this as the fertility gap (
+ We refer to this as the fertility gap (
 \emph on
 fgap
 \emph default
-) or fertility shortfall.
- This is actually the reverse of fertility, as the bigger the gap, the lower
- the number of children in the household in a given age cohort.
+).
  Apart from the exogenous variable that was excluded from the second stage
- regression elaborated in the next sections, we included a series of control
- variables that were clearly exogenous to fertility in all four specifications
- of the first stage.
+ regressions presented below, we include a series of control variables that
+ are clearly exogenous to fertility.
  The first exogenous control variable, 
 \emph on
 femhead,
 \emph default
- was a an indicator variable that took the value of 1 if the household head
- was female.
+ is a an indicator variable that takes the value of 1 if the household head
+ is female.
  The second, 
 \emph on
 urban
 \emph default
-, was an indicator variable that took the value of 1 if the household resided
+, is an indicator variable that takes the value of 1 if the household resides
  in an urban area
 \begin_inset Foot
 status collapsed
@@ -1311,117 +1318,126 @@ In some specifications where we expect regional variation in the outcome
 \end_inset
 
 .
- Next, we included three dummies to account for the education level of the
+ Next, we include three dummies to account for the education level of the
  mother.
  The first, 
 \emph on
 mprim
 \emph default
-, took the value of 1 if the mother had completed primary education.
+, takes the value of 1 if the mother has completed primary education.
  The second, 
 \emph on
 msec,
 \emph default
- was the additional effect of having completed secondary education.
+ is the additional effect of the mother having completed secondary education
+ as well.
  The third, 
 \emph on
 mthird,
 \emph default
- was the additional effect of the mother having completed tertiary education.
- The comparison category was therefore households where the mother did not
+ is the additional effect of the mother having completed tertiary education
+ as well.
+ The comparison category is therefore households where the mother did not
  complete at least primary education.
- We also added two community variables that were likely to influence household
+ We also add two community variables that are likely to influence household
  size.
- These wew 
+ These are 
 \emph on
 school 
 \emph default
-which was a dummy variable that took the value of 1 if there was a school
+which is a dummy variable that takes the value of 1 if there was a school
  in the village, and 
 \emph on
 health,
 \emph default
- which was a dummy that took the value of 1 if there was a public health
+ which is a dummy that takes the value of 1 if there was a public health
  center or clinic in the community.
- Finally, we also added an indicator (
+ Finally, we also add an indicator (
 \emph on
 cdied
 \emph default
-) that took the value of one if a son or daughter of the mother had died
+) that takes the value of one if a son or daughter of the mother had died
  in the past.
 \end_layout
 
 \begin_layout Standard
-We experimented with 4 different possible excluded instruments.
- Model (1) used an indicator that took the value of 1 if the firstborn in
- the household was a girl as an excluded instrument (
+We experimented with 4 different possible excluded instruments, resulting
+ in four different first stage regression models presented in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:firststage"
+
+\end_inset
+
+.
+ Model (1) uses an indicator that takes the value of 1 if the firstborn
+ in the household was a girl as the excluded instrument (
 \emph on
 oldestgirl
 \emph default
 ).
- The coefficient was significant at the 1 percent level and had the expected
- sign.
- Having a girl as the firstborn offspring reduced the fertility gap by about
- 0.2 children.
- In other words, households that had a girl as a firstborn tended to be
- closer to maximal fecundity.
- For the controls, we found that households where females were the head
- had a significantly larger fertility gap.
- The effect was very large, suggesting that such mothers had more than 1
+ The coefficient is significant at the 1 percent level and has the expected
+ sign: Having a girl as the firstborn offspring reduces the fertility gap
+ by about 0.2 children.
+ In other words, households that had a girl as a firstborn tend to be closer
+ to maximal fecundity.
+ For the controls, we find that households where females are the head have
+ a significantly larger fertility gap.
+ The effect is very large, suggesting that such mothers had more than 1
  child less than the maximum.
- Also, in urban areas, households seemed to have significantly fewer children.
- Schooling of the mother seemed to reduce the number of children only at
+ Also, in urban areas, households seem to have significantly fewer children.
+ Schooling of the mother seems to reduce the number of children only at
  the secondary and tertiary level.
- There seemed to be some indication that mothers who had completed primary
- education had a slightly smaller fertility gap than mothers who had not
+ There seems to be some indication that mothers who had completed primary
+ education have a slightly smaller fertility gap than mothers who had not
  completed even primary education.
- The community variables did not seem to have an effect on the fertility
+ The community variables do not seem to have an effect on the fertility
  gap.
- Finally, having lost a child in the past left a significant additional
+ Finally, having lost a child in the past leaves a significant additional
  fertility gap compared with households that had never lost a child.
- However, the additional gap was much lower than 1, suggesting a substantial
- replacement effect in Ugandan fertility.
+ However, the additional gap is much lower than 1, suggesting a substantial
+ replacement effect.
  
 \end_layout
 
 \begin_layout Standard
-Model (2) used an indicator that equaled 1 if the first two children born
+Model (2) uses an indicator that equals 1 if the first two children born
  to the mother in the household were both girls as excluded instrument (
 \emph on
 2oldestgirls
 \emph default
 ).
- Using this instrument only made sense if we confined ourselves to households
+ Using this instrument only makes sense if we confine ourselves to households
  that had at least two children, hence the reduction in the sample size.
- As in (1) the parameter on the excluded instrument was significantly negative,
+ As in (1) the parameter on the excluded instrument is significantly negative,
  in line with our hypothesis.
- The control variables were very close to what they had been in model (1).
- Model (3) went one step further and considered the first three children.
+ The control variables are very close to what they are in model (1).
+ Model (3) goes one step further and considers the first three children.
  In this case, the indicator, 
 \emph on
-3oldestgirls
+3oldestgirls,
 \emph default
- was one only if the 3 first children were all girls.
+ is one only if the 3 first children were all girls.
  This again only made sense for households that had at least three children,
  further reducing the sample size.
- The coefficient estimate was again negative, but this time it was not significa
-nt anymore.
- We assumed that the reduced sample size in this model might have reduced
+ The coefficient estimate is again negative, but this time it is not significant
+ anymore.
+ We suspect that the reduced sample size in this model might have reduced
  the power of the t-test too much.
 \end_layout
 
 \begin_layout Standard
-Model (4) used a continuous variable as an excluded instrument (
+Finally, model (4) uses a continuous variable as the excluded instrument
+ (
 \emph on
 percentfemales
 \emph default
-).
- We calculated the share of girls among children as a share of the total
- number of children in the household.
- Again, the coefficient on this instrument had the expected sign.
- A higher share of females within the households was associated with a smaller
- fertility gap.
- This was consistent with 
+), which is the share of girls among children as a share of the total number
+ of children in the household.
+ Again, the coefficient on this instrument has the expected sign: A higher
+ share of females within the households is associated with a smaller fertility
+ gap.
+ This is consistent with 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "Jayachandran01082011"
@@ -1438,13 +1454,12 @@ try until you have a boy
 
  fertility rule leads to an outcome where larger households have on average
  more girls.
- Again, the other variables were similar to the previous models.
- We found that a daughters-only household (
+ Again, the other variables are similar to the previous models.
+ The regression suggests that a daughters-only household (
 \emph on
 percentfemales
 \emph default
- = 1) would be on average 0.28 children larger than a sons-only household
- (
+ = 1) is on average 0.28 children larger than a sons-only household (
 \emph on
 percentfemales
 \emph default
@@ -1452,13 +1467,12 @@ percentfemales
 \end_layout
 
 \begin_layout Standard
-While most of our instruments were significant and had the expected sign,
- they explained only a small part of the variance in the outcome.
- When all exogenous controls were included, the R-squared was indeed rather
- low.
- If we ran partial regressions, regressing the excluded instruments one
- by one on the dependent variable, the R-square dropped below 1 percent.
- The F-value of a regression with only excluded instruments - another important
+While most of our instruments are statistically significant and have the
+ expected sign, they explain only a small part of the variance in the fertility
+ gap.
+ If we run partial regressions, regressing the excluded instruments one
+ by one on the dependent variable, the R-square drops below 1 percent.
+ The F-value of a regression with only excluded instruments - an important
  indicator of the strength of the instruments according to 
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -1466,7 +1480,7 @@ key "1995"
 
 \end_inset
 
- - also dropped to 9.46
+ - also drops to 9.46
 \begin_inset Foot
 status collapsed
 
@@ -1478,13 +1492,13 @@ As a rule of thumb, it is often stated that one has weak instruments if
 \end_inset
 
 .
- In other words, we had serious concerns that our instruments were weak.
- We therefore used inference that was robust to weak instruments.
- In particular, we relied on the Anderson-Rubin test statistic to gauge
- the significance of the endogenous variable in all subsequent regressions
- 
+ In other words, we have serious concerns that our instruments are weak
+ and therefore use inference methods that are robust to weak instruments.
+ In particular, we rely on the Anderson-Rubin test statistic to gauge the
+ significance of the endogenous variable in all subsequent regressions,
+ as suggested in 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "RePEc:ecm:emetrp:v:65:y:1997:i:3:p:557-586"
 
 \end_inset
@@ -1498,45 +1512,16 @@ Household labor supply
 \end_layout
 
 \begin_layout Standard
-This section turns to fertility's effect on total household adult labor
- supply (table 
+We now turns to the effect of fertility on total household adult labor supply.
+ Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:totlabour"
 
 \end_inset
 
-).
- It also looks at labor supply separately for the mother and the father
- (table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:2SLS-estimates-of"
-
-\end_inset
-
-), and by activity (table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:2SLS-estimates-allocation"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
-Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:totlabour"
-
-\end_inset
-
- investigates the effect of our main variable of interest, the fertility
- shortfall, on the number of days worked in agriculture (land preparation,
- input application, weeding and harvesting)
+ shows regressions of the total time (number of days) worked in household
+ agriculture on the fertility shortfall and a set of other exogenous controls
 \begin_inset Foot
 status collapsed
 
@@ -1552,21 +1537,17 @@ We have also done this analysis using days worked per acre of land held
 \end_inset
 
 .
- The first column of the table reports the result without taking into account
- endogeneity of number of children.
- It reports Ordinary Least Squares (OLS) estimates that explain the number
- of days that adults reported to have worked on the household farm in the
- 2004 agricultural season.
- Agricultural work was defined as work related to land preparation, input
- application, weeding and harvesting.
- We saw that there was no significant correlation between the number of
- days worked and fertility as measured by the fertility gap.
- We did find significant and negative effects when the household was being
- headed by a female (
+ As a reference, the first column of the table reports Ordinary Least Squares
+ (OLS) results without taking into account endogeneity of the fertility
+ gap.
+ We see that there is no significant correlation between the number of days
+ worked and fertility as measured by the fertility gap.
+ With respect to the control variables, we do find a significant and negative
+ effect of the household being headed by a female (
 \emph on
 femhead
 \emph default
-) and the household was located in an urban area (
+) and the household being located in an urban area (
 \emph on
 urban
 \emph default
@@ -1579,14 +1560,14 @@ mprim
 \emph on
 msec
 \emph default
-) did not seem to systematically relate to the number of days worked in
+) does not seem to systematically relate to the number of days worked in
  agriculture, but mothers who had finished tertiary education (
 \emph on
 mthird
 \emph default
-) appeared to work less in agriculture.
- The OLS estimates also showed positive correlations between a school in
- the community (
+) appear to work less in agriculture.
+ The OLS estimates also show positive correlations between a school in the
+ community (
 \emph on
 school
 \emph default
@@ -1606,31 +1587,51 @@ health
 \end_layout
 
 \begin_layout Standard
-Models (2) to (4) estimated the same models, but instrumented the fertility
+Models (2) to (4) estimate the same models, but instrument the fertility
  gap with a single excluded instrument.
- In model (2), the instrument was an indicator taking the value of 1 if
- the firstborn was a girl.
- The coefficient on the fertility gap then became positive and significant
- at a 10 percent level, implying that higher fertility (and hence a shrinking
- fertility gap) caused a reduction in the number of days the parents worked
- on the family fields.
- Model (3) used the sex of the first and second born as instruments for
- the fertility gap.
- Model (4) used the share of daughters as an instrument.
- The estimate of the fertility effect became higher, and is now significant
- even at a 1 percent significance level.
-\end_layout
+ In model (2), the instrument is an indicator taking the value of 1 if the
+ firstborn was a girl (corresponding to the first stage regression in model
+ (1) in table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:firststage"
 
-\begin_layout Standard
-Finally, model (5) used both the gender of the firstborn and the share of
- daughters as the excluded instruments
+\end_inset
+
+).
+ The coefficient on the fertility gap becomes positive and significant at
+ a 10 percent level, implying that higher fertility (and hence a shrinking
+ fertility gap) causes a reduction in the number of days the parents worked
+ on the family fields.
+ Model (3) uses the sex of the first and second born as instruments for
+ the fertility gap (corresponding to model (2) in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:firststage"
+
+\end_inset
+
+).
+ Model (4) uses the share of daughters as an instrument (corresponding to
+ model (4) in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:firststage"
+
+\end_inset
+
+).
+ The estimate of the fertility effect becomes higher, and is now significant
+ at a 1 percent significance level.
+ Finally, model (5) uses both the gender of the firstborn and the share
+ of daughters as the excluded instruments
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-We used Limited Information Maximum Likelihood (LIML), as this is known
- to have better small sample properties than 2SLS in overidentified models
- with weak instruments 
+We use Limited Information Maximum Likelihood (LIML) to estimate this model,
+ as this is known to have better small sample properties than 2SLS in overidenti
+fied models with weak instruments 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
@@ -1643,13 +1644,12 @@ key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
 \end_inset
 
 .
- According to the Hansen-J statistic, our model that used multiple instruments
- was valid (Hansen-J=0.849; p-val=0.357).
- We thus assumed this was the preferred specification.
- Each additional child caused a reduction of about 66 days of labor in agricultu
-re by the parents.
- With respect to the other variables in the regression, we found some signs
- that households where the mother had finished tertiary education appeared
+ According to the Hansen-J statistic, the null that our instruments are
+ valid can not be rejected (Hansen-J=0.849; p-val=0.357).
+ In this specification, an increase in the fertility gap of 1 child causes
+ an increase of about 66 days of labor in agriculture by the parents.
+ With respect to the other variables in the regression, we find some signs
+ that households where the mother has finished tertiary education appears
  to be less engaged in agriculture.
 \end_layout
 
@@ -1661,7 +1661,9 @@ reference "tab:2SLS-estimates-of"
 
 \end_inset
 
- differentiates between work done by the mother and by the father.
+ digs deeper into the effect of fertility on agricultural labour.
+ In particular, it differentiates between work done by the mother and by
+ the father.
  For the sake of space, it only shows the coefficient on the fertility gap,
  but we also added the exogenous control variables that were also included
  in the first stage regression.
@@ -1694,61 +1696,36 @@ reference "tab:2SLS-estimates-of"
  5 percent level (model (2)).
  An increase in the fertility gap per age cohort by one child lead a mother
  to work almost 30 days more in subsistence farming.
- Cycling through the results with the alternative instruments, the results
- change little with respect to significance.
+ Cycling through the results with the alternative instruments (models (3)
+ through (5)), the results change little with respect to significance.
  In all, an additional child seemed to reduce the number of days the mother
  worked in agricultural production by about 40 days.
- Full results are reported in table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:appendixmotherh"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
 The first column of the second panel reports the same OLS regression but
  with the number of days adult males worked as the dependent variable.
- As was the case with female labor, the fertility gap did not seem to correlate
- to male labor supply when we did not take into account the endogenous nature
+ As was the case with female labor, the fertility gap does not seem to correlate
+ to male labor supply when we do not take into account the endogenous nature
  of fertility choices.
- Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Effect-on-maileappend"
-
-\end_inset
-
- in the appendix gives full results and the OLS results are in the first
- column.
- We found that living in urban areas led to farmers reporting fewer days
- worked in the field.
- In households headed by females, we also found a large negative effect
- on the number of days that men worked in agriculture-related activities.
- This is because, in most cases, households are headed by females because
- the male head is missing, leading to fewer days reported in the field.
- We also found some evidence of males working less if the mother had higher
- education.
- This is most likely because men with higher education choose women with
- higher education to marry and the other way around.
+ If we instrument fertility in models (2) to (5), the effect of fertility
+ on labor supply by the father is less clear cut that that for the mother.
+ When we use the sex of the first born (model 2) and the sex of the first
+ two children born (model 3) as instruments, the coefficient is not significantl
+y different from zero.
+ If we instrument the fertility gap using the percentage of females, we
+ find some indication that more children reduce time allocated to working
+ in the field by the father.
+ The effect, however, is only half the size of the reductions we found for
+ women.
+ The over-identified model in model (5) shows a significant effect at the
+ 10 percent level only.
+ 
 \end_layout
 
 \begin_layout Standard
-Judged by the instrumental variable models from (2) to (5), the effect of
- fertility on labor supply by the father was less clear cut.
- When we used the sex of the first born (model 2) and the sex of the first
- two children born (model 3) as instruments, the coefficient was positive
- but not significantly different from zero.
- If we instrumented the fertility gap using the percentage of females, we
- found some indication that more children might reduce time allocated to
- working in the field by the father.
- The effect, however, is only half the size of the reductions we found for
- women.
- The over-identified model in model (5) showed a significant effect at the
- 10 percent level only.
- These findings were similar to what others have found.
+These findings are in line with what others have found, both in developed
+ countries in general and in developing country agriculture in particular.
  For instance, in their study on labor supply response to fertility in the
  United States, 
 \begin_inset CommandInset citation
@@ -1767,8 +1744,36 @@ key "RePEc:iza:izadps:dp2162"
 \end_inset
 
  found that Indonesian women reduced their working days in response to the
- higher fecundity in both rural and urban areas .
+ higher fecundity in both rural and urban areas.
+\end_layout
+
+\begin_layout Standard
+QUESTION: why is this important? This clearly shows that male and female
+ labour are not substitutes.
+ Gender daily callendars show that male time use does not change with children.
+ Women compress time as much as possible (WEAI surveys, Gender asset gap).
+ obviously, if you have to raise farm productivity.
+ It is one of the reasons why we see gender gaps in productivity.
+ Policywise, it means ag policy should start thinking about child care survices
+ in rural areas.
+ There should be invested in health, which would reduce fertility.
+ In family planning.
  
+\end_layout
+
+\begin_layout Standard
+labour reproductive and productive later.
+ literature rond care economy.
+ Care economy and developing contry (arora diskha).
+ Time poverty.
+\end_layout
+
+\begin_layout Standard
+This contributes to income inequality between men and women.
+ This may also point to inefficient allocation within the household, where
+ too much labour is proided to male managed plots and too little to female
+ managed plots.
+ This may result in aggregate productivity losses.
 \end_layout
 
 \begin_layout Standard
@@ -1780,6 +1785,9 @@ reference "tab:2SLS-estimates-allocation"
 \end_inset
 
  looks at reported labor by activity instead of by sex.
+ As mentioned in the descriptive statistics above, we differentiate between
+ 4 different agricultural activities: land preparation, input application,
+ weeding, and harvesting.
  Again, the results in table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1787,20 +1795,19 @@ reference "tab:2SLS-estimates-allocation"
 
 \end_inset
 
- only show the coefficients on the fertility gap.
- Full results are in the appendix.
- Model (1) in the top panel presents OLS results for number of days worked
- on land preparation.
- There were no effects from fertility in this specification.
- Again, as expected, households living in urban areas spent significantly
- less time preparing land.
- Female-headed households also allocated less time to land preparation.
- There was also some indication that women who had tertiary education were
- less engaged in land preparation.
-\end_layout
+ only show the coefficients on the fertility gap, and results are in the
+ appendix.
+ In the top panel of Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:2SLS-estimates-allocation"
 
-\begin_layout Standard
-Model (2) presents the same model, but instruments fertility with the indicator
+\end_inset
+
+, model (1) presents OLS results for number of days worked on land preparation.
+ There are no significant effects from fertility on time spend on land preparati
+on in this specification.
+ Model (2) presents the same model, but instruments fertility with the indicator
  for the first child being a girl.
  When we ran this model, the fertility effect became positive, but was not
  significantly different from zero.
@@ -1811,10 +1818,7 @@ Model (2) presents the same model, but instruments fertility with the indicator
  model (5), but the effect size shrank.
  An additional child reduced time allocated to land preparation by about
  25 days.
-\end_layout
-
-\begin_layout Standard
-The second panel repeated the same five models, but used days spent on input
+ The second panel repeats the same five models, but uses days spent on input
  application as the dependent variable.
  In none of the five specifications did fertility seem to have a significant
  impact.
@@ -1829,7 +1833,7 @@ reference "fig:Average-hours-worked"
 .
  In all, households spent only about one day applying inputs (including
  planting).
- The only significant effect we found is that households where the mother
+ The only significant effect we find is that households where the mother
  has at least primary education allocated more time to input application
  (table 
 \begin_inset CommandInset ref
@@ -1843,7 +1847,7 @@ reference "tab:applappend"
 
 \begin_layout Standard
 The third panel presents results for time spent on weeding.
- The results were similar to the ones for land preparation, but the effects
+ The results are similar to the ones for land preparation, but the effects
  are smaller.
  Each extra child reduced time allocated to weeding by about 20 days.
  Full results in the appendix (table 
@@ -1855,22 +1859,21 @@ reference "tab:timeweeding"
 
 ) show significant negative effects for female-headed households and for
  households in urban areas.
- We also found that households in communities that have a health center
- spent fewer days on weeding.
+ We also find that households in communities that have a health center spent
+ fewer days on weeding.
  Finally, the last panel looks at the effects of fertility on days worked
  for harvesting.
- There was no significant positive association between the number of children
- in the family and the number of days spent harvesting if we used only our
- binary instrument.
- We found a positive effect if we instrumented the fertility gap by the
- share of girls among siblings, but the effect was small compared to the
- other effects.
+ There is no significant association between the number of children born
+ and the number of days spent harvesting if we used only our binary instrument.
+ We find a positive effect if we instrumented the fertility gap by the share
+ of girls among siblings, but the effect was small compared to the other
+ effects.
  
 \end_layout
 
 \begin_layout Standard
-The above suggests that fertility affects time allocated to land preparation
- and weeding in a negative way.
+QUESTION: The above suggests that fertility affects time allocated to land
+ preparation and weeding in a negative way.
  Harvesting seems to be less related to family size.
  Probably, when crops are ready to be harvested, farmers are more likely
  to put in the extra effort.
@@ -1879,6 +1882,34 @@ The above suggests that fertility affects time allocated to land preparation
  The reductions of time allocated to land preparation and weeding may reduce
  both area planted and agricultural productivity.
  The next section looks at this question.
+\end_layout
+
+\begin_layout Standard
+Since male time does not change, we can assume the differences in activities
+ are related to women.
+ 
+\end_layout
+
+\begin_layout Standard
+The weeding is obviously a productiivty issue: If you dont weed, you have
+ smaller plants.
+ The land preparation issue means an absence of the crop, as we see for
+ sweet potatoes.
+ 
+\end_layout
+
+\begin_layout Standard
+policy: adapted technology: labour saving technology for women.
+ Oxen are not for women - land preparation tools that women can manage and
+ training should be targeted to women (Lecoutere 2012 Journal of Co-operative
+ Organization and Management).
+ 
+\end_layout
+
+\begin_layout Standard
+Look also to gender roles in agriculture in Uganda.
+ But this is very context specific (crop, area, culture, season, social
+ organization,)
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1952,6 +1983,65 @@ The first row looks at the probability that a household grows the respective
  size.
  Finally, the fertility gap had no significant effect on yield for any of
  the products.
+ 
+\end_layout
+
+\begin_layout Standard
+These results are again in line 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ali2015investigating"
+
+\end_inset
+
+, who find significant differences in cropping patterns between male and
+ female managed plots.
+ They find that female managers cultivate more roots, pulses and oilseeds,
+ while male managers are involved more in the cultivation of cerials, bananas
+ and cash crops such as coffee.
+ Taken together with our resutls, this suggests that for bananas, this gender
+ difference may be related to time constraints that result from high fertility.
+ For roots and tubers, on the other hand, it seems the fact that 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ali2015investigating"
+
+\end_inset
+
+ find female managers cultivate more of it should be attributed to factors
+ other than fertility, such as for example preferences.
+ 
+\end_layout
+
+\begin_layout Standard
+QUESTION: What are the consequneces of this finding? Refer to graph and
+ note it are the women that do most land preparation for sweet potatoes.
+ In addition, land preparation activities suffer most from fertility.
+\end_layout
+
+\begin_layout Standard
+If you have matooke, you made an investment years ago, so you actually plan
+ for the future.
+ Consequences: matooke hele jaar door tros die rijp is en die je kan eten.
+ In addition, het is een cash crop.
+ Maar langs den andere kant is matooke wel niet echt nutritious.
+ Veel suiker.
+\end_layout
+
+\begin_layout Standard
+Cassava laten ze niet vallen, dat is subsistance crop
+\end_layout
+
+\begin_layout Standard
+Maize is typische ventencrop.
+ 
+\end_layout
+
+\begin_layout Standard
+Sweet potatoes is een diversifier voor de cassava.
+ Wordt ook wel een beetje vermarkt.
+ Als de SP wegvalt, minder diversiteit.
+ Source of vit A (immuniteit, normaal voral in vlees who)
 \end_layout
 
 \begin_layout Standard
