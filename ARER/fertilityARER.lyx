@@ -107,11 +107,11 @@ At the most basic level, subsistence farmers in rural Africa combine natural
  with human resources to make a living.
  They use mainly household labor on their own small plots to produce food
  for their own consumption.
- As such, the allocation of total available time within these housedholds
+ As such, the allocation of total available time within these households
  to different activities will have an important effect on agricultural labor
  supply, production patterns, productivity, and ultimately well-being.
  In households with more children, domestic and reproductive labor competes
- with agriculural labor.
+ with agricultural labor.
  More children means that especially mothers will need to spend more time
  caring for children.
  Since women are known to supply most of the agricultural labor, the loss
@@ -173,7 +173,7 @@ In this study, we investigate the effect of fertility on the division of
  male off-spring are generally preferred to female, resulting in particular
  fertility patterns.
  The random nature of the newborns' sex means we can use the reproductive
- paterns as an instrumental variable (IV) to determine the exogenous component
+ patterns as an instrumental variable (IV) to determine the exogenous component
  of fertility at the household level 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -442,9 +442,9 @@ key "1995"
 
 \begin_layout Standard
 We are not aware of studies that look directly at the effect of fertility
- on agricultural labour and production decisions.
+ on agricultural labor and production decisions.
  However, since the bulk of the work related to child bearing and rearing
- is carried by women within the household, fertility is intimitly related
+ is carried by women within the household, fertility is intimately related
  to gender, and we can also learn from the large body of literature on gender
  and agriculture.
  There is a well documented productivity gap of about 20-30 percent between
@@ -456,8 +456,8 @@ key "RePEc:ucp:jpolec:v:104:y:1996:i:5:p:1010-46,fao2011"
 \end_inset
 
 , and over time, researches have attempted to explain these differences.
- For example, there is some evidence that lower producivity on women managed
- plots can be partly explained through property rights agruments 
+ For example, there is some evidence that lower productivity on women managed
+ plots can be partly explained through property rights arguments 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "agarwal1994field,LastarriaCornhiel19971317,Deere2003925"
@@ -465,7 +465,7 @@ key "agarwal1994field,LastarriaCornhiel19971317,Deere2003925"
 \end_inset
 
 .
- Also, differences in non-land inputs and differential access to technolgy
+ Also, differences in non-land inputs and differential access to technology
  and services has been causes of the productivity gap 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -483,8 +483,8 @@ key "RePEc:eee:wdevel:v:30:y:2002:i:11:p:1987-2000"
 \end_inset
 
 .
- Finally, the sexual divison of labour in agriculture means male and female
- labour can not be regardes as perfect substitutes 
+ Finally, the sexual division of labor in agriculture means male and female
+ labor can not be regarded as perfect substitutes 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Jacoby1991265"
@@ -502,7 +502,7 @@ key "doi:10.1080/00220388.2010.536222"
 
 \end_inset
 
- finds presistent lower productivity for female managed plots and female
+ finds persistent lower productivity for female managed plots and female
  headed households.
  
 \begin_inset CommandInset citation
@@ -514,7 +514,7 @@ key "ali2015investigating"
  use panel data from Uganda and an Oaxaca decomposition, and find that lower
  productivity on women managed plots can be attributed to the fact that
  women use less fertilizer, improved seeds and chemicals.
- Another important determinant of the productigity gap is women's lower
+ Another important determinant of the productivity gap is women's lower
  uptake of cash crops such as bananas and coffee.
  Still, an unexplained productivity gap of about 30 percent persists.
  Ultimately the authors were able to attribute two-fifths of the productivity
@@ -733,7 +733,7 @@ key "RePEc:ucp:jpolec:v:90:y:1982:i:1:p:52-73"
 
 .
  Anthropological and demographic evidence emphasize the dominant role of
- males in traditional patrilineal societies where descent and inheritance
+ males in traditional patrimonial societies where descent and inheritance
  are transmitted through the male line.
  Furthermore, male children strengthen the relationship between the wife
  and her husband's kin (by guaranteeing the continuation of his lineage)
@@ -859,7 +859,7 @@ key "PADR:PADR588"
 \end_inset
 
  uses information on the desired number of boys and girls to calculate sex
- ratios, which may differ markedly for actual fertility behaviour.
+ ratios, which may differ markedly for actual fertility behavior.
  
 \end_layout
 
@@ -868,7 +868,7 @@ Data and Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
-We used the Uganda National Household Survey (UNHS) 2005-2006, obtained
+We used the Uganda National Household Survey (UGHS) 2005-2006, obtained
  directly from the Uganda Bureau of Statistics (UBOS).
  Although it is somewhat dated, we chose this survey because it has much
  more information about agriculture than the more recent UNHS of 2009-2012,
@@ -1070,7 +1070,7 @@ The third and fourth column present the same statistics, but now looks at
  The gap is smallest when the first two children are both girls.
  Finally, columns 5 and 6 propose the share of female children in the total
  number of a household's children as a potential instrument.
- While we will use this instrument as a contineous variable in the analysis
+ While we will use this instrument as a continuous variable in the analysis
  below, for now we simply divided the sample in two, conditional on whether
  more or less than half of the children were female.
  We found that the average number of children was indeed smaller in the
@@ -1088,15 +1088,15 @@ The third and fourth column present the same statistics, but now looks at
 An important outcome variable we will look at is labor supply in agriculture,
  one of the prime pathways through which fertility is likely to affect productiv
 ity and wellbeing.
- The UNHS 2005-2006 records hours worked on different plots reported for
- each individual.
+ The UNHS 2005-2006 records days worked on different plots reported separately
+ for adult male and female household members.
  Most of Uganda has two cropping seasons.
  The first runs from January to June.
  The second is from July to December.
  The UNHS 2005-2006 interviewed households twice over the course of one
  year to capture this feature.
- It visited households in the beginning of 2005 to capture the second 2004
- cropping season (which runs from July to December 2004).
+ Households were visited in the beginning of 2005 to capture the second
+ 2004 cropping season (which runs from July to December 2004).
  Enumerators revisited the households at the end of 2005 to record information
  from the first 2005 cropping season (which runs from January to June 2005).
  Our study only considers the 2004 July to December cropping season, as
@@ -1134,6 +1134,16 @@ key "RePEc:wbk:wbpubs:7214"
 \end_inset
 
 .
+ These results are also consistent with 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "RODE:RODE108"
+
+\end_inset
+
+, who show that women in Uganda supply 80 % of the household labor time
+ for food production, 60 % for production of cash crops and most of labor
+ for household and care work.
  Reported child labor was negligible
 \begin_inset Foot
 status collapsed
@@ -1152,15 +1162,15 @@ While the relationship between fertility and child labor is an important
 \end_inset
 
 .
- This already indicated that the tradeoff between the time lost by the mother
- because of rearing the children and the time gained by extra hands was
- likely to work against agricultural production.
+ This already indicated that the trade-off between the time lost by the
+ mother because of rearing the children and the time gained by extra hands
+ was likely to work against agricultural production.
  Typical for Uganda is the short amount of time spent on applying inputs.
  Farmers in Uganda use very limited amounts of fertilizer and other inputs,
  so also the time spent on applying them is short.
  There is also some heterogeneity in the time spent on different crops.
- For instance, matooke is allocated less time than maize, both for men and
- for women.
+ For instance, toolmake is allocated less time than maize, both for men
+ and for women.
  However, there are also differences between the sexes.
  For instance, women spend much more time cultivating sweet potatoes, and
  to a lesser extent beans, than men.
@@ -1630,8 +1640,8 @@ status collapsed
 
 \begin_layout Plain Layout
 We use Limited Information Maximum Likelihood (LIML) to estimate this model,
- as this is known to have better small sample properties than 2SLS in overidenti
-fied models with weak instruments 
+ as this is known to have better small sample properties than 2SLS in over-ident
+ified models with weak instruments 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
@@ -1654,6 +1664,18 @@ key "RePEc:aea:jecper:v:15:y:2001:i:4:p:69-85"
 \end_layout
 
 \begin_layout Standard
+The above establishes a substantial fertility effect on labor time.
+ In an environment characterized by semi-subsistence agriculture, such a
+ dramatic drop in time allocated to agricultural activities at the household
+ level in response to additional children is bound to affect well=being
+ and food security.
+ But looking only at the fertility effect of aggregate labor supply does
+ not allow as to say a lot about how well-being and food security is likely
+ to be affected.
+ 
+\end_layout
+
+\begin_layout Standard
 Table 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1661,9 +1683,9 @@ reference "tab:2SLS-estimates-of"
 
 \end_inset
 
- digs deeper into the effect of fertility on agricultural labour.
- In particular, it differentiates between work done by the mother and by
- the father.
+ therefore digs deeper into the effect of fertility on agricultural labor.
+ In particular, it differentiates between work done by adult males and by
+ adult females.
  For the sake of space, it only shows the coefficient on the fertility gap,
  but we also added the exogenous control variables that were also included
  in the first stage regression.
@@ -1689,17 +1711,18 @@ reference "tab:2SLS-estimates-of"
 
 \end_inset
 
- shows the effect of fertility on time worked in agriculture by the mother.
- The OLS estimate is not significant (model (1)).
+ shows the effect of fertility on time worked in agriculture by female members
+ of the household.
+ The OLD estimate is not significant (model (1)).
  Accounting for endogeneity of fertility using the exogenous variation caused
  by the sex of the firstborn rendered the fertility gap significant at a
  5 percent level (model (2)).
- An increase in the fertility gap per age cohort by one child lead a mother
- to work almost 30 days more in subsistence farming.
+ An increase in the fertility gap per age cohort by one child leads female
+ adults to work almost 30 days more in subsistence farming.
  Cycling through the results with the alternative instruments (models (3)
  through (5)), the results change little with respect to significance.
- In all, an additional child seemed to reduce the number of days the mother
- worked in agricultural production by about 40 days.
+ In all, an additional child seems to reduce the number of days adult female
+ members work in agricultural production by about 40 days.
 \end_layout
 
 \begin_layout Standard
@@ -1709,13 +1732,13 @@ The first column of the second panel reports the same OLS regression but
  to male labor supply when we do not take into account the endogenous nature
  of fertility choices.
  If we instrument fertility in models (2) to (5), the effect of fertility
- on labor supply by the father is less clear cut that that for the mother.
+ on labor supply by adult males is less clear cut that that for adult females.
  When we use the sex of the first born (model 2) and the sex of the first
  two children born (model 3) as instruments, the coefficient is not significantl
 y different from zero.
- If we instrument the fertility gap using the percentage of females, we
- find some indication that more children reduce time allocated to working
- in the field by the father.
+ If we instrument the fertility gap using the percentage of female children,
+ we find some indication that more children reduce time allocated to working
+ in the field by adult males.
  The effect, however, is only half the size of the reductions we found for
  women.
  The over-identified model in model (5) shows a significant effect at the
@@ -1745,35 +1768,60 @@ key "RePEc:iza:izadps:dp2162"
 
  found that Indonesian women reduced their working days in response to the
  higher fecundity in both rural and urban areas.
-\end_layout
-
-\begin_layout Standard
-QUESTION: why is this important? This clearly shows that male and female
- labour are not substitutes.
- Gender daily callendars show that male time use does not change with children.
- Women compress time as much as possible (WEAI surveys, Gender asset gap).
- obviously, if you have to raise farm productivity.
- It is one of the reasons why we see gender gaps in productivity.
- Policywise, it means ag policy should start thinking about child care survices
- in rural areas.
- There should be invested in health, which would reduce fertility.
- In family planning.
- 
-\end_layout
-
-\begin_layout Standard
-labour reproductive and productive later.
- literature rond care economy.
- Care economy and developing contry (arora diskha).
- Time poverty.
-\end_layout
-
-\begin_layout Standard
-This contributes to income inequality between men and women.
+ It supports the view that male and female labor are far from perfect substitute
+s within the household.
+ This contributes to income inequality between men and women.
  This may also point to inefficient allocation within the household, where
- too much labour is proided to male managed plots and too little to female
- managed plots.
- This may result in aggregate productivity losses.
+ too much labor is provided to male managed plots and too little to female
+ managed plots, resulting in aggregate productivity losses 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:ucp:jpolec:v:104:y:1996:i:5:p:1010-46"
+
+\end_inset
+
+.
+ Our analysis clearly shows how fertility increases time poverty, a process
+ whereby asset poverty and time constraints may reinforce each other through
+ difficult trade off that (mostly women) have to make 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "RePEc:taf:femeco:v:16:y:2010:i:3:p:45-78"
+
+\end_inset
+
+.
+ For example, the trade-off a mother has to make between caring for children
+ and tending to her farm may have important implications for food security
+ of the household and nutrition of the children.
+ Women’s time poverty may also restricts women’s and children’s ability
+ to expand their capabilities 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "doi:10.1080/00346764.2015.1035909"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For policy, the above means that efforts known to reduce fertility, such
+ as education, basic health provision and family planning, are likely to
+ reduce the time pressure for women and increase labor allocation to agricultura
+l activities.
+ In addition, policies that reduce the time burden due to reproductive activitie
+s are likely to work as well.
+ For example, organized child care, where economies of scale are obtained
+ by bringing a group of children together to be cared for by one person
+ at peak hours could increase time available for agriculture for women.
+ Innovations in agricultural technology should focus on time saving innovations
+ that can be effectively used by women.
+ In ovations beyond agriculture that target women and reduce time spend
+ on reproductive chores should also be effective in increasing time in agricultu
+re.
+ Women who face competing claims of time are also likely to benefit of basic
+ infrastructure, such as clean water provision and basic health care.
 \end_layout
 
 \begin_layout Standard
@@ -1872,44 +1920,48 @@ reference "tab:timeweeding"
 \end_layout
 
 \begin_layout Standard
-QUESTION: The above suggests that fertility affects time allocated to land
- preparation and weeding in a negative way.
+The above suggests that fertility affects especially women's time allocated
+ to land preparation and weeding in a negative way (since male time allocation
+ does not change significantly as we have seen before).
  Harvesting seems to be less related to family size.
  Probably, when crops are ready to be harvested, farmers are more likely
- to put in the extra effort.
+ to put in the extra effort regardless of family size.
  This seems to be less evident for work that has an uncertain payoff in
  the future, such as weeding.
- The reductions of time allocated to land preparation and weeding may reduce
- both area planted and agricultural productivity.
- The next section looks at this question.
+ A reduction in time allocated to weeding is likely to affect productivity,
+ as weeds compete for sun and nutrients in the soil.
+ Reductions in time allocated to land preparation, on the other hand, are
+ likely to result in lost production.
+ For instance, crops that require thorough land preparation may not be cultivate
+d, or in smaller acreage.
 \end_layout
 
 \begin_layout Standard
-Since male time does not change, we can assume the differences in activities
- are related to women.
+Policy should thus focus on the promotion of adapted technologies that focus
+ on the two activities that are affected by fertility, such as labor saving
+ technology for land preparation.
+ However, policy should carefully contemplate the gender consequences of
+ the proposed technology.
+ For example, promoting oxen traction for land preparation is likely to
+ increase time pressure for women even more.
+ It is therefore important that tools and technology to help in land preparation
+ and weeding can be used by women.
+ Equally important is that extension and training with respect to these
+ technologies is targeted towards women.
+ Norms and customs also play a role in what agricultural activities are
+ done by whom, even though the exact patterns are very context specific
  
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "1982"
 
-\begin_layout Standard
-The weeding is obviously a productiivty issue: If you dont weed, you have
- smaller plants.
- The land preparation issue means an absence of the crop, as we see for
- sweet potatoes.
+\end_inset
+
+.
+ As such policies that aim to change gender norms and customs can affect
+ the time allocation between different agricultural activities within the
+ household.
  
-\end_layout
-
-\begin_layout Standard
-policy: adapted technology: labour saving technology for women.
- Oxen are not for women - land preparation tools that women can manage and
- training should be targeted to women (Lecoutere 2012 Journal of Co-operative
- Organization and Management).
- 
-\end_layout
-
-\begin_layout Standard
-Look also to gender roles in agriculture in Uganda.
- But this is very context specific (crop, area, culture, season, social
- organization,)
 \end_layout
 
 \begin_layout Subsubsection*
@@ -1983,11 +2035,12 @@ The first row looks at the probability that a household grows the respective
  size.
  Finally, the fertility gap had no significant effect on yield for any of
  the products.
- 
+ Maize is for instance a typical male crop, and thus unaffected by household
+ size.
 \end_layout
 
 \begin_layout Standard
-These results are again in line 
+These results are again in line with 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "ali2015investigating"
@@ -1999,7 +2052,7 @@ key "ali2015investigating"
  They find that female managers cultivate more roots, pulses and oilseeds,
  while male managers are involved more in the cultivation of cerials, bananas
  and cash crops such as coffee.
- Taken together with our resutls, this suggests that for bananas, this gender
+ Taken together with our results, this suggests that for bananas, this gender
  difference may be related to time constraints that result from high fertility.
  For roots and tubers, on the other hand, it seems the fact that 
 \begin_inset CommandInset citation
@@ -2010,38 +2063,40 @@ key "ali2015investigating"
 
  find female managers cultivate more of it should be attributed to factors
  other than fertility, such as for example preferences.
- 
+ Matooke, as opposed to the other corps we included in the analysis, is
+ a perennial crop.
+ This means that matooke requires some foresight and planning.
+ Sweet potatoes could be labeled a women crop in Uganda.
+ This was already clear from Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Average-hours-worked"
+
+\end_inset
+
+.
+ The figure also shows the share of female labor in land preparation for
+ sweet potatoes is relatively high.
+ The previous finding that land preparation suffers substantially as a result
+ of fertility is thus consistent with the finding that larger households
+ are less engaged in sweet potato growing.
 \end_layout
 
 \begin_layout Standard
-QUESTION: What are the consequneces of this finding? Refer to graph and
- note it are the women that do most land preparation for sweet potatoes.
- In addition, land preparation activities suffer most from fertility.
-\end_layout
-
-\begin_layout Standard
-If you have matooke, you made an investment years ago, so you actually plan
- for the future.
- Consequences: matooke hele jaar door tros die rijp is en die je kan eten.
- In addition, het is een cash crop.
- Maar langs den andere kant is matooke wel niet echt nutritious.
- Veel suiker.
-\end_layout
-
-\begin_layout Standard
-Cassava laten ze niet vallen, dat is subsistance crop
-\end_layout
-
-\begin_layout Standard
-Maize is typische ventencrop.
- 
-\end_layout
-
-\begin_layout Standard
-Sweet potatoes is een diversifier voor de cassava.
- Wordt ook wel een beetje vermarkt.
- Als de SP wegvalt, minder diversiteit.
- Source of vit A (immuniteit, normaal voral in vlees who)
+The above has far reaching consequences.
+ Matooke comes in bunches that can be kept for a while and can be harvest
+ troughout the year (about one and a half years after planting).
+ This means that households that cultivate matooke, with some planning,
+ can have an almost constant source of food, resulting in relative food
+ security.
+ Sweet potatoes is the prime source of vitamin A in Uganda.
+ Children with vitamin A deficiency are at increased risk of severe morbidity
+ from common childhood infections such as diarrheal diseases and measles,
+ and in cases of extreme deficiency, can go blind.
+ The findings thus highlight the need to make sure that households with
+ many children are food secure throughout the year.
+ In addition, policies to promote nutritious foods should target large families
+ to compensate for the lower probability that they grow sweet potatoes.
 \end_layout
 
 \begin_layout Standard
@@ -2055,7 +2110,7 @@ reference "tab:2SLS-totals"
  presents results for total production and productivity, using the prices
  for the different crops.
  Again we used five different models.
- The first one was again a regression that did not take endogeneity into
+ The first one was again a regression that did not take heterogeneity into
  account.
  While in the previous regressions this was typically OLS, this might now
  have changed to a probit or tobit regression, depending on the nature of
@@ -2092,8 +2147,7 @@ Conclusion
 
 \begin_layout Standard
 We looked at the effect of fertility, defined as the number of biological
- children born to a mother, on agricultural production and its determinants.
- One of the most evident determinants was household agricultural labor.
+ children born to a mother, on agricultural production.
  The identification strategy we used relies on the premise that, in partilineal
  societies, boys are preferred to girls in terms of offspring.
  Households that have a girl as the first child will have a higher propensity
@@ -2178,24 +2232,20 @@ young
 \end_layout
 
 \begin_layout Standard
-There are different ways in which the negative effect of fertility on labor
- and production can be influenced.
+There are different ways in which the negative effect of fertility on agricultur
+al labor and production can be influenced.
  First, our analysis reconfirms the need for fertility-reducing policies.
  Apart from known fertility-reducing policies such as women's education
  and improved maternal health care, the most promising policies should try
  to work on the root cause of increased fertility.
- This should be done by reducing households' propensity to have higher fertility
+ This should be done by reducing household's propensity to have higher fertility
  if the firstborn is a girl.
  We can think of a host of policies that would do this by pushing against
  the patrilineal nature of these societies.
  For example, Uganda may consider changing its land act to make it similar
  to what Kenya recently did and give equal inheritance rights to both girls
  and boys.
- 
-\end_layout
-
-\begin_layout Standard
-Policy response involves addressing cultural issues related to high fertility,
+ Policy response involves addressing cultural issues related to high fertility,
  some of which may face considerable resistance.
  Changing a set of cultural values is likely to be a very slow process.
  Meanwhile, the government of Uganda should support the nutritional needs
