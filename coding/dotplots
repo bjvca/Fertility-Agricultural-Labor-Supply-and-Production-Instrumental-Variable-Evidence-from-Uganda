@@ -6,7 +6,7 @@ asec4a <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_D
 asec5a <- read.dta("/home/bjvca/data/data/UGANDA/UNHS/UNHS_2005/UNHS_III_AGRIC_DATA/asec5a.dta")
 
 merged <- merge(asec4a, asec5a, by.x=c("hh", "a4aq1", "a4aq2"), by.y=c("hh", "a5aq2", "a5aq3"))
-selhh <- read.dta("/home/bjvca/data/data/fertility and ag productivity/datasets/hhsel.dta")
+selhh <- read.dta("/home/bjvca/data/projects/fertility and ag productivity/datasets/hhsel.dta")
 merged <- merge(selhh, merged, by.x=c("hh"), by.y=c("hh")) 
 
 
@@ -63,7 +63,8 @@ long <- subset(long, long$crop %in% c(130, 210, 620, 630, 741) )
 long$crop <-  as.factor(long$crop)
 library(lattice)
 levels(long$crop)<- c("maize", "beans", "s potatoes","cassava", "matooke")
-pdf("/home/bjvca/data/data/fertility and ag productivity/dotplot.pdf")
-dotplot(crop ~ days | sex, data = long, groups = type,
-        key = simpleKey(levels(long$type), space = "right"))
+pdf("/home/bjvca/data/projects/fertility and ag productivity/dotplot.pdf")
+
+dotplot(crop ~ days | sex, data = long, groups = type,  pch=c(15,16,17,3), col=c(1,2,3,4), key = list(text=list(levels(long$type)), space="right",points=list(pch=c(15,16,17,3)),col=c(1,2,3,4)))
+
 dev.off()
